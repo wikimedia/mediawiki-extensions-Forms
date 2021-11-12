@@ -1,0 +1,10 @@
+{
+	"name": "mediawiki/forms",
+	"type": "mediawiki-extension",
+	"extra": {
+		"installer-name": "Forms"
+	},
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}

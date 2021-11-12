@@ -1,0 +1,178 @@
+{
+	"name": "Forms",
+	"version": "0.1",
+	"license-name": "GPL-3.0-only",
+	"author": [
+		"[http://www.hallowelt.com Hallo Welt! GmbH]"
+	],
+	"url": "http://www.hallowelt.com",
+	"descriptionmsg": "forms-desc",
+	"requires": {
+		"MediaWiki": ">= 1.31.0"
+	},
+	"MessagesDirs": {
+		"Forms": "i18n"
+	},
+	"attributes": {
+		"Forms": {
+			"Definitions": {},
+			"TypeMap": {
+				"text": {
+					"view": "mw.ext.forms.widget.view.TextView",
+					"edit": "OO.ui.TextInputWidget"
+				},
+				"button": "OO.ui.ButtonWidget",
+				"label": "OO.ui.LabelWidget",
+				"textarea": {
+					"view": "mw.ext.forms.widget.view.TextView",
+					"edit": "OO.ui.MultilineTextInputWidget"
+				},
+				"number": {
+					"view": "mw.ext.forms.widget.view.TextView",
+					"edit": "OO.ui.NumberInputWidget"
+				},
+				"dropdown": {
+					"view": "mw.ext.forms.widget.view.OptionView",
+					"edit": "OO.ui.DropdownInputWidget"
+				},
+				"checkbox": {
+					"view": "mw.ext.forms.widget.view.BooleanView",
+					"edit": "mw.ext.forms.widget.edit.Checkbox"
+				},
+				"radio": {
+					"view": "mw.ext.forms.widget.view.BooleanView",
+					"edit": "mw.ext.forms.widget.edit.Radio"
+				},
+				"checkbox-multiselect": {
+					"view": "mw.ext.forms.widget.view.CheckboxMultiselectView",
+					"edit": "OO.ui.CheckboxMultiselectInputWidget"
+				},
+				"radio-multiselect": {
+					"view": "mw.ext.forms.widget.view.RadioSelectView",
+					"edit": "OO.ui.RadioSelectInputWidget"
+				},
+				"select-file": {
+					"view": "mw.ext.forms.widget.view.SingleImageView",
+					"edit": "mw.ext.forms.widget.edit.SelectFileInput"
+				},
+				"icon": "OO.ui.IconWidget",
+				"indicator": "OO.ui.IndicatorWidget",
+				"popup-button": "OO.ui.PopupButtonWidget",
+				"progress-bar": "OO.ui.ProgressBarWidget",
+				"layout_horizontal": "OO.ui.HorizontalLayout",
+				"layout_booklet": "OO.ui.BookletLayout",
+				"layout_index": "OO.ui.IndexLayout",
+				"section_label": "mw.ext.forms.widget.view.SectionLabel",
+				"_default": {
+					"view": "mw.ext.forms.widget.view.TextView",
+					"edit": "OO.ui.TextInputWidget"
+				}
+			},
+			"Targets": {
+				"json-on-wikipage": "MediaWiki\\Extension\\Forms\\Target\\JsonOnWikiPage::factory",
+				"database": "MediaWiki\\Extension\\Forms\\Target\\Database::factory"
+			}
+		}
+	},
+	"ServiceWiringFiles": [
+		"ServiceWiring.php"
+	],
+	"SpecialPages": {
+		"CreateFormInstance": "MediaWiki\\Extension\\Forms\\Special\\CreateForm"
+	},
+	"config_prefix": "egForms",
+	"config": {
+		"TargetEMailRecipients": {
+			"value":  {}
+		}
+	},
+	"GroupPermissions": {
+		"sysop": {
+			"forms-create-form": true
+		}
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\Forms\\": "src/",
+		"MediaWiki\\Extension\\Forms\\Tests\\": "tests/phpunit"
+	},
+	"ContentHandlers": {
+		"FormDefinition": "MediaWiki\\Extension\\Forms\\ContentHandler\\FormDefinitionHandler",
+		"FormData": "MediaWiki\\Extension\\Forms\\ContentHandler\\FormDataHandler"
+	},
+	"APIModules": {
+		"forms-get-definitions": "MediaWiki\\Extension\\Forms\\Api\\GetDefinitions",
+		"forms-form-submit": "MediaWiki\\Extension\\Forms\\Api\\FormSubmit"
+	},
+	"ResourceModules": {
+		"ext.forms.init": {
+			"scripts": [
+				"ext.forms.init.js"
+			],
+			"dependencies": [
+				"ext.forms.widgets"
+			]
+		},
+		"ext.forms.define": {
+			"scripts": [
+				"ext.forms.define.js"
+			]
+		},
+		"ext.forms.widgets": {
+			"scripts": [
+				"mixin/BookletLayoutParser.js",
+				"mixin/IndexLayoutParser.js",
+				"mixin/DefinitionParser.js",
+				"mixin/FormLoadingAlert.js",
+				"mixin/FloatableButtons.js",
+				"mixin/EditSummary.js",
+				"mixin/Message.js",
+				"widget/edit/Checkbox.js",
+				"widget/edit/Radio.js",
+				"widget/edit/SelectFileInputWidget.js",
+				"widget/view/SingleImageView.js",
+				"widget/view/BooleanView.js",
+				"widget/view/TextView.js",
+				"widget/view/OptionView.js",
+				"widget/view/CheckboxMultiselectView.js",
+				"widget/view/RadioSelectView.js",
+				"widget/view/SectionLabel.js",
+				"widget/Form.js",
+				"widget/FormPicker.js"
+			],
+			"styles": [
+				"ext.forms.form.less"
+			],
+			"dependencies": [
+				"ext.forms.define",
+				"oojs-ui"
+			],
+			"messages": [
+				"forms-form-picker-picker-label",
+				"forms-form-picker-layout-help",
+				"forms-form-picker-layout-label",
+				"forms-error-invalid-form",
+				"forms-form-loading-label",
+				"forms-form-submit-label",
+				"forms-form-reset-label",
+				"forms-form-cancel-label",
+				"forms-message-ack-button-tooltip",
+				"forms-form-validation-failed",
+				"forms-form-submit-success",
+				"forms-api-generic-error",
+				"forms-form-form-name-label",
+				"forms-edit-summary-placeholder"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "Forms/resources"
+	},
+	"Hooks": {
+		"ContentHandlerDefaultModelFor": "MediaWiki\\Extension\\Forms\\Setup::onContentHandlerDefaultModelFor",
+		"ResourceLoaderTestModules": "MediaWiki\\Extension\\Forms\\Setup::onResourceLoaderTestModules",
+		"ParserFirstCallInit": "MediaWiki\\Extension\\Forms\\Setup::onParserFirstCallInit",
+		"LoadExtensionSchemaUpdates": "MediaWiki\\Extension\\Forms\\Hook\\LoadExtensionSchemaUpdates\\AddFormDataTable::callback"
+	},
+	"manifest_version": 2
+}
