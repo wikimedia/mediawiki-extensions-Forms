@@ -1,0 +1,4 @@
+{
+	"forms-desc": "Description of Forms for [[Special:Version]]",
+	"ext-forms-edit-error-form-sealed": "Error message shown when user attempts to edit a sealed form instance"
+}

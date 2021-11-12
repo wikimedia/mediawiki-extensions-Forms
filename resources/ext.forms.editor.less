@@ -1,0 +1,237 @@
+.ext-forms-form-element-group {
+	position: relative;
+	.ext-forms-form-editor-element-wrapper {
+		position: relative;
+		margin-top: 10px;
+		min-height: 30px;
+		&:first-of-type {
+			margin-top: 0;
+		}
+		&.item-selected {
+			.wrapper-overlay{
+				background-color: rgba(0, 0, 0, 0.2);
+			}
+		}
+		&:hover {
+			>.wrapper-overlay {
+				min-width: 200px;
+				display: block;
+				background-color: rgba(193, 193, 193, 0.4);
+				.name-badge {
+					display: inline-block;
+				}
+				.wrapper-sort-handle:not(.handle-in-tool) {
+					display: inline-block;
+				}
+			}
+		}
+		&.wrapper-for-layout {
+			min-height: 30px;
+			background-color: #f2f2f2;
+			&:hover {
+				> .wrapper-overlay {
+					display: block;
+					height: 1px;
+					background: none;
+					z-index: 9;
+				}
+			}
+		}
+		.subitem-sortable {
+			min-height: 30px;
+			&.active-drag {
+				border: 2px solid green;
+			}
+		}
+		.wrapper-overlay {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 10;
+			text-align: right;
+			display: none;
+			.name-badge {
+				display: none;
+				padding-left: 5px;
+				padding-right: 5px;
+				background-color: white;
+				border: 3px solid rgb(51, 102, 204);
+				.oo-ui-buttonWidget {
+					margin: 0;
+					a {
+						padding: 10px;
+						span.oo-ui-iconElement-icon {
+							background-size: 15px;
+							background-position: 0;
+						}
+					}
+				}
+				label.oo-ui-labelElement-label {
+					margin: 2px !important;
+				}
+			}
+			.wrapper-sort-handle:not(.handle-in-tool) {
+				display: none;
+				position: absolute;
+				left: 0;
+				padding: 0 22px 0 22px;
+				cursor: move;
+				height: 100%;
+				background-color: #b0b0b0;
+				border-radius: 2px;
+				background-size: 20px;
+			}
+		}
+	}
+	div.editor-element {
+		vertical-align: top;
+		border: 2px solid #b3b3b3;
+		border-radius: 4px;
+		padding: 10px;
+		margin: 5px;
+		min-height: 500px;
+		&.preview-area {
+			width: 100%;
+			min-height: 200px !important;
+			.empty-help-placeholder {
+				width: 100%;
+				text-align: center;
+				font-weight: bold;
+				font-size: 1.5em;
+				color: gray;
+			}
+			&.active-drag {
+				border-style: dashed;
+				border-color: orange;
+				border-radius: 10px;
+			}
+			&.drop-valid {
+				border-color: green;
+			}
+			ul#item-sortable-wrapper {
+				padding: 0 !important;
+				min-height: inherit;
+				.item-sortable-placeholder {
+					background: repeating-linear-gradient(
+						45deg,
+						#fefeff,
+						#e8e8e8 10px,
+						#d0d0d0 10px,
+						#d2d2d2 20px
+					);
+					height: 50px;
+					border-radius: 5px;
+					margin: 10px 0 10px 0;
+				}
+			}
+		}
+	}
+	.oo-ui-fieldsetLayout-header {
+		font-size: 1.2em;
+	}
+}
+
+.oo-ui-messageDialog {
+	z-index: 11 !important;
+}
+
+/**
+	Because we use dropdown in the popup,
+	the dropdown list is outside of the element,
+	and needs to be brought to the front to appear
+	in front of the dialog
+ */
+.oo-ui-menuSelectWidget {
+	z-index: 12;
+}
+
+.ui-draggable-dragging {
+	z-index: 999999;
+}
+
+.ext-forms-form-editor-element-picker {
+	width: 100%;
+	padding: 10px;
+	background-color: #f9f9f9;
+	z-index: 99999;
+	.picker-trigger {
+		cursor: pointer;
+		.oo-ui-iconWidget {
+			cursor: inherit;
+			width: 25px;
+			height: 25px;
+			background-size: 25px;
+			margin-left: 10px;
+			&.oo-ui-icon-expand {
+				position: absolute;
+				right: 10px;
+			}
+		}
+		.oo-ui-labelWidget {
+			cursor: inherit;
+			margin: 0 0 0 20px;
+			vertical-align: middle;
+			font-size: 18px;
+		}
+	}
+	.element-picker-items-layout {
+		-ms-box-orient: horizontal;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: flex;
+		justify-content: center;
+		.oo-ui-fieldsetLayout {
+			display: inline-block;
+			min-width: 150px;
+			flex-grow: 0;
+			.oo-ui-fieldsetLayout-header {
+				.oo-ui-iconElement-icon {
+					background-size: 18px;
+				}
+			}
+			.oo-ui-fieldsetLayout-group	{
+				align-content: stretch;
+				display: flex;
+				flex-wrap: wrap;
+			}
+		}
+	}
+	.picker-elements {
+		.oo-ui-buttonWidget.close-elements {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+		}
+		.picker-element-item {
+			cursor: pointer;
+			display: flex;
+			background-color: #eaeaea;
+			border-radius: 5px;
+			border: 1px solid #b3b1b1;
+			margin: 3px;
+			padding: 5px 8px 5px 8px;
+			.oo-ui-horizontalLayout {
+				position: relative;
+				.oo-ui-labelElement-label.with-icon {
+					margin-left: 25px;
+				}
+			}
+			&:hover {
+				background-color: #c4c3c3;
+			}
+		}
+	}
+}
+
+.ext-forms-editor-options-popup {
+	z-index: 20;
+}
+
+.oo-ui-menuSelectWidget {
+	z-index: 100;
+}

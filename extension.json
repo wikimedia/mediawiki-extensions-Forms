@@ -1,0 +1,246 @@
+{
+	"name": "Forms",
+	"version": "0.2",
+	"license-name": "GPL-3.0-only",
+	"author": [
+		"[http://www.hallowelt.com Hallo Welt! GmbH]"
+	],
+	"url": "http://www.hallowelt.com",
+	"descriptionmsg": "forms-desc",
+	"requires": {
+		"MediaWiki": ">= 1.31.0"
+	},
+	"MessagesDirs": {
+		"Forms": "i18n"
+	},
+	"attributes": {
+		"Forms": {
+			"Definitions": {
+				"FormEditor": "Forms/resources/formDefinitions/FormEditor.js",
+				"FormProperties": "Forms/resources/formDefinitions/FormProperties.js"
+			},
+			"Targets": {
+				"json-on-wikipage": "MediaWiki\\Extension\\Forms\\Target\\JsonOnWikiPage::factory",
+				"form-definition": "MediaWiki\\Extension\\Forms\\Target\\FormDefinition::factory",
+				"database": "MediaWiki\\Extension\\Forms\\Target\\Database::factory",
+				"email": "MediaWiki\\Extension\\Forms\\Target\\Email::factory",
+				"template":  "MediaWiki\\Extension\\Forms\\Target\\Template::factory"
+			}
+		}
+	},
+	"ServiceWiringFiles": [
+		"ServiceWiring.php"
+	],
+	"SpecialPages": {
+		"CreateFormInstance": "MediaWiki\\Extension\\Forms\\Special\\CreateFormInstance",
+		"FormEditor": "MediaWiki\\Extension\\Forms\\Special\\FormEditor"
+	},
+	"config_prefix": "egForms",
+	"config": {
+		"TargetEMailRecipients": {
+			"value":  {}
+		}
+	},
+	"GroupPermissions": {
+		"user": {
+			"forms-create-form": true
+		},
+		"sysop": {
+			"forms-create-form": true,
+			"forms-edit-form-definition": true
+		}
+	},
+	"AvailableRights": [
+		"forms-create-form",
+		"forms-edit-form-definition"
+	],
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\Forms\\": "src/",
+		"MediaWiki\\Extension\\Forms\\Tests\\": "tests/phpunit"
+	},
+	"ContentHandlers": {
+		"FormDefinition": "MediaWiki\\Extension\\Forms\\ContentHandler\\FormDefinitionHandler",
+		"FormData": "MediaWiki\\Extension\\Forms\\ContentHandler\\FormDataHandler"
+	},
+	"APIModules": {
+		"forms-get-definitions": "MediaWiki\\Extension\\Forms\\Api\\GetDefinitions",
+		"forms-form-submit": "MediaWiki\\Extension\\Forms\\Api\\FormSubmit"
+	},
+	"Actions": {
+		"editdefinitionsource": "MediaWiki\\Extension\\Forms\\Action\\FormDefinitionSourceEditAction"
+	},
+	"ResourceModules": {
+		"ext.forms.form.editor": {
+			"scripts": [
+				"target/FormTarget.js",
+				"target/JsonOnWikiPage.js",
+				"target/Database.js",
+				"target/Template.js",
+				"widget/edit/JSInput.js",
+				"formElement/JSInput.js",
+				"widget/edit/StyleTextarea.js",
+				"formElement/StyleTextarea.js",
+				"elementGroup/Group.js",
+				"elementGroup/Inputs.js",
+				"elementGroup/Layouts.js",
+				"elementGroup/Other.js",
+				"widget/editor/FormElementGroup.js",
+				"widget/editor/FormEditorElementDescriptor.js",
+				"widget/editor/FormElementWrapper.js",
+				"formElement/FormElementGroup.js",
+				"formElement/FormElementWrapper.js",
+				"widget/editor/ElementPicker.js",
+				"widget/editor/ElementPickerItem.js"
+			],
+			"styles": [
+				"ext.forms.editor.less"
+			],
+			"messages": [
+				"forms-form-editor-title",
+				"forms-form-editor-form-name-label",
+				"forms-form-editor-form-name-help",
+				"forms-form-editor-prop-title",
+				"forms-form-editor-prop-showTitle",
+				"forms-form-editor-prop-showFormName",
+				"forms-form-editor-prop-sealAfterCreation",
+				"forms-form-editor-prop-buttonsFloat",
+				"forms-form-editor-prop-categories",
+				"forms-form-editor-prop-buttonsFloat",
+				"forms-form-editor-prop-enableProgressSave",
+				"forms-form-editor-prop-enableEditSummary",
+				"forms-form-editor-prop-includable",
+				"forms-form-editor-prop-abstract",
+				"forms-form-editor-prop-partial",
+				"forms-form-editor-prop-targetType",
+				"forms-form-editor-prop-targetTitle",
+				"forms-form-editor-prop-targetAfterAction",
+				"forms-form-editor-prop-targetTypeJsonOnWikipage",
+				"forms-form-editor-prop-targetTypeDatabase",
+				"forms-form-editor-prop-targetTypeEmail",
+				"forms-form-editor-prop-targetEmailReceivers",
+				"forms-form-editor-prop-targetAfterActionType",
+				"forms-form-editor-prop-targetAfterActionTypeRedirect",
+				"forms-form-editor-prop-targetAfterActionTypeCallback",
+				"forms-form-editor-prop-targetAfterActionUrl",
+				"forms-form-editor-prop-targetAfterActionCallback",
+				"forms-form-editor-prop-targetAfterActionTypeNone",
+				"forms-form-editor-prop-use-form-revs",
+				"forms-form-editor-prop-use-form-revs-help",
+				"forms-form-editor-prop-extends",
+				"forms-form-editor-form-props-label",
+				"forms-form-editor-form-items-label",
+				"ext-forms-type-button",
+				"ext-forms-type-checkbox",
+				"ext-forms-type-checkbox_multiselect",
+				"ext-forms-type-dropdown",
+				"ext-forms-type-icon",
+				"ext-forms-type-indicator",
+				"ext-forms-type-label",
+				"ext-forms-type-multi_step",
+				"ext-forms-type-number",
+				"ext-forms-type-progress_bar",
+				"ext-forms-type-radio",
+				"ext-forms-type-radio_multiselect",
+				"ext-forms-type-section_label",
+				"ext-forms-type-select_file",
+				"ext-forms-type-textarea",
+				"ext-forms-type-layout_horizontal",
+				"ext-forms-type-layout_booklet",
+				"ext-forms-type-layout_index",
+				"ext-forms-type-text",
+				"ext-forms-type-form_import",
+				"ext-forms-type-multiplier",
+				"ext-forms-type-menutag_multiselect",
+				"ext-forms-type-category_multiselect",
+				"ext-forms-type-layout_fieldset",
+				"ext-forms-label-checkbox-horizontal-layout",
+				"ext-forms-label-appearance",
+				"ext-forms-label-behaviour",
+				"ext-forms-label-infrastructure",
+				"ext-forms-label-target",
+				"ext-forms-label-listeners",
+				"ext-forms-label-company-name",
+				"ext-forms-label-employees-number",
+				"ext-forms-label-city",
+				"ext-forms-label-contacts",
+				"ext-forms-label-show-contacts",
+				"ext-forms-label-show-address",
+				"ext-forms-label-sales",
+				"ext-forms-label-name",
+				"ext-forms-label-label",
+				"ext-forms-label-help",
+				"ext-forms-label-no-layout",
+				"ext-forms-label-show-on",
+				"ext-forms-label-create",
+				"ext-forms-label-edit",
+				"ext-forms-label-view",
+				"ext-forms-label-style",
+				"ext-forms-label-custom-widget-properties",
+				"ext-forms-label-choose-element-to-insert",
+				"ext-forms-title-remove",
+				"forms-form-editor-form-props-label",
+				"forms-form-editor-form-items-label",
+				"forms-form-editor-item-area-tree",
+				"forms-form-editor-item-area-preview-loading",
+				"forms-form-editor-item-area-prop",
+				"ext-forms-label-default-value",
+				"ext-forms-label-required",
+				"ext-forms-label-outlined",
+				"ext-forms-label-framed",
+				"form-formelement-index-layout-tab",
+				"form-formelement-booklet-layout-page",
+				"ext-forms-label-sel-by-default",
+				"ext-forms-label-add-first",
+				"ext-forms-label-max-number-to-add",
+				"ext-forms-label-completion-step",
+				"ext-forms-label-completion-step-help",
+				"form-formelement-multi-step-step",
+				"ext-forms-label-min",
+				"ext-forms-label-max",
+				"ext-forms-label-options",
+				"ext-forms-label-data",
+				"ext-forms-label-title",
+				"ext-forms-label-show-drop-target",
+				"ext-forms-label-wikitext",
+				"ext-forms-label-number-of-rows",
+				"ext-forms-label-placeholder",
+				"ext-forms-label-indicator",
+				"form-formelement-wikitext-input",
+				"forms-formelement-group-input",
+				"forms-formelement-group-layout",
+				"forms-formelement-group-other",
+				"ext-forms-label-icon",
+				"ext-forms-label-helpinline",
+				"forms-form-editor-prop-targetTypeTemplate",
+				"forms-form-editor-prop-targetTemplate",
+				"forms-form-editor-target-template-field",
+				"forms-form-editor-target-template-field-manual",
+				"ext-forms-type-title",
+				"ext-forms-label-type",
+				"forms-form-editor-button-import-template",
+				"forms-form-editor-confirm-import-template"
+			],
+			"dependencies": [
+				"ext.forms.init",
+				"oojs-ui",
+				"jquery.ui"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "Forms/resources"
+	},
+	"Hooks": {
+		"ContentHandlerDefaultModelFor": "MediaWiki\\Extension\\Forms\\Setup::onContentHandlerDefaultModelFor",
+		"ResourceLoaderTestModules": "MediaWiki\\Extension\\Forms\\Setup::onResourceLoaderTestModules",
+		"ParserFirstCallInit": "MediaWiki\\Extension\\Forms\\Setup::onParserFirstCallInit",
+		"LoadExtensionSchemaUpdates": [
+			"MediaWiki\\Extension\\Forms\\Hook\\LoadExtensionSchemaUpdates\\AddFormAutosaveTable::callback",
+			"MediaWiki\\Extension\\Forms\\Hook\\LoadExtensionSchemaUpdates\\AddFormDataTable::callback",
+			"MediaWiki\\Extension\\Forms\\Hook\\LoadExtensionSchemaUpdates\\AddFormRevisionTable::callback"
+		]
+	},
+	"manifest_version": 2,
+	"load_composer_autoloader": true
+}
