@@ -55,8 +55,7 @@
 		"forms-edit-form-definition"
 	],
 	"AutoloadNamespaces": {
-		"MediaWiki\\Extension\\Forms\\": "src/",
-		"MediaWiki\\Extension\\Forms\\Tests\\": "tests/phpunit"
+		"MediaWiki\\Extension\\Forms\\": "src/"
 	},
 	"ContentHandlers": {
 		"FormDefinition": "MediaWiki\\Extension\\Forms\\ContentHandler\\FormDefinitionHandler",
