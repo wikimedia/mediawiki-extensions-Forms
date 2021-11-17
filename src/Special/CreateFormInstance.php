@@ -11,6 +11,9 @@ class CreateFormInstance extends FormSpecial {
 	 */
 	protected $definitionManager;
 
+	/**
+	 * @var string
+	 */
 	protected $formDefinition = '';
 
 	public function __construct() {

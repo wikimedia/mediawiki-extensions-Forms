@@ -3,13 +3,18 @@
 namespace MediaWiki\Extension\Forms\Target;
 
 use HashConfig;
+use MediaWiki\Extension\Forms\ITarget;
 use Title;
 use WikiPage;
 
 class Template extends TitleTarget {
-	/** @var Title  */
+	/** @var Title */
 	protected $template;
 
+	/**
+	 * @param HashConfig $config
+	 * @return ITarget
+	 */
 	public static function factory( HashConfig $config ) {
 		$instance = parent::factory( $config );
 
@@ -20,14 +25,23 @@ class Template extends TitleTarget {
 		return $instance;
 	}
 
+	/**
+	 * @param Title $templateTitle
+	 */
 	public function setTemplate( Title $templateTitle ) {
 		$this->template = $templateTitle;
 	}
 
+	/**
+	 * @return string
+	 */
 	protected function getPageFormat() {
 		return '';
 	}
 
+	/**
+	 * @return string
+	 */
 	protected function getDataForContent() {
 		$templateData = [];
 		$formData = [];
@@ -35,7 +49,7 @@ class Template extends TitleTarget {
 
 		$templateFields = $this->getTemplateFields();
 		foreach ( $this->data as $field => $value ) {
-			if ( in_array( $field, $this->reservedFields  ) ){
+			if ( in_array( $field, $this->reservedFields ) ) {
 				$formData[$field] = $value;
 			} elseif ( in_array( $field, $templateFields ) || empty( $templateFields ) ) {
 				$templateData[$field] = $value;
@@ -53,6 +67,10 @@ class Template extends TitleTarget {
 		return $text;
 	}
 
+	/**
+	 * @param array $data
+	 * @return string
+	 */
 	private function getFormTag( array $data ) {
 		$tag = '<formMeta ';
 		$values = $this->assocToStringValues( $data );
@@ -62,6 +80,10 @@ class Template extends TitleTarget {
 		return $tag;
 	}
 
+	/**
+	 * @param array $data
+	 * @return string
+	 */
 	private function getTemplateCall( array $data ) {
 		$values = $this->assocToStringValues( $data );
 		$imploded = implode( "\n|", $values );
@@ -69,6 +91,10 @@ class Template extends TitleTarget {
 		return "{{{$templateName}\n|{$imploded}}}";
 	}
 
+	/**
+	 * @param array $data
+	 * @return string
+	 */
 	private function getUnsortedFields( array $data ) {
 		$text = '';
 		foreach ( $data as $key => $value ) {
@@ -78,6 +104,10 @@ class Template extends TitleTarget {
 		return $text;
 	}
 
+	/**
+	 * @param array $data
+	 * @return array
+	 */
 	private function assocToStringValues( array $data ) {
 		$values = [];
 		foreach ( $data as $key => $value ) {
@@ -87,11 +117,14 @@ class Template extends TitleTarget {
 		return $values;
 	}
 
+	/**
+	 * @return array
+	 */
 	private function getTemplateFields() {
 		if ( $this->template->exists() === false ) {
 			return [];
 		}
-		//TODO: Gotta be better way
+		// TODO: Gotta be better way
 		$wp = WikiPage::factory( $this->template );
 		$content = $wp->getContent();
 		$text = $content->getNativeData();

@@ -7,11 +7,11 @@ use MediaWiki\MediaWikiServices;
 
 return [
 
-	'FormsDefinitionManager' => function ( MediaWikiServices $services ) {
+	'FormsDefinitionManager' => static function ( MediaWikiServices $services ) {
 		return new DefinitionManager();
 	},
 
-	'FormsRevisionManager' => function( MediaWikiServices $services ) {
+	'FormsRevisionManager' => static function ( MediaWikiServices $services ) {
 		$revisionStore = $services->getRevisionStore();
 		$db = $services->getDBLoadBalancer()->getConnection(
 			DB_MASTER
@@ -22,7 +22,7 @@ return [
 		);
 	},
 
-	'FormsAutosaver' => function( MediaWikiServices $services ) {
+	'FormsAutosaver' => static function ( MediaWikiServices $services ) {
 		$db = $services->getDBLoadBalancer()->getConnection(
 			DB_MASTER
 		);
@@ -30,5 +30,5 @@ return [
 			$db
 		);
 	}
-	
+
 ];

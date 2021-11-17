@@ -7,16 +7,16 @@ use MediaWiki\MediaWikiServices;
 use Title;
 
 class DefinitionManager {
-	const TYPE_ABSTRACT = 'abstract';
-	const TYPE_CONCRETE = 'concrete';
-	const TYPE_PARTIAL = 'partial';
-	const TYPE_SYSTEM = 'system';
+	public const TYPE_ABSTRACT = 'abstract';
+	public const TYPE_CONCRETE = 'concrete';
+	public const TYPE_PARTIAL = 'partial';
+	public const TYPE_SYSTEM = 'system';
 
-	const LANG_JS = 'js';
-	const LANG_JSON = 'json';
-	
-	const SOURCE_ATTRIBUTE = 'attribute';
-	const SOURCE_WIKIPAGE = 'wikipage';
+	public const LANG_JS = 'js';
+	public const LANG_JSON = 'json';
+
+	public const SOURCE_ATTRIBUTE = 'attribute';
+	public const SOURCE_WIKIPAGE = 'wikipage';
 
 	/**
 	 * @var array
@@ -72,7 +72,11 @@ class DefinitionManager {
 
 		return $this->definitions[$definition]['content'];
 	}
-	
+
+	/**
+	 * @param string $definitionName
+	 * @return bool
+	 */
 	public function definitionIsWikipage( $definitionName ) {
 		if ( $this->definitionExists( $definitionName ) === false ) {
 			return false;
@@ -82,7 +86,7 @@ class DefinitionManager {
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Get the latest Revision ID of the form definition,
 	 * if form is defined as a wikipage
@@ -113,7 +117,7 @@ class DefinitionManager {
 			static::TYPE_PARTIAL => [],
 			static::TYPE_SYSTEM => []
 		];
-		foreach( $this->definitions as $name => $info ) {
+		foreach ( $this->definitions as $name => $info ) {
 			$type = $info['type'];
 			if ( !isset( $names[$type] ) ) {
 				$names[$type] = [];
@@ -126,12 +130,12 @@ class DefinitionManager {
 	/**
 	 * Get definition keys for a given type
 	 *
-	 * @type string
+	 * @param string $type
 	 * @return array
 	 */
 	public function getDefinitionKeys( $type = self::TYPE_CONCRETE ) {
 		$names = [];
-		foreach( $this->definitions as $name => $info ) {
+		foreach ( $this->definitions as $name => $info ) {
 			if ( $info['type'] === $type ) {
 				$names[] = $name;
 			}
@@ -146,7 +150,7 @@ class DefinitionManager {
 	 * @return string
 	 * @throws \MWException
 	 */
-	public function getDefinitionLang( $name  ) {
+	public function getDefinitionLang( $name ) {
 		if ( !$this->definitionExists( $name ) ) {
 			throw new \MWException( 'Definition does not exist' );
 		}
@@ -159,13 +163,20 @@ class DefinitionManager {
 		$this->loadFromContentModel();
 	}
 
-	private function getTitleFromDefinitionName( $name )  {
+	/**
+	 * @param string $name
+	 * @return Title
+	 */
+	private function getTitleFromDefinitionName( $name ) {
 		 // TODO: No hardcoded extension
 		return Title::newFromText( "$name.form" );
 	}
 
 	/**
 	 * Parses actual definition contents to determine the type
+	 * @param string $definition
+	 * @param string $lang
+	 * @return string
 	 */
 	private function parseDefinitionType( $definition, $lang ) {
 		if ( $lang === static::LANG_JS ) {
@@ -205,6 +216,11 @@ class DefinitionManager {
 		return static::TYPE_CONCRETE;
 	}
 
+	/**
+	 * @param string $definition
+	 * @param mixed $default
+	 * @return mixed
+	 */
 	private function parseDefinitionLang( $definition, $default ) {
 		$matches = [];
 		$langs = implode( '|', [
@@ -242,7 +258,7 @@ class DefinitionManager {
 
 	protected function loadFromContentModel() {
 		$pages = $this->getPages();
-		foreach( $pages as $pageRow ) {
+		foreach ( $pages as $pageRow ) {
 			$page = \Title::newFromRow( $pageRow );
 			$wikipage = \WikiPage::factory( $page );
 			$content = $wikipage->getContent();
@@ -259,6 +275,9 @@ class DefinitionManager {
 		}
 	}
 
+	/**
+	 * @return bool
+	 */
 	protected function getPages() {
 		$db = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection(
 			DB_REPLICA
@@ -272,16 +291,27 @@ class DefinitionManager {
 		return $res;
 	}
 
-
+	/**
+	 * @param string $definition
+	 * @return bool
+	 */
 	protected function fileExists( $definition ) {
 		return file_exists( $this->expandPath( $definition ) );
 	}
 
+		/**
+		 * @param string $definition
+		 * @return string
+		 */
 	protected function getContent( $definition ) {
 		return file_get_contents( $this->expandPath( $definition ) );
 	}
 
+	/**
+	 * @param string $definition
+	 * @return string
+	 */
 	protected function expandPath( $definition ) {
-		return dirname( dirname( dirname ( __FILE__ ) ) ) . "/$definition";
+		return dirname( dirname( __DIR__ ) ) . "/$definition";
 	}
 }

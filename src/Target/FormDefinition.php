@@ -4,14 +4,23 @@ namespace MediaWiki\Extension\Forms\Target;
 
 use MediaWiki\Extension\Forms\FormRevisionManager;
 use MediaWiki\MediaWikiServices;
+use Status;
 use Title;
 
 class FormDefinition extends JsonOnWikiPage {
 
+	/**
+	 * @return string
+	 */
 	protected function getPageFormat() {
 		return ".form";
 	}
 
+	/**
+	 * @param array $formsubmittedData
+	 * @param string $summary
+	 * @return Status
+	 */
 	public function execute( $formsubmittedData, $summary ) {
 		$this->data = $formsubmittedData;
 		$this->summary = $summary;
@@ -32,6 +41,9 @@ class FormDefinition extends JsonOnWikiPage {
 		return $saveStatus;
 	}
 
+	/**
+	 * @param array $saveValue
+	 */
 	private function insertRev( $saveValue ) {
 		/** @var FormRevisionManager $revManager */
 		$revManager = MediaWikiServices::getInstance()->getService(

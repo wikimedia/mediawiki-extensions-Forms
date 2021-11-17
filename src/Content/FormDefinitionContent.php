@@ -2,25 +2,45 @@
 
 namespace MediaWiki\Extension\Forms\Content;
 
-use Html;
-use Title;
-use ParserOutput;
-use ParserOptions;
 use Hooks;
+use Html;
+use ParserOptions;
+use ParserOutput;
+use Title;
 
 class FormDefinitionContent extends FormDataContent {
+	/**
+	 * @var string
+	 */
 	protected $currentForm = '';
 
+	/**
+	 * @param string $text
+	 * @param string $modelId
+	 */
 	public function __construct( $text, $modelId = 'FormDefinition' ) {
 		parent::__construct( $text, $modelId );
 	}
 
-	protected function fillParserOutput( Title $title, $revId, ParserOptions $options, $generateHtml, ParserOutput &$output ) {
+	/**
+	 * @param Title $title
+	 * @param int $revId
+	 * @param ParserOptions $options
+	 * @param string $generateHtml
+	 * @param ParserOutput &$output
+	 */
+	protected function fillParserOutput( Title $title, $revId, ParserOptions $options,
+		$generateHtml, ParserOutput &$output ) {
 		$this->currentForm = $this->getTitleWithoutExtension( $title );
 		$this->addCategoriesFromJSON( $output );
 		parent::fillParserOutput( $title, $revId, $options, $generateHtml, $output );
 	}
 
+	/**
+	 * @param string $action
+	 * @param Title|null $for
+	 * @return string
+	 */
 	public function getFormContainer( $action = 'view', $for = null ) {
 		$formConfig = [
 			'data-action' => 'create',
@@ -32,13 +52,21 @@ class FormDefinitionContent extends FormDataContent {
 		return Html::element( 'div', $formConfig );
 	}
 
+	/**
+	 * @param Title $title
+	 * @return string
+	 */
 	public function getTitleWithoutExtension( $title ) {
 		$prefixedDBKey = $title->getPrefixedDBKey();
-		return substr( $prefixedDBKey, 0, -5);
+		return substr( $prefixedDBKey, 0, -5 );
 	}
 
+	/**
+	 * @param Title $title
+	 * @return string
+	 */
 	protected function getDisplayTitle( $title ) {
-		$displayTitle = substr( $title->getPrefixedText(), 0, -5  );
+		$displayTitle = substr( $title->getPrefixedText(), 0, -5 );
 		Hooks::run( 'FormsGetDisplayTitle', [ $title, &$displayTitle, 'view' ] );
 		return $displayTitle;
 	}
@@ -48,9 +76,9 @@ class FormDefinitionContent extends FormDataContent {
 	 * @param ParserOutput $output
 	 */
 	private function addCategoriesFromJSON( $output ) {
-		$formdata = (array) $this->getData()->getValue();
+		$formdata = (array)$this->getData()->getValue();
 		$categories = isset( $formdata['categories'] ) ? $formdata['categories'] : [];
-		foreach( $categories as $categoryName ) {
+		foreach ( $categories as $categoryName ) {
 			$output->addCategory( $categoryName, $categoryName );
 		}
 	}

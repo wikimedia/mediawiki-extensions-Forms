@@ -2,18 +2,21 @@
 namespace MediaWiki\Extension\Forms\Tag;
 
 class CreateForm extends FormTag {
-	/** @var array  */
+	/** @var array */
 	protected $sizes = [
 		'small' => "50%",
 		'medium' => "75%",
 		'large' => "100%"
 	];
 
-	/** @var array  */
+	/** @var array */
 	protected $data = [];
 
+	/**
+	 * @return string
+	 */
 	public function handle() {
-		$this->parser->getOutput()->updateCacheExpiry(0);
+		$this->parser->getOutput()->updateCacheExpiry( 0 );
 		$out = $this->parser->getOutput();
 
 		$this->parseData();
@@ -23,11 +26,14 @@ class CreateForm extends FormTag {
 			return $this->error( 'forms-error-no-form-specified' );
 		}
 
-		$out->addModules('ext.forms.init');
+		$out->addModules( 'ext.forms.init' );
 
 		return $this->getFormContainer( $forms );
 	}
 
+	/**
+	 * @return string
+	 */
 	protected function getStyle() {
 		if ( isset( $this->args['style'] ) ) {
 			return $this->args['style'];
@@ -36,6 +42,9 @@ class CreateForm extends FormTag {
 		return "width: $size;";
 	}
 
+	/**
+	 * @return string
+	 */
 	protected function getSize() {
 		$size = $this->sizes['large'];
 		if ( isset( $this->args['size'] ) && isset( $this->sizes[$this->args['size']] ) ) {
@@ -44,6 +53,9 @@ class CreateForm extends FormTag {
 		return $size;
 	}
 
+	/**
+	 * @return array
+	 */
 	protected function parseForm() {
 		if ( !isset( $this->args['form'] ) || empty( $this->args['form'] ) ) {
 			return [];
@@ -52,6 +64,10 @@ class CreateForm extends FormTag {
 		return explode( '|', $this->args['form'] );
 	}
 
+	/**
+	 * @param array $forms
+	 * @return string
+	 */
 	protected function getFormContainer( $forms ) {
 		$data = [
 			'class' => 'forms-form-container',
@@ -68,7 +84,7 @@ class CreateForm extends FormTag {
 		} else {
 			$data['data-form'] = $forms[0];
 		}
-		return \Html::element('div', $data );
+		return \Html::element( 'div', $data );
 	}
 
 	protected function parseData() {
@@ -88,6 +104,9 @@ class CreateForm extends FormTag {
 		}
 	}
 
+	/**
+	 * @return bool
+	 */
 	protected function autoSelectForm() {
 		if ( isset( $this->args['autoselectform'] ) ) {
 			return true;

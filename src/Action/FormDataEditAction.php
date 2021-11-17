@@ -2,24 +2,42 @@
 
 namespace MediaWiki\Extension\Forms\Action;
 
+use Content;
+use ContentHandler;
 use FormlessAction;
+use Hooks;
 use MediaWiki\Extension\Forms\Content\FormDataContent;
 use MediaWiki\Storage\RevisionRecord;
 use SpecialPage;
-use Content;
-use Hooks;
-use ContentHandler;
+use Title;
 
 class FormDataEditAction extends FormlessAction {
+
+	/**
+	 * @var string
+	 */
 	protected $contentModel = 'FormData';
+
+	/**
+	 * @var string
+	 */
 	protected $contentFormat = '';
 
+	/**
+	 * @var string
+	 */
 	protected $action = 'edit';
 
+	/**
+	 * @return string
+	 */
 	public function getName() {
 		return 'edit';
 	}
 
+	/**
+	 * @return string
+	 */
 	public function getRestriction() {
 		return 'edit';
 	}
@@ -50,6 +68,9 @@ class FormDataEditAction extends FormlessAction {
 		$out->addModules( 'ext.forms.init' );
 	}
 
+	/**
+	 * @return Content|null
+	 */
 	protected function getCurrentContent() {
 		$rev = $this->page->getRevision();
 		$content = $rev ? $rev->getContent( RevisionRecord::RAW ) : null;
@@ -62,14 +83,23 @@ class FormDataEditAction extends FormlessAction {
 		return $content;
 	}
 
+	/**
+	 * @return Title
+	 */
 	protected function getCreateRedirect() {
 		return SpecialPage::getTitleFor( 'CreateFormInstance' )->getLocalURL();
 	}
 
+	/**
+	 * @return null
+	 */
 	public function onView() {
 		return null;
 	}
 
+	/**
+	 * @return string
+	 */
 	private function getDisplayTitle() {
 		$displayTitle = wfMessage(
 			"forms-form-edit-title",
@@ -79,12 +109,16 @@ class FormDataEditAction extends FormlessAction {
 		return $displayTitle;
 	}
 
+	/**
+	 * @param FormDataContent $content
+	 * @return bool
+	 */
 	private function checkSealed( FormDataContent $content ) {
 		$data = $content->getData()->getValue();
 		if ( $data === null ) {
 			return false;
 		}
-		if( !property_exists( $data, '_sealed' ) ) {
+		if ( !property_exists( $data, '_sealed' ) ) {
 			return false;
 		}
 		if ( $data->_sealed === true ) {

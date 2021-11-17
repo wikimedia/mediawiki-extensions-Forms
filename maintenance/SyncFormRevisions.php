@@ -1,8 +1,8 @@
 <?php
 
-$IP = dirname(dirname(dirname(__DIR__)));
+$IP = dirname( dirname( dirname( __DIR__ ) ) );
 
-require_once( "$IP/maintenance/Maintenance.php" );
+require_once "$IP/maintenance/Maintenance.php";
 
 class SyncFormRevisions extends Maintenance {
 
@@ -30,11 +30,11 @@ class SyncFormRevisions extends Maintenance {
 
 		$status = $revManager->syncRevs( $form, $maxRev );
 		if ( $status->isOK() === false ) {
-			return $this->output( "Error:" . $status->getMessage() . PHP_EOL);
+			return $this->output( "Error:" . $status->getMessage() . PHP_EOL );
 		}
 		$this->output( '...done' . PHP_EOL );
 	}
 }
 
 $maintClass = 'SyncFormRevisions';
-require_once( RUN_MAINTENANCE_IF_MAIN );
+require_once RUN_MAINTENANCE_IF_MAIN;
