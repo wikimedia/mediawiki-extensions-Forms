@@ -2,24 +2,23 @@
 
 namespace MediaWiki\Extension\Forms\Target;
 
-use MediaWiki\Extension\Forms\ITarget;
-use HashConfig;
-use MediaWiki\MediaWikiServices;
-use Wikimedia\Rdbms\IDatabase;
 use FormatJson;
-use User;
+use HashConfig;
+use MediaWiki\Extension\Forms\ITarget;
+use MediaWiki\MediaWikiServices;
 use RequestContext;
 use Status;
+use User;
+use Wikimedia\Rdbms\IDatabase;
 
 class Database implements ITarget {
-	const TABLE = 'form_data';
-	const FIELD_ID = 'fd_id';
-	const FIELD_TITLE = 'fd_title';
-	const FIELD_FORM = 'fd_form';
-	const FIELD_DATA = 'fd_data';
-	const FIELD_USER = 'fd_user';
-	const FIELD_TIMESTAMP = 'fd_timestamp';
-
+	public const TABLE = 'form_data';
+	public const FIELD_ID = 'fd_id';
+	public const FIELD_TITLE = 'fd_title';
+	public const FIELD_FORM = 'fd_form';
+	public const FIELD_DATA = 'fd_data';
+	public const FIELD_USER = 'fd_user';
+	public const FIELD_TIMESTAMP = 'fd_timestamp';
 
 	/**
 	 * @var IDatabase
@@ -62,8 +61,11 @@ class Database implements ITarget {
 		$this->user = $user;
 	}
 
+	/**
+	 * @param HashConfig $config
+	 * @return ITarget
+	 */
 	public static function factory( HashConfig $config ) {
-		error_log( $config->get( 'form' ) );
 		if ( !$config->has( 'form' ) || !$config->get( 'form' ) ) {
 			return null;
 		}
@@ -83,7 +85,11 @@ class Database implements ITarget {
 		return new static( $db, $user, $config->get( 'form' ), $title, $id );
 	}
 
-	// TODO: This probably does not work, it should not always set the latest rev
+	/**
+	 * TODO: This probably does not work, it should not always set the latest rev
+	 * @param array &$formsubmittedData
+	 * @param bool|false $toLatest
+	 */
 	public function trySetFormRev( &$formsubmittedData, $toLatest = false ) {
 		$definitionManager = MediaWikiServices::getInstance()->getService(
 			"FormsDefinitionManager"
@@ -123,6 +129,9 @@ class Database implements ITarget {
 		return Status::newFatal( "forms-error-target-db-save-failed" );
 	}
 
+	/**
+	 * @return bool
+	 */
 	private function checkId() {
 		$row = $this->db->selectRow(
 			static::TABLE,
@@ -138,6 +147,10 @@ class Database implements ITarget {
 		return false;
 	}
 
+	/**
+	 * @param array $formsubmittedData
+	 * @return bool
+	 */
 	private function update( array $formsubmittedData ) {
 		return $this->db->update(
 			static::TABLE,
@@ -146,6 +159,10 @@ class Database implements ITarget {
 		);
 	}
 
+	/**
+	 * @param array $formsubmittedData
+	 * @return bool
+	 */
 	private function insert( array $formsubmittedData ) {
 		return $this->db->insert(
 			static::TABLE,
@@ -157,7 +174,7 @@ class Database implements ITarget {
 	 * Helper function that updates the DB data with
 	 * the row id of the newly inserted data
 	 *
-	 * @param array &$formsubmittedData
+	 * @param array $formsubmittedData
 	 * @return bool
 	 */
 	private function insertIDToData( $formsubmittedData ) {
@@ -173,7 +190,11 @@ class Database implements ITarget {
 		$formsubmittedData['_id'] = $this->id;
 	}
 
-	private function getDataForDB( $formsubmittedData) {
+	/**
+	 * @param array $formsubmittedData
+	 * @return array
+	 */
+	private function getDataForDB( $formsubmittedData ) {
 		return [
 			static::FIELD_FORM => $this->form,
 			static::FIELD_TITLE => $this->title,
@@ -192,7 +213,7 @@ class Database implements ITarget {
 	 * return [
 	 *    "type" => "redirect",
 	 *    "url" => Title::newMainPage()->getLocalUrl()
-	 *]
+	 * ]
 	 *
 	 * @return array|false
 	 */

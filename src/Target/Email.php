@@ -2,21 +2,40 @@
 
 namespace MediaWiki\Extension\Forms\Target;
 
-use MediaWiki\Extension\Forms\ITarget;
-use HashConfig;
-use MediaWiki\MediaWikiServices;
-use Wikimedia\Rdbms\IDatabase;
 use FormatJson;
-use User;
+use HashConfig;
+use MediaWiki\Extension\Forms\ITarget;
 use RequestContext;
 use Status;
+use User;
 
 class Email implements ITarget {
+	/**
+	 * @var string
+	 */
 	protected $form;
+
+	/**
+	 * @var string
+	 */
 	protected $title;
+
+	/**
+	 * @var User
+	 */
 	protected $user;
+
+	/**
+	 * @var array
+	 */
 	protected $receivers;
 
+	/**
+	 * @param array $receivers
+	 * @param User $user
+	 * @param string $form
+	 * @param string $title
+	 */
 	protected function __construct( $receivers, $user, $form, $title = '' ) {
 		$this->receivers = $receivers;
 		$this->form = $form;
@@ -24,6 +43,10 @@ class Email implements ITarget {
 		$this->user = $user;
 	}
 
+	/**
+	 * @param HashConfig $config
+	 * @return ITarget
+	 */
 	public static function factory( HashConfig $config ) {
 		if ( !$config->has( 'form' ) ) {
 			return null;
@@ -48,10 +71,15 @@ class Email implements ITarget {
 	 */
 	public function execute( $formsubmittedData, $summary ) {
 		$mails = [];
-		foreach( $this->receivers as $receiver ) {
+		foreach ( $this->receivers as $receiver ) {
 			$mails[] = new \MailAddress( $receiver );
 		}
-		\UserMailer::send( $mails, $GLOBALS['wgPasswordSender'], $this->title, FormatJson::encode( $formsubmittedData ) );
+		\UserMailer::send(
+			$mails,
+			$GLOBALS['wgPasswordSender'],
+			$this->title,
+			FormatJson::encode( $formsubmittedData )
+		);
 		return Status::newGood();
 	}
 
@@ -64,14 +92,14 @@ class Email implements ITarget {
 	 * return [
 	 *    "type" => "redirect",
 	 *    "url" => Title::newMainPage()->getLocalUrl()
-	 *]
+	 * ]
 	 *
 	 * @return array|false
 	 */
 	public function getDefaultAfterAction() {
 		return [
-	     "type" => "redirect",
-	     "url" => \Title::newMainPage()->getLocalUrl()
+		 "type" => "redirect",
+		 "url" => \Title::newMainPage()->getLocalUrl()
 		];
 	}
 }

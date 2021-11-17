@@ -6,8 +6,8 @@ use MediaWiki\Extension\Forms\DefinitionManager;
 use MediaWiki\MediaWikiServices;
 
 class GetDefinitions extends \ApiBase {
-	const QUERY_TYPE_QUERY_AVAILABLE = 'query-available';
-	const QUERY_TYPE_GET_DEFINITION = 'get-definition';
+	public const QUERY_TYPE_QUERY_AVAILABLE = 'query-available';
+	public const QUERY_TYPE_GET_DEFINITION = 'get-definition';
 
 	/**
 	 * @var string
@@ -18,7 +18,7 @@ class GetDefinitions extends \ApiBase {
 	 * @var string
 	 */
 	protected $definitionType;
-	
+
 	/**
 	 *
 	 * @var string
@@ -46,6 +46,9 @@ class GetDefinitions extends \ApiBase {
 		$this->returnResults();
 	}
 
+	/**
+	 * @return array
+	 */
 	protected function getAllowedParams() {
 		return [
 			'type' => [
@@ -92,28 +95,39 @@ class GetDefinitions extends \ApiBase {
 
 		if ( $this->status->isGood() ) {
 			$result->addValue( null, 'success', 1 );
-			$result->addValue( null , 'result', $this->status->getValue() );
+			$result->addValue( null, 'result', $this->status->getValue() );
 		} else {
 			$result->addValue( null, 'success', 0 );
 			$result->addValue( null, 'error', $this->status->getMessage() );
 		}
-
 	}
 
+	/**
+	 *
+	 */
 	protected function getAvailableDefinitions() {
 		$type = $this->getParameter( 'definitionType' );
-		$this->status = \Status::newGood( $this->definitionManager->getDefinitionKeys( $type ) );
+		$this->status = \Status::newGood(
+			$this->definitionManager->getDefinitionKeys( $type )
+		);
 	}
 
+	/**
+	 *
+	 */
 	protected function getDefinitionContent() {
 		$name = $this->getParameter( 'name' );
 		if ( !$name ) {
-			$this->status = \Status::newFatal( wfMessage( 'forms-api-get-definitions-no-name' ) );
+			$this->status = \Status::newFatal(
+				$this->msg( 'forms-api-get-definitions-no-name' )
+			);
 		}
 		if ( !$this->definitionManager->definitionExists( $name ) ) {
-			$this->status = \Status::newFatal( wfMessage( 'forms-api-get-definition-not-exist', $name ) );
+			$this->status = \Status::newFatal(
+				$this->msg( 'forms-api-get-definition-not-exist', $name )
+			);
 		}
-		
+
 		$validForTime = $this->getParameter( 'validForTime' );
 		$this->status = \Status::newGood( [
 			'definition' => $this->definitionManager->getDefinition( $name, $validForTime ),

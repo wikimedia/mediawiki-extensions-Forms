@@ -20,7 +20,7 @@ interface ITarget {
 	 * return [
 	 *	"type" => "redirect",
 	 *	"url" => Title::newMainPage()->getLocalUrl()
-	 *]
+	 * ]
 	 *
 	 * @return array|false
 	 */

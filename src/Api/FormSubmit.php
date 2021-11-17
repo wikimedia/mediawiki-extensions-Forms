@@ -2,7 +2,6 @@
 
 namespace MediaWiki\Extension\Forms\Api;
 
-
 use MediaWiki\Extension\Forms\ITarget;
 
 class FormSubmit extends \ApiBase {
@@ -43,6 +42,9 @@ class FormSubmit extends \ApiBase {
 		$this->returnResults();
 	}
 
+	/**
+	 * @return array
+	 */
 	protected function getAllowedParams() {
 		return [
 			'form' => [
@@ -64,6 +66,15 @@ class FormSubmit extends \ApiBase {
 		];
 	}
 
+	/**
+	 * Using the settings determine the value for the given parameter
+	 *
+	 * @param string $paramName Parameter name
+	 * @param array|mixed $paramSettings Default value or an array of settings
+	 *  using PARAM_* constants.
+	 * @param bool $parseLimit Whether to parse and validate 'limit' parameters
+	 * @return mixed Parameter value
+	 */
 	protected function getParameterFromSettings( $paramName, $paramSettings, $parseLimit ) {
 		$value = parent::getParameterFromSettings( $paramName, $paramSettings, $parseLimit );
 		if ( $paramName === 'target' ) {
@@ -90,11 +101,15 @@ class FormSubmit extends \ApiBase {
 
 	protected function sendToTarget() {
 		if ( $this->target instanceof ITarget === false ) {
-			$this->status = \Status::newFatal( wfMessage( 'forms-api-form-submit-invalid-target' ) );
+			$this->status = \Status::newFatal(
+				$this->msg( 'forms-api-form-submit-invalid-target' )
+			);
 			return;
 		}
 		if ( empty( $this->data ) ) {
-			$this->status = \Status::newFatal( wfMessage( 'forms-api-form-submit-empty-data' ) );
+			$this->status = \Status::newFatal(
+				$this->msg( 'forms-api-form-submit-empty-data' )
+			);
 			return;
 		}
 
@@ -106,13 +121,14 @@ class FormSubmit extends \ApiBase {
 
 		if ( $this->status->isGood() ) {
 			$result->addValue( null, 'success', 1 );
-			$result->addValue( null , 'result', $this->status->getValue() );
-			$result->addValue( null , 'defaultAfterAction', $this->target->getDefaultAfterAction() );
+			$result->addValue( null, 'result', $this->status->getValue() );
+			$result->addValue(
+				null, 'defaultAfterAction', $this->target->getDefaultAfterAction()
+			);
 		} else {
 			$result->addValue( null, 'success', 0 );
 			$result->addValue( null, 'error', $this->status->getMessage() );
 		}
-
 	}
 
 	/**

@@ -59,6 +59,10 @@ abstract class FormTag {
 
 	abstract public function handle();
 
+	/**
+	 * @param string $message
+	 * @return string
+	 */
 	protected function error( $message ) {
 		return \Html::element( 'div', [
 			"class" => "ext-forms-tag-error"

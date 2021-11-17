@@ -6,16 +6,16 @@ use MediaWiki\Extension\Forms\Tag\CreateForm;
 use MediaWiki\Extension\Forms\Tag\FormList;
 use MediaWiki\Extension\Forms\Tag\FormMeta;
 use Parser;
-use Title;
 use ResourceLoader;
+use Title;
 
 class Setup {
 
 	/**
 	 *
 	 * @param Title $title
-	 * @param string $model
-	 * @return boolean
+	 * @param string &$model
+	 * @return bool
 	 */
 	public static function onContentHandlerDefaultModelFor( Title $title, &$model ) {
 		if ( preg_match( '/\.form$/', $title->getText() ) && !$title->isTalkPage() ) {
@@ -32,9 +32,9 @@ class Setup {
 
 	/**
 	 * Register QUnit Tests with MediaWiki framework
-	 * @param array $testModules
-	 * @param ResourceLoader $resourceLoader
-	 * @return boolean
+	 * @param array &$testModules
+	 * @param ResourceLoader &$resourceLoader
+	 * @return bool
 	 */
 	public static function onResourceLoaderTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
 		$testModules['qunit']['ext.forms.tests'] = [
@@ -48,6 +48,9 @@ class Setup {
 		return true;
 	}
 
+	/**
+	 * @param Parser $parser
+	 */
 	public static function onParserFirstCallInit( Parser $parser ) {
 		$parser->setHook( 'createForm', [ CreateForm::class, 'callback' ] );
 		$parser->setHook( 'formMeta', [ FormMeta::class, 'callback' ] );

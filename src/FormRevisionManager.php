@@ -4,16 +4,16 @@ namespace MediaWiki\Extension\Forms;
 
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Storage\RevisionStore;
-use Database;
-use Title;
 use Status;
+use Title;
+use Wikimedia\Rdbms\IDatabase;
 
 class FormRevisionManager {
-	const TABLE = 'form_revision';
+	public const TABLE = 'form_revision';
 
-	const FIELD_REV_ID = 'fr_rev_id';
-	const FIELD_PAGE_ID = 'fr_page_id';
-	const FIELD_APPLIES_FROM = 'fr_applies_from';
+	public const FIELD_REV_ID = 'fr_rev_id';
+	public const FIELD_PAGE_ID = 'fr_page_id';
+	public const FIELD_APPLIES_FROM = 'fr_applies_from';
 
 	/**
 	 * @var RevisionStore
@@ -21,20 +21,23 @@ class FormRevisionManager {
 	protected $revisionStore;
 
 	/**
-	 * @var Database
+	 * @var IDatabase
 	 */
 	protected $db;
 
 	/**
-	 *
 	 * @param RevisionStore $revisionStore
-	 * @param Database $db
+	 * @param IDatabase $db
 	 * @return FormRevisionManager
 	 */
 	public static function factory( $revisionStore, $db ) {
 		return new static( $revisionStore, $db );
 	}
 
+	/**
+	 * @param RevisionStore $revisionStore
+	 * @param IDatabase $db
+	 */
 	public function __construct( $revisionStore, $db ) {
 		$this->revisionStore = $revisionStore;
 		$this->db = $db;
@@ -65,7 +68,7 @@ class FormRevisionManager {
 	/**
 	 * Delete revision history for given form
 	 *
-	 * @param $formId
+	 * @param int $formId
 	 * @return bool
 	 */
 	public function deleteForForm( $formId ) {
@@ -80,6 +83,11 @@ class FormRevisionManager {
 		);
 	}
 
+	/**
+	 * @param string $form
+	 * @param int $maxRev
+	 * @return Status
+	 */
 	public function syncRevs( $form, $maxRev ) {
 		$defManager = MediaWikiServices::getInstance()->getService(
 			'FormsDefinitionManager'
@@ -88,7 +96,8 @@ class FormRevisionManager {
 		$conds = [];
 		if ( $form !== '*' ) {
 			if ( $defManager->definitionExists( $form ) ) {
-				$formTitle = Title::newFromText( "$form.form" ); // TODO: Hardcoded
+				// TODO: Hardcoded
+				$formTitle = Title::newFromText( "$form.form" );
 				if ( !$formTitle instanceof Title || !$formTitle->exists() ) {
 					return Status::newFatal( "Form $form is invalid or is not declared as a wikipage" );
 				} else {
@@ -102,7 +111,7 @@ class FormRevisionManager {
 			$conds[] = static::FIELD_REV_ID . "<= $maxRev";
 		}
 
-		if( empty( $conds ) ) {
+		if ( empty( $conds ) ) {
 			$conds = [
 				static::FIELD_REV_ID . "> 0 "
 			];
@@ -135,23 +144,31 @@ class FormRevisionManager {
 			[ 'ORDER BY' => static::FIELD_APPLIES_FROM . " DESC" ]
 		);
 
-
 		if ( $row ) {
-			return (int) $row->{static::FIELD_REV_ID};
+			return (int)$row->{static::FIELD_REV_ID};
 		}
 
 		return null;
 	}
 
+	/**
+	 * @param int $revId
+	 * @return bool
+	 */
 	private function exists( $revId ) {
 		$row = $this->db->selectRow(
 			static::TABLE,
 			'*',
 			[ static::FIELD_REV_ID => $revId ]
 		);
-		return !!$row;
+		return (bool)$row;
 	}
 
+	/**
+	 * @param int $revId
+	 * @param stinrg $ts
+	 * @return bool
+	 */
 	private function doUpdate( $revId, $ts ) {
 		$res = $this->db->update(
 			static::TABLE,
@@ -162,6 +179,12 @@ class FormRevisionManager {
 		return $res;
 	}
 
+	/**
+	 * @param int $pageId
+	 * @param int $revId
+	 * @param string $ts
+	 * @return bool
+	 */
 	private function doInsert( $pageId, $revId, $ts ) {
 		$res = $this->db->insert(
 			static::TABLE,

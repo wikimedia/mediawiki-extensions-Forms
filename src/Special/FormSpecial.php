@@ -2,15 +2,21 @@
 
 namespace MediaWiki\Extension\Forms\Special;
 
-use SpecialPage;
 use Html;
-use ExtensionRegistry;
+use SpecialPage;
 
 /**
  * Base class for all special pages that are supposed to show a form
  */
 abstract class FormSpecial extends SpecialPage {
 
+	/**
+	 * @param array $form
+	 * @param string $data
+	 * @param string $action
+	 * @param string $created
+	 * @return string
+	 */
 	protected function getFormContainer( $form, $data = '', $action = 'view', $created = '' ) {
 		$data = [
 			'class' => 'forms-form-container',
