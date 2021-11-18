@@ -10,7 +10,7 @@
 	};
 
 	mw.ext.forms.target.JsonOnWikiPage.prototype.getDisplayName = function() {
-		return mw.message( 'forms-form-editor-prop-targetTypeJsonOnWikipage' ).text();
+		return mw.message( 'forms-form-editor-prop-targettypejsononwikipage' ).text();
 	};
 
 	mw.ext.forms.target.JsonOnWikiPage.prototype.getAdditionalFields = function() {
@@ -18,7 +18,7 @@
 			type: 'text',
 			name: 'target.title',
 			required: true,
-			label: mw.message( 'forms-form-editor-prop-targetTitle' ).text()
+			label: mw.message( 'forms-form-editor-prop-targettitle' ).text()
 		} ];
  	};
 

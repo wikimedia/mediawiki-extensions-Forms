@@ -2,7 +2,7 @@
  * pasting to .form wikipage.
  */
 var def = {
-	title: mw.message( 'ext-forms-title-new-customer' ).text(),
+	title: mw.message( 'forms-title-new-customer' ).text(),
 	showTitle: true,
 	target: {
 		type: 'json-on-wikipage',
@@ -18,12 +18,12 @@ var def = {
 		{
 			required: true,
 			name: 'customerName',
-			label: mw.message( 'ext-forms-label-company-name' ).text(),
+			label: mw.message( 'forms-label-company-name' ).text(),
 			type: 'text'
 		},
 		{
 			name: 'noOfEmployees',
-			label: mw.message( 'ext-forms-label-employees-number' ).text(),
+			label: mw.message( 'forms-label-employees-number' ).text(),
 			type: 'number',
 			min: 1,
 			max: 5000,
@@ -31,12 +31,12 @@ var def = {
 		},
 		{
 			name: 'city',
-			label: mw.message( 'ext-forms-label-city' ).text(),
+			label: mw.message( 'forms-label-city' ).text(),
 			type: 'text'
 		},
 		{
 			type: 'label',
-			widget_label: mw.message( 'ext-forms-label-contacts' ).text()
+			widget_label: mw.message( 'forms-label-contacts' ).text()
 		},
 		{
 			type: 'layout_horizontal',
@@ -44,7 +44,7 @@ var def = {
 			items: [
 				{
 					type: 'label',
-					widget_label: mw.message( 'ext-forms-label-show-contacts' ).text()
+					widget_label: mw.message( 'forms-label-show-contacts' ).text()
 				},
 				{
 					name: 'showContacts',
@@ -62,7 +62,7 @@ var def = {
 				},
 				{
 					type: 'label',
-					widget_label: mw.message( 'ext-forms-label-show-address' ).text()
+					widget_label: mw.message( 'forms-label-show-address' ).text()
 				},
 				{
 					name: 'showAddresses',
@@ -89,46 +89,46 @@ var def = {
 			pages: [
 				{
 					name: 'contactSales',
-					label: mw.message( 'ext-forms-label-sales' ).text(),
+					label: mw.message( 'forms-label-sales' ).text(),
 					icon: 'ongoingConversation',
 					items: [
 						{
 							name: 'contactSalesName',
-							label: mw.message( 'ext-forms-label-name' ).text(),
+							label: mw.message( 'mwstake-formengine-label-name' ).text(),
 							type: 'text'
 						},
 						{
 							name: 'contactSalesTel',
-							label: mw.message( 'ext-forms-label-phone' ).text(),
+							label: mw.message( 'forms-label-phone' ).text(),
 							type: 'text'
 						},
 						{
 							name: 'contactSalesEmail',
 							icon: 'message',
-							label: mw.message( 'ext-forms-label-email' ).text(),
+							label: mw.message( 'forms-label-email' ).text(),
 							type: 'text'
 						}
 					]
 				},
 				{
 					name: 'contactProduction',
-					label: mw.message( 'ext-forms-label-production' ).text(),
+					label: mw.message( 'forms-label-production' ).text(),
 					icon: 'ongoingConversation',
 					items: [
 						{
 							name: 'contactProductionName',
-							label: mw.message( 'ext-forms-label-name' ).text(),
+							label: mw.message( 'mwstake-formengine-label-name' ).text(),
 							type: 'text'
 						},
 						{
 							name: 'contactProductionTel',
-							label: mw.message( 'ext-forms-label-phone' ).text(),
+							label: mw.message( 'forms-label-phone' ).text(),
 							type: 'text'
 						},
 						{
 							name: 'contactProductionEmail',
 							icon: 'message',
-							label: mw.message( 'ext-forms-label-email' ).text(),
+							label: mw.message( 'forms-label-email' ).text(),
 							type: 'text'
 						}
 					]
@@ -143,16 +143,16 @@ var def = {
 			tabs: [
 				{
 					name: 'addressHQ',
-					label: mw.message( 'ext-forms-label-hq' ).text(),
+					label: mw.message( 'forms-label-hq' ).text(),
 					items: [
 						{
 							name: 'addressHQStreet',
-							label: mw.message( 'ext-forms-label-street' ).text(),
+							label: mw.message( 'forms-label-street' ).text(),
 							type: 'text'
 						},
 						{
 							name: 'addressHQBilling',
-							label: mw.message( 'ext-forms-label-hq-address-billing' ).text(),
+							label: mw.message( 'forms-label-hq-address-billing' ).text(),
 							type: 'checkbox',
 							selected: true
 						}
@@ -160,26 +160,26 @@ var def = {
 				},
 				{
 					name: 'facilitiesTab',
-					label: mw.message( 'ext-forms-label-facilities' ).text(),
+					label: mw.message( 'forms-label-facilities' ).text(),
 					items: [
 						{
 							name: 'facilities',
 							type: 'checkbox-multiselect',
-							label: mw.message( 'ext-forms-label-facilities' ).text(),
+							label: mw.message( 'forms-label-facilities' ).text(),
 							value: [ 'production', 'sales' ],
 							options: [
 								{
 									data: 'management',
-									label: mw.message( 'ext-forms-label-management' ).text()
+									label: mw.message( 'forms-label-management' ).text()
 								}, {
 									data: 'production',
-									label: mw.message( 'ext-forms-label-production' ).text()
+									label: mw.message( 'forms-label-production' ).text()
 								}, {
 									data: 'sales',
-									label: mw.message( 'ext-forms-label-sales' ).text()
+									label: mw.message( 'forms-label-sales' ).text()
 								}, {
 									data: 'warehouse',
-									lable: mw.message( 'ext-forms-label-warehouse' ).text()
+									lable: mw.message( 'forms-label-warehouse' ).text()
 								}
 							]
 						}
@@ -187,26 +187,26 @@ var def = {
 				},
 				{
 					name: 'facilitiesTabRadio',
-					label: mw.message( 'ext-forms-label-facilities-radio' ).text(),
+					label: mw.message( 'forms-label-facilities-radio' ).text(),
 					items: [
 						{
 							name: 'facilities-radio',
 							type: 'radio-multiselect',
-							label: mw.message( 'ext-forms-label-facilities-radio' ).text(),
+							label: mw.message( 'forms-label-facilities-radio' ).text(),
 							value: 'sales',
 							options: [
 								{
 									data: 'management',
-									label: mw.message( 'ext-forms-label-management' ).text()
+									label: mw.message( 'forms-label-management' ).text()
 								}, {
 									data: 'production',
-									label: mw.message( 'ext-forms-label-production' ).text()
+									label: mw.message( 'forms-label-production' ).text()
 								}, {
 									data: 'sales',
-									label: mw.message( 'ext-forms-label-sales' ).text()
+									label: mw.message( 'forms-label-sales' ).text()
 								}, {
 									data: 'warehouse',
-									label: mw.message( 'ext-forms-label-warehouse' ).text()
+									label: mw.message( 'forms-label-warehouse' ).text()
 								}
 							]
 						}

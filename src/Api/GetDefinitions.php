@@ -124,7 +124,7 @@ class GetDefinitions extends \ApiBase {
 		}
 		if ( !$this->definitionManager->definitionExists( $name ) ) {
 			$this->status = \Status::newFatal(
-				$this->msg( 'forms-api-get-definition-not-exist', $name )
+				$this->msg( 'forms-api-get-definitions-not-exist', $name )
 			);
 		}
 

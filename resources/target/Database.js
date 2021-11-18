@@ -10,14 +10,14 @@
 	};
 
 	mw.ext.forms.target.Database.prototype.getDisplayName = function() {
-		return mw.message( 'forms-form-editor-prop-targetTypeDatabase' ).text();
+		return mw.message( 'forms-form-editor-prop-targettypedatabase' ).text();
 	};
 
 	mw.ext.forms.target.Database.prototype.getAdditionalFields = function() {
 		return [ {
 			type: 'text',
 			name: 'target.title',
-			label: mw.message( 'forms-form-editor-prop-targetTitle' ).text()
+			label: mw.message( 'forms-form-editor-prop-targettitle' ).text()
 		} ];
  	};
 

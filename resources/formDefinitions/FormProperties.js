@@ -10,7 +10,7 @@ return {
 			pages: [
 				{
 					name: 'appearance',
-					label: mw.message( 'ext-forms-label-appearance' ).text(),
+					label: mw.message( 'forms-label-appearance' ).text(),
 					icon: 'article',
 					items: [
 						{
@@ -21,7 +21,7 @@ return {
 						{
 							type: 'checkbox',
 							name: 'showTitle',
-							label: mw.message( 'forms-form-editor-prop-showTitle' ).text()
+							label: mw.message( 'forms-form-editor-prop-showtitle' ).text()
 						},
 						{
 							type: 'checkbox',
@@ -31,13 +31,13 @@ return {
 						{
 							type: 'checkbox',
 							name: 'buttonsFloat',
-							label: mw.message( 'forms-form-editor-prop-buttonsFloat' ).text()
+							label: mw.message( 'forms-form-editor-prop-buttonsfloat' ).text()
 						}
 					]
 				},
 				{
 					name: 'behaviour',
-					label: mw.message( 'ext-forms-label-behaviour' ).text(),
+					label: mw.message( 'forms-label-behaviour' ).text(),
 					icon: 'settings',
 					items: [
 						{
@@ -48,23 +48,23 @@ return {
 						{
 							type: 'checkbox',
 							name: 'sealAfterCreation',
-							label: mw.message( 'forms-form-editor-prop-sealAfterCreation' ).text()
+							label: mw.message( 'forms-form-editor-prop-sealaftercreation' ).text()
 						},
 						{
 							type: 'checkbox',
 							name: 'enableProgressSave',
-							label: mw.message( 'forms-form-editor-prop-enableProgressSave' ).text()
+							label: mw.message( 'forms-form-editor-prop-enableprogresssave' ).text()
 						},
 						{
 							type: 'checkbox',
 							name: 'enableEditSummary',
-							label: mw.message( 'forms-form-editor-prop-enableEditSummary' ).text()
+							label: mw.message( 'forms-form-editor-prop-enableeditsummary' ).text()
 						}
 					]
 				},
 				{
 					name: 'infrastructure',
-					label: mw.message( 'ext-forms-label-infrastructure' ).text(),
+					label: mw.message( 'forms-label-infrastructure' ).text(),
 					icon: 'puzzle',
 					items: [
 						{
@@ -124,13 +124,13 @@ return {
 				},
 				{
 					name: 'target',
-					label: mw.message( 'ext-forms-label-target' ).text(),
+					label: mw.message( 'forms-label-target' ).text(),
 					icon: 'articleRedirect',
 					items: [
 						{
 							type: 'dropdown',
 							name: 'target.type',
-							label: mw.message( 'forms-form-editor-prop-targetType' ).text(),
+							label: mw.message( 'forms-form-editor-prop-targettype' ).text(),
 							options: [],
 							style: 'margin-bottom: 10px;',
 							listeners: {
@@ -161,7 +161,7 @@ return {
 						{
 							name: 'show_target_afterAction',
 							type: 'checkbox',
-							label: mw.message( 'forms-form-editor-prop-targetAfterAction' ).text(),
+							label: mw.message( 'forms-form-editor-prop-targetafteraction' ).text(),
 							listeners: {
 								change: function( val ) {
 									if ( val ) {
@@ -177,19 +177,19 @@ return {
 							type: 'dropdown',
 							hidden: true,
 							name: 'target.afterAction.type',
-							label: mw.message( 'forms-form-editor-prop-targetAfterActionType' ).text(),
+							label: mw.message( 'forms-form-editor-prop-targetafteractiontype' ).text(),
 							options: [
 								{
 									data: '',
-									label: mw.message( 'forms-form-editor-prop-targetAfterActionTypeNone' ).text()
+									label: mw.message( 'forms-form-editor-prop-targetafteractiontypenone' ).text()
 								},
 								{
 									data: 'redirect',
-									label: mw.message( 'forms-form-editor-prop-targetAfterActionTypeRedirect' ).text(),
+									label: mw.message( 'forms-form-editor-prop-targetafteractiontyperedirect' ).text(),
 								},
 								{
 									data: 'callback',
-									label: mw.message( 'forms-form-editor-prop-targetAfterActionTypeCallback' ).text(),
+									label: mw.message( 'forms-form-editor-prop-targetafteractiontypecallback' ).text(),
 								}
 							],
 							listeners: {
@@ -212,18 +212,18 @@ return {
 							type: 'text',
 							hidden: true,
 							name: 'target.afterAction.url',
-							label: mw.message( 'forms-form-editor-prop-targetAfterActionUrl' ).text()
+							label: mw.message( 'forms-form-editor-prop-targetafteractionurl' ).text()
 						},{
 							type: 'js_input',
 							hidden: true,
 							name: 'target.afterAction.callback',
-							label: mw.message( 'forms-form-editor-prop-targetAfterActionCallback' ).text()
+							label: mw.message( 'forms-form-editor-prop-targetafteractioncallback' ).text()
 						}
 					]
 				},
 				{
 					name: 'listeners_page',
-					label: mw.message( 'ext-forms-label-listeners' ).text(),
+					label: mw.message( 'mwstake-formengine-label-listeners' ).text(),
 					icon: 'feedback',
 					items: [
 						{
@@ -247,13 +247,13 @@ return {
 				}/*,
 				{
 					name: 'local_css_page',
-					label: mw.message( 'ext-forms-label-local-css' ).text(),
+					label: mw.message( 'forms-label-local-css' ).text(),
 					icon: 'eye',
 					items: [
 						{
 							type: 'label',
 							noLayout: true,
-							widget_label: mw.message( 'ext-forms-label-local-css-help' ).text(),
+							widget_label: mw.message( 'forms-label-local-css-help' ).text(),
 						},
 						{
 							type: 'multiplier',

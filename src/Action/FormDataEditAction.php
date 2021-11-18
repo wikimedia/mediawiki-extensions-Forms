@@ -55,7 +55,7 @@ class FormDataEditAction extends FormlessAction {
 
 		if ( $this->checkSealed( $content ) ) {
 			$out->addReturnTo( $this->getTitle() );
-			return $out->addWikiMsg( 'ext-forms-edit-error-form-sealed' );
+			return $out->addWikiMsg( 'forms-edit-error-form-sealed' );
 		}
 		if ( $this->action === 'create' ) {
 			// All creations in this content model should be done over the SP
