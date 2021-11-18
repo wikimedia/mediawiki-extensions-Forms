@@ -47,7 +47,7 @@ class CreateFormInstance extends FormSpecial {
 		$this->formDefinition = $form;
 		$this->getOutput()->setPageTitle(
 			wfMessage(
-				"createforminstance-form-name",
+				"forms-createforminstance-form-name",
 				str_replace( '_', ' ', $form )
 			)
 		);

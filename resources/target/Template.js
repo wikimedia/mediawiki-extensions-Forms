@@ -19,7 +19,7 @@
 	};
 
 	mw.ext.forms.target.Template.prototype.getDisplayName = function() {
-		return mw.message( 'forms-form-editor-prop-targetTypeTemplate' ).text();
+		return mw.message( 'forms-form-editor-prop-targettypetemplate' ).text();
 	};
 
 	mw.ext.forms.target.Template.prototype.getAdditionalFields = function() {
@@ -27,13 +27,13 @@
 			type: 'text',
 			name: 'target.title',
 			required: true,
-			label: mw.message( 'forms-form-editor-prop-targetTitle' ).text()
+			label: mw.message( 'forms-form-editor-prop-targettitle' ).text()
 		}, {
 			type: 'title',
 			name: 'target.template',
 			namespace: 10,
 			required: true,
-			label: mw.message( 'forms-form-editor-prop-targetTemplate' ).text()
+			label: mw.message( 'forms-form-editor-prop-targettemplate' ).text()
 		}, {
 			type: 'button',
 			name: 'target.importfromtemplate',
