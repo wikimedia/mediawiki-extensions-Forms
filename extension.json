@@ -232,7 +232,6 @@
 	},
 	"Hooks": {
 		"ContentHandlerDefaultModelFor": "MediaWiki\\Extension\\Forms\\Setup::onContentHandlerDefaultModelFor",
-		"ResourceLoaderTestModules": "MediaWiki\\Extension\\Forms\\Setup::onResourceLoaderTestModules",
 		"ParserFirstCallInit": "MediaWiki\\Extension\\Forms\\Setup::onParserFirstCallInit",
 		"LoadExtensionSchemaUpdates": [
 			"MediaWiki\\Extension\\Forms\\Hook\\LoadExtensionSchemaUpdates\\AddFormAutosaveTable::callback",

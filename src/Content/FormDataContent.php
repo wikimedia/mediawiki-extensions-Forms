@@ -126,4 +126,11 @@ class FormDataContent extends \JsonContent {
 		\Hooks::run( 'FormsGetDisplayTitle', [ $title, &$displayTitle, 'view' ] );
 		return $displayTitle;
 	}
+
+	/**
+	 * @return bool
+	 */
+	public function isValid() {
+		return $this->getText() === '' || parent::isValid();
+	}
 }
