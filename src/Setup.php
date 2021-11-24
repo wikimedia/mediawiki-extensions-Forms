@@ -6,7 +6,6 @@ use MediaWiki\Extension\Forms\Tag\CreateForm;
 use MediaWiki\Extension\Forms\Tag\FormList;
 use MediaWiki\Extension\Forms\Tag\FormMeta;
 use Parser;
-use ResourceLoader;
 use Title;
 
 class Setup {
@@ -27,24 +26,6 @@ class Setup {
 			$model = 'FormData';
 			return false;
 		}
-		return true;
-	}
-
-	/**
-	 * Register QUnit Tests with MediaWiki framework
-	 * @param array &$testModules
-	 * @param ResourceLoader &$resourceLoader
-	 * @return bool
-	 */
-	public static function onResourceLoaderTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
-		$testModules['qunit']['ext.forms.tests'] = [
-			'scripts' => [
-				'tests/qunit/ext.forms.PageFormConverter.test'
-			],
-			'localBasePath' => dirname( __DIR__ ),
-			'remoteExtPath' => 'Forms',
-		];
-
 		return true;
 	}
 
