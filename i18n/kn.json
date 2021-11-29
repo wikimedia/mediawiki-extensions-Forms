@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"ಮಲ್ನಾಡಾಚ್ ಕೊಂಕ್ಣೊ"
+		]
+	},
+	"forms-form-editor-prop-title": "ಶೀರ್ಷಿಕೆ",
+	"forms-form-editor-prop-categories": "ವರ್ಗಗಳು",
+	"forms-form-editor-prop-targettitle": "ಶೀರ್ಷಿಕೆ",
+	"forms-form-editor-prop-targetafteractiontyperedirect": "ಪುನರ್ನಿರ್ದೇಶನ",
+	"forms-formelement-group-other": "ಇತರ",
+	"forms-label-city": "ನಗರ",
+	"forms-label-contacts": "ಸಂಪರ್ಕಗಳು",
+	"forms-label-phone": "ಫೋನ್",
+	"forms-label-email": "ಇ-ಅಂಚೆ",
+	"forms-title-new-customer": "ಹೊಸ ಗ್ರಾಹಕ",
+	"forms-form-editor-prop-targettypetemplate": "ಟೆಂಪ್ಲೇಟು"
+}

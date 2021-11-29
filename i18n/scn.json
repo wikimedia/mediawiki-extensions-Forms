@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ajeje Brazorf"
+		]
+	},
+	"forms-createforminstance-form-name": "Crea $1",
+	"forms-api-get-definitions-not-exist": "La difinizzioni \"$1\" nun esisti",
+	"forms-form-edit-title": "Cancia $1",
+	"forms-form-editor-prop-title": "Tìtulu",
+	"forms-form-editor-prop-categories": "Catigurìi",
+	"forms-form-editor-prop-abstract": "Astrattu",
+	"forms-form-editor-prop-partial": "Parziali",
+	"forms-form-editor-prop-targettitle": "Tìtulu",
+	"forms-form-editor-prop-targettypejsononwikipage": "JSON supra na wikipàggina",
+	"forms-form-editor-prop-targettypedatabase": "Database",
+	"forms-form-editor-prop-targetafteractiontypenone": "Nudda azzioni",
+	"forms-form-editor-prop-targetafteractiontyperedirect": "Rimannu",
+	"forms-formelement-group-other": "Àutru",
+	"forms-label-behaviour": "Cumpurtamentu",
+	"forms-label-infrastructure": "Nfrastruttura",
+	"forms-label-city": "Citati",
+	"forms-label-contacts": "Cuntatti",
+	"forms-label-show-contacts": "Ammustra cuntatti",
+	"forms-label-show-address": "Ammustra nnirizzu",
+	"forms-label-email": "Email",
+	"forms-label-production": "Produzzioni",
+	"forms-label-street": "Vìa",
+	"forms-form-editor-prop-targettypetemplate": "Template",
+	"forms-form-editor-prop-targettemplate": "Template da usari",
+	"forms-form-editor-target-template-field-manual": "(manuali)"
+}

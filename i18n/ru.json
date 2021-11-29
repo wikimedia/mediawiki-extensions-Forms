@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kareyac"
+		]
+	},
+	"forms-createforminstance-form-name": "Создать $1",
+	"forms-form-editor-prop-categories": "Категории",
+	"forms-label-city": "Город:",
+	"forms-label-street": "Улица:",
+	"forms-label-warehouse": "Склад",
+	"forms-form-editor-prop-targettypetemplate": "Шаблон"
+}

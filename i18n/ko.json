@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ykhwong"
+		]
+	},
+	"formeditor": "폼 편집기",
+	"forms-form-edit-title": "$1 편집",
+	"forms-form-editor-prop-targettypedatabase": "데이터베이스",
+	"forms-form-editor-prop-targetafteractiontypecallback": "콜백",
+	"forms-formelement-group-other": "기타",
+	"forms-label-contacts": "연락처",
+	"forms-label-show-address": "주소 보기",
+	"forms-label-email": "이메일",
+	"forms-label-hq-address": "본사",
+	"forms-form-editor-prop-targettypetemplate": "틀"
+}

@@ -1,4 +1,7 @@
 {
+	"@metadata": {
+		"authors": []
+	},
 	"forms-desc": "Allzweckformular-Framework für MediaWiki",
 	"createforminstance": "Instanz erzeugen",
 	"forms-createforminstance-form-name": "$1 erstellen",

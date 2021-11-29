@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
+	"forms-createforminstance-form-name": "$1 uleeën",
+	"formeditor": "Editeur fir Formulairen",
+	"forms-api-get-definitions-not-exist": "Definitioun \"$1\" gëtt et net",
+	"forms-target-json-page-summary": "Mam Formulaire \"$1\" änneren",
+	"forms-error-no-form-specified": "Kee Formulaire uginn",
+	"forms-form-edit-title": "$1 änneren",
+	"forms-form-editor-form-name-label": "Numm vum Formulaire",
+	"forms-form-editor-prop-title": "Titel",
+	"forms-form-editor-prop-showtitle": "Titel weisen",
+	"forms-form-editor-prop-categories": "Kategorien",
+	"forms-form-editor-prop-abstract": "Resumé",
+	"forms-form-editor-prop-partial": "Partiell",
+	"forms-form-editor-prop-targettitle": "Titel",
+	"forms-form-editor-prop-targettypedatabase": "Datebank",
+	"forms-form-editor-prop-targetafteractiontypenone": "Keng Aktioun",
+	"forms-form-editor-prop-targetafteractiontyperedirect": "Viruleedung",
+	"forms-label-appearance": "Ausgesinn",
+	"forms-label-behaviour": "Verhalen",
+	"forms-label-infrastructure": "Infrastruktur",
+	"forms-label-target": "Zil",
+	"forms-label-city": "Stad",
+	"forms-label-contacts": "Kontakter",
+	"forms-label-show-address": "Adress weisen",
+	"forms-label-phone": "Telefon",
+	"forms-label-email": "E-Mail",
+	"forms-label-production": "Produktioun",
+	"forms-label-hq-address": "Haaptsëtz",
+	"forms-label-street": "Strooss",
+	"forms-label-warehouse": "Lager",
+	"forms-title-new-customer": "Neie Client",
+	"forms-form-editor-prop-targettypetemplate": "Schabloun",
+	"forms-form-editor-target-template-field-manual": "(manuell)"
+}
