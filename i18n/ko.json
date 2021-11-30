@@ -4,14 +4,25 @@
 			"Ykhwong"
 		]
 	},
+	"forms-createforminstance-form-name": "$1 만들기",
 	"formeditor": "폼 편집기",
 	"forms-form-edit-title": "$1 편집",
+	"forms-form-editor-title": "폼 편집기",
+	"forms-form-editor-prop-categories": "분류",
+	"forms-form-editor-prop-enableeditsummary": "편집 요약 활성화",
 	"forms-form-editor-prop-targettypedatabase": "데이터베이스",
+	"forms-form-editor-prop-targetafteractiontyperedirect": "넘겨주기",
 	"forms-form-editor-prop-targetafteractiontypecallback": "콜백",
+	"forms-formelement-group-input": "입력",
+	"forms-formelement-group-layout": "레이아웃",
 	"forms-formelement-group-other": "기타",
+	"forms-label-employees-number": "직원 수",
 	"forms-label-contacts": "연락처",
 	"forms-label-show-address": "주소 보기",
 	"forms-label-email": "이메일",
 	"forms-label-hq-address": "본사",
-	"forms-form-editor-prop-targettypetemplate": "틀"
+	"forms-form-editor-prop-targettypetemplate": "틀",
+	"forms-form-editor-prop-targettemplate": "사용할 틀",
+	"right-forms-create-form": "폼 만들기",
+	"action-forms-create-form": "폼을 만들"
 }

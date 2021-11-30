@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Khun Kt"
+		]
+	},
+	"forms-form-editor-prop-title": "ကꩻတူႏရဲန်ႏ",
+	"forms-form-editor-prop-showtitle": "အွောန်ႏနယ်ကတူႏစဲဉ်ႏ",
+	"forms-form-editor-prop-targettypejsononwikipage": "JSON ဝီခီပီးဒီးယားလောင်း",
+	"forms-form-editor-prop-targettypedatabase": "ဒေတာဗေ့",
+	"forms-formelement-group-other": "အလင်",
+	"forms-label-show-address": "အွောန်ႏနယ်အိုင်အဝ်ႏခင်ႏလမ်း",
+	"forms-form-editor-prop-targettypetemplate": "တမ်းပလေက်"
+}
