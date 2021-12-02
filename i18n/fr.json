@@ -4,5 +4,24 @@
 			"Ajeje Brazorf"
 		]
 	},
-	"forms-label-production": "Production"
+	"forms-createforminstance-form-name": "Créer $1",
+	"forms-api-get-definitions-not-exist": "La définition « $1 » n’existe pas",
+	"forms-form-edit-title": "Modifier $1",
+	"forms-form-editor-prop-title": "Titre",
+	"forms-form-editor-prop-categories": "Catégories",
+	"forms-form-editor-prop-partial": "Partiel",
+	"forms-form-editor-prop-targettype": "Type de cible",
+	"forms-form-editor-prop-targettitle": "Titre",
+	"forms-form-editor-prop-targetafteractiontypenone": "Aucune action",
+	"forms-formelement-group-other": "Autre",
+	"forms-label-behaviour": "Comportement",
+	"forms-label-infrastructure": "Infrastructure",
+	"forms-label-target": "Cible",
+	"forms-label-city": "Ville",
+	"forms-label-show-address": "Afficher l’adresse",
+	"forms-label-email": "Courriel",
+	"forms-label-production": "Production",
+	"forms-form-editor-prop-targettypetemplate": "Modèle",
+	"forms-form-editor-prop-targettemplate": "Modèle à utiliser",
+	"forms-form-editor-target-template-field": "Champ du modèle"
 }

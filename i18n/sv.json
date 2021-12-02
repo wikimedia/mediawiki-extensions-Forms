@@ -17,7 +17,7 @@
 	"forms-edit-error-form-sealed": "Detta formulär har förseglats och kan inte redigeras",
 	"forms-api-form-submit-invalid-target": "Formulärets mål är ogiltigt",
 	"forms-error-form-mismatch": "Kunde inte spara på grund av att formulärets namn inte stämmer",
-	"forms-error-target-db-save-failed": "Misslyckades att spara till databas",
+	"forms-error-target-db-save-failed": "Kunde inte spara till databas",
 	"forms-form-editor-title": "Formulärredigerare",
 	"forms-form-editor-form-name-label": "Formulärnamn",
 	"forms-form-editor-form-name-help": "Detta är namnet formuläret kommer registreras som. Det kommer användas som formuläridentifierare, vi rekommenderar att inte använda specialtecken",

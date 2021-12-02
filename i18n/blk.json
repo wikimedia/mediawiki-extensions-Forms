@@ -4,11 +4,30 @@
 			"Khun Kt"
 		]
 	},
+	"forms-createforminstance-form-name": "ဖန်ဆင်ꩻ $1",
+	"forms-form-edit-title": "မွဉ်းဖျင် $1",
+	"forms-form-editor-form-name-label": "ဖောင်မိဉ်ꩻ",
 	"forms-form-editor-prop-title": "ကꩻတူႏရဲန်ႏ",
 	"forms-form-editor-prop-showtitle": "အွောန်ႏနယ်ကတူႏစဲဉ်ႏ",
+	"forms-form-editor-prop-categories": "ကဏ္ဍဖိုင်ႏ",
+	"forms-form-editor-prop-enableeditsummary": "ဗွောင် မွဉ်းဖျင်အအဲဉ်ႏချုတ်",
+	"forms-form-editor-prop-targettitle": "ကတူႏစဲဉ်ႏ",
 	"forms-form-editor-prop-targettypejsononwikipage": "JSON ဝီခီပီးဒီးယားလောင်း",
 	"forms-form-editor-prop-targettypedatabase": "ဒေတာဗေ့",
+	"forms-form-editor-prop-targetafteractiontypenone": "ပုင်ႏလိတ်အဝ်ႏတဝ်း",
+	"forms-form-editor-prop-targetafteractionurl": "ယီးနယ်ချာ URL ထျꩻ",
+	"forms-formelement-group-input": "သွင်ꩻသော့ꩻ",
 	"forms-formelement-group-other": "အလင်",
+	"forms-label-appearance": "အပွိုင်အငုဲင်ꩻ",
+	"forms-label-city": "ဝေင်ꩻ",
+	"forms-label-contacts": "သွုပ်ဆွိုက်တာႏ",
+	"forms-label-show-contacts": "အွောန်ႏနယ်သွုပ်ဆွိုက်တာႏ",
 	"forms-label-show-address": "အွောန်ႏနယ်အိုင်အဝ်ႏခင်ႏလမ်း",
-	"forms-form-editor-prop-targettypetemplate": "တမ်းပလေက်"
+	"forms-label-phone": "ဖိုန်း",
+	"forms-label-email": "အီးမေး",
+	"forms-label-street": "တဖူꩻ",
+	"forms-form-editor-prop-targettypetemplate": "တမ်းပလေက်",
+	"forms-form-editor-prop-targettemplate": "သုင်ꩻတမ်းပလေက်တာႏ",
+	"right-forms-create-form": "ဖန်ဆင်ꩻဖောင်ဖိုင်ႏ",
+	"action-forms-create-form": "ဖန်ဆင်ꩻဖောင်ဖိုင်ႏ"
 }
