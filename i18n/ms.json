@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tofeiku"
+		]
+	},
+	"formeditor": "Penyunting borang",
+	"forms-form-editor-form-name-label": "Nama borang",
+	"forms-form-editor-prop-title": "Tajuk",
+	"forms-form-editor-prop-categories": "Kategori",
+	"forms-form-editor-prop-targettitle": "Tajuk",
+	"forms-form-editor-prop-targettypedatabase": "Pangkalan data",
+	"forms-form-editor-form-items-label": "Unsur borang",
+	"forms-formelement-group-other": "Lain-lain",
+	"forms-label-target": "Sasaran",
+	"forms-label-city": "Bandar",
+	"forms-label-show-address": "Tunjuk alamat",
+	"forms-label-sales": "Jualan",
+	"forms-label-phone": "Telefon",
+	"forms-label-email": "E-mel",
+	"forms-label-hq-address": "Ibu pejabat",
+	"forms-label-facilities": "Kemudahan",
+	"forms-title-new-customer": "Pelanggan baru",
+	"forms-form-editor-prop-targettypetemplate": "Templat",
+	"forms-form-editor-target-template-field-manual": "(manual)"
+}

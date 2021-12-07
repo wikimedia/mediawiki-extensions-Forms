@@ -4,7 +4,7 @@
 	"forms-createforminstance-form-name": "$1 erstellen",
 	"formeditor": "Formulareditor",
 	"forms-api-get-definitions-no-name": "Für \"get-definition\" muss ein Name angegeben sein",
-	"forms-api-get-definitions-not-exist": "Definition \"$1\" existiert nicht",
+	"forms-api-get-definitions-not-exist": "Definition „$1“ existiert nicht",
 	"forms-target-json-page-summary": "Mit Formular bearbeiten: $1",
 	"forms-error-no-form-specified": "Kein Formular angegeben",
 	"forms-form-edit-title": "Bearbeite $1",
@@ -64,5 +64,10 @@
 	"forms-label-management": "Management",
 	"forms-label-warehouse": "Warenhaus",
 	"forms-label-facilities-radio": "Standort Radio",
-	"forms-title-new-customer": "Neuer Kunde"
+	"forms-title-new-customer": "Neuer Kunde",
+	"@metadata": {
+		"authors": [
+			"Umherirrender"
+		]
+	}
 }

@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ajeje Brazorf"
+		]
+	},
+	"forms-createforminstance-form-name": "Crea $1",
+	"forms-form-edit-title": "Modifica $1",
+	"forms-form-editor-prop-title": "Titolo",
+	"forms-form-editor-prop-categories": "Categorie",
+	"forms-form-editor-prop-partial": "Parziale",
+	"forms-form-editor-prop-targettitle": "Titolo",
+	"forms-formelement-group-other": "Altro",
+	"forms-label-infrastructure": "Infrastruttura",
+	"forms-label-company-name": "Nome della compagnia",
+	"forms-label-contacts": "Contratti",
+	"forms-label-show-address": "Mostra indirizzo",
+	"forms-label-phone": "Telefono",
+	"forms-label-email": "Email",
+	"forms-label-production": "Produzione",
+	"forms-form-editor-prop-targettypetemplate": "Template",
+	"forms-form-editor-prop-targettemplate": "Template da usare"
+}

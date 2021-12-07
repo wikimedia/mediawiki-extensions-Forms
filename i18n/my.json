@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dr Lotus Black"
+		]
+	},
+	"forms-form-editor-prop-title": "ခေါင်းစဉ်",
+	"forms-form-editor-prop-showtitle": "ပြသခေါင်းစဉ်",
+	"forms-form-editor-prop-categories": "ကဏ္ဍများ",
+	"forms-form-editor-prop-targettitle": "ခေါင်းစဉ်",
+	"forms-label-city": "မြို့",
+	"forms-label-email": "အီးမေးလ်",
+	"forms-label-street": "လမ်း"
+}
