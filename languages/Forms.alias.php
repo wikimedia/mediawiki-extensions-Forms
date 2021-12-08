@@ -10,6 +10,6 @@ $specialPageAliases['en'] = [
 
 /** English (English) */
 $specialPageAliases['de'] = [
-	'CreateFormInstance' => [ 'Formularinstanz erstellen ' ],
+	'CreateFormInstance' => [ 'Formularinstanz erstellen' ],
 	'FormEditor' => [ 'Formulareditor' ]
 ];
