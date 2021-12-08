@@ -10,5 +10,6 @@
 	"forms-form-editor-prop-targettitle": "ခေါင်းစဉ်",
 	"forms-label-city": "မြို့",
 	"forms-label-email": "အီးမေးလ်",
-	"forms-label-street": "လမ်း"
+	"forms-label-street": "လမ်း",
+	"forms-form-editor-prop-targettypetemplate": "တမ်းပလိတ်"
 }
