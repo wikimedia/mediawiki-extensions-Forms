@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\Forms\ContentHandler;
 
 use JavaScriptContentHandler;
 use MediaWiki\Extension\Forms\Action\FormDefinitionEditAction;
+use MediaWiki\Extension\Forms\Action\FormDefinitionSourceEditAction;
 use MediaWiki\Extension\Forms\Content\FormDefinitionContent;
 
 class FormDefinitionHandler extends JavaScriptContentHandler {
@@ -47,7 +48,8 @@ class FormDefinitionHandler extends JavaScriptContentHandler {
 	 */
 	public function getActionOverrides() {
 		return [
-			'edit' => FormDefinitionEditAction::class
+			'edit' => FormDefinitionEditAction::class,
+			'editdefinitionsource' => FormDefinitionSourceEditAction::class
 		];
 	}
 }

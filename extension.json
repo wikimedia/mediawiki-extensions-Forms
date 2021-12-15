@@ -246,6 +246,8 @@
 	"Hooks": {
 		"ContentHandlerDefaultModelFor": "MediaWiki\\Extension\\Forms\\Setup::onContentHandlerDefaultModelFor",
 		"ParserFirstCallInit": "MediaWiki\\Extension\\Forms\\Setup::onParserFirstCallInit",
+		"SkinTemplateNavigation::Universal": "MediaWiki\\Extension\\Forms\\Setup::onSkinTemplateNavigation_Universal",
+		"CodeEditorGetPageLanguage": "MediaWiki\\Extension\\Forms\\Setup::onCodeEditorGetPageLanguage",
 		"LoadExtensionSchemaUpdates": [
 			"MediaWiki\\Extension\\Forms\\Hook\\LoadExtensionSchemaUpdates\\AddFormAutosaveTable::callback",
 			"MediaWiki\\Extension\\Forms\\Hook\\LoadExtensionSchemaUpdates\\AddFormDataTable::callback",

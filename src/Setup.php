@@ -5,9 +5,12 @@ namespace MediaWiki\Extension\Forms;
 use MediaWiki\Extension\Forms\Tag\CreateForm;
 use MediaWiki\Extension\Forms\Tag\FormList;
 use MediaWiki\Extension\Forms\Tag\FormMeta;
+use Message;
 use Parser;
+use SkinTemplate;
 use Title;
 
+// phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
 class Setup {
 
 	/**
@@ -36,5 +39,42 @@ class Setup {
 		$parser->setHook( 'createForm', [ CreateForm::class, 'callback' ] );
 		$parser->setHook( 'formMeta', [ FormMeta::class, 'callback' ] );
 		$parser->setHook( 'formList', [ FormList::class, 'callback' ] );
+	}
+
+	/**
+	 * @param SkinTemplate $sktemplate
+	 * @param array &$links
+	 * @return bool
+	 */
+	public static function onSkinTemplateNavigation_Universal( SkinTemplate $sktemplate, array &$links ) {
+		$currentContentModel = $sktemplate->getTitle()->getContentModel();
+		if ( in_array( $currentContentModel, [ 'FormDefinition', 'FormData' ] ) ) {
+			// In case VisualEditor overrides with "Edit source"
+			$links['views']['edit']['text'] = Message::newFromKey( 'edit' )->plain();
+
+			// Add real "Edit source"
+			$links['views']['editdefinitionsource'] = $links['views']['edit'];
+			$links['views']['editdefinitionsource']['text']
+				= Message::newFromKey( 'forms-action-editsource' )->plain();
+			$links['views']['editdefinitionsource']['href'] = $sktemplate->getTitle()->getLinkURL( [
+				'action' => 'editdefinitionsource'
+			] );
+		}
+		return true;
+	}
+
+	/**
+	 * @param Title $title
+	 * @param string &$languageCode
+	 * @return bool
+	 */
+	public static function onCodeEditorGetPageLanguage( Title $title, &$languageCode ) {
+		$currentContentModel = $title->getContentModel();
+		if ( in_array( $currentContentModel, [ 'FormDefinition', 'FormData' ] ) ) {
+			$languageCode = 'json';
+			return false;
+		}
+
+		return true;
 	}
 }
