@@ -14,6 +14,22 @@
 		"Forms": "i18n"
 	},
 	"attributes": {
+		"BlueSpiceFoundation": {
+			"PermissionRegistry": {
+				"forms-create-form": {
+					"type": "global",
+					"roles": [
+						"editor"
+					]
+				},
+				"forms-edit-form-definition": {
+					"type": "global",
+					"roles": [
+						"admin"
+					]
+				}
+			}
+		},
 		"Forms": {
 			"Definitions": {
 				"FormEditor": "Forms/resources/formDefinitions/FormEditor.js",

@@ -25,7 +25,7 @@ class FormEditor extends FormSpecial {
 	protected $action = 'create';
 
 	public function __construct() {
-		parent::__construct( 'FormEditor' );
+		parent::__construct( 'FormEditor', 'forms-edit-form-definition' );
 	}
 
 	/**
