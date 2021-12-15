@@ -85,5 +85,6 @@
 	"right-forms-create-form": "Create forms",
 	"right-forms-edit-form-definition": "Edit form definitions",
 	"action-forms-create-form": "create forms",
-	"action-forms-edit-form-definition": "edit form definitions"
+	"action-forms-edit-form-definition": "edit form definitions",
+	"forms-action-editsource": "Edit source"
 }
