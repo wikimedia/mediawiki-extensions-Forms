@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Umherirrender"
+			"Umherirrender",
+			"Umlaut"
 		]
 	},
 	"forms-desc": "Allzweckformular-Framework für MediaWiki",
@@ -69,5 +70,6 @@
 	"forms-label-management": "Management",
 	"forms-label-warehouse": "Warenhaus",
 	"forms-label-facilities-radio": "Standort Radio",
-	"forms-title-new-customer": "Neuer Kunde"
+	"forms-title-new-customer": "Neuer Kunde",
+	"forms-form-editor-prop-targettypetemplate": "Vorlage"
 }
