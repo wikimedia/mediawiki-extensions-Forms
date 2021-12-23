@@ -44,6 +44,8 @@
 	"forms-form-editor-prop-targetafteractionurl": "Umleitung auf URL",
 	"forms-form-editor-prop-targetafteractioncallback": "JS Callback Funktion (Fortgeschritten)",
 	"forms-form-editor-prop-extends": "Leitet ab von",
+	"forms-form-editor-prop-use-form-revs": "Verfolgung von Versionen",
+	"forms-form-editor-prop-use-form-revs-help": "Wenn diese Option auf true gesetzt ist, behalten alle Formularinstanzen, die mit diesem Formular erstellt wurden, den Zustand des Formulars bei der Erstellung der Instanz. Aktualisierungen der Formulardefinition werden nicht auf die Instanzen angewendet, die vor der Aktualisierung erstellt wurden.",
 	"forms-form-editor-form-props-label": "Formulareigenschaften",
 	"forms-form-editor-form-items-label": "Formularelemente",
 	"forms-formelement-group-input": "Eingaben",
@@ -71,5 +73,18 @@
 	"forms-label-warehouse": "Warenhaus",
 	"forms-label-facilities-radio": "Standort Radio",
 	"forms-title-new-customer": "Neuer Kunde",
-	"forms-form-editor-prop-targettypetemplate": "Vorlage"
+	"forms-form-editor-prop-targettypetemplate": "Vorlage",
+	"forms-form-editor-prop-targettemplate": "Zu verwendende Vorlage",
+	"forms-form-editor-target-template-field": "Vorlagenfeld",
+	"forms-form-editor-target-template-field-manual": "(manuell)",
+	"forms-form-meta-tag": "Erstellt mit dem Formular [[$1]] (Version: $2)",
+	"forms-form-editor-button-import-template": "Felder aus Vorlage importieren",
+	"forms-form-editor-confirm-import-template": "Dadurch werden alle aktuellen Felder im Formular gelöscht und durch Felder ersetzt, die aus der ausgewählten Vorlage importiert wurden. Bist du sicher, dass du fortfahren möchtest?",
+	"apihelp-forms-get-definitions-summary": "Ermöglicht die Abfrage der vorhandenen Formulardefinitionen",
+	"apihelp-forms-form-submit-summary": "Bietet Bearbeitung über Formulare",
+	"right-forms-create-form": "Formulare erstellen",
+	"right-forms-edit-form-definition": "Formulardefinitionen bearbeiten",
+	"action-forms-create-form": "Formulare erstellen",
+	"action-forms-edit-form-definition": "Formulardefinitionen bearbeiten",
+	"forms-action-editsource": "Quelltext bearbeiten"
 }

@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Ajeje Brazorf",
-			"Gomoko"
+			"Gomoko",
+			"Paraboule"
 		]
 	},
 	"forms-desc": "Cadre de formulaire complet pour MédiaWiki",
@@ -85,5 +86,6 @@
 	"right-forms-create-form": "Créer des formulaires",
 	"right-forms-edit-form-definition": "Modifier les définitions de formulaire",
 	"action-forms-create-form": "créer les formulaires",
-	"action-forms-edit-form-definition": "modifier les définitions de formulaire"
+	"action-forms-edit-form-definition": "modifier les définitions de formulaire",
+	"forms-action-editsource": "Editer la source"
 }
