@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajeje Brazorf"
+			"Ajeje Brazorf",
+			"Beta16"
 		]
 	},
 	"forms-createforminstance-form-name": "Crea $1",
@@ -19,5 +20,6 @@
 	"forms-label-email": "Email",
 	"forms-label-production": "Produzione",
 	"forms-form-editor-prop-targettypetemplate": "Template",
-	"forms-form-editor-prop-targettemplate": "Template da usare"
+	"forms-form-editor-prop-targettemplate": "Template da usare",
+	"forms-action-editsource": "Modifica sorgente"
 }
