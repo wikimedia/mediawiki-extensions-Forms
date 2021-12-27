@@ -84,5 +84,6 @@
 	"right-forms-create-form": "Создавање на обрасци",
 	"right-forms-edit-form-definition": "уредување на одредби во обрасци",
 	"action-forms-create-form": "создавање на обрасци",
-	"action-forms-edit-form-definition": "уредување на одредби"
+	"action-forms-edit-form-definition": "уредување на одредби",
+	"forms-action-editsource": "Уреди извор"
 }
