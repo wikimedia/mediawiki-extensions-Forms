@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"আফতাবুজ্জামান"
+			"আফতাবুজ্জামান",
+			"Hirok Raja"
 		]
 	},
 	"forms-createforminstance-form-name": "$1 তৈরি করুন",
@@ -13,5 +14,6 @@
 	"forms-form-editor-prop-targettitle": "শিরোনাম",
 	"forms-label-phone": "ফোন",
 	"forms-label-email": "ইমেইল",
-	"forms-form-editor-prop-targettypetemplate": "টেমপ্লেট"
+	"forms-form-editor-prop-targettypetemplate": "টেমপ্লেট",
+	"forms-action-editsource": "উৎস সম্পাদনা"
 }
