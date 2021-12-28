@@ -36,5 +36,6 @@
 	"forms-label-warehouse": "Lager",
 	"forms-title-new-customer": "Neie Client",
 	"forms-form-editor-prop-targettypetemplate": "Schabloun",
-	"forms-form-editor-target-template-field-manual": "(manuell)"
+	"forms-form-editor-target-template-field-manual": "(manuell)",
+	"forms-action-editsource": "Quelltext änneren"
 }
