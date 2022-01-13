@@ -243,6 +243,11 @@
 		"localBasePath": "resources",
 		"remoteExtPath": "Forms/resources"
 	},
+	"HookHandlers": {
+		"discovery-skin": {
+			"class": "\\MediaWiki\\Extension\\Forms\\HookHandler\\DiscoverySkin"
+		}
+	},
 	"Hooks": {
 		"ContentHandlerDefaultModelFor": "MediaWiki\\Extension\\Forms\\Setup::onContentHandlerDefaultModelFor",
 		"ParserFirstCallInit": "MediaWiki\\Extension\\Forms\\Setup::onParserFirstCallInit",
@@ -252,7 +257,9 @@
 			"MediaWiki\\Extension\\Forms\\Hook\\LoadExtensionSchemaUpdates\\AddFormAutosaveTable::callback",
 			"MediaWiki\\Extension\\Forms\\Hook\\LoadExtensionSchemaUpdates\\AddFormDataTable::callback",
 			"MediaWiki\\Extension\\Forms\\Hook\\LoadExtensionSchemaUpdates\\AddFormRevisionTable::callback"
-		]
+		],
+		"ChameleonSkinTemplateOutputPageBeforeExec": "MediaWiki\\Extension\\Forms\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\AddEditDefinionSourceAction::callback",
+		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin"
 	},
 	"manifest_version": 2,
 	"load_composer_autoloader": true
