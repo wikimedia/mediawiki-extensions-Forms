@@ -50,7 +50,13 @@ class Setup {
 		$currentContentModel = $sktemplate->getTitle()->getContentModel();
 		if ( in_array( $currentContentModel, [ 'FormDefinition', 'FormData' ] ) ) {
 			// In case VisualEditor overrides with "Edit source"
-			$links['views']['edit']['text'] = Message::newFromKey( 'edit' )->plain();
+			$links['views']['edit'] = [
+				'text' => Message::newFromKey( 'edit' )->plain(),
+				'title' => Message::newFromKey( 'edit' )->plain(),
+				'href' => $sktemplate->getTitle()->getLocalURL( [
+					'action' => 'edit',
+				] )
+			];
 
 			// Add real "Edit source"
 			$links['views']['editdefinitionsource'] = $links['views']['edit'];
