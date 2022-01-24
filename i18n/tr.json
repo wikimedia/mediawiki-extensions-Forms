@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Can"
+		]
+	},
+	"forms-form-editor-prop-title": "Başlık",
+	"forms-form-editor-prop-categories": "Kategoriler",
+	"forms-form-editor-prop-targettype": "Hedef Türü",
+	"forms-form-editor-prop-targettypedatabase": "Veritabanı",
+	"forms-form-editor-prop-targetafteractiontypenone": "Eylem yok",
+	"forms-label-target": "Hedef",
+	"forms-label-company-name": "Şirketin adı",
+	"forms-label-employees-number": "İşçi sayısı",
+	"forms-label-city": "Şehir",
+	"forms-label-contacts": "Kişiler",
+	"forms-label-show-contacts": "Kişileri göster",
+	"forms-label-show-address": "Adresi göster",
+	"forms-label-sales": "Satışlar",
+	"forms-label-phone": "Telefon",
+	"forms-label-email": "E-posta",
+	"forms-label-production": "Üretim",
+	"forms-label-hq-address": "Merkez",
+	"forms-label-street": "Sokak",
+	"forms-label-hq-address-billing": "Fatura adresi mi?",
+	"forms-label-facilities": "Tesisler",
+	"forms-label-management": "Yönetim",
+	"forms-label-facilities-radio": "Tesis radyosu",
+	"forms-action-editsource": "Kaynağı düzenle"
+}
