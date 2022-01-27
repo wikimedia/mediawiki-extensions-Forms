@@ -26,7 +26,7 @@ class CreateForm extends FormTag {
 			return $this->error( 'forms-error-no-form-specified' );
 		}
 
-		$out->addModules( 'ext.forms.init' );
+		$out->addModules( [ 'ext.forms.init' ] );
 
 		return $this->getFormContainer( $forms );
 	}
