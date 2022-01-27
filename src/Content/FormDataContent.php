@@ -40,7 +40,7 @@ class FormDataContent extends \JsonContent {
 								$title->getPageLanguage(), $chain, false
 							)
 						);
-						$output->addModuleStyles( 'mediawiki.action.view.redirectPage' );
+						$output->addModuleStyles( [ 'mediawiki.action.view.redirectPage' ] );
 					}
 				}
 			}
@@ -48,7 +48,7 @@ class FormDataContent extends \JsonContent {
 		}
 		$output->setDisplayTitle( $this->getDisplayTitle( $title ) );
 		$output->setText( $this->getFormContainer( 'view', $title ) );
-		$output->addModules( 'ext.forms.init' );
+		$output->addModules( [ 'ext.forms.init' ] );
 	}
 
 	/**
