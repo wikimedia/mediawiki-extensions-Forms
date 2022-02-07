@@ -44,6 +44,7 @@
 			}
 		}
 	},
+	"callback": "mwsInitComponents",
 	"ServiceWiringFiles": [
 		"ServiceWiring.php"
 	],

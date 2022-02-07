@@ -6,7 +6,7 @@
 	},
 	"require": {
 		"composer/installers": "~1.0",
-		"mwstake/mediawiki-component-formengine": "<=1.0.6"
+		"mwstake/mediawiki-component-formengine": "~2"
 	},
 	"require-dev": {
 		"mediawiki/mediawiki-codesniffer": "38.0.0",
