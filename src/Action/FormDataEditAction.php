@@ -7,7 +7,7 @@ use ContentHandler;
 use FormlessAction;
 use Hooks;
 use MediaWiki\Extension\Forms\Content\FormDataContent;
-use MediaWiki\Storage\RevisionRecord;
+use MediaWiki\Revision\RevisionRecord;
 use SpecialPage;
 use Title;
 
