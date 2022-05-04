@@ -87,5 +87,7 @@
 	"right-forms-edit-form-definition": "{{doc-right|forms-edit-form-definition}}",
 	"action-forms-create-form": "{{doc-action|forms-create-form}}",
 	"action-forms-edit-form-definition": "{{doc-action|forms-edit-form-definition}}",
-	"forms-action-editsource": "Label for content action link"
+	"forms-action-editsource": "Label for content action link",
+	"forms-form-editor-prop-rl-deps": "Label for the form editor field that specifies the list of RL module dependencies (module names)",
+	"forms-form-editor-prop-rl-deps-help": "Help text for the form editor field that specifies the list of RL module dependencies (module names)"
 }
