@@ -68,6 +68,13 @@ return {
 					icon: 'puzzle',
 					items: [
 						{
+							type: 'tag',
+							name: 'rlDependencies',
+							widget_allowArbitrary: true,
+							label: mw.message( 'forms-form-editor-prop-rl-deps' ).text(),
+							help: mw.message( 'forms-form-editor-prop-rl-deps-help' ).text()
+						},
+						{
 							type: 'checkbox',
 							name: 'useFormRevs',
 							label: mw.message( 'forms-form-editor-prop-use-form-revs' ).text(),
