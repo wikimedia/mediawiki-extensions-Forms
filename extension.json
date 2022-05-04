@@ -231,7 +231,13 @@
 				"mwstake-formengine-type-title",
 				"mwstake-formengine-type",
 				"forms-form-editor-button-import-template",
-				"forms-form-editor-confirm-import-template"
+				"forms-form-editor-confirm-import-template",
+				"mwstake-formengine-type-combobox",
+				"mwstake-formengine-type-tag",
+				"mwstake-formengine-label-input-position",
+				"mwstake-formengine-label-allowed-values",
+				"forms-form-editor-prop-rl-deps",
+				"forms-form-editor-prop-rl-deps-help"
 			],
 			"dependencies": [
 				"ext.forms.init",
