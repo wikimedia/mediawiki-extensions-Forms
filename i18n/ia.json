@@ -79,6 +79,8 @@
 	"forms-form-meta-tag": "Create usante le formulario [[$1]] (version: $2)",
 	"forms-form-editor-button-import-template": "Importar campos de un patrono",
 	"forms-form-editor-confirm-import-template": "Isto delera tote le campos actual del formulario e los reimplaciara per illos importate del patrono seligite. Es tu secur de voler continuar?",
+	"apihelp-forms-get-definitions-summary": "Permitte cercar in le definitiones de formulario existente",
+	"apihelp-forms-form-submit-summary": "Permitte modificar via formularios",
 	"right-forms-create-form": "Crear formularios",
 	"right-forms-edit-form-definition": "Modificar definitiones de formulario",
 	"action-forms-create-form": "crear formularios",
