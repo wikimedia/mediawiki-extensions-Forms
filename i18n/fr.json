@@ -3,7 +3,8 @@
 		"authors": [
 			"Ajeje Brazorf",
 			"Gomoko",
-			"Paraboule"
+			"Paraboule",
+			"Verdy p"
 		]
 	},
 	"forms-desc": "Cadre de formulaire complet pour MédiaWiki",
@@ -87,5 +88,7 @@
 	"right-forms-edit-form-definition": "Modifier les définitions de formulaire",
 	"action-forms-create-form": "créer les formulaires",
 	"action-forms-edit-form-definition": "modifier les définitions de formulaire",
-	"forms-action-editsource": "Editer la source"
+	"forms-action-editsource": "Editer la source",
+	"forms-form-editor-prop-rl-deps": "Dépendances du chargeur de ressources",
+	"forms-form-editor-prop-rl-deps-help": "Spécifie la liste des modules du chargeur de ressources qui devraient être chargés lorsque le formulaire est instancié"
 }

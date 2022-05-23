@@ -38,5 +38,6 @@
 	"forms-form-editor-prop-targettypetemplate": "틀",
 	"forms-form-editor-prop-targettemplate": "사용할 틀",
 	"right-forms-create-form": "폼 만들기",
-	"action-forms-create-form": "폼을 만들"
+	"action-forms-create-form": "폼을 만들",
+	"forms-form-editor-prop-rl-deps": "리소스 로더 의존성"
 }

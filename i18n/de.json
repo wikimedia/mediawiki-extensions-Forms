@@ -86,5 +86,7 @@
 	"right-forms-edit-form-definition": "Formulardefinitionen bearbeiten",
 	"action-forms-create-form": "Formulare erstellen",
 	"action-forms-edit-form-definition": "Formulardefinitionen bearbeiten",
-	"forms-action-editsource": "Quelltext bearbeiten"
+	"forms-action-editsource": "Quelltext bearbeiten",
+	"forms-form-editor-prop-rl-deps": "Abhängigkeiten vom Ressourcenlader",
+	"forms-form-editor-prop-rl-deps-help": "Angabe der Liste der ResourceLoader-Module, die bei der Instanziierung des Formulars geladen werden sollen"
 }
