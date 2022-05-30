@@ -85,5 +85,7 @@
 	"right-forms-edit-form-definition": "уредување на одредби во обрасци",
 	"action-forms-create-form": "создавање на обрасци",
 	"action-forms-edit-form-definition": "уредување на одредби",
-	"forms-action-editsource": "Уреди извор"
+	"forms-action-editsource": "Уреди извор",
+	"forms-form-editor-prop-rl-deps": "Зависности на ресурсниот вчитувач",
+	"forms-form-editor-prop-rl-deps-help": "Укажете список на модули ResourceLoader кои би се вчитале при отворањето на образецот"
 }
