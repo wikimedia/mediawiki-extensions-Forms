@@ -36,5 +36,5 @@ class SyncFormRevisions extends Maintenance {
 	}
 }
 
-$maintClass = 'SyncFormRevisions';
+$maintClass = SyncFormRevisions::class;
 require_once RUN_MAINTENANCE_IF_MAIN;
