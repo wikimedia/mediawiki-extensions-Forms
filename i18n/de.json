@@ -88,5 +88,11 @@
 	"action-forms-edit-form-definition": "Formulardefinitionen bearbeiten",
 	"forms-action-editsource": "Quelltext bearbeiten",
 	"forms-form-editor-prop-rl-deps": "Abhängigkeiten vom Ressourcenlader",
-	"forms-form-editor-prop-rl-deps-help": "Angabe der Liste der ResourceLoader-Module, die bei der Instanziierung des Formulars geladen werden sollen"
+	"forms-form-editor-prop-rl-deps-help": "Angabe der Liste der ResourceLoader-Module, die bei der Instanziierung des Formulars geladen werden sollen",
+	"forms-form-editor-prop-targettypeemail": "Email",
+	"forms-form-editor-prop-target-email-receiver": "Empfänger",
+	"forms-form-editor-prop-target-email-subject": "Betreff",
+	"forms-form-editor-prop-target-email-body": "Inhalt",
+	"forms-error-target-mail-send-failed": "Emailversand fehlgeschlagen",
+	"forms-error-target-mail-no-mail": "Keine gültige Emailadresse verfügbar"
 }

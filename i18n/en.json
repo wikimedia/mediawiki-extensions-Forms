@@ -88,5 +88,11 @@
 	"action-forms-edit-form-definition": "edit form definitions",
 	"forms-action-editsource": "Edit source",
 	"forms-form-editor-prop-rl-deps": "Resource loader dependencies",
-	"forms-form-editor-prop-rl-deps-help": "Specify list of ResourceLoader modules that should be loaded when the form is instantiated"
+	"forms-form-editor-prop-rl-deps-help": "Specify list of ResourceLoader modules that should be loaded when the form is instantiated",
+	"forms-form-editor-prop-targettypeemail": "Email",
+	"forms-form-editor-prop-target-email-receiver": "Receiver",
+	"forms-form-editor-prop-target-email-subject": "Subject",
+	"forms-form-editor-prop-target-email-body": "Content",
+	"forms-error-target-mail-send-failed": "Send mail failed",
+	"forms-error-target-mail-no-mail": "No valid email address available"
 }
