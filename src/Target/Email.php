@@ -2,12 +2,16 @@
 
 namespace MediaWiki\Extension\Forms\Target;
 
-use FormatJson;
+use DataPreprocessor;
 use HashConfig;
+use MailAddress;
 use MediaWiki\Extension\Forms\ITarget;
+use MediaWiki\MediaWikiServices;
+use Message;
 use RequestContext;
 use Status;
 use User;
+use UserMailer;
 
 class Email implements ITarget {
 	/**
@@ -18,7 +22,12 @@ class Email implements ITarget {
 	/**
 	 * @var string
 	 */
-	protected $title;
+	protected $subject;
+
+	/**
+	 * @var Message
+	 */
+	protected $body;
 
 	/**
 	 * @var User
@@ -31,16 +40,48 @@ class Email implements ITarget {
 	protected $receivers;
 
 	/**
+	 * @var array
+	 */
+	protected $senders;
+
+	/**
+	 * @var array
+	 */
+	protected $receiverEmails;
+
+	/**
+	 * @var DataPreprocessor
+	 */
+	protected $preprocessor;
+
+	/**
 	 * @param array $receivers
+	 * @param string $subject
+	 * @param string $body
 	 * @param User $user
 	 * @param string $form
-	 * @param string $title
+	 * @param array $receiverEmails
+	 * @param array $senders
+	 * @param DataPreprocessor $preprocessor
 	 */
-	protected function __construct( $receivers, $user, $form, $title = '' ) {
+	protected function __construct(
+		$receivers,
+		$subject,
+		$body,
+		$user,
+		$form,
+		$receiverEmails,
+		$senders,
+		$preprocessor ) {
 		$this->receivers = $receivers;
+		$this->subject = $subject;
+		$this->body = $body;
 		$this->form = $form;
-		$this->title = $title;
 		$this->user = $user;
+
+		$this->receiverEmails = $receiverEmails;
+		$this->senders = $senders;
+		$this->preprocessor = $preprocessor;
 	}
 
 	/**
@@ -51,16 +92,31 @@ class Email implements ITarget {
 		if ( !$config->has( 'form' ) ) {
 			return null;
 		}
-		$title = '';
-		if ( $config->has( 'title' ) ) {
-			$config->get( 'title' );
-		}
 
 		$receivers = $config->get( 'receivers' );
 		$receivers = explode( "\n", $receivers );
 
+		$subject = $config->get( 'subject' );
+		$body = $config->get( 'body' );
+
 		$user = RequestContext::getMain()->getUser();
-		return new static( $receivers, $user, $config->get( 'form' ), $title );
+
+		$mainConfig = MediaWikiServices::getInstance()->getMainConfig();
+		$receiverEmails = $mainConfig->get( 'FormsTargetEMailRecipients' );
+		$senders = $mainConfig->get( 'PasswordSender' );
+
+		$preprocessor = MediaWikiServices::getInstance()->getService( 'FormsDataPreprocessor' );
+
+		return new static(
+			$receivers,
+			$subject,
+			$body,
+			$user,
+			$config->get( 'form' ),
+			$receiverEmails,
+			$senders,
+			$preprocessor
+		);
 	}
 
 	/**
@@ -70,36 +126,107 @@ class Email implements ITarget {
 	 * @return Status
 	 */
 	public function execute( $formsubmittedData, $summary ) {
-		$mails = [];
-		foreach ( $this->receivers as $receiver ) {
-			$mails[] = new \MailAddress( $receiver );
+		$mails = $this->getReceivers();
+		if ( !$mails ) {
+			return Status::newFatal( 'forms-error-target-mail-no-mail' );
 		}
-		\UserMailer::send(
+
+		$status = UserMailer::send(
 			$mails,
-			$GLOBALS['wgPasswordSender'],
-			$this->title,
-			FormatJson::encode( $formsubmittedData )
+			new MailAddress( $this->senders ),
+			$this->getMailSubject( $formsubmittedData ),
+			$this->getMailBody( $formsubmittedData )
 		);
-		return Status::newGood();
+
+		if ( $status->isOK() ) {
+			return Status::newGood( [
+				'id' => 0,
+				'data' => $formsubmittedData
+			] );
+		} else {
+			return Status::newFatal( 'forms-error-target-mail-send-failed' );
+		}
 	}
 
 	/**
-	 * Action that occurs after form instance is saved
 	 *
-	 * Can be overridden by specifying target.afterAction in form definition
+	 * @return array
+	 */
+	private function getReceivers() {
+		$mails = [];
+		foreach ( $this->receivers as $receiver ) {
+			$address = $this->receiverEmails[ $receiver ];
+
+			if ( in_array( $address, $this->receiverEmails ) ) {
+				if ( $this->isUser( $address ) ) {
+					$user = User::newFromName( $address );
+					$addressFromUser = MailAddress::newFromUser( $user );
+					$mails[] = $addressFromUser;
+				}
+				if ( $this->isMail( $address ) ) {
+					$mails[] = new MailAddress( $address );
+				}
+			}
+		}
+		return $mails;
+	}
+
+	/**
 	 *
-	 * Example - redirecting to a page:
-	 * return [
-	 *    "type" => "redirect",
-	 *    "url" => Title::newMainPage()->getLocalUrl()
-	 * ]
-	 *
-	 * @return array|false
+	 * @return false
 	 */
 	public function getDefaultAfterAction() {
-		return [
-		 "type" => "redirect",
-		 "url" => \Title::newMainPage()->getLocalUrl()
-		];
+		return false;
+	}
+
+	/**
+	 *
+	 * @param array $formData
+	 * @return string
+	 */
+	private function getMailSubject( $formData ) {
+		$mailbody = $this->preprocessor->preprocess( $formData, $this->subject, $this->user );
+		return $mailbody;
+	}
+
+	/**
+	 *
+	 * @param array $formData
+	 * @return string
+	 */
+	private function getMailBody( $formData ) {
+		$mailbody = $this->preprocessor->preprocess( $formData, $this->body, $this->user );
+		return $mailbody;
+	}
+
+	/**
+	 *
+	 * @param string $username
+	 * @return bool
+	 */
+	private function isUser( $username ) {
+		$user = User::newFromName( $username );
+		if ( $user instanceof User && $user->isRegistered() && $user->isEmailConfirmed() ) {
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 *
+	 * @param string $address
+	 * @return bool
+	 */
+	private function isMail( $address ) {
+		$matches = [];
+		$isMail = preg_match(
+			'([a-z0-9_.-]+([a-z0-9_.-]+)*\@[a-z0-9_-]+([a-z0-9_.-]+)*.[a-z]+)',
+			$address,
+			$matches
+		);
+		if ( $isMail ) {
+			return true;
+		}
+		return false;
 	}
 }

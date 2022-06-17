@@ -2,6 +2,7 @@
 
 namespace MediaWiki\Extension\Forms\Special;
 
+use Config;
 use MediaWiki\Extension\Forms\DefinitionManager;
 use MediaWiki\MediaWikiServices;
 use Title;
@@ -20,12 +21,22 @@ class FormEditor extends FormSpecial {
 	protected $data = '';
 
 	/**
+	 * @var Config
+	 */
+	protected $config;
+
+	/**
 	 * @var string
 	 */
 	protected $action = 'create';
 
-	public function __construct() {
+	/**
+	 *
+	 * @param Config $config
+	 */
+	public function __construct( Config $config ) {
 		parent::__construct( 'FormEditor', 'forms-edit-form-definition' );
+		$this->config = $config;
 	}
 
 	/**
@@ -50,6 +61,11 @@ class FormEditor extends FormSpecial {
 	protected function insertDependencies() {
 		$this->getOutput()->addModules( 'ext.forms.form.editor' );
 		$this->getOutput()->addJsConfigVars( 'formsAvailableFormsForWidget', $this->getAvailableFormsForWidget() );
+
+		$this->getOutput()->addJsConfigVars(
+			'formsEmailTargets',
+			array_keys( $this->config->get( 'FormsTargetEMailRecipients' )
+		) );
 	}
 
 	/**
