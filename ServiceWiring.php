@@ -3,6 +3,7 @@
 use MediaWiki\Extension\Forms\Autosaver;
 use MediaWiki\Extension\Forms\DefinitionManager;
 use MediaWiki\Extension\Forms\FormRevisionManager;
+use MediaWiki\Extension\Forms\Util\DataPreprocessor;
 use MediaWiki\MediaWikiServices;
 
 return [
@@ -29,6 +30,11 @@ return [
 		return Autosaver::factory(
 			$db
 		);
+	},
+
+	'FormsDataPreprocessor' => static function ( MediaWikiServices $services ) {
+		$context = RequestContext::getMain();
+		return new DataPreprocessor( $services->getParser(), $context );
 	}
 
 ];

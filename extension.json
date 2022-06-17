@@ -50,14 +50,18 @@
 	],
 	"SpecialPages": {
 		"CreateFormInstance": "MediaWiki\\Extension\\Forms\\Special\\CreateFormInstance",
-		"FormEditor": "MediaWiki\\Extension\\Forms\\Special\\FormEditor"
+		"FormEditor": {
+			"class":  "MediaWiki\\Extension\\Forms\\Special\\FormEditor",
+			"services": [
+				"MainConfig"
+			]
+		}
 	},
 	"ExtensionMessagesFiles": {
 		"FormsAlias": "languages/Forms.alias.php"
 	},
-	"config_prefix": "egForms",
 	"config": {
-		"TargetEMailRecipients": {
+		"FormsTargetEMailRecipients": {
 			"value":  {}
 		}
 	},
@@ -95,6 +99,7 @@
 				"target/JsonOnWikiPage.js",
 				"target/Database.js",
 				"target/Template.js",
+				"target/Email.js",
 				"widget/edit/JSInput.js",
 				"formElement/JSInput.js",
 				"widget/edit/StyleTextarea.js",
@@ -241,7 +246,11 @@
 				"mwstake-formengine-label-input-position",
 				"mwstake-formengine-label-allowed-values",
 				"forms-form-editor-prop-rl-deps",
-				"forms-form-editor-prop-rl-deps-help"
+				"forms-form-editor-prop-rl-deps-help",
+				"forms-form-editor-prop-targettypeemail",
+				"forms-form-editor-prop-target-email-receiver",
+				"forms-form-editor-prop-target-email-subject",
+				"forms-form-editor-prop-target-email-body"
 			],
 			"dependencies": [
 				"ext.forms.init",
