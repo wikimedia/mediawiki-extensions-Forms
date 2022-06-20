@@ -4,5 +4,7 @@
 			"Joao Xavier"
 		]
 	},
-	"forms-form-editor-prop-categories": "Kategorii"
+	"forms-form-editor-prop-title": "Titulo",
+	"forms-form-editor-prop-categories": "Kategorii",
+	"forms-form-editor-prop-targettitle": "Titulo"
 }
