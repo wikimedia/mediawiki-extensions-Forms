@@ -127,7 +127,7 @@ class FormSubmit extends \ApiBase {
 			);
 		} else {
 			$result->addValue( null, 'success', 0 );
-			$result->addValue( null, 'error', $this->status->getMessage() );
+			$result->addValue( null, 'error', [ 'info' => $this->status->getMessage() ] );
 		}
 	}
 
