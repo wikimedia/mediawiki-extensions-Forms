@@ -258,9 +258,20 @@ class DefinitionManager {
 
 	protected function loadFromContentModel() {
 		$pages = $this->getPages();
+		if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
+			// MW 1.36+
+			$wikiPageFactory = MediaWikiServices::getInstance()->getWikiPageFactory();
+		} else {
+			$wikiPageFactory = null;
+		}
 		foreach ( $pages as $pageRow ) {
 			$page = \Title::newFromRow( $pageRow );
-			$wikipage = \WikiPage::factory( $page );
+			if ( $wikiPageFactory !== null ) {
+				// MW 1.36+
+				$wikipage = $wikiPageFactory->newFromTitle( $page );
+			} else {
+				$wikipage = \WikiPage::factory( $page );
+			}
 			$content = $wikipage->getContent();
 
 			$name = $content->getTitleWithoutExtension( $page );

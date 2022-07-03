@@ -197,7 +197,12 @@ abstract class TitleTarget implements ITarget {
 	protected function saveToPage() {
 		$title = $this->getTitleFromPageName();
 		try {
-			$wikipage = \WikiPage::factory( $title );
+			if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
+				// MW 1.36+
+				$wikipage = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $title );
+			} else {
+				$wikipage = \WikiPage::factory( $title );
+			}
 			$content = \ContentHandler::makeContent(
 				$this->getDataForContent(),
 				$title
