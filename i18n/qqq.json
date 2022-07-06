@@ -90,5 +90,11 @@
 	"action-forms-edit-form-definition": "{{doc-action|forms-edit-form-definition}}",
 	"forms-action-editsource": "Label for content action link.\n{{Identical/Edit source}}",
 	"forms-form-editor-prop-rl-deps": "Label for the form editor field that specifies the list of RL module dependencies (module names)",
-	"forms-form-editor-prop-rl-deps-help": "Help text for the form editor field that specifies the list of RL module dependencies (module names)"
+	"forms-form-editor-prop-rl-deps-help": "Help text for the form editor field that specifies the list of RL module dependencies (module names)",
+	"forms-form-editor-prop-targettypeemail": "Label for target type \"email\" select option in the form editor.\n{{Identical|Email}}",
+	"forms-form-editor-prop-target-email-receiver": "Label for dropdown widget which allows selection of receiver of mail",
+	"forms-form-editor-prop-target-email-subject": "Label for text input widget to define email subject",
+	"forms-form-editor-prop-target-email-body": "Label for text input to define content of email",
+	"forms-error-target-mail-send-failed": "Label for error message if mail send failed",
+	"forms-error-target-mail-no-mail": "Label for error message if no valid mail address is set"
 }
