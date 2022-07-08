@@ -21,5 +21,10 @@
 	"forms-label-production": "Produzione",
 	"forms-form-editor-prop-targettypetemplate": "Template",
 	"forms-form-editor-prop-targettemplate": "Template da usare",
-	"forms-action-editsource": "Modifica sorgente"
+	"forms-action-editsource": "Modifica sorgente",
+	"forms-form-editor-prop-targettypeemail": "Email",
+	"forms-form-editor-prop-target-email-subject": "Oggetto",
+	"forms-form-editor-prop-target-email-body": "Contenuto",
+	"forms-error-target-mail-send-failed": "Invio email non riuscito",
+	"forms-error-target-mail-no-mail": "Nessun indirizzo email valido disponibile"
 }

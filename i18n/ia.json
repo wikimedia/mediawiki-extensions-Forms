@@ -87,5 +87,11 @@
 	"action-forms-edit-form-definition": "modificar definitiones de formulario",
 	"forms-action-editsource": "Modificar fonte",
 	"forms-form-editor-prop-rl-deps": "Dependentias del cargator de ressources",
-	"forms-form-editor-prop-rl-deps-help": "Specifica le lista de modulos del cargator de ressources que debe esser cargate quando le formulario es instantiate"
+	"forms-form-editor-prop-rl-deps-help": "Specifica le lista de modulos del cargator de ressources que debe esser cargate quando le formulario es instantiate",
+	"forms-form-editor-prop-targettypeemail": "E-mail",
+	"forms-form-editor-prop-target-email-receiver": "Destinatario",
+	"forms-form-editor-prop-target-email-subject": "Subjecto",
+	"forms-form-editor-prop-target-email-body": "Contento",
+	"forms-error-target-mail-send-failed": "Le invio del message de e-mail ha fallite",
+	"forms-error-target-mail-no-mail": "Nulle adresse de e-mail valide es disponibile"
 }
