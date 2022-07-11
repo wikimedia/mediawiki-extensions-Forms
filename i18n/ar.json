@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mohanad Kh"
+		]
+	},
+	"forms-form-editor-prop-targettypeemail": "بريد إلكتروني",
+	"forms-form-editor-prop-target-email-receiver": "المُرسل إليه",
+	"forms-form-editor-prop-target-email-subject": "الموضوع",
+	"forms-form-editor-prop-target-email-body": "المحتوى",
+	"forms-error-target-mail-send-failed": "فشل إرسال البريد"
+}
