@@ -87,5 +87,11 @@
 	"action-forms-edit-form-definition": "уредување на одредби",
 	"forms-action-editsource": "Уреди извор",
 	"forms-form-editor-prop-rl-deps": "Зависности на ресурсниот вчитувач",
-	"forms-form-editor-prop-rl-deps-help": "Укажете список на модули ResourceLoader кои би се вчитале при отворањето на образецот"
+	"forms-form-editor-prop-rl-deps-help": "Укажете список на модули ResourceLoader кои би се вчитале при отворањето на образецот",
+	"forms-form-editor-prop-targettypeemail": "Е-пошта",
+	"forms-form-editor-prop-target-email-receiver": "Примач",
+	"forms-form-editor-prop-target-email-subject": "Наслов",
+	"forms-form-editor-prop-target-email-body": "Содржина",
+	"forms-error-target-mail-send-failed": "Испраќањето не успеа",
+	"forms-error-target-mail-no-mail": "Нема внесено важечка е-пошта"
 }
