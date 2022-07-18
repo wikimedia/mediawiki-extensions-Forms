@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Laitei",
 			"Teitei Para"
 		]
 	},
 	"forms-form-editor-prop-targettypeemail": "Email",
 	"forms-form-editor-prop-target-email-receiver": "Totuhpa",
-	"forms-form-editor-prop-target-email-subject": "A chhâpa",
+	"forms-form-editor-prop-target-email-subject": "Athâtih",
 	"forms-form-editor-prop-target-email-body": "A tlôhpa",
 	"forms-error-target-mail-send-failed": "Châ a paphao vei",
 	"forms-error-target-mail-no-mail": "Email yna su adopa y vei"
