@@ -23,5 +23,10 @@
 	"forms-label-production": "تولید",
 	"forms-label-hq-address": "دفتر مرکزی",
 	"forms-label-street": "خیابان",
-	"forms-form-editor-target-template-field-manual": "(دستی)"
+	"forms-form-editor-target-template-field-manual": "(دستی)",
+	"forms-form-editor-prop-targettypeemail": "ایمیل",
+	"forms-form-editor-prop-target-email-receiver": "دریافت‌کننده",
+	"forms-form-editor-prop-target-email-subject": "موضوع",
+	"forms-form-editor-prop-target-email-body": "محتوا",
+	"forms-error-target-mail-send-failed": "ارسال نامه ناموفق"
 }

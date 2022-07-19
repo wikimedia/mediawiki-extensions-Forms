@@ -39,5 +39,10 @@
 	"forms-form-editor-prop-targettemplate": "사용할 틀",
 	"right-forms-create-form": "폼 만들기",
 	"action-forms-create-form": "폼을 만들",
-	"forms-form-editor-prop-rl-deps": "리소스 로더 의존성"
+	"forms-form-editor-prop-rl-deps": "리소스 로더 의존성",
+	"forms-form-editor-prop-targettypeemail": "이메일",
+	"forms-form-editor-prop-target-email-receiver": "받는이",
+	"forms-form-editor-prop-target-email-subject": "제목",
+	"forms-error-target-mail-send-failed": "메일 보내기 실패",
+	"forms-error-target-mail-no-mail": "유효한 이메일 주소가 없습니다"
 }
