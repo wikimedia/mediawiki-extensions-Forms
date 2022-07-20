@@ -2,10 +2,13 @@
 
 namespace MediaWiki\Extension\Forms\Target;
 
+use CommentStoreComment;
+use Exception;
 use HashConfig;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\MediaWikiServices;
-use MWException;
+use MediaWiki\Revision\SlotRecord;
+use RequestContext;
 use Status;
 use Title;
 
@@ -207,10 +210,13 @@ abstract class TitleTarget implements ITarget {
 				$this->getDataForContent(),
 				$title
 			);
-			$saveStatus = $wikipage->doEditContent(
-				$content,
-				$this->summary ?: wfMessage( 'forms-target-json-page-summary', $this->form )->plain()
-			);
+			$user = RequestContext::getMain()->getUser();
+			$updater = $wikipage->newPageUpdater( $user );
+			$updater->setContent( SlotRecord::MAIN, $content );
+			$summary = $this->summary ?: wfMessage( 'forms-target-json-page-summary', $this->form )->plain();
+			$comment = CommentStoreComment::newUnsavedComment( $summary );
+			$updater->saveRevision( $comment );
+			$saveStatus = $updater->getStatus();
 			if ( $saveStatus->isOK() ) {
 				return Status::newGood( [
 					'title' => $title->getPrefixedDBkey(),
@@ -219,7 +225,7 @@ abstract class TitleTarget implements ITarget {
 				] );
 			}
 			return $saveStatus;
-		} catch ( MWException $ex ) {
+		} catch ( Exception $ex ) {
 			return Status::newFatal( $ex->getMessage() );
 		}
 	}
