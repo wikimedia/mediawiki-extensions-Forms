@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Can"
+			"Can",
+			"Hedda"
 		]
 	},
 	"forms-createforminstance-form-name": "$1 oluştur",
@@ -43,5 +44,10 @@
 	"right-forms-edit-form-definition": "Form tanımlarını düzenle",
 	"action-forms-create-form": "form oluştur",
 	"action-forms-edit-form-definition": "form tanımlarını düzenle",
-	"forms-action-editsource": "Kaynağı düzenle"
+	"forms-action-editsource": "Kaynağı düzenle",
+	"forms-form-editor-prop-targettypeemail": "E-posta",
+	"forms-form-editor-prop-target-email-receiver": "Alıcı",
+	"forms-form-editor-prop-target-email-subject": "Konu",
+	"forms-form-editor-prop-target-email-body": "İçerik",
+	"forms-error-target-mail-no-mail": "Geçerli bir e-posta adresi yok"
 }
