@@ -4,8 +4,6 @@ namespace MediaWiki\Extension\Forms\Content;
 
 use Html;
 use MediaWiki\MediaWikiServices;
-use ParserOptions;
-use ParserOutput;
 use Title;
 
 class FormDefinitionContent extends FormDataContent {
@@ -20,20 +18,6 @@ class FormDefinitionContent extends FormDataContent {
 	 */
 	public function __construct( $text, $modelId = 'FormDefinition' ) {
 		parent::__construct( $text, $modelId );
-	}
-
-	/**
-	 * @param Title $title
-	 * @param int $revId
-	 * @param ParserOptions $options
-	 * @param string $generateHtml
-	 * @param ParserOutput &$output
-	 */
-	protected function fillParserOutput( Title $title, $revId, ParserOptions $options,
-		$generateHtml, ParserOutput &$output ) {
-		$this->currentForm = $this->getTitleWithoutExtension( $title );
-		$this->addCategoriesFromJSON( $output );
-		parent::fillParserOutput( $title, $revId, $options, $generateHtml, $output );
 	}
 
 	/**
@@ -71,17 +55,4 @@ class FormDefinitionContent extends FormDataContent {
 		$hookContainer->run( 'FormsGetDisplayTitle', [ $title, &$displayTitle, 'view' ] );
 		return $displayTitle;
 	}
-
-	/**
-	 *
-	 * @param ParserOutput $output
-	 */
-	private function addCategoriesFromJSON( $output ) {
-		$formdata = (array)$this->getData()->getValue();
-		$categories = isset( $formdata['categories'] ) ? $formdata['categories'] : [];
-		foreach ( $categories as $categoryName ) {
-			$output->addCategory( $categoryName, $categoryName );
-		}
-	}
-
 }
