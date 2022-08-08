@@ -21,52 +21,6 @@ class FormDataContent extends \JsonContent {
 	}
 
 	/**
-	 * @param Title $title
-	 * @param int $revId
-	 * @param \ParserOptions $options
-	 * @param string $generateHtml
-	 * @param \ParserOutput &$output
-	 */
-	protected function fillParserOutput( Title $title, $revId, \ParserOptions $options,
-		$generateHtml, \ParserOutput &$output ) {
-		if ( $this->isRedirect() ) {
-			$destTitle = $this->getRedirectTarget();
-			if ( $destTitle instanceof Title ) {
-				$output->addLink( $destTitle );
-				if ( $generateHtml ) {
-					$target = $this->getRedirectTarget();
-					if ( $target ) {
-						$output->setText(
-							\Article::getRedirectHeaderHtml(
-								$title->getPageLanguage(), $target, false
-							)
-						);
-						$output->addModuleStyles( [ 'mediawiki.action.view.redirectPage' ] );
-					}
-				}
-			}
-			return;
-		}
-		$output->setDisplayTitle( $this->getDisplayTitle( $title ) );
-		$output->setText( $this->getFormContainer( 'view', $title ) );
-		$output->addModules( [ 'ext.forms.init' ] );
-	}
-
-	/**
-	 * @return Title|null
-	 */
-	public function getRedirectTarget() {
-		$data = $this->getData()->getValue();
-		if ( !is_object( $data ) ) {
-			return null;
-		}
-		if ( property_exists( $data, '_redirect' ) ) {
-			return Title::newFromText( $data->_redirect );
-		}
-		return null;
-	}
-
-	/**
 	 * @param string $action
 	 * @param Title|null $for
 	 * @return string
@@ -87,7 +41,8 @@ class FormDataContent extends \JsonContent {
 			$formConfig['data-data'] = $data;
 			$formConfig['data-form'] = $this->formName;
 			if ( $for instanceof Title && $for->exists() ) {
-				$formConfig['data-form-created'] = $for->getFirstRevision()->getTimestamp();
+				$revisionLookup = MediaWikiServices::getInstance()->getRevisionLookup();
+				$formConfig['data-form-created'] = $revisionLookup->getFirstRevision( $for )->getTimestamp();
 			}
 
 		}
@@ -102,20 +57,6 @@ class FormDataContent extends \JsonContent {
 	public function getTitleWithoutExtension( $title ) {
 		$prefixedText = $title->getPrefixedText();
 		return substr( $prefixedText, 0, -9 );
-	}
-
-	/**
-	 * @return bool
-	 */
-	private function getFormProps() {
-		if ( !$this->formName ) {
-			$data = $this->getData()->getValue();
-			if ( property_exists( $data, '_form' ) ) {
-				$this->formName = $data->_form;
-				return true;
-			}
-		}
-		return false;
 	}
 
 	/**
@@ -134,5 +75,19 @@ class FormDataContent extends \JsonContent {
 	 */
 	public function isValid() {
 		return $this->getText() === '' || parent::isValid();
+	}
+
+	/**
+	 * @return bool
+	 */
+	private function getFormProps() {
+		if ( !$this->formName ) {
+			$data = $this->getData()->getValue();
+			if ( property_exists( $data, '_form' ) ) {
+				$this->formName = $data->_form;
+				return true;
+			}
+		}
+		return false;
 	}
 }
