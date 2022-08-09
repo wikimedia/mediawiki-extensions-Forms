@@ -5,8 +5,8 @@ namespace MediaWiki\Extension\Forms\Content;
 use Title;
 
 class FormDataContent extends \JsonContent {
+
 	/**
-	 *
 	 * @var string
 	 */
 	protected $formName;
@@ -33,11 +33,11 @@ class FormDataContent extends \JsonContent {
 			if ( $destTitle instanceof Title ) {
 				$output->addLink( $destTitle );
 				if ( $generateHtml ) {
-					$chain = $this->getRedirectChain();
-					if ( $chain ) {
+					$target = $this->getRedirectTarget();
+					if ( $target ) {
 						$output->setText(
 							\Article::getRedirectHeaderHtml(
-								$title->getPageLanguage(), $chain, false
+								$title->getPageLanguage(), $target, false
 							)
 						);
 						$output->addModuleStyles( [ 'mediawiki.action.view.redirectPage' ] );
