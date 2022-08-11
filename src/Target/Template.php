@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\Forms\Target;
 use HashConfig;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\MediaWikiServices;
+use TextContent;
 use Title;
 use WikiPage;
 
@@ -133,7 +134,7 @@ class Template extends TitleTarget {
 			$wp = WikiPage::factory( $this->template );
 		}
 		$content = $wp->getContent();
-		$text = $content->getNativeData();
+		$text = ( $content instanceof TextContent ) ? $content->getText() : '';
 		$matches = [];
 		preg_match_all( '/{{{(.*?)(\|.*?|)}}}/', $text, $matches );
 		if ( isset( $matches[1] ) ) {
