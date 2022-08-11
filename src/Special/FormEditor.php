@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\Forms\Special;
 use Config;
 use MediaWiki\Extension\Forms\DefinitionManager;
 use MediaWiki\MediaWikiServices;
+use TextContent;
 use Title;
 use WikiPage;
 
@@ -107,7 +108,8 @@ class FormEditor extends FormSpecial {
 		$title = Title::newFromText( "$subPage.form" );
 		$wikipage = WikiPage::factory( $title );
 		$content = $wikipage->getContent();
-		return $content->getNativeData();
+		$data = ( $content instanceof TextContent ) ? $content->getText() : '';
+		return $data;
 	}
 
 	/**
