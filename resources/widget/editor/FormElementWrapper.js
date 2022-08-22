@@ -126,7 +126,7 @@
 		if ( accept === null ) {
 			return;
 		}
-		if ( !$.isArray( accept ) ) {
+		if ( !Array.isArray( accept ) ) {
 			accept = [accept];
 		}
 
