@@ -72,7 +72,7 @@ class FormDataEditAction extends FormlessAction {
 	 * @return Content|null
 	 */
 	protected function getCurrentContent() {
-		$rev = $this->page->getRevision();
+		$rev = $this->page->getRevisionRecord();
 		$content = $rev ? $rev->getContent( RevisionRecord::RAW ) : null;
 
 		if ( $content === false || $content === null ) {
