@@ -3,10 +3,10 @@
 namespace MediaWiki\Extension\Forms\Action;
 
 use Content;
-use ContentHandler;
 use FormlessAction;
 use Hooks;
 use MediaWiki\Extension\Forms\Content\FormDataContent;
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
 use SpecialPage;
 use Title;
@@ -76,7 +76,8 @@ class FormDataEditAction extends FormlessAction {
 		$content = $rev ? $rev->getContent( RevisionRecord::RAW ) : null;
 
 		if ( $content === false || $content === null ) {
-			$handler = ContentHandler::getForModelID( $this->contentModel );
+			$handler = MediaWikiServices::getInstance()->getContentHandlerFactory();
+			$handler = $handler->getContentHandler( $this->contentModel );
 			$this->action = 'create';
 			return $handler->makeEmptyContent();
 		}
