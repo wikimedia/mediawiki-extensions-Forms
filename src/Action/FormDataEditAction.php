@@ -4,7 +4,6 @@ namespace MediaWiki\Extension\Forms\Action;
 
 use Content;
 use FormlessAction;
-use Hooks;
 use MediaWiki\Extension\Forms\Content\FormDataContent;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
@@ -106,7 +105,8 @@ class FormDataEditAction extends FormlessAction {
 			"forms-form-edit-title",
 			$this->getCurrentContent()->getTitleWithoutExtension( $this->getTitle() )
 		)->plain();
-		Hooks::run( 'FormsGetDisplayTitle', [ $this->getTitle(), &$displayTitle, 'edit' ] );
+		$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+		$hookContainer->run( 'FormsGetDisplayTitle', [ $this->getTitle(), &$displayTitle, 'edit' ] );
 		return $displayTitle;
 	}
 

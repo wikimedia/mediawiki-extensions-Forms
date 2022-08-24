@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\Forms\Content;
 
-use Hooks;
 use Html;
+use MediaWiki\MediaWikiServices;
 use ParserOptions;
 use ParserOutput;
 use Title;
@@ -67,7 +67,8 @@ class FormDefinitionContent extends FormDataContent {
 	 */
 	protected function getDisplayTitle( $title ) {
 		$displayTitle = substr( $title->getPrefixedText(), 0, -5 );
-		Hooks::run( 'FormsGetDisplayTitle', [ $title, &$displayTitle, 'view' ] );
+		$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+		$hookContainer->run( 'FormsGetDisplayTitle', [ $title, &$displayTitle, 'view' ] );
 		return $displayTitle;
 	}
 
