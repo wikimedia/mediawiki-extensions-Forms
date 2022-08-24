@@ -2,6 +2,7 @@
 
 namespace MediaWiki\Extension\Forms\Content;
 
+use MediaWiki\MediaWikiServices;
 use Title;
 
 class FormDataContent extends \JsonContent {
@@ -123,7 +124,8 @@ class FormDataContent extends \JsonContent {
 	 */
 	protected function getDisplayTitle( $title ) {
 		$displayTitle = substr( $title->getPrefixedText(), 0, -9 );
-		\Hooks::run( 'FormsGetDisplayTitle', [ $title, &$displayTitle, 'view' ] );
+		$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+		$hookContainer->run( 'FormsGetDisplayTitle', [ $title, &$displayTitle, 'view' ] );
 		return $displayTitle;
 	}
 
