@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\Forms;
 
 use MediaWiki\Extension\Forms\Content\FormDefinitionContent;
 use MediaWiki\MediaWikiServices;
+use TextContent;
 use Title;
 
 class DefinitionManager {
@@ -63,7 +64,7 @@ class DefinitionManager {
 					if ( $title->getArticleID() === $rev->getPageId() ) {
 						$content = $rev->getContent( 'main' );
 						if ( $content instanceof FormDefinitionContent ) {
-							return $content->getNativeData();
+							return $content->getText();
 						}
 					}
 				}
@@ -264,7 +265,7 @@ class DefinitionManager {
 			$content = $wikipage->getContent();
 
 			$name = $content->getTitleWithoutExtension( $page );
-			$data = $content->getNativeData();
+			$data = ( $content instanceof TextContent ) ? $content->getText() : '';
 			$this->definitions[$name] = [
 				'type' => $this->parseDefinitionType( $data, static::LANG_JSON ),
 				'source' => static::SOURCE_WIKIPAGE,
