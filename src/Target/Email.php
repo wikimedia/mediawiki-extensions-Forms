@@ -54,6 +54,9 @@ class Email implements ITarget {
 	 */
 	protected $preprocessor;
 
+	/** @var MediaWikiServices */
+	protected $services = null;
+
 	/**
 	 * @param array $receivers
 	 * @param string $subject
@@ -82,6 +85,7 @@ class Email implements ITarget {
 		$this->receiverEmails = $receiverEmails;
 		$this->senders = $senders;
 		$this->preprocessor = $preprocessor;
+		$this->services = MediaWikiServices::getInstance();
 	}
 
 	/**
@@ -101,11 +105,12 @@ class Email implements ITarget {
 
 		$user = RequestContext::getMain()->getUser();
 
-		$mainConfig = MediaWikiServices::getInstance()->getMainConfig();
+		$services = MediaWikiServices::getInstance();
+		$mainConfig = $services->getMainConfig();
 		$receiverEmails = $mainConfig->get( 'FormsTargetEMailRecipients' );
 		$senders = $mainConfig->get( 'PasswordSender' );
 
-		$preprocessor = MediaWikiServices::getInstance()->getService( 'FormsDataPreprocessor' );
+		$preprocessor = $services->getService( 'FormsDataPreprocessor' );
 
 		return new static(
 			$receivers,
@@ -154,12 +159,13 @@ class Email implements ITarget {
 	 */
 	private function getReceivers() {
 		$mails = [];
+		$userFactory = $this->services->getUserFactory();
 		foreach ( $this->receivers as $receiver ) {
 			$address = $this->receiverEmails[ $receiver ];
 
 			if ( in_array( $address, $this->receiverEmails ) ) {
 				if ( $this->isUser( $address ) ) {
-					$user = User::newFromName( $address );
+					$user = $userFactory->newFromName( $address );
 					$addressFromUser = MailAddress::newFromUser( $user );
 					$mails[] = $addressFromUser;
 				}
@@ -205,7 +211,7 @@ class Email implements ITarget {
 	 * @return bool
 	 */
 	private function isUser( $username ) {
-		$user = User::newFromName( $username );
+		$user = $this->services->getUserFactory()->newFromName( $username );
 		if ( $user instanceof User && $user->isRegistered() && $user->isEmailConfirmed() ) {
 			return true;
 		}
