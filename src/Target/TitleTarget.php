@@ -253,7 +253,10 @@ abstract class TitleTarget implements ITarget {
 			return false;
 		}
 
-		if ( $title->userCan( $action ) ) {
+		$user = RequestContext::getMain()->getUser();
+		$userCan = MediaWikiServices::getInstance()->getPermissionManager()
+			->userCan( $action, $user, $title );
+		if ( $userCan ) {
 			return true;
 		}
 		return false;
