@@ -22,10 +22,10 @@ class FormDataContent extends \JsonContent {
 
 	/**
 	 * @param string $action
-	 * @param Title|null $for
+	 * @param Title|null $form
 	 * @return string
 	 */
-	public function getFormContainer( $action = 'view', $for = null ) {
+	public function getFormContainer( $action = 'view', $form = null ) {
 		$formConfig = [
 			'data-action' => $action,
 			'class' => 'forms-form-container'
@@ -40,9 +40,10 @@ class FormDataContent extends \JsonContent {
 			$data = \FormatJson::encode( $data );
 			$formConfig['data-data'] = $data;
 			$formConfig['data-form'] = $this->formName;
-			if ( $for instanceof Title && $for->exists() ) {
-				$revisionLookup = MediaWikiServices::getInstance()->getRevisionLookup();
-				$formConfig['data-form-created'] = $revisionLookup->getFirstRevision( $for )->getTimestamp();
+			if ( $form instanceof Title && $form->exists() ) {
+				$firstRev = MediaWikiServices::getInstance()->getRevisionLookup()
+					->getFirstRevision( $form->toPageIdentity() );
+				$formConfig['data-form-created'] = $firstRev->getTimestamp();
 			}
 
 		}
