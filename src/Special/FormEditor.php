@@ -7,7 +7,6 @@ use MediaWiki\Extension\Forms\DefinitionManager;
 use MediaWiki\MediaWikiServices;
 use TextContent;
 use Title;
-use WikiPage;
 
 class FormEditor extends FormSpecial {
 
@@ -106,12 +105,8 @@ class FormEditor extends FormSpecial {
 	 */
 	private function getDataForForm( $subPage ) {
 		$title = Title::newFromText( "$subPage.form" );
-		if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
-			// MW 1.36+
-			$wikipage = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $title );
-		} else {
-			$wikipage = WikiPage::factory( $title );
-		}
+		$wikipage = MediaWikiServices::getInstance()->getWikiPageFactory()
+			->newFromTitle( $title );
 		$content = $wikipage->getContent();
 		$data = ( $content instanceof TextContent ) ? $content->getText() : '';
 		return $data;

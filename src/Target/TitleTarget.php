@@ -43,6 +43,9 @@ abstract class TitleTarget implements ITarget {
 	 */
 	protected $summary = '';
 
+	/** @var MediaWikiServices */
+	protected $services = null;
+
 	/**
 	 * @param string $pageName
 	 * @param string $form
@@ -54,6 +57,7 @@ abstract class TitleTarget implements ITarget {
 		$this->stripExtension();
 		$this->form = $form;
 		$this->exists = $exists;
+		$this->services = MediaWikiServices::getInstance();
 	}
 
 	/**
@@ -114,9 +118,7 @@ abstract class TitleTarget implements ITarget {
 	 * form RevID and update the form instance with it
 	 */
 	public function tryUpdateFormRevision() {
-		$definitionManager = MediaWikiServices::getInstance()->getService(
-			"FormsDefinitionManager"
-		);
+		$definitionManager = $this->services->getService( "FormsDefinitionManager" );
 		if ( $definitionManager->definitionIsWikipage( $this->form ) ) {
 			$this->data['_form_rev'] = $definitionManager->getLatestDefinitionRev( $this->form );
 		}
@@ -200,12 +202,7 @@ abstract class TitleTarget implements ITarget {
 	protected function saveToPage() {
 		$title = $this->getTitleFromPageName();
 		try {
-			if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
-				// MW 1.36+
-				$wikipage = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $title );
-			} else {
-				$wikipage = \WikiPage::factory( $title );
-			}
+			$wikipage = $this->services->getWikiPageFactory()->newFromTitle( $title );
 			$content = \ContentHandler::makeContent(
 				$this->getDataForContent(),
 				$title
