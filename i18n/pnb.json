@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bgo eiu"
+		]
+	},
+	"forms-createforminstance-form-name": "$1 بݨاؤ",
+	"forms-form-edit-title": "$1 سودھو",
+	"forms-form-editor-prop-title": "سرخی",
+	"forms-form-editor-prop-categories": "گٹھاں",
+	"forms-form-editor-prop-targettitle": "سرخی",
+	"forms-formelement-group-input": "اِنپوٹ",
+	"forms-formelement-group-other": "ہور",
+	"forms-label-city": "شَہر",
+	"forms-label-email": "ای میل",
+	"forms-label-street": "سڑک",
+	"forms-action-editsource": "سروت سودھو",
+	"forms-form-editor-prop-targettypeemail": "ای میل",
+	"forms-form-editor-prop-target-email-subject": "وشا"
+}
