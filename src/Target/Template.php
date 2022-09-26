@@ -4,10 +4,8 @@ namespace MediaWiki\Extension\Forms\Target;
 
 use HashConfig;
 use MediaWiki\Extension\Forms\ITarget;
-use MediaWiki\MediaWikiServices;
 use TextContent;
 use Title;
-use WikiPage;
 
 class Template extends TitleTarget {
 	/** @var Title */
@@ -127,12 +125,7 @@ class Template extends TitleTarget {
 			return [];
 		}
 		// TODO: Gotta be better way
-		if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
-			// MW 1.36+
-			$wp = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $this->template );
-		} else {
-			$wp = WikiPage::factory( $this->template );
-		}
+		$wp = $this->services->getWikiPageFactory()->newFromTitle( $this->template );
 		$content = $wp->getContent();
 		$text = ( $content instanceof TextContent ) ? $content->getText() : '';
 		$matches = [];

@@ -24,8 +24,12 @@ class DefinitionManager {
 	 */
 	protected $definitions = [];
 
+	/** @var MediaWikiServices */
+	protected $services = null;
+
 	public function __construct() {
 		// Load all definitions registered
+		$this->services = MediaWikiServices::getInstance();
 		$this->loadDefinitions();
 	}
 
@@ -54,13 +58,11 @@ class DefinitionManager {
 		if ( $validForTime !== '' && $this->definitionIsWikipage( $definition ) ) {
 			$title = $this->getTitleFromDefinitionName( $definition );
 			if ( $title instanceof Title && $title->exists() ) {
-				$revisionManager = MediaWikiServices::getInstance()->getService(
-					'FormsRevisionManager'
-				);
+				$revisionManager = $this->services->getService( 'FormsRevisionManager' );
 				$revId = $revisionManager->getRevisionForTime( $title, $validForTime );
 				if ( $revId ) {
 					// TODO: This is duplicate code - not too bad, but could be better
-					$rev = MediaWikiServices::getInstance()->getRevisionStore()->getRevisionById( $revId );
+					$rev = $this->services->getRevisionStore()->getRevisionById( $revId );
 					if ( $title->getArticleID() === $rev->getPageId() ) {
 						$content = $rev->getContent( 'main' );
 						if ( $content instanceof FormDefinitionContent ) {
@@ -259,20 +261,10 @@ class DefinitionManager {
 
 	protected function loadFromContentModel() {
 		$pages = $this->getPages();
-		if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
-			// MW 1.36+
-			$wikiPageFactory = MediaWikiServices::getInstance()->getWikiPageFactory();
-		} else {
-			$wikiPageFactory = null;
-		}
+		$wikiPageFactory = $this->services->getWikiPageFactory();
 		foreach ( $pages as $pageRow ) {
 			$page = \Title::newFromRow( $pageRow );
-			if ( $wikiPageFactory !== null ) {
-				// MW 1.36+
-				$wikipage = $wikiPageFactory->newFromTitle( $page );
-			} else {
-				$wikipage = \WikiPage::factory( $page );
-			}
+			$wikipage = $wikiPageFactory->newFromTitle( $page );
 			$content = $wikipage->getContent();
 
 			$name = $content->getTitleWithoutExtension( $page );
@@ -288,12 +280,10 @@ class DefinitionManager {
 	}
 
 	/**
-	 * @return bool
+	 * @return array
 	 */
 	protected function getPages() {
-		$db = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection(
-			DB_REPLICA
-		);
+		$db = $this->services->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$res = $db->select(
 			'page',
 			'*',
