@@ -15,7 +15,7 @@ return [
 	'FormsRevisionManager' => static function ( MediaWikiServices $services ) {
 		$revisionStore = $services->getRevisionStore();
 		$db = $services->getDBLoadBalancer()->getConnection(
-			DB_MASTER
+			DB_PRIMARY
 		);
 		return FormRevisionManager::factory(
 			$revisionStore,
@@ -25,7 +25,7 @@ return [
 
 	'FormsAutosaver' => static function ( MediaWikiServices $services ) {
 		$db = $services->getDBLoadBalancer()->getConnection(
-			DB_MASTER
+			DB_PRIMARY
 		);
 		return Autosaver::factory(
 			$db
