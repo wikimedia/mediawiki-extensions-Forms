@@ -79,7 +79,7 @@ class Database implements ITarget {
 		}
 
 		$db = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection(
-			DB_MASTER
+			DB_PRIMARY
 		);
 		$user = RequestContext::getMain()->getUser();
 		return new static( $db, $user, $config->get( 'form' ), $title, $id );
