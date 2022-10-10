@@ -7,5 +7,6 @@
 	"forms-formelement-group-other": "Drugo",
 	"forms-form-editor-prop-categories": "Kategorije",
 	"forms-label-contacts": "Stiki",
-	"forms-action-editsource": "Uredi vir"
+	"forms-action-editsource": "Uredi vir",
+	"forms-form-edit-title": "Uredi $1"
 }
