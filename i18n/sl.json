@@ -8,5 +8,7 @@
 	"forms-form-editor-prop-categories": "Kategorije",
 	"forms-label-contacts": "Stiki",
 	"forms-action-editsource": "Uredi vir",
-	"forms-form-edit-title": "Uredi $1"
+	"forms-form-edit-title": "Uredi $1",
+	"forms-form-editor-prop-title": "Naslov",
+	"forms-form-editor-prop-targettitle": "Naslov"
 }
