@@ -5,7 +5,9 @@
 		]
 	},
 	"forms-form-edit-title": "Uredi $1",
+	"forms-form-editor-prop-title": "Naslov",
 	"forms-form-editor-prop-categories": "Kategorije",
+	"forms-form-editor-prop-targettitle": "Naslov",
 	"forms-formelement-group-other": "Drugo",
 	"forms-label-contacts": "Stiki",
 	"forms-action-editsource": "Uredi vir"
