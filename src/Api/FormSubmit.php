@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\Forms\Api;
 
 use MediaWiki\Extension\Forms\ITarget;
+use Wikimedia\ParamValidator\ParamValidator;
 
 class FormSubmit extends \ApiBase {
 
@@ -48,20 +49,20 @@ class FormSubmit extends \ApiBase {
 	protected function getAllowedParams() {
 		return [
 			'form' => [
-				\ApiBase::PARAM_TYPE => 'string',
-				\ApiBase::PARAM_REQUIRED => true
+				ParamValidator::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_REQUIRED => true
 			],
 			'target' => [
-				\ApiBase::PARAM_TYPE => 'string',
-				\ApiBase::PARAM_REQUIRED => true
+				ParamValidator::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_REQUIRED => true
 			],
 			'data' => [
-				\ApiBase::PARAM_TYPE => 'string',
-				\ApiBase::PARAM_REQUIRED => true
+				ParamValidator::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_REQUIRED => true
 			],
 			'summary' => [
-				\ApiBase::PARAM_TYPE => 'string',
-				\ApiBase::PARAM_REQUIRED => false
+				ParamValidator::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_REQUIRED => false
 			]
 		];
 	}

@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\Forms\Api;
 
 use MediaWiki\Extension\Forms\DefinitionManager;
 use MediaWiki\MediaWikiServices;
+use Wikimedia\ParamValidator\ParamValidator;
 
 class GetDefinitions extends \ApiBase {
 	public const QUERY_TYPE_QUERY_AVAILABLE = 'query-available';
@@ -52,23 +53,23 @@ class GetDefinitions extends \ApiBase {
 	protected function getAllowedParams() {
 		return [
 			'type' => [
-				\ApiBase::PARAM_TYPE => 'string',
-				\ApiBase::PARAM_REQUIRED => false,
-				\ApiBase::PARAM_DFLT => self::QUERY_TYPE_QUERY_AVAILABLE
+				ParamValidator::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_REQUIRED => false,
+				ParamValidator::PARAM_DEFAULT => self::QUERY_TYPE_QUERY_AVAILABLE
 			],
 			'definitionType' => [
-				\ApiBase::PARAM_TYPE => 'string',
-				\ApiBase::PARAM_REQUIRED => false,
-				\ApiBase::PARAM_DFLT => DefinitionManager::TYPE_CONCRETE
+				ParamValidator::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_REQUIRED => false,
+				ParamValidator::PARAM_DEFAULT => DefinitionManager::TYPE_CONCRETE
 			],
 			'name' => [
-				\ApiBase::PARAM_TYPE => 'string',
-				\ApiBase::PARAM_REQUIRED => false,
+				ParamValidator::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_REQUIRED => false,
 			],
 			'validForTime' => [
-				\ApiBase::PARAM_TYPE => 'string',
-				\ApiBase::PARAM_REQUIRED => false,
-				\ApiBase::PARAM_DFLT => ''
+				ParamValidator::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_REQUIRED => false,
+				ParamValidator::PARAM_DEFAULT => ''
 			]
 		];
 	}
