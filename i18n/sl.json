@@ -4,6 +4,7 @@
 			"Eleassar"
 		]
 	},
+	"forms-createforminstance-form-name": "Ustvari $1",
 	"forms-form-edit-title": "Uredi $1",
 	"forms-form-editor-prop-title": "Naslov",
 	"forms-form-editor-prop-categories": "Kategorije",
