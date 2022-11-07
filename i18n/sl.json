@@ -10,5 +10,6 @@
 	"forms-action-editsource": "Uredi vir",
 	"forms-form-edit-title": "Uredi $1",
 	"forms-form-editor-prop-title": "Naslov",
-	"forms-form-editor-prop-targettitle": "Naslov"
+	"forms-form-editor-prop-targettitle": "Naslov",
+	"forms-createforminstance-form-name": "Ustvari $1"
 }
