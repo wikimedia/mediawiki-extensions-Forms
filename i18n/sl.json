@@ -12,5 +12,6 @@
 	"forms-form-editor-prop-title": "Naslov",
 	"forms-form-editor-prop-targettitle": "Naslov",
 	"forms-createforminstance-form-name": "Ustvari $1",
-	"forms-label-email": "E-pošta"
+	"forms-label-email": "E-pošta",
+	"forms-api-get-definitions-not-exist": "Opredelitev »$1« ne obstaja"
 }
