@@ -5,11 +5,14 @@
 		]
 	},
 	"forms-createforminstance-form-name": "Ustvari $1",
+	"forms-api-get-definitions-not-exist": "Opredelitev »$1« ne obstaja",
 	"forms-form-edit-title": "Uredi $1",
 	"forms-form-editor-prop-title": "Naslov",
 	"forms-form-editor-prop-categories": "Kategorije",
 	"forms-form-editor-prop-targettitle": "Naslov",
 	"forms-formelement-group-other": "Drugo",
 	"forms-label-contacts": "Stiki",
+	"forms-label-email": "E-pošta",
+	"forms-form-editor-prop-targettypetemplate": "Predloga",
 	"forms-action-editsource": "Uredi vir"
 }
