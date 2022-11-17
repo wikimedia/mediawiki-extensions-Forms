@@ -5,5 +5,10 @@
 		]
 	},
 	"forms-createforminstance-form-name": "Napravi $1",
-	"forms-action-editsource": "Uredi kôd"
+	"forms-action-editsource": "Uredi kôd",
+	"forms-desc": "Svestrani okvir obrasca za MediaWiki",
+	"forms-form-edit-title": "Uredi $1",
+	"forms-form-editor-prop-title": "Naslov",
+	"forms-form-editor-prop-showtitle": "Naslov za prikaz",
+	"forms-form-editor-prop-categories": "Kategorije"
 }
