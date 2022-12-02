@@ -3,9 +3,9 @@
 	"version": "1.2-alpha",
 	"license-name": "GPL-3.0-only",
 	"author": [
-		"[http://www.hallowelt.com Hallo Welt! GmbH]"
+		"[https://www.hallowelt.com Hallo Welt! GmbH]"
 	],
-	"url": "http://www.hallowelt.com",
+	"url": "https://www.hallowelt.com",
 	"descriptionmsg": "forms-desc",
 	"requires": {
 		"MediaWiki": ">= 1.35.0"
