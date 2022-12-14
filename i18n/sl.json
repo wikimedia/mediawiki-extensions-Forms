@@ -14,5 +14,6 @@
 	"forms-createforminstance-form-name": "Ustvari $1",
 	"forms-label-email": "E-pošta",
 	"forms-api-get-definitions-not-exist": "Opredelitev »$1« ne obstaja",
-	"forms-form-editor-prop-targettypetemplate": "Predloga"
+	"forms-form-editor-prop-targettypetemplate": "Predloga",
+	"forms-label-city": "Mesto"
 }
