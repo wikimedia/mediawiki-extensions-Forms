@@ -3,7 +3,7 @@
 namespace MediaWiki\Extension\Forms;
 
 use MediaWiki\MediaWikiServices;
-use MediaWiki\Storage\RevisionStore;
+use MediaWiki\Revision\RevisionStore;
 use Status;
 use Title;
 use Wikimedia\Rdbms\IDatabase;
