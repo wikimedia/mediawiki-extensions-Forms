@@ -16,5 +16,8 @@
 	"forms-api-get-definitions-not-exist": "Opredelitev »$1« ne obstaja",
 	"forms-form-editor-prop-targettypetemplate": "Predloga",
 	"forms-label-city": "Mesto",
-	"forms-form-editor-prop-targetafteractiontyperedirect": "Preusmeritev"
+	"forms-form-editor-prop-targetafteractiontyperedirect": "Preusmeritev",
+	"forms-error-form-mismatch": "Shranjevanje ni uspelo zaradi neujemanja imena obrazca",
+	"forms-error-target-db-save-failed": "Shranjevanje v podatkovno zbirko ni uspelo",
+	"forms-error-target-mail-send-failed": "Pošiljanje e-pošte ni uspelo"
 }
