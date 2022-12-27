@@ -7,14 +7,21 @@
 	"forms-createforminstance-form-name": "Ustvari $1",
 	"forms-api-get-definitions-not-exist": "Opredelitev »$1« ne obstaja",
 	"forms-form-edit-title": "Uredi $1",
+	"forms-error-form-mismatch": "Shranjevanje ni uspelo zaradi neujemanja imena obrazca",
+	"forms-error-target-db-save-failed": "Shranjevanje v podatkovno zbirko ni uspelo",
 	"forms-form-editor-prop-title": "Naslov",
 	"forms-form-editor-prop-categories": "Kategorije",
+	"forms-form-editor-prop-enableprogresssave": "Omogoči vmesno shranjevanje",
+	"forms-form-editor-prop-enableeditsummary": "Omogoči povzetek urejanj",
 	"forms-form-editor-prop-targettitle": "Naslov",
 	"forms-form-editor-prop-targetafteractiontyperedirect": "Preusmeritev",
+	"forms-form-editor-prop-targetafteractionurl": "Preusmeritev na URL",
+	"forms-form-editor-prop-use-form-revs": "Sledi redakcijam",
 	"forms-formelement-group-other": "Drugo",
 	"forms-label-city": "Mesto",
 	"forms-label-contacts": "Stiki",
 	"forms-label-email": "E-pošta",
 	"forms-form-editor-prop-targettypetemplate": "Predloga",
-	"forms-action-editsource": "Uredi vir"
+	"forms-action-editsource": "Uredi vir",
+	"forms-error-target-mail-send-failed": "Pošiljanje e-pošte ni uspelo"
 }
