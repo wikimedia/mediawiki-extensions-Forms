@@ -8,5 +8,6 @@
 	"forms-form-editor-prop-title": "כותרת",
 	"forms-form-editor-prop-showtitle": "כותרת התצוגה",
 	"forms-form-editor-prop-targettitle": "כותרת",
-	"forms-action-editsource": "עריכת קוד מקור"
+	"forms-action-editsource": "עריכת קוד מקור",
+	"forms-form-editor-form-name-label": "שם הטופס"
 }
