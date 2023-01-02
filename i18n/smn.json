@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Seipinne"
+			"Seipinne",
+			"Yupik"
 		]
 	},
 	"forms-form-editor-prop-targetafteractiontyperedirect": "Stivrim",
+	"forms-label-contacts": "Ohtâvuotâtiäđuh",
 	"forms-form-editor-prop-targettypetemplate": "Myenster"
 }
