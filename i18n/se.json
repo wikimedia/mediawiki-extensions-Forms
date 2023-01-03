@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yupik"
+			"Yupik",
+			"Kimberli Mäkäräinen (WMNO)"
 		]
 	},
+	"forms-label-contacts": "Oktavuođadieđut",
 	"forms-label-email": "E-poastačujuhus",
 	"forms-form-editor-prop-targettypeemail": "E-poastačujuhus"
 }
