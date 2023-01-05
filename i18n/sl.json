@@ -10,6 +10,7 @@
 	"forms-error-form-mismatch": "Shranjevanje ni uspelo zaradi neujemanja imena obrazca",
 	"forms-error-target-db-save-failed": "Shranjevanje v podatkovno zbirko ni uspelo",
 	"forms-form-editor-prop-title": "Naslov",
+	"forms-form-editor-prop-showtitle": "Prikazani naslov",
 	"forms-form-editor-prop-categories": "Kategorije",
 	"forms-form-editor-prop-enableprogresssave": "Omogoči vmesno shranjevanje",
 	"forms-form-editor-prop-enableeditsummary": "Omogoči povzetek urejanj",
