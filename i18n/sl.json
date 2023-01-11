@@ -24,6 +24,8 @@
 	"forms-label-contacts": "Stiki",
 	"forms-label-email": "E-pošta",
 	"forms-form-editor-prop-targettypetemplate": "Predloga",
+	"forms-form-editor-prop-targettemplate": "Predloga za uporabo",
+	"forms-form-editor-target-template-field": "Polje predloge",
 	"forms-action-editsource": "Uredi vir",
 	"forms-error-target-mail-send-failed": "Pošiljanje e-pošte ni uspelo"
 }
