@@ -25,5 +25,7 @@
 	"forms-form-editor-prop-targetafteractionurl": "Preusmeritev na URL",
 	"forms-form-editor-prop-use-form-revs": "Sledi redakcijam",
 	"forms-form-editor-form-props-label": "Lastnosti obrazca",
-	"forms-form-editor-prop-showtitle": "Prikazani naslov"
+	"forms-form-editor-prop-showtitle": "Prikazani naslov",
+	"forms-form-editor-prop-targettemplate": "Predloga za uporabo",
+	"forms-form-editor-target-template-field": "Polje predloge"
 }
