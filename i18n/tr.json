@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Can",
-			"Hedda"
+			"Hedda",
+			"Rapsar"
 		]
 	},
 	"forms-createforminstance-form-name": "$1 oluştur",
@@ -44,7 +45,7 @@
 	"right-forms-edit-form-definition": "Form tanımlarını düzenle",
 	"action-forms-create-form": "form oluştur",
 	"action-forms-edit-form-definition": "form tanımlarını düzenle",
-	"forms-action-editsource": "Kaynağı düzenle",
+	"forms-action-editsource": "Kaynağı değiştir",
 	"forms-form-editor-prop-targettypeemail": "E-posta",
 	"forms-form-editor-prop-target-email-receiver": "Alıcı",
 	"forms-form-editor-prop-target-email-subject": "Konu",
