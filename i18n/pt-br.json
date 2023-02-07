@@ -1,9 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
-			"YuriNikolai"
+			"YuriNikolai",
+			"Eduardoaddad"
 		]
 	},
+	"formeditor": "Editor de formulários",
+	"forms-target-json-page-summary": "Editar por formulário: $1",
+	"forms-error-no-form-specified": "Não está especificado nenhum formulário",
+	"forms-form-edit-title": "Editar $1",
 	"forms-form-editor-prop-title": "Título",
-	"forms-form-editor-prop-categories": "Categorias"
+	"forms-form-editor-prop-showtitle": "Título de apresentação",
+	"forms-form-editor-prop-categories": "Categorias",
+	"forms-form-editor-prop-targetafteractiontypenone": "Nenhuma operação",
+	"forms-form-editor-prop-targetafteractiontyperedirect": "Redirecionamento"
 }
