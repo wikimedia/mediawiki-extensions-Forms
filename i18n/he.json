@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Amire80"
+			"Amire80",
+			"שוקו מוקה"
 		]
 	},
 	"forms-form-edit-title": "עריכת $1",
@@ -9,5 +10,7 @@
 	"forms-form-editor-prop-showtitle": "כותרת התצוגה",
 	"forms-form-editor-prop-targettitle": "כותרת",
 	"forms-action-editsource": "עריכת קוד מקור",
-	"forms-form-editor-form-name-label": "שם הטופס"
+	"forms-form-editor-form-name-label": "שם הטופס",
+	"forms-label-employees-number": "מספר העובדים",
+	"forms-label-city": "עיר"
 }
