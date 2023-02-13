@@ -5,10 +5,13 @@
 		]
 	},
 	"forms-createforminstance-form-name": "Ustvari $1",
+	"formeditor": "Urejevalnik obrazcev",
 	"forms-api-get-definitions-not-exist": "Opredelitev »$1« ne obstaja",
+	"forms-error-no-form-specified": "Določen ni noben obrazec",
 	"forms-form-edit-title": "Uredi $1",
 	"forms-error-form-mismatch": "Shranjevanje ni uspelo zaradi neujemanja imena obrazca",
 	"forms-error-target-db-save-failed": "Shranjevanje v podatkovno zbirko ni uspelo",
+	"forms-form-editor-title": "Urejevalnik obrazcev",
 	"forms-form-editor-form-name-label": "Ime obrazca",
 	"forms-form-editor-prop-title": "Naslov",
 	"forms-form-editor-prop-showtitle": "Prikazani naslov",
@@ -19,8 +22,10 @@
 	"forms-form-editor-prop-targettitle": "Naslov",
 	"forms-form-editor-prop-targetafteractiontyperedirect": "Preusmeritev",
 	"forms-form-editor-prop-targetafteractionurl": "Preusmeritev na URL",
+	"forms-form-editor-prop-extends": "Podaljša obrazec",
 	"forms-form-editor-prop-use-form-revs": "Sledi redakcijam",
 	"forms-form-editor-form-props-label": "Lastnosti obrazca",
+	"forms-form-editor-form-items-label": "Elementi obrazca",
 	"forms-formelement-group-other": "Drugo",
 	"forms-label-appearance": "Videz",
 	"forms-label-infrastructure": "Infrastruktura",
@@ -39,6 +44,7 @@
 	"forms-form-editor-prop-targettemplate": "Predloga za uporabo",
 	"forms-form-editor-target-template-field": "Polje predloge",
 	"forms-form-editor-target-template-field-manual": "(ročno)",
+	"action-forms-edit-form-definition": "urejanje opredelitev obrazca",
 	"forms-action-editsource": "Uredi vir",
 	"forms-error-target-mail-send-failed": "Pošiljanje e-pošte ni uspelo"
 }
