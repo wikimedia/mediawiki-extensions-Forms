@@ -40,5 +40,11 @@
 	"forms-label-phone": "Telefon",
 	"forms-label-hq-address": "Sedež",
 	"forms-label-street": "Ulica",
-	"forms-form-editor-target-template-field-manual": "(ročno)"
+	"forms-form-editor-target-template-field-manual": "(ročno)",
+	"formeditor": "Urejevalnik obrazcev",
+	"forms-error-no-form-specified": "Določen ni noben obrazec",
+	"forms-form-editor-title": "Urejevalnik obrazcev",
+	"forms-form-editor-prop-extends": "Podaljša obrazec",
+	"forms-form-editor-form-items-label": "Elementi obrazca",
+	"action-forms-edit-form-definition": "urejanje opredelitev obrazca"
 }
