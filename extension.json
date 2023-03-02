@@ -5,7 +5,7 @@
 	"author": [
 		"[http://www.hallowelt.com Hallo Welt! GmbH]"
 	],
-	"url": "http://www.hallowelt.com",
+	"url": "https://en.wiki.bluespice.com/wiki/Reference:Forms",
 	"descriptionmsg": "forms-desc",
 	"requires": {
 		"MediaWiki": ">= 1.35.0"
