@@ -7,5 +7,8 @@
 	"forms-form-editor-prop-title": "טיטל",
 	"forms-form-editor-prop-targettitle": "טיטל",
 	"forms-form-editor-prop-categories": "קאַטעגאָריעס",
-	"forms-label-email": "בליצפּאָסט"
+	"forms-label-email": "בליצפּאָסט",
+	"forms-createforminstance-form-name": "שאַפֿן $1",
+	"forms-formelement-group-other": "אַנדער",
+	"forms-form-editor-prop-targettypetemplate": "מוסטער"
 }
