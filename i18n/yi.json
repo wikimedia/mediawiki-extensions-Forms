@@ -4,8 +4,11 @@
 			"Pacha Tchernof"
 		]
 	},
+	"forms-createforminstance-form-name": "שאַפֿן $1",
 	"forms-form-editor-prop-title": "טיטל",
 	"forms-form-editor-prop-categories": "קאַטעגאָריעס",
 	"forms-form-editor-prop-targettitle": "טיטל",
-	"forms-label-email": "בליצפּאָסט"
+	"forms-formelement-group-other": "אַנדער",
+	"forms-label-email": "בליצפּאָסט",
+	"forms-form-editor-prop-targettypetemplate": "מוסטער"
 }
