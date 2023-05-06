@@ -113,7 +113,8 @@ class FormDataHandler extends \JsonContentHandler {
 	 */
 	private function getDisplayTitle( $title ) {
 		$displayTitle = substr( $title->getPrefixedText(), 0, -9 );
-		\Hooks::run( 'FormsGetDisplayTitle', [ $title, &$displayTitle, 'view' ] );
+		MediaWikiServices::getInstance()->getHookContainer()
+			->run( 'FormsGetDisplayTitle', [ $title, &$displayTitle, 'view' ] );
 		return $displayTitle;
 	}
 
