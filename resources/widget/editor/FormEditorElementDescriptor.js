@@ -332,7 +332,7 @@
 			classes: [ 'forms-form-layout-inner' ],
 			content: [ index ]
 		} );
-		this.renderedLayout.addItems( panel );
+		this.renderedLayout.addItems( [ panel ] );
 
 		// Add values to the option controls just rendered
 		this.setPropertiesInputValues( overrideValues );
