@@ -244,6 +244,7 @@
 				"mwstake-formengine-type-combobox",
 				"mwstake-formengine-type-tag",
 				"mwstake-formengine-label-input-position",
+				"mwstake-formengine-label-allow-arbitrary",
 				"mwstake-formengine-label-allowed-values",
 				"forms-form-editor-prop-rl-deps",
 				"forms-form-editor-prop-rl-deps-help",
