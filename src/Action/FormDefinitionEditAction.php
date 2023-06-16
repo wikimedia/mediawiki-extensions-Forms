@@ -3,7 +3,6 @@
 namespace MediaWiki\Extension\Forms\Action;
 
 use SpecialPage;
-use Title;
 
 class FormDefinitionEditAction extends FormDataEditAction {
 
@@ -41,7 +40,8 @@ class FormDefinitionEditAction extends FormDataEditAction {
 	}
 
 	/**
-	 * @return Title
+	 * @return string
+	 * @throws \MWException
 	 */
 	protected function getCreateRedirect() {
 		return SpecialPage::getTitleFor( 'FormEditor' )->getLocalURL();
