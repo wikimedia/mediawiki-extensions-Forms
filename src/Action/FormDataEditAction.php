@@ -6,9 +6,8 @@ use Content;
 use FormlessAction;
 use MediaWiki\Extension\Forms\Content\FormDataContent;
 use MediaWiki\MediaWikiServices;
-use MediaWiki\Revision\RevisionRecord;
+use MediaWiki\Revision\SlotRecord;
 use SpecialPage;
-use Title;
 
 class FormDataEditAction extends FormlessAction {
 
@@ -16,11 +15,6 @@ class FormDataEditAction extends FormlessAction {
 	 * @var string
 	 */
 	protected $contentModel = 'FormData';
-
-	/**
-	 * @var string
-	 */
-	protected $contentFormat = '';
 
 	/**
 	 * @var string
@@ -54,11 +48,13 @@ class FormDataEditAction extends FormlessAction {
 
 		if ( $this->checkSealed( $content ) ) {
 			$out->addReturnTo( $this->getTitle() );
-			return $out->addWikiMsg( 'forms-edit-error-form-sealed' );
+			$out->addWikiMsg( 'forms-edit-error-form-sealed' );
+			return;
 		}
 		if ( $this->action === 'create' ) {
 			// All creations in this content model should be done over the SP
-			return $out->redirect( $this->getCreateRedirect() );
+			$out->redirect( $this->getCreateRedirect() );
+			return;
 		}
 
 		$out->setPageTitle( $this->getDisplayTitle() );
@@ -72,7 +68,7 @@ class FormDataEditAction extends FormlessAction {
 	 */
 	protected function getCurrentContent() {
 		$rev = $this->getWikipage()->getRevisionRecord();
-		$content = $rev ? $rev->getContent( RevisionRecord::RAW ) : null;
+		$content = $rev ? $rev->getContent( SlotRecord::MAIN ) : null;
 
 		if ( $content === false || $content === null ) {
 			$handler = MediaWikiServices::getInstance()->getContentHandlerFactory();
@@ -84,7 +80,8 @@ class FormDataEditAction extends FormlessAction {
 	}
 
 	/**
-	 * @return Title
+	 * @return string
+	 * @throws \MWException
 	 */
 	protected function getCreateRedirect() {
 		return SpecialPage::getTitleFor( 'CreateFormInstance' )->getLocalURL();
