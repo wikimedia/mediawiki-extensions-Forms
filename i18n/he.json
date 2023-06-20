@@ -35,7 +35,20 @@
 	"forms-form-editor-prop-targettype": "סוג היעד",
 	"forms-form-editor-prop-targettitle": "כותרת",
 	"forms-form-editor-prop-targetafteraction": "הקצאה אחרי פעולה",
+	"forms-form-editor-prop-targettypedatabase": "מסד נתונים",
+	"forms-formelement-group-other": "אחר",
+	"forms-label-appearance": "מראה",
+	"forms-label-behaviour": "התנהגות",
+	"forms-label-infrastructure": "תשתית",
+	"forms-label-target": "יעד",
+	"forms-label-company-name": "שם החברה",
 	"forms-label-employees-number": "מספר העובדים",
 	"forms-label-city": "עיר",
-	"forms-action-editsource": "עריכת קוד מקור"
+	"forms-label-contacts": "יצירת קשר",
+	"forms-label-email": "דואר אלקטרוני",
+	"forms-form-editor-prop-targettypetemplate": "תבנית",
+	"forms-action-editsource": "עריכת קוד מקור",
+	"forms-form-editor-prop-targettypeemail": "דואר אלקטרוני",
+	"forms-form-editor-prop-target-email-receiver": "נמען",
+	"forms-form-editor-prop-target-email-subject": "נושא"
 }
