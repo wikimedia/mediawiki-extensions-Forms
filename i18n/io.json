@@ -10,5 +10,6 @@
 	"forms-label-city": "Urbo",
 	"forms-label-email": "E-postal adreso",
 	"forms-formelement-group-other": "Altra",
-	"forms-label-contacts": "Kontakti"
+	"forms-label-contacts": "Kontakti",
+	"forms-form-edit-title": "Redaktez $1"
 }
