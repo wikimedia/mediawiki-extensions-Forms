@@ -137,8 +137,11 @@ class FormDataHandler extends \JsonContentHandler {
 			$data = \FormatJson::encode( $data );
 			$formConfig['data-data'] = $data;
 			$formConfig['data-form'] = $this->formName;
-			$revisionLookup = MediaWikiServices::getInstance()->getRevisionLookup();
-			$formConfig['data-form-created'] = $revisionLookup->getFirstRevision( $title )->getTimestamp();
+			if ( $title instanceof Title && $title->exists() ) {
+				$firstRev = MediaWikiServices::getInstance()->getRevisionLookup()
+					->getFirstRevision( $title->toPageIdentity() );
+				$formConfig['data-form-created'] = $firstRev->getTimestamp();
+			}
 		}
 		return \Html::element( 'div', $formConfig );
 	}
