@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"NFarras"
+			"NFarras",
+			"Veracious"
 		]
 	},
-	"forms-createforminstance-form-name": "Buat $1"
+	"forms-createforminstance-form-name": "Buat $1",
+	"forms-form-editor-prop-targetafteractiontypenone": "Tiada tindakan"
 }
