@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
+			"מקף",
 			"שוקו מוקה"
 		]
 	},
@@ -50,5 +51,28 @@
 	"forms-form-editor-prop-targettypetemplate": "תבנית",
 	"forms-form-editor-prop-targettypeemail": "דואר אלקטרוני",
 	"forms-form-editor-prop-target-email-receiver": "נמען",
-	"forms-form-editor-prop-target-email-subject": "נושא"
+	"forms-form-editor-prop-target-email-subject": "נושא",
+	"forms-form-editor-prop-targettypejsononwikipage": "JSON בדף ויקי",
+	"forms-form-editor-prop-targetafteractiontype": "סוג לאחר פעולה",
+	"forms-form-editor-prop-targetafteractiontypenone": "אין פעולה",
+	"forms-form-editor-prop-targetafteractiontyperedirect": "הפניה",
+	"forms-form-editor-prop-targetafteractiontypecallback": "מענה (callback)",
+	"forms-form-editor-prop-targetafteractionurl": "הפניה ל־URL",
+	"forms-form-editor-prop-targetafteractioncallback": "פונקציית מענה (callback) ב־JS (מתקדם)",
+	"forms-form-editor-prop-extends": "מרחיב את הטופס",
+	"forms-form-editor-prop-use-form-revs": "לעקוב אחר שינויים",
+	"forms-form-editor-form-props-label": "פרטי טופס",
+	"forms-form-editor-form-items-label": "רכיבי טופס",
+	"forms-formelement-group-input": "קלטים",
+	"forms-formelement-group-layout": "פריסות",
+	"forms-label-street": "רחוב",
+	"forms-label-facilities": "מתקנים",
+	"forms-title-new-customer": "לקוח חדש",
+	"forms-form-editor-prop-targettemplate": "תבנית לשימוש",
+	"forms-form-editor-target-template-field": "שדה תבנית",
+	"forms-form-editor-target-template-field-manual": "(מדריך)",
+	"forms-form-meta-tag": "נוצר באמצעות טופס [[$1]] (גרסה: $2)",
+	"forms-form-editor-button-import-template": "יבוא שדות מתבנית",
+	"right-forms-edit-form-definition": "עריכת הגדרות טופס",
+	"forms-error-target-mail-no-mail": "אין כתובת דוא״ל תקינה זמינה"
 }
