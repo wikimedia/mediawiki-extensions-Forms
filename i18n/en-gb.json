@@ -1,8 +1,0 @@
-{
-	"@metadata": {
-		"authors": [
-			"Piano1forte2"
-		]
-	},
-	"forms-api-get-definitions-no-name": "Name parameter must be set for type 'get-definition'"
-}
