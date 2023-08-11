@@ -3,7 +3,7 @@
 namespace MediaWiki\Extension\Forms\ContentHandler;
 
 use Content;
-use JavaScriptContentHandler;
+use JsonContentHandler;
 use MediaWiki\Content\Renderer\ContentParseParams;
 use MediaWiki\Extension\Forms\Action\FormDefinitionEditAction;
 use MediaWiki\Extension\Forms\Action\FormDefinitionSourceEditAction;
@@ -11,7 +11,7 @@ use MediaWiki\Extension\Forms\Content\FormDefinitionContent;
 use ParserOutput;
 use Title;
 
-class FormDefinitionHandler extends JavaScriptContentHandler {
+class FormDefinitionHandler extends JsonContentHandler {
 	/**
 	 * @param string $modelId
 	 */
@@ -69,12 +69,12 @@ class FormDefinitionHandler extends JavaScriptContentHandler {
 	) {
 		$dbKey = $cpoParams->getPage()->getDBkey();
 		$title = Title::newFromDBkey( $dbKey );
-		$this->currentForm = $this->getTitleWithoutExtension( $title );
+		$definitionForm = $this->getTitleWithoutExtension( $title );
 		$data = (array)$content->getData()->getValue();
 		$this->addCategoriesFromJSON( $output, $data );
 
 		$formDataHandler = new FormDataHandler();
-		$formDataHandler->fillParserOutput( $content, $cpoParams, $output );
+		$formDataHandler->fillParserOutputForDefinition( $content, $cpoParams, $output, $definitionForm );
 	}
 
 	/**
