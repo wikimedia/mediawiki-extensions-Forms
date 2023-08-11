@@ -63,9 +63,14 @@ class FormDataHandler extends \JsonContentHandler {
 	protected $formName;
 
 	/**
+	 * @var string|null
+	 */
+	private $forcedFormName = null;
+
+	/**
 	 * @param \Title $destination
 	 * @param string $text
-	 * @return \MediaWiki\Extension\Forms\ContentHandler\class
+	 * @return \MediaWiki\Extension\Forms\Content\FormDataContent
 	 */
 	public function makeRedirectContent( \Title $destination, $text = '' ) {
 		$class = $this->getContentClass();
@@ -78,12 +83,29 @@ class FormDataHandler extends \JsonContentHandler {
 	/**
 	 * @param Content $content
 	 * @param ContentParseParams $cpoParams
+	 * @param ParserOutput $output
+	 * @param string $definitionForm
+	 *
+	 * @return void
+	 */
+	public function fillParserOutputForDefinition(
+		Content $content, ContentParseParams $cpoParams, ParserOutput $output, string $definitionForm
+	) {
+		$this->forcedFormName = $definitionForm;
+		$this->fillParserOutput( $content, $cpoParams, $output, 'create' );
+	}
+
+	/**
+	 * @param Content $content
+	 * @param ContentParseParams $cpoParams
 	 * @param ParserOutput &$output The output object to fill (reference).
+	 * @param string|null $defaultAction
 	 */
 	protected function fillParserOutput(
 		Content $content,
 		ContentParseParams $cpoParams,
-		ParserOutput &$output
+		ParserOutput &$output,
+		?string $defaultAction = 'view'
 	) {
 		$dbKey = $cpoParams->getPage()->getDBkey();
 		$title = Title::newFromDBkey( $dbKey );
@@ -93,9 +115,9 @@ class FormDataHandler extends \JsonContentHandler {
 			$destTitle = $this->getRedirectTarget( $data );
 			if ( $destTitle instanceof Title ) {
 				$output->addLink( $destTitle );
-				if ( $cpoParams->generateHtml ) {
+				if ( $cpoParams->getGenerateHtml() ) {
 					$output->setText(
-						Article::getRedirectHeaderHtml( $title->getPageLanguage(), $destTitle, false )
+						Article::getRedirectHeaderHtml( $title->getPageLanguage(), $destTitle )
 					);
 					$output->addModuleStyles( [ 'mediawiki.action.view.redirectPage' ] );
 				}
@@ -103,7 +125,7 @@ class FormDataHandler extends \JsonContentHandler {
 			return;
 		}
 		$output->setDisplayTitle( $this->getDisplayTitle( $title ) );
-		$output->setText( $this->getFormContainer( $data, 'view', $title ) );
+		$output->setText( $this->getFormContainer( $data, $defaultAction, $title ) );
 		$output->addModules( [ 'ext.forms.init' ] );
 	}
 
@@ -128,6 +150,9 @@ class FormDataHandler extends \JsonContentHandler {
 			'data-action' => $action,
 			'class' => 'forms-form-container'
 		];
+		if ( $this->forcedFormName ) {
+			$formConfig['data-form'] = $this->forcedFormName;
+		}
 
 		if ( $action !== 'create' ) {
 			if ( !$this->getFormProps( $data ) ) {
@@ -136,7 +161,7 @@ class FormDataHandler extends \JsonContentHandler {
 			unset( $data->_form );
 			$data = \FormatJson::encode( $data );
 			$formConfig['data-data'] = $data;
-			$formConfig['data-form'] = $this->formName;
+			$formConfig['data-form'] = $this->forcedFormName || $this->formName;
 			if ( $title instanceof Title && $title->exists() ) {
 				$firstRev = MediaWikiServices::getInstance()->getRevisionLookup()
 					->getFirstRevision( $title->toPageIdentity() );
