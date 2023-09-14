@@ -161,7 +161,7 @@ class FormDataHandler extends \JsonContentHandler {
 			unset( $data->_form );
 			$data = \FormatJson::encode( $data );
 			$formConfig['data-data'] = $data;
-			$formConfig['data-form'] = $this->forcedFormName || $this->formName;
+			$formConfig['data-form'] = $this->forcedFormName ?? $this->formName;
 			if ( $title instanceof Title && $title->exists() ) {
 				$firstRev = MediaWikiServices::getInstance()->getRevisionLookup()
 					->getFirstRevision( $title->toPageIdentity() );
