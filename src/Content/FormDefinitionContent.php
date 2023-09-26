@@ -3,7 +3,6 @@
 namespace MediaWiki\Extension\Forms\Content;
 
 use Html;
-use MediaWiki\MediaWikiServices;
 use Title;
 
 class FormDefinitionContent extends FormDataContent {
@@ -23,6 +22,7 @@ class FormDefinitionContent extends FormDataContent {
 	/**
 	 * @param string $action
 	 * @param Title|null $for
+	 *
 	 * @return string
 	 */
 	public function getFormContainer( $action = 'view', $for = null ) {
@@ -37,22 +37,9 @@ class FormDefinitionContent extends FormDataContent {
 	}
 
 	/**
-	 * @param Title $title
 	 * @return string
 	 */
-	public function getTitleWithoutExtension( $title ) {
-		$prefixedDBKey = $title->getPrefixedDBKey();
-		return substr( $prefixedDBKey, 0, -5 );
-	}
-
-	/**
-	 * @param Title $title
-	 * @return string
-	 */
-	protected function getDisplayTitle( $title ) {
-		$displayTitle = substr( $title->getPrefixedText(), 0, -5 );
-		$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
-		$hookContainer->run( 'FormsGetDisplayTitle', [ $title, &$displayTitle, 'view' ] );
-		return $displayTitle;
+	protected function getPageFormat() {
+		return ".form";
 	}
 }

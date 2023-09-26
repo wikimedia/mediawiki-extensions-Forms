@@ -2,10 +2,11 @@
 
 namespace MediaWiki\Extension\Forms\Content;
 
+use JsonContent;
 use MediaWiki\MediaWikiServices;
 use Title;
 
-class FormDataContent extends \JsonContent {
+class FormDataContent extends JsonContent {
 
 	/**
 	 * @var string
@@ -23,6 +24,7 @@ class FormDataContent extends \JsonContent {
 	/**
 	 * @param string $action
 	 * @param Title|null $form
+	 *
 	 * @return string
 	 */
 	public function getFormContainer( $action = 'view', $form = null ) {
@@ -41,11 +43,11 @@ class FormDataContent extends \JsonContent {
 			$formConfig['data-data'] = $data;
 			$formConfig['data-form'] = $this->formName;
 			if ( $form instanceof Title && $form->exists() ) {
-				$firstRev = MediaWikiServices::getInstance()->getRevisionLookup()
-					->getFirstRevision( $form->toPageIdentity() );
+				$firstRev = MediaWikiServices::getInstance()->getRevisionLookup()->getFirstRevision(
+						$form->toPageIdentity()
+					);
 				$formConfig['data-form-created'] = $firstRev->getTimestamp();
 			}
-
 		}
 
 		return \Html::element( 'div', $formConfig );
@@ -53,19 +55,21 @@ class FormDataContent extends \JsonContent {
 
 	/**
 	 * @param Title $title
+	 *
 	 * @return string
 	 */
 	public function getTitleWithoutExtension( $title ) {
 		$prefixedText = $title->getPrefixedText();
-		return substr( $prefixedText, 0, -9 );
+		return substr( $prefixedText, 0, -strlen( $this->getPageFormat() ) );
 	}
 
 	/**
 	 * @param Title $title
+	 *
 	 * @return string
 	 */
-	protected function getDisplayTitle( $title ) {
-		$displayTitle = substr( $title->getPrefixedText(), 0, -9 );
+	public function getDisplayTitle( $title ) {
+		$displayTitle = substr( $title->getPrefixedText(), 0, -strlen( $this->getPageFormat() ) );
 		$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
 		$hookContainer->run( 'FormsGetDisplayTitle', [ $title, &$displayTitle, 'view' ] );
 		return $displayTitle;
@@ -86,9 +90,18 @@ class FormDataContent extends \JsonContent {
 			$data = $this->getData()->getValue();
 			if ( property_exists( $data, '_form' ) ) {
 				$this->formName = $data->_form;
+
 				return true;
 			}
 		}
+
 		return false;
+	}
+
+	/**
+	 * @return string
+	 */
+	protected function getPageFormat() {
+		return ".formdata";
 	}
 }
