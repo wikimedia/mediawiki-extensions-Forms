@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\Forms\ContentHandler;
 
 use Article;
 use Content;
+use JsonContentHandler;
 use MediaWiki\Content\Renderer\ContentParseParams;
 use MediaWiki\Extension\Forms\Action\FormDataEditAction;
 use MediaWiki\Extension\Forms\Content\FormDataContent;
@@ -11,7 +12,7 @@ use MediaWiki\MediaWikiServices;
 use ParserOutput;
 use Title;
 
-class FormDataHandler extends \JsonContentHandler {
+class FormDataHandler extends JsonContentHandler {
 	/**
 	 * @param string $modelId
 	 */
@@ -107,6 +108,10 @@ class FormDataHandler extends \JsonContentHandler {
 		ParserOutput &$output,
 		?string $defaultAction = 'view'
 	) {
+		if ( !$content instanceof FormDataContent ) {
+			throw new \InvalidArgumentException( 'FormDataHandler can only handle FormDataContent' );
+		}
+
 		$dbKey = $cpoParams->getPage()->getDBkey();
 		$title = Title::newFromDBkey( $dbKey );
 		$data = $content->getData()->getValue() ?? new \stdClass;
@@ -124,20 +129,9 @@ class FormDataHandler extends \JsonContentHandler {
 			}
 			return;
 		}
-		$output->setDisplayTitle( $this->getDisplayTitle( $title ) );
+		$output->setDisplayTitle( $content->getDisplayTitle( $title ) );
 		$output->setText( $this->getFormContainer( $data, $defaultAction, $title ) );
 		$output->addModules( [ 'ext.forms.init' ] );
-	}
-
-	/**
-	 * @param Title $title
-	 * @return string
-	 */
-	private function getDisplayTitle( $title ) {
-		$displayTitle = substr( $title->getPrefixedText(), 0, -9 );
-		MediaWikiServices::getInstance()->getHookContainer()
-			->run( 'FormsGetDisplayTitle', [ $title, &$displayTitle, 'view' ] );
-		return $displayTitle;
 	}
 
 	/**
