@@ -298,7 +298,6 @@
 	};
 
 	mw.ext.forms.widget.formElement.FormElementGroup.prototype.recursiveRender = function( items ) {
-		console.log( Object.keys( items ).length );
 		if ( $.isEmptyObject( items ) ) {
 			return;
 		}
