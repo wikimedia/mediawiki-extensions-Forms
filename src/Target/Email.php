@@ -90,7 +90,7 @@ class Email implements ITarget {
 
 	/**
 	 * @param HashConfig $config
-	 * @return ITarget
+	 * @return ITarget|null
 	 */
 	public static function factory( HashConfig $config ) {
 		if ( !$config->has( 'form' ) ) {

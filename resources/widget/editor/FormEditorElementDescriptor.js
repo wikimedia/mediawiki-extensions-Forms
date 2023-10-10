@@ -369,10 +369,8 @@
 
 	mw.ext.forms.widget.formElement.FormEditorElementDescriptor.prototype.getInputsFromIndexLayout = function( layout ) {
 		var tabs = layout.stackLayout.getItems();
-		console.log( tabs );
 		for ( var i = 0; i < tabs.length; i++ ) {
 			var tab = tabs[i];
-			console.log( tab.items );
 		}
 
 		return [];
