@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Brettchenweber",
+			"McDutchie",
 			"Umherirrender",
 			"Umlaut"
 		]
@@ -62,7 +63,7 @@
 	"forms-label-contacts": "Kontakte",
 	"forms-label-show-contacts": "Kontakte anzeigen",
 	"forms-label-show-address": "Adresse anzeigen",
-	"forms-label-sales": "Adresse anzeigen",
+	"forms-label-sales": "Verkäufe",
 	"forms-label-phone": "Telefon",
 	"forms-label-email": "E-Mail",
 	"forms-label-production": "Produktion",
