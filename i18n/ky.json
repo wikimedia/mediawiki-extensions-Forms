@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bosogo"
+		]
+	},
+	"forms-createforminstance-form-name": "«‎$1»‎ түзүү",
+	"forms-form-edit-title": "«‎$1» түзөтүү",
+	"forms-form-editor-prop-title": "Аталыш",
+	"forms-form-editor-prop-categories": "Категориялар",
+	"forms-form-editor-prop-targettitle": "Аталыш",
+	"forms-formelement-group-other": "Башка",
+	"forms-label-city": "Шаар",
+	"forms-label-email": "Электрондук почта",
+	"forms-form-editor-prop-targettypetemplate": "Калып"
+}

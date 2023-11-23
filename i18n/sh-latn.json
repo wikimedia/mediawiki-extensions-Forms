@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Winston Sung"
+		]
+	},
+	"forms-desc": "Svestrani okvir obrasca za MediaWiki",
+	"forms-createforminstance-form-name": "Napravi $1",
+	"forms-form-edit-title": "Uredi $1",
+	"forms-form-editor-prop-title": "Naslov",
+	"forms-form-editor-prop-showtitle": "Naslov za prikaz",
+	"forms-form-editor-prop-categories": "Kategorije",
+	"forms-action-editsource": "Uredi kôd"
+}
