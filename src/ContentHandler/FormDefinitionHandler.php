@@ -71,8 +71,8 @@ class FormDefinitionHandler extends JsonContentHandler {
 			throw new \InvalidArgumentException( 'FormDefinitionHandler can only handle FormDefinitionContent' );
 		}
 
-		$dbKey = $cpoParams->getPage()->getDBkey();
-		$title = Title::newFromDBkey( $dbKey );
+		$page = $cpoParams->getPage();
+		$title = Title::castFromPageReference( $page );
 		$definitionForm = $content->getTitleWithoutExtension( $title );
 		$data = (array)$content->getData()->getValue();
 		$this->addCategoriesFromJSON( $output, $data );
