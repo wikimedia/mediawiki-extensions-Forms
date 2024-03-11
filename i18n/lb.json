@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"forms-createforminstance-form-name": "$1 uleeën",
@@ -37,5 +38,6 @@
 	"forms-title-new-customer": "Neie Client",
 	"forms-form-editor-prop-targettypetemplate": "Schabloun",
 	"forms-form-editor-target-template-field-manual": "(manuell)",
-	"forms-action-editsource": "Quelltext änneren"
+	"forms-action-editsource": "Quelltext änneren",
+	"forms-form-editor-prop-targettypeemail": "E-Mail"
 }
