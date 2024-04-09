@@ -1,0 +1,31 @@
+[
+	{
+		"name": "form_autosave",
+		"columns": [
+			{
+				"name": "fa_id",
+				"type": "integer",
+				"options": {
+					"notnull": true,
+					"autoincrement": true
+				}
+			},
+			{
+				"name": "fa_data",
+				"type": "blob",
+				"options": {
+					"notnull": false
+				}
+			},
+			{
+				"name": "fa_timestamp",
+				"type": "mwtimestamp",
+				"options": {
+					"notnull": true
+				}
+			}
+		],
+		"indexes": [],
+		"pk": [ "fa_id" ]
+	}
+]

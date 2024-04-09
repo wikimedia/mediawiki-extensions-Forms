@@ -267,6 +267,15 @@
 	"HookHandlers": {
 		"discovery-skin": {
 			"class": "\\MediaWiki\\Extension\\Forms\\HookHandler\\DiscoverySkin"
+		},
+		"addFormAutosaveTable": {
+			"class": "MediaWiki\\Extension\\Forms\\HookHandler\\LoadExtensionSchemaUpdates\\AddFormAutosaveTable"
+		},
+		"addFormDataTable": {
+			"class": "MediaWiki\\Extension\\Forms\\HookHandler\\LoadExtensionSchemaUpdates\\AddFormDataTable"
+		},
+		"addFormRevisionTable": {
+			"class": "MediaWiki\\Extension\\Forms\\HookHandler\\LoadExtensionSchemaUpdates\\AddFormRevisionTable"
 		}
 	},
 	"Hooks": {
@@ -275,9 +284,9 @@
 		"SkinTemplateNavigation::Universal": "MediaWiki\\Extension\\Forms\\Setup::onSkinTemplateNavigation_Universal",
 		"CodeEditorGetPageLanguage": "MediaWiki\\Extension\\Forms\\Setup::onCodeEditorGetPageLanguage",
 		"LoadExtensionSchemaUpdates": [
-			"MediaWiki\\Extension\\Forms\\Hook\\LoadExtensionSchemaUpdates\\AddFormAutosaveTable::callback",
-			"MediaWiki\\Extension\\Forms\\Hook\\LoadExtensionSchemaUpdates\\AddFormDataTable::callback",
-			"MediaWiki\\Extension\\Forms\\Hook\\LoadExtensionSchemaUpdates\\AddFormRevisionTable::callback"
+			"addFormAutosaveTable",
+			"addFormDataTable",
+			"addFormRevisionTable"
 		],
 		"ChameleonSkinTemplateOutputPageBeforeExec": "MediaWiki\\Extension\\Forms\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\AddEditDefinionSourceAction::callback",
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin"
