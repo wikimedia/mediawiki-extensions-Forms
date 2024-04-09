@@ -1,0 +1,54 @@
+[
+	{
+		"name": "form_data",
+		"columns": [
+			{
+				"name": "fd_id",
+				"type": "integer",
+				"options": {
+					"notnull": true,
+					"autoincrement": true
+				}
+			},
+			{
+				"name": "fd_title",
+				"type": "binary",
+				"options": {
+					"length": 255,
+					"notnull": false,
+					"default": ""
+				}
+			},
+			{
+				"name": "fd_form",
+				"type": "binary",
+				"options": {
+					"length": 255,
+					"notnull": true
+				}
+			},
+			{
+				"name": "fd_data",
+				"type": "text",
+				"options": {}
+			},
+			{
+				"name": "fd_user",
+				"type": "integer",
+				"options": {
+					"length": 6,
+					"unsigned": true
+				}
+			},
+			{
+				"name": "fd_timestamp",
+				"type": "mwtimestamp",
+				"options": {
+					"notnull": true
+				}
+			}
+		],
+		"indexes": [],
+		"pk": [ "fd_id" ]
+	}
+]
