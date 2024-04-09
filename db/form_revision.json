@@ -1,0 +1,32 @@
+[
+	{
+		"name": "form_revision",
+		"columns": [
+			{
+				"name": "fr_rev_id",
+				"type": "integer",
+				"options": {
+					"length": 6,
+					"notnull": true
+				}
+			},
+			{
+				"name": "fr_page_id",
+				"type": "integer",
+				"options": {
+					"length": 6,
+					"notnull": true
+				}
+			},
+			{
+				"name": "fr_applies_from",
+				"type": "mwtimestamp",
+				"options": {
+					"notnull": true
+				}
+			}
+		],
+		"indexes": [],
+		"pk": [ "fr_rev_id" ]
+	}
+]
