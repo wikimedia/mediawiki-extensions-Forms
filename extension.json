@@ -279,7 +279,6 @@
 			"MediaWiki\\Extension\\Forms\\Hook\\LoadExtensionSchemaUpdates\\AddFormDataTable::callback",
 			"MediaWiki\\Extension\\Forms\\Hook\\LoadExtensionSchemaUpdates\\AddFormRevisionTable::callback"
 		],
-		"ChameleonSkinTemplateOutputPageBeforeExec": "MediaWiki\\Extension\\Forms\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\AddEditDefinionSourceAction::callback",
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin"
 	},
 	"manifest_version": 2,
