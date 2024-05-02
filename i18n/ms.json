@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Hakimi97",
 			"Tofeiku"
 		]
 	},
@@ -12,6 +13,7 @@
 	"forms-form-editor-prop-targettypedatabase": "Pangkalan data",
 	"forms-form-editor-form-items-label": "Unsur borang",
 	"forms-formelement-group-other": "Lain-lain",
+	"forms-label-appearance": "Penampilan",
 	"forms-label-target": "Sasaran",
 	"forms-label-city": "Bandar",
 	"forms-label-show-address": "Tunjuk alamat",
