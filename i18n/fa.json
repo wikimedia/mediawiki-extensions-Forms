@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jeeputer"
+			"Jeeputer",
+			"Darafsh"
 		]
 	},
 	"forms-createforminstance-form-name": "ایجاد $1",
@@ -27,6 +28,7 @@
 	"forms-form-editor-prop-targetafteractiontyperedirect": "تغییرمسیر",
 	"forms-formelement-group-input": "ورودی‌ها",
 	"forms-formelement-group-other": "سایر",
+	"forms-label-appearance": "ظاهر",
 	"forms-label-target": "هدف",
 	"forms-label-company-name": "نام شرکت",
 	"forms-label-employees-number": "شمار کارکنان",
