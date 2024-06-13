@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Eduardoaddad",
+			"Fúlvio",
 			"YuriNikolai"
 		]
 	},
@@ -13,5 +14,6 @@
 	"forms-form-editor-prop-showtitle": "Título de apresentação",
 	"forms-form-editor-prop-categories": "Categorias",
 	"forms-form-editor-prop-targetafteractiontypenone": "Nenhuma operação",
-	"forms-form-editor-prop-targetafteractiontyperedirect": "Redirecionamento"
+	"forms-form-editor-prop-targetafteractiontyperedirect": "Redirecionamento",
+	"forms-label-appearance": "Aparência"
 }
