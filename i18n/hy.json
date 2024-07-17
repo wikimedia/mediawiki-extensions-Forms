@@ -1,12 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"Սերգեյ Սաֆարյան"
 		]
 	},
 	"forms-form-editor-prop-categories": "Կատեգորիաներ",
 	"forms-formelement-group-other": "Այլ",
 	"forms-label-city": "Քաղաք",
 	"forms-label-street": "Փողոց",
-	"forms-form-editor-prop-targettypetemplate": "Կաղապար"
+	"forms-form-editor-prop-targettypetemplate": "Կաղապար",
+	"forms-label-appearance": "Արտաքին տեսք"
 }
