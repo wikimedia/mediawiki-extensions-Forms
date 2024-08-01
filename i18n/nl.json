@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Mainframe98",
-			"McDutchie"
+			"McDutchie",
+			"Siebrand"
 		]
 	},
 	"forms-desc": "Algemeen formulieren-framework voor MediaWiki",
@@ -59,8 +60,8 @@
 	"forms-label-employees-number": "Aantal werknemers",
 	"forms-label-city": "Plaats",
 	"forms-label-contacts": "Contracten",
-	"forms-label-show-contacts": "Contacten tonen",
-	"forms-label-show-address": "Adres tonen",
+	"forms-label-show-contacts": "Contacten weergeven",
+	"forms-label-show-address": "Adres weergeven",
 	"forms-label-sales": "Verkoop",
 	"forms-label-phone": "Telefoonnummer",
 	"forms-label-email": "E-mail",
