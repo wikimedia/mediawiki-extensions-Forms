@@ -14,61 +14,6 @@
 
 	OO.inheritClass( mw.ext.forms.widget.formElement.FormElementGroup, OO.ui.InputWidget );
 
-	mw.ext.forms.widget.formElement.FormElementGroup.static.getElementPickerItems = function() {
-		var grouped = {};
-		for( var name in mw.ext.forms.registry.Type.registry ) {
-			if ( !mw.ext.forms.registry.Type.registry.hasOwnProperty( name ) ) {
-				continue;
-			}
-			var element =  mw.ext.forms.registry.Type.registry[name];
-			if ( name === '_default' ) {
-				continue;
-			}
-			if ( element.isSystemElement() ) {
-				continue;
-			}
-			if ( element.isHidden() ) {
-				continue;
-			}
-			var group = element.getGroup(),
-				groupObject = mw.ext.forms.registry.ElementGroup.registry[group];
-			if ( !grouped.hasOwnProperty( group ) ) {
-				grouped[group] = {
-					group: groupObject,
-					items: []
-				};
-			}
-
-
-			grouped[group].items.push( {
-				data: name,
-				label: element.getDisplayName(),
-				icon: element.getIcon(),
-				type: mw.ext.forms.widget.formElement.FormElementGroup.static.getElementType( element )
-			} );
-		}
-
-		return grouped;
-	};
-
-	mw.ext.forms.widget.formElement.FormElementGroup.static.getElementPickerOptions = function() {
-		var grouped = mw.ext.forms.widget.formElement.FormElementGroup.static.getElementPickerItems(),
-			options = [];
-		for( var group in grouped ) {
-			options.push( {
-				optgroup: grouped[group].group.getDisplayText(),
-			} );
-			for( var i = 0; i < grouped[group].items.length; i++ ) {
-				options.push( {
-					data: grouped[group].items[i].data,
-					label: grouped[group].items[i].label,
-				} );
-			}
-		}
-
-		return options;
-	};
-
 	mw.ext.forms.widget.formElement.FormElementGroup.static.getElementType = function( element ) {
 		if ( element instanceof mw.ext.forms.formElement.FormLayoutElement ) {
 			return 'layout';
@@ -109,7 +54,6 @@
 						} );
 					} else {
 						this.addNewFromDraggable( ui.item, true );
-						this.elementPicker.dropDone();
 					}
 					this.dropAllowed = false;
 					setTimeout( function() {
@@ -145,10 +89,7 @@
 
 		this.setHelpPlaceholder();
 
-		this.elementPicker = new mw.ext.forms.widget.ElementPicker(
-			mw.ext.forms.widget.formElement.FormElementGroup.static.getElementPickerItems(), true
-		);
-		this.$element.append(  this.elementPicker.$element, this.$previewArea );
+		this.$element.append( this.$previewArea );
 	};
 
 	mw.ext.forms.widget.formElement.FormElementGroup.prototype.addNewFromDraggable = function( $draggable, removeDraggable ) {
@@ -374,8 +315,10 @@
 	mw.ext.forms.widget.formElement.FormElementGroup.prototype.openItemOptions = function( id, wrapper ) {
 		this.findElementByIdentifier( id ).done( function( element ) {
 			wrapper.optionsPanel.clearItems();
-			element.renderOptions( wrapper.optionsPanel, element.getValue() );
-			wrapper.openOptions();
+			var hasOptions = element.renderOptions( wrapper.optionsPanel, element.getValue() );
+			if ( hasOptions ) {
+				wrapper.openOptions();
+			}
 		}.bind( this ) );
 
 	};
@@ -410,7 +353,7 @@
 
 	mw.ext.forms.widget.formElement.FormElementGroup.prototype.setHelpPlaceholder = function() {
 		this.$previewArea.prepend(
-			$( '<div>' ).addClass( 'empty-help-placeholder' ).text( 'Drop elements from the Element picker here to add them to the form' )
+			$( '<div>' ).addClass( 'empty-help-placeholder' ).text( mw.msg( 'forms-editor-group-empty-help' ) )
 		);
 	};
 

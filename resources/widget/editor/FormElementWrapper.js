@@ -43,27 +43,18 @@
 		}
 		this.$element.attr( 'id', this.identifier );
 
-		this.$overlay.dblclick( function() {
+		OO.ui.getDefaultOverlay().append( this.popup.$element );
+
+		this.$overlay.click( function() {
 			this.group.openItemOptions( this.identifier, this );
 		}.bind( this ) );
-
-		OO.ui.getDefaultOverlay().append( this.popup.$element );
 	};
 
 	OO.inheritClass( mw.ext.forms.widget.formElement.FormElementWrapper, OO.ui.Widget );
 	OO.mixinClass( mw.ext.forms.widget.formElement.FormElementWrapper, OO.ui.mixin.PopupElement );
 
 	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.getNameAndToolsBadge = function() {
-		this.optionsButton = new OO.ui.ButtonWidget( {
-			icon: 'menu',
-			title: 'Options',
-			framed: false
-		} );
-		this.optionsButton.connect( this, {
-			click: function() {
-				this.group.openItemOptions( this.identifier, this );
-			}
-		} );
+
 		this.removeButton = new OO.ui.ButtonWidget( {
 			icon: 'trash',
 			title: 'Remove element',
@@ -72,20 +63,11 @@
 		} );
 		this.removeButton.connect( this, {
 			click: function() {
-				OO.ui.confirm( 'Removing the element will also remove all possible subitems of this item. Are you sure you want to remove this item?' )
-					.done( function ( confirmed ) {
-					if ( confirmed ) {
-						this.group.removeElement( this.identifier );
-					}
-				}.bind( this ) );
+				this.group.removeElement( this.identifier );
 			}
 		} );
 
 		var items = [
-			new OO.ui.LabelWidget( {
-				label: this.name || this.identifier
-			} ),
-			this.optionsButton,
 			this.removeButton
 		];
 

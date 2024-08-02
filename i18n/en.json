@@ -20,7 +20,6 @@
 	"forms-error-target-db-save-failed": "Saving to database failed",
 	"forms-form-editor-title": "Form Editor",
 	"forms-form-editor-form-name-label": "Form name",
-	"forms-form-editor-form-name-help": "This is the name form will get registered under. It will be used as a form identifier, it is recommended to use no special characters",
 	"forms-form-editor-prop-title": "Title",
 	"forms-form-editor-prop-showtitle": "Display title",
 	"forms-form-editor-prop-showFormName": "Display form name",
@@ -94,5 +93,13 @@
 	"forms-form-editor-prop-target-email-subject": "Subject",
 	"forms-form-editor-prop-target-email-body": "Content",
 	"forms-error-target-mail-send-failed": "Send mail failed",
-	"forms-error-target-mail-no-mail": "No valid email address available"
+	"forms-error-target-mail-no-mail": "No valid email address available",
+
+	"forms-editor-create-form-label": "Create form",
+	"forms-editor-toolbar-cancel": "Cancel",
+	"forms-editor-toolbar-save": "Save changes",
+	"forms-editor-toolbar-done": "Done",
+	"forms-editor-group-empty-help": "Form currently has no elements. Open \"Form elements\" tab and drag elements here",
+	"forms-form-editor-form-props-summary-label": "Summary",
+	"forms-form-editor-form-props-summary-placeholder": "Describe what you changed"
 }
