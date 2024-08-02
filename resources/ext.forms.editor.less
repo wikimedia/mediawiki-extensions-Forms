@@ -56,12 +56,16 @@
 				display: none;
 				padding-left: 5px;
 				padding-right: 5px;
-				background-color: white;
-				border: 3px solid rgb(51, 102, 204);
+				background-color: #cecece;
+				height: 100%;
+				margin: 0 !important;
+				vertical-align: top;
 				.oo-ui-buttonWidget {
+					height: 100%;
 					margin: 0;
 					a {
-						padding: 10px;
+						height: 100%;
+						padding: 5px;
 						span.oo-ui-iconElement-icon {
 							background-size: 15px;
 							background-position: 0;
@@ -73,22 +77,18 @@
 				}
 			}
 			.wrapper-sort-handle:not(.handle-in-tool) {
+				background-color: #cecece;
 				display: none;
-				position: absolute;
-				left: 0;
-				padding: 0 22px 0 22px;
+				width: 40px;
 				cursor: move;
 				height: 100%;
-				background-color: #b0b0b0;
-				border-radius: 2px;
 				background-size: 20px;
 			}
 		}
 	}
 	div.editor-element {
 		vertical-align: top;
-		border: 2px solid #b3b3b3;
-		border-radius: 4px;
+		border: 1px solid #a4a4a4;
 		padding: 10px;
 		margin: 5px;
 		min-height: 500px;
@@ -133,6 +133,18 @@
 	}
 }
 
+.form-editor-toolbar {
+	position: sticky;
+	top: 64px;
+	z-index: 20;
+	.oo-ui-barToolGroup.actions {
+		float: right;
+	}
+	.oo-ui-tool-name-save a {
+		padding: 12px !important;
+	}
+}
+
 .oo-ui-messageDialog {
 	z-index: 11 !important;
 }
@@ -154,62 +166,17 @@
 .ext-forms-form-editor-element-picker {
 	width: 100%;
 	padding: 10px;
-	background-color: #f9f9f9;
-	z-index: 99999;
-	.picker-trigger {
-		cursor: pointer;
-		.oo-ui-iconWidget {
-			cursor: inherit;
-			width: 25px;
-			height: 25px;
-			background-size: 25px;
-			margin-left: 10px;
-			&.oo-ui-icon-expand {
-				position: absolute;
-				right: 10px;
-			}
-		}
-		.oo-ui-labelWidget {
-			cursor: inherit;
-			margin: 0 0 0 20px;
-			vertical-align: middle;
-			font-size: 18px;
-		}
-	}
-	.element-picker-items-layout {
-		-ms-box-orient: horizontal;
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: flex;
-		justify-content: center;
-		.oo-ui-fieldsetLayout {
-			display: inline-block;
-			min-width: 150px;
-			flex-grow: 0;
-			.oo-ui-fieldsetLayout-header {
-				.oo-ui-iconElement-icon {
-					background-size: 18px;
-				}
-			}
-			.oo-ui-fieldsetLayout-group	{
-				align-content: stretch;
-				display: flex;
-				flex-wrap: wrap;
-			}
-		}
-	}
-	.picker-elements {
-		.oo-ui-buttonWidget.close-elements {
-			position: absolute;
-			right: 10px;
-			top: 10px;
-		}
+	background-color: #ffffff;
+	border-bottom: 1px solid #a4a4a4;
+	border-left: 1px solid #d9d6d6;
+	border-right: 1px solid #d9d6d6;
+	/* Height of toolbar */
+	top: 46px;
+	.ext-forms-form-editor-element-picker-page {
+		overflow: hidden !important;
 		.picker-element-item {
 			cursor: pointer;
-			display: flex;
+			display: inline-block;
 			background-color: #eaeaea;
 			border-radius: 5px;
 			border: 1px solid #b3b1b1;
@@ -221,11 +188,9 @@
 					margin-left: 25px;
 				}
 			}
-			&:hover {
-				background-color: #c4c3c3;
-			}
 		}
 	}
+
 }
 
 .ext-forms-editor-options-popup {

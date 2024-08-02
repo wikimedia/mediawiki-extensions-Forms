@@ -126,6 +126,7 @@
 				value[name] = this.values[name];
 				continue;
 			}
+
 			value[name] = this.configInputs[name].getValue();
 		}
 
@@ -324,6 +325,12 @@
 				content: [ groupLayout ]
 			} ) );
 		}
+		// Filter out any non instance of `OO.ui.InputWidget`
+		for ( var wkey in this.configInputs ) {
+			if ( !( this.configInputs[wkey] instanceof OO.ui.InputWidget ) ) {
+				delete ( this.configInputs[wkey] );
+			}
+		}
 		var index = new OO.ui.IndexLayout( { expanded: false } );
 		index.addTabPanels( tabs );
 		var panel = new OO.ui.PanelLayout( {
@@ -347,10 +354,14 @@
 			} );
 		}
 
-		// This is kinda round-about, but we dont want the descriptor to return the actual layout,
-		// just to add items to the one that is passed
-		layout.addItems( this.renderedLayout.getItems() );
 		this.ignoreChanges( false );
+		if ( !$.isEmptyObject( this.configInputs ) ) {
+			// This is kinda round-about, but we dont want the descriptor to return the actual layout,
+			// just to add items to the one that is passed
+			layout.addItems( this.renderedLayout.getItems() );
+			return true;
+		}
+		return false;
 	};
 
 	mw.ext.forms.widget.formElement.FormEditorElementDescriptor.prototype.groupToTabs = function( items ) {
