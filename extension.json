@@ -31,10 +31,6 @@
 			}
 		},
 		"Forms": {
-			"Definitions": {
-				"FormEditor": "Forms/resources/formDefinitions/FormEditor.js",
-				"FormProperties": "Forms/resources/formDefinitions/FormProperties.js"
-			},
 			"Targets": {
 				"json-on-wikipage": "MediaWiki\\Extension\\Forms\\Target\\JsonOnWikiPage::factory",
 				"form-definition": "MediaWiki\\Extension\\Forms\\Target\\FormDefinition::factory",
@@ -114,7 +110,13 @@
 				"formElement/FormElementGroup.js",
 				"formElement/FormElementWrapper.js",
 				"widget/editor/ElementPicker.js",
-				"widget/editor/ElementPickerItem.js"
+				"widget/editor/ElementPickerItem.js",
+				"form/Items.js",
+				"form/FormProperties.js",
+				"FormEditor.js",
+				"dialog/FormPropertiesDialog.js",
+				"dialog/SaveFormDefinitionDialog.js",
+				"ext.forms.formEditor.bootstrap.js"
 			],
 			"styles": [
 				"ext.forms.editor.less"
@@ -122,7 +124,6 @@
 			"messages": [
 				"forms-form-editor-title",
 				"forms-form-editor-form-name-label",
-				"forms-form-editor-form-name-help",
 				"forms-form-editor-prop-title",
 				"forms-form-editor-prop-showtitle",
 				"forms-form-editor-prop-showFormName",
@@ -251,12 +252,20 @@
 				"forms-form-editor-prop-targettypeemail",
 				"forms-form-editor-prop-target-email-receiver",
 				"forms-form-editor-prop-target-email-subject",
-				"forms-form-editor-prop-target-email-body"
+				"forms-form-editor-prop-target-email-body",
+				"forms-editor-toolbar-cancel",
+				"forms-editor-toolbar-save",
+				"forms-editor-group-empty-help",
+				"forms-editor-toolbar-done",
+				"forms-form-editor-form-props-summary-label",
+				"forms-form-editor-form-props-summary-placeholder",
+				"mwstake-formengine-type-hr"
 			],
 			"dependencies": [
 				"ext.forms.init",
 				"oojs-ui",
-				"jquery.ui"
+				"jquery.ui",
+				"ext.forms.standalone"
 			]
 		}
 	},

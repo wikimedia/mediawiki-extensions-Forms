@@ -22,7 +22,6 @@
 	"forms-error-target-db-save-failed": "Generic error message when saving to database failed",
 	"forms-form-editor-title": "Title of the form editor.\n{{Identical|Form Editor}}",
 	"forms-form-editor-form-name-label": "Label for the \"form_name\" text field in the form editor.\n{{Identical|Form name}}",
-	"forms-form-editor-form-name-help": "Help message for the \"form_name\" text field in the form editor.",
 	"forms-form-editor-prop-title": "Label for the \"title\" text field in the form editor.\n{{Identical|Title}}",
 	"forms-form-editor-prop-showtitle": "Label for the \"showTitle\" checkbox field in the form editor.\n{{Identical|Display title}}",
 	"forms-form-editor-prop-showFormName": "Label for the \"showTitle\" checkbox field in the form editor.\n{{Identical|Display form name}}",
@@ -96,5 +95,12 @@
 	"forms-form-editor-prop-target-email-subject": "Label for text input widget to define email subject",
 	"forms-form-editor-prop-target-email-body": "Label for text input to define content of email",
 	"forms-error-target-mail-send-failed": "Label for error message if mail send failed",
-	"forms-error-target-mail-no-mail": "Label for error message if no valid mail address is set"
+	"forms-error-target-mail-no-mail": "Label for error message if no valid mail address is set",
+	"forms-editor-create-form-label": "Label for the button on Special:FormEditor to create a new form",
+	"forms-editor-toolbar-cancel": "Generic label for a cancel button",
+	"forms-editor-toolbar-save": "Generic label for a save button",
+	"forms-editor-toolbar-done": "Generic label for an done button",
+	"forms-editor-group-empty-help": "Help text for the empty group in the form editor",
+	"forms-form-editor-form-props-summary-label": "Field label for the summary field in the form editor",
+	"forms-form-editor-form-props-summary-placeholder": "Placeholder text for the summary field in the form editor"
 }
