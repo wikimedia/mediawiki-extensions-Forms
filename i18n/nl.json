@@ -21,7 +21,6 @@
 	"forms-error-target-db-save-failed": "Opslaan in database mislukt",
 	"forms-form-editor-title": "Formulieren-editor",
 	"forms-form-editor-form-name-label": "Formuliernaam",
-	"forms-form-editor-form-name-help": "Onder deze naam wordt het formulier geregistreerd. De naam wordt gebruikt ter identificatie van het formulier. Het gebruik van speciale tekens wordt afgeraden.",
 	"forms-form-editor-prop-title": "Titel",
 	"forms-form-editor-prop-showtitle": "Weergavetitel",
 	"forms-form-editor-prop-showFormName": "Formuliernaam weergeven",

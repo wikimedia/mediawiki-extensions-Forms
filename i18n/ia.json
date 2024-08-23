@@ -19,7 +19,6 @@
 	"forms-error-target-db-save-failed": "Le salveguarda in le base de datos ha fallite",
 	"forms-form-editor-title": "Editor de formularios",
 	"forms-form-editor-form-name-label": "Nomine del formulario",
-	"forms-form-editor-form-name-help": "Iste es le nomine sub le qual le formulario essera registrate. Illo essera usate pro identificar le formulario. Es recommendate de evitar le characteres special.",
 	"forms-form-editor-prop-title": "Titulo",
 	"forms-form-editor-prop-showtitle": "Monstrar titulo",
 	"forms-form-editor-prop-showFormName": "Monstrar nomine del formulario",

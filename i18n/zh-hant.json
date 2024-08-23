@@ -19,7 +19,6 @@
 	"forms-error-target-db-save-failed": "儲存到資料庫失敗",
 	"forms-form-editor-title": "表單編輯器",
 	"forms-form-editor-form-name-label": "表單名稱",
-	"forms-form-editor-form-name-help": "這是表單將會取得其下註冊的名稱。因為會被使用來識別表單，建議不要使用特殊字元",
 	"forms-form-editor-prop-title": "標題",
 	"forms-form-editor-prop-showtitle": "顯示標題",
 	"forms-form-editor-prop-showFormName": "顯示表單名稱",

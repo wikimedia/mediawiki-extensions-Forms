@@ -20,7 +20,6 @@
 	"forms-error-target-db-save-failed": "فشل الحفظ في قاعدة البيانات",
 	"forms-form-editor-title": "محرر النموذج",
 	"forms-form-editor-form-name-label": "اسم النموذج",
-	"forms-form-editor-form-name-help": "هذا هو نموذج الاسم الذي سيتم تسجيله تحت. سيتم استخدامه كمعرف نموذج ، يوصى بعدم استخدام أحرف خاصة",
 	"forms-form-editor-prop-title": "العنوان",
 	"forms-form-editor-prop-showtitle": "عرض العنوان",
 	"forms-form-editor-prop-showFormName": "عرض اسم النموذج",

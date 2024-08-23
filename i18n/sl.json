@@ -19,7 +19,6 @@
 	"forms-error-target-db-save-failed": "Shranjevanje v podatkovno zbirko ni uspelo",
 	"forms-form-editor-title": "Urejevalnik obrazcev",
 	"forms-form-editor-form-name-label": "Ime obrazca",
-	"forms-form-editor-form-name-help": "To je ime, pod katerim bo obrazec registriran. Uporabljal se bo kot identifikator obrazca. Priporočeno je, da ne uporabljate posebnih znakov.",
 	"forms-form-editor-prop-title": "Naslov",
 	"forms-form-editor-prop-showtitle": "Prikazani naslov",
 	"forms-form-editor-prop-showFormName": "Prikaz imena obrazca",

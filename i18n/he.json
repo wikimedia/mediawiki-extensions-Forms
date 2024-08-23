@@ -21,7 +21,6 @@
 	"forms-error-target-db-save-failed": "השמירה למסד הנתונים נכשלה",
 	"forms-form-editor-title": "עורך טפסים",
 	"forms-form-editor-form-name-label": "שם הטופס",
-	"forms-form-editor-form-name-help": "זה השם שבו הטופס יירשם. הוא ישמש כמזהה הטופס, ומומלץ לא להשתמש בתווים מיוחדים.",
 	"forms-form-editor-prop-title": "כותרת",
 	"forms-form-editor-prop-showtitle": "כותרת התצוגה",
 	"forms-form-editor-prop-showFormName": "שם התצוגה של הטופס",

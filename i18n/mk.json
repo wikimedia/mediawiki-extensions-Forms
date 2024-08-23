@@ -19,7 +19,6 @@
 	"forms-error-target-db-save-failed": "Не успеа зачувувањето во базата",
 	"forms-form-editor-title": "Уредник на обрасци",
 	"forms-form-editor-form-name-label": "Име на образецот",
-	"forms-form-editor-form-name-help": "Образецот ќе биде заведен под ова име. Ќе се користи како негова назнака. Се препорачува да не користите посебни знаци.",
 	"forms-form-editor-prop-title": "Наслов",
 	"forms-form-editor-prop-showtitle": "Наслов за приказ",
 	"forms-form-editor-prop-showFormName": "Прикажи име на образецот",

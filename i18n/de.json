@@ -22,7 +22,6 @@
 	"forms-error-target-db-save-failed": "Speichern in die Datenbank fehlgeschlagen",
 	"forms-form-editor-title": "Formulareditor",
 	"forms-form-editor-form-name-label": "Formularname",
-	"forms-form-editor-form-name-help": "Unter diesem Namen wird das Formular registriert. Er wird als eindeutiger Identifizierer verwendet und sollte daher keine Sonderzeichen beinhalten",
 	"forms-form-editor-prop-title": "Titel",
 	"forms-form-editor-prop-showtitle": "Anzeigetitel",
 	"forms-form-editor-prop-showFormName": "Formularnamen anzeigen",

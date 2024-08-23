@@ -18,7 +18,6 @@
 	"forms-error-target-db-save-failed": "Nepavyko išsaugoti duomenų bazėje",
 	"forms-form-editor-title": "Formos redaktorius",
 	"forms-form-editor-form-name-label": "Formos pavadinimas",
-	"forms-form-editor-form-name-help": "Tokiu pavadinimu forma bus registruojama. Jis bus naudojamas kaip formos identifikatorius, rekomenduojama nenaudoti specialiųjų simbolių",
 	"forms-form-editor-prop-title": "Pavadinimas",
 	"forms-form-editor-prop-showtitle": "Rodomas pavadinimas",
 	"forms-form-editor-prop-showFormName": "Rodyti formos pavadinimą",
