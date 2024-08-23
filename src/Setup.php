@@ -47,13 +47,17 @@ class Setup {
 	 * @return bool
 	 */
 	public static function onSkinTemplateNavigation_Universal( SkinTemplate $sktemplate, array &$links ) {
-		$currentContentModel = $sktemplate->getTitle()->getContentModel();
+		$title = $sktemplate->getTitle();
+		if ( !$title ) {
+			return true;
+		}
+		$currentContentModel = $title->getContentModel();
 		if ( in_array( $currentContentModel, [ 'FormDefinition', 'FormData' ] ) ) {
 			// In case VisualEditor overrides with "Edit source"
 			$links['views']['edit'] = [
 				'text' => Message::newFromKey( 'edit' )->plain(),
 				'title' => Message::newFromKey( 'edit' )->plain(),
-				'href' => $sktemplate->getTitle()->getLocalURL( [
+				'href' => $title->getLocalURL( [
 					'action' => 'edit',
 				] )
 			];
@@ -62,7 +66,7 @@ class Setup {
 			$links['views']['editdefinitionsource'] = $links['views']['edit'];
 			$links['views']['editdefinitionsource']['text']
 				= Message::newFromKey( 'forms-action-editsource' )->plain();
-			$links['views']['editdefinitionsource']['href'] = $sktemplate->getTitle()->getLinkURL( [
+			$links['views']['editdefinitionsource']['href'] = $title->getLinkURL( [
 				'action' => 'editdefinitionsource'
 			] );
 		}
