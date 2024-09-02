@@ -19,7 +19,6 @@
 	"forms-error-target-db-save-failed": "Не успеа зачувувањето во базата",
 	"forms-form-editor-title": "Уредник на обрасци",
 	"forms-form-editor-form-name-label": "Име на образецот",
-	"forms-form-editor-form-name-help": "Образецот ќе биде заведен под ова име. Ќе се користи како негова назнака. Се препорачува да не користите посебни знаци.",
 	"forms-form-editor-prop-title": "Наслов",
 	"forms-form-editor-prop-showtitle": "Наслов за приказ",
 	"forms-form-editor-prop-showFormName": "Прикажи име на образецот",
@@ -93,5 +92,12 @@
 	"forms-form-editor-prop-target-email-subject": "Наслов",
 	"forms-form-editor-prop-target-email-body": "Содржина",
 	"forms-error-target-mail-send-failed": "Испраќањето не успеа",
-	"forms-error-target-mail-no-mail": "Нема внесено важечка е-пошта"
+	"forms-error-target-mail-no-mail": "Нема внесено важечка е-пошта",
+	"forms-editor-create-form-label": "Создај образец",
+	"forms-editor-toolbar-cancel": "Откажи",
+	"forms-editor-toolbar-save": "Зачувај промени",
+	"forms-editor-toolbar-done": "Готово",
+	"forms-editor-group-empty-help": "Образецот моментално нема елементи. Отворете го јазичето „Елементи на образецот“ и довлечете ги елементите тука",
+	"forms-form-editor-form-props-summary-label": "Опис",
+	"forms-form-editor-form-props-summary-placeholder": "Опишете ги направените измени"
 }

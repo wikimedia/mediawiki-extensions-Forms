@@ -3,7 +3,8 @@
 		"authors": [
 			"Amire80",
 			"מקף",
-			"שוקו מוקה"
+			"שוקו מוקה",
+			"Freddy9"
 		]
 	},
 	"forms-desc": "מסגרת טפסים כללית למדיה־ויקי",
@@ -21,7 +22,6 @@
 	"forms-error-target-db-save-failed": "השמירה למסד הנתונים נכשלה",
 	"forms-form-editor-title": "עורך טפסים",
 	"forms-form-editor-form-name-label": "שם הטופס",
-	"forms-form-editor-form-name-help": "זה השם שבו הטופס יירשם. הוא ישמש כמזהה הטופס, ומומלץ לא להשתמש בתווים מיוחדים.",
 	"forms-form-editor-prop-title": "כותרת",
 	"forms-form-editor-prop-showtitle": "כותרת התצוגה",
 	"forms-form-editor-prop-showFormName": "שם התצוגה של הטופס",
@@ -95,5 +95,12 @@
 	"forms-form-editor-prop-target-email-subject": "נושא",
 	"forms-form-editor-prop-target-email-body": "תוכן",
 	"forms-error-target-mail-send-failed": "שליחת דואר נכשלה",
-	"forms-error-target-mail-no-mail": "אין כתובת דוא״ל תקינה זמינה"
+	"forms-error-target-mail-no-mail": "אין כתובת דוא״ל תקינה זמינה",
+	"forms-editor-create-form-label": "יצירת טופס",
+	"forms-editor-toolbar-cancel": "ביטול",
+	"forms-editor-toolbar-save": "שמירת השינויים",
+	"forms-editor-toolbar-done": "בוצע",
+	"forms-editor-group-empty-help": "לטופס אין כרגע רכיבים. יש לפתוח את הלשונית \"רכיבי טופס\" ולגרור רכיבים לכאן",
+	"forms-form-editor-form-props-summary-label": "תקציר",
+	"forms-form-editor-form-props-summary-placeholder": "תיאור השינויים"
 }

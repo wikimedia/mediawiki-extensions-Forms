@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Milicevic01"
+		]
+	},
+	"forms-editor-toolbar-cancel": "Откажи",
+	"forms-editor-toolbar-save": "Сачувај измене",
+	"forms-editor-toolbar-done": "Готово",
+	"forms-form-editor-form-props-summary-label": "Опис",
+	"forms-form-editor-form-props-summary-placeholder": "Опишите шта сте променили"
+}

@@ -19,7 +19,6 @@
 	"forms-error-target-db-save-failed": "儲存到資料庫失敗",
 	"forms-form-editor-title": "表單編輯器",
 	"forms-form-editor-form-name-label": "表單名稱",
-	"forms-form-editor-form-name-help": "這是表單將會取得其下註冊的名稱。因為會被使用來識別表單，建議不要使用特殊字元",
 	"forms-form-editor-prop-title": "標題",
 	"forms-form-editor-prop-showtitle": "顯示標題",
 	"forms-form-editor-prop-showFormName": "顯示表單名稱",
@@ -93,5 +92,12 @@
 	"forms-form-editor-prop-target-email-subject": "主旨",
 	"forms-form-editor-prop-target-email-body": "內容",
 	"forms-error-target-mail-send-failed": "發送電郵失敗",
-	"forms-error-target-mail-no-mail": "沒有可用的有效電子郵件地址"
+	"forms-error-target-mail-no-mail": "沒有可用的有效電子郵件地址",
+	"forms-editor-create-form-label": "建立表單",
+	"forms-editor-toolbar-cancel": "取消",
+	"forms-editor-toolbar-save": "儲存更改",
+	"forms-editor-toolbar-done": "完成",
+	"forms-editor-group-empty-help": "表單目前沒有元素。請開啟「表單元素」標籤，並將元素拖曳至此處",
+	"forms-form-editor-form-props-summary-label": "摘要",
+	"forms-form-editor-form-props-summary-placeholder": "描述您做出的更改"
 }
