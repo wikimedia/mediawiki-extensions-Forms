@@ -4,5 +4,8 @@
 			"Kareyac"
 		]
 	},
-	"forms-form-editor-prop-categories": "Ստորոգութիւններ"
+	"forms-form-editor-prop-categories": "Ստորոգութիւններ",
+	"forms-editor-toolbar-cancel": "Չեղարկել",
+	"forms-editor-toolbar-done": "Եղած է",
+	"forms-form-editor-form-props-summary-label": "Ամփոփում"
 }

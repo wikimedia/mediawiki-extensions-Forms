@@ -16,5 +16,7 @@
 	"forms-label-phone": "ফোন",
 	"forms-label-email": "ইমেইল",
 	"forms-form-editor-prop-targettypetemplate": "টেমপ্লেট",
-	"forms-action-editsource": "উৎস সম্পাদনা"
+	"forms-action-editsource": "উৎস সম্পাদনা",
+	"forms-editor-toolbar-cancel": "বাতিল",
+	"forms-form-editor-form-props-summary-label": "সারাংশ"
 }

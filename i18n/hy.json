@@ -10,5 +10,8 @@
 	"forms-label-city": "Քաղաք",
 	"forms-label-street": "Փողոց",
 	"forms-form-editor-prop-targettypetemplate": "Կաղապար",
-	"forms-label-appearance": "Արտաքին տեսք"
+	"forms-label-appearance": "Արտաքին տեսք",
+	"forms-editor-toolbar-cancel": "Չեղարկել",
+	"forms-editor-toolbar-done": "Արված է",
+	"forms-form-editor-form-props-summary-label": "Ամփոփում"
 }

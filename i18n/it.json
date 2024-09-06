@@ -26,5 +26,9 @@
 	"forms-form-editor-prop-target-email-subject": "Oggetto",
 	"forms-form-editor-prop-target-email-body": "Contenuto",
 	"forms-error-target-mail-send-failed": "Invio email non riuscito",
-	"forms-error-target-mail-no-mail": "Nessun indirizzo email valido disponibile"
+	"forms-error-target-mail-no-mail": "Nessun indirizzo email valido disponibile",
+	"forms-editor-toolbar-cancel": "Annulla",
+	"forms-editor-toolbar-save": "Salva modifiche",
+	"forms-editor-toolbar-done": "Fatto",
+	"forms-form-editor-form-props-summary-placeholder": "Descrivi cosa hai cambiato"
 }

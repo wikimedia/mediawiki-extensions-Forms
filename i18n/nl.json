@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Mainframe98",
-			"McDutchie"
+			"McDutchie",
+			"Siebrand"
 		]
 	},
 	"forms-createforminstance-form-name": "$1 aanmaken",
@@ -73,8 +74,8 @@
 	"forms-form-editor-form-props-label": "Formulier-eigenschappen",
 	"forms-form-editor-form-items-label": "Formulier-elementen",
 	"forms-label-company-name": "Naam van het bedrijf",
-	"forms-label-show-contacts": "Contacten tonen",
-	"forms-label-show-address": "Adres tonen",
+	"forms-label-show-contacts": "Contacten weergeven",
+	"forms-label-show-address": "Adres weergeven",
 	"forms-label-sales": "Verkoop",
 	"forms-label-production": "Productie",
 	"forms-label-hq-address-billing": "Is dit een factuuradres?",
