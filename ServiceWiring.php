@@ -7,13 +7,28 @@ use MediaWiki\Extension\Forms\FormRevisionManager;
 use MediaWiki\Extension\Forms\Util\DataPreprocessor;
 use MediaWiki\MediaWikiServices;
 
+/** @phpcs-require-sorted-array */
 return [
 
-	'FormsDefinitionManager' => static function ( MediaWikiServices $services ) {
+	'FormsAutosaver' => static function ( MediaWikiServices $services ): Autosaver {
+		$db = $services->getDBLoadBalancer()->getConnection(
+			DB_PRIMARY
+		);
+		return Autosaver::factory(
+			$db
+		);
+	},
+
+	'FormsDataPreprocessor' => static function ( MediaWikiServices $services ): DataPreprocessor {
+		$context = RequestContext::getMain();
+		return new DataPreprocessor( $services->getParser(), $context );
+	},
+
+	'FormsDefinitionManager' => static function ( MediaWikiServices $services ): DefinitionManager {
 		return new DefinitionManager();
 	},
 
-	'FormsRevisionManager' => static function ( MediaWikiServices $services ) {
+	'FormsRevisionManager' => static function ( MediaWikiServices $services ): FormRevisionManager {
 		$revisionStore = $services->getRevisionStore();
 		$db = $services->getDBLoadBalancer()->getConnection(
 			DB_PRIMARY
@@ -23,19 +38,5 @@ return [
 			$db
 		);
 	},
-
-	'FormsAutosaver' => static function ( MediaWikiServices $services ) {
-		$db = $services->getDBLoadBalancer()->getConnection(
-			DB_PRIMARY
-		);
-		return Autosaver::factory(
-			$db
-		);
-	},
-
-	'FormsDataPreprocessor' => static function ( MediaWikiServices $services ) {
-		$context = RequestContext::getMain();
-		return new DataPreprocessor( $services->getParser(), $context );
-	}
 
 ];
