@@ -93,5 +93,12 @@
 	"forms-form-editor-prop-target-email-subject": "Subjecto",
 	"forms-form-editor-prop-target-email-body": "Contento",
 	"forms-error-target-mail-send-failed": "Le invio del message de e-mail ha fallite",
-	"forms-error-target-mail-no-mail": "Nulle adresse de e-mail valide es disponibile"
+	"forms-error-target-mail-no-mail": "Nulle adresse de e-mail valide es disponibile",
+	"forms-editor-create-form-label": "Crear formulario",
+	"forms-editor-toolbar-cancel": "Cancellar",
+	"forms-editor-toolbar-save": "Salveguardar cambiamentos",
+	"forms-editor-toolbar-done": "Facite",
+	"forms-editor-group-empty-help": "Le formulario actualmente non ha elementos. Aperi le scheda “Elementos del formulario” e trahe elementos verso illo.",
+	"forms-form-editor-form-props-summary-label": "Summario",
+	"forms-form-editor-form-props-summary-placeholder": "Describe lo que tu ha cambiate"
 }
