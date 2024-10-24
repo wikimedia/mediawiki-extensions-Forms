@@ -95,8 +95,8 @@ class FormSubmit extends \ApiBase {
 
 	protected function readInParameters() {
 		$this->form = $this->getParameter( 'form' );
-		$this->target = $this->makeTarget( $this->getParameter( 'target' ) );
 		$this->data = $this->getParameter( 'data' );
+		$this->target = $this->makeTarget( $this->getParameter( 'target' ) );
 		$this->summary = $this->getParameter( 'summary' );
 	}
 
@@ -152,6 +152,10 @@ class FormSubmit extends \ApiBase {
 		if ( isset( $targets[$targetType] ) ) {
 			$factory = $targets[$targetType];
 			if ( is_callable( $factory ) ) {
+				$id = $data['_id'] ?? $this->data['_id'] ?? null;
+				if ( $id ) {
+					$data['_id'] = $id;
+				}
 				unset( $data['type'] );
 				$config = new \HashConfig( array_merge(
 					$data, [
