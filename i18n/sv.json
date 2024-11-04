@@ -20,7 +20,6 @@
 	"forms-error-target-db-save-failed": "Kunde inte spara till databas",
 	"forms-form-editor-title": "Formulärredigerare",
 	"forms-form-editor-form-name-label": "Formulärnamn",
-	"forms-form-editor-form-name-help": "Detta är namnet formuläret kommer registreras som. Det kommer användas som formuläridentifierare, vi rekommenderar att inte använda specialtecken",
 	"forms-form-editor-prop-title": "Titel",
 	"forms-form-editor-prop-showtitle": "Visningstitel",
 	"forms-form-editor-prop-showFormName": "Visa formulärnamn",

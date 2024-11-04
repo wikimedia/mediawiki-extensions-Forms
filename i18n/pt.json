@@ -19,7 +19,6 @@
 	"forms-error-target-db-save-failed": "A gravação na base de dados falhou",
 	"forms-form-editor-title": "Editor de formulários",
 	"forms-form-editor-form-name-label": "Nome do formulário",
-	"forms-form-editor-form-name-help": "É com este nome que o formulário será registado. O nome será usado como identificador do formulário. Recomenda-se que não sejam usados caracteres especiais",
 	"forms-form-editor-prop-title": "Título",
 	"forms-form-editor-prop-showtitle": "Título de apresentação",
 	"forms-form-editor-prop-showFormName": "Apresentar nome do formulário",

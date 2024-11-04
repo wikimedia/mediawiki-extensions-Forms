@@ -18,7 +18,6 @@
 	"forms-error-target-db-save-failed": "Fallo al guardar en la base de datos",
 	"forms-form-editor-title": "Editor de formularios",
 	"forms-form-editor-form-name-label": "Nombre del formulario",
-	"forms-form-editor-form-name-help": "Este es el nombre con el que se registrará el formulario. Se utilizará como identificador del formulario, se recomienda no utilizar caracteres especiales",
 	"forms-form-editor-prop-title": "Título",
 	"forms-form-editor-prop-showtitle": "Mostrar título",
 	"forms-form-editor-prop-showFormName": "Mostrar el nombre del formulario",

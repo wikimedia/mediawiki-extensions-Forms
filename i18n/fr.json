@@ -22,7 +22,6 @@
 	"forms-error-target-db-save-failed": "Échec de l’enregistrement en base de données",
 	"forms-form-editor-title": "Éditeur de formulaire",
 	"forms-form-editor-form-name-label": "Nom du formulaire",
-	"forms-form-editor-form-name-help": "C’est le nom sous lequel le formulaire sera enregistré. Il sera utilisé comme identifiant de formulaire, il est recommandé de ne pas utiliser de caractères spéciaux",
 	"forms-form-editor-prop-title": "Titre",
 	"forms-form-editor-prop-showtitle": "Afficher le titre",
 	"forms-form-editor-prop-showFormName": "Afficher le nom du formulaire",
