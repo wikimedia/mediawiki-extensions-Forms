@@ -2,7 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Alshamiri1",
-			"Mohanad Kh"
+			"Mohanad Kh",
+			"Meno25",
+			"Mohanad"
 		]
 	},
 	"forms-desc": "إطار عمل الشكل الشامل لميدياويكي",
@@ -77,7 +79,7 @@
 	"forms-form-editor-prop-targettemplate": "قالب للاستخدام",
 	"forms-form-editor-target-template-field": "حقل القالب",
 	"forms-form-editor-target-template-field-manual": "(يدوي)",
-	"forms-form-meta-tag": "تم إنشاؤه باستخدام النموذج [[ $1 ]] (المراجعة: $2 )",
+	"forms-form-meta-tag": "تم إنشاؤه باستخدام النموذج [[$1]] (المراجعة: $2)",
 	"forms-form-editor-button-import-template": "استيراد الحقول من القالب",
 	"forms-form-editor-confirm-import-template": "سيؤدي هذا إلى حذف جميع الحقول الحالية في النموذج واستبدالها بالحقول المستوردة من القالب المحدد. هل انت متأكد انك تريد المتابعة؟",
 	"apihelp-forms-get-definitions-summary": "يوفر الاستعلام عن تعريفات النماذج الموجودة",
