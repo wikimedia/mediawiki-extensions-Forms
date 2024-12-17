@@ -10,7 +10,7 @@ mw.ext.forms.dialog.SaveFormDefinitionDialog = function( cfg ) {
 OO.inheritClass( mw.ext.forms.dialog.SaveFormDefinitionDialog, OO.ui.ProcessDialog );
 
 mw.ext.forms.dialog.SaveFormDefinitionDialog.static.name = 'saveFormDefinitionDialog';
-mw.ext.forms.dialog.SaveFormDefinitionDialog.static.title = mw.message( 'forms-editor-toolbar-save' ).text();
+mw.ext.forms.dialog.SaveFormDefinitionDialog.static.title = mw.message( 'forms-editor-toolbar-save-label' ).text();
 mw.ext.forms.dialog.SaveFormDefinitionDialog.static.padded = true;
 mw.ext.forms.dialog.SaveFormDefinitionDialog.static.actions = [
 	{ action: 'save', label: mw.message( 'forms-editor-toolbar-done' ).text(), flags: [ 'primary', 'progressive' ] },

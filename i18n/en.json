@@ -97,7 +97,7 @@
 
 	"forms-editor-create-form-label": "Create form",
 	"forms-editor-toolbar-cancel": "Cancel",
-	"forms-editor-toolbar-save": "Save changes",
+	"forms-editor-toolbar-save-label": "Save",
 	"forms-editor-toolbar-done": "Done",
 	"forms-editor-group-empty-help": "Form currently has no elements. Open \"Form elements\" tab and drag elements here",
 	"forms-form-editor-form-props-summary-label": "Summary",
