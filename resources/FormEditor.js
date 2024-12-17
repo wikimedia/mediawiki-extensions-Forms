@@ -117,8 +117,8 @@ mw.ext.forms.widget.FormEditor.prototype.makeToolbar = function () {
 	};
 	OO.inheritClass( cancelTool, OO.ui.Tool );
 	cancelTool.static.name = 'cancel';
-	cancelTool.static.icon = 'cancel';
-	cancelTool.static.flags = [ 'destructive' ];
+	cancelTool.static.icon = 'close';
+	cancelTool.static.flags = [];
 	cancelTool.static.title = mw.msg( 'forms-editor-toolbar-cancel' );
 	cancelTool.prototype.onSelect = function() {
 		editor.cancelEditing();
@@ -131,7 +131,7 @@ mw.ext.forms.widget.FormEditor.prototype.makeToolbar = function () {
 	};
 	OO.inheritClass( saveTool, OO.ui.Tool );
 	saveTool.static.name = 'save';
-	saveTool.static.title = mw.msg( 'forms-editor-toolbar-save' );
+	saveTool.static.title = mw.msg( 'forms-editor-toolbar-save-label' );
 	saveTool.static.flags = [ 'primary', 'progressive' ];
 	saveTool.prototype.onSelect = function() {
 		this.setActive( false );
@@ -143,13 +143,18 @@ mw.ext.forms.widget.FormEditor.prototype.makeToolbar = function () {
 	toolbar.setup( [
 		{
 			type: 'bar',
+			include: [ 'cancel' ],
+			align: 'before'
+		},
+		{
+			type: 'bar',
 			include: [ 'elements' ]
 		},
 		{
 			name: 'actions',
 			classes: [ 'actions' ],
 			type: 'bar',
-			include: [ 'settings', 'cancel', 'save' ]
+			include: [ 'settings', 'save' ]
 		}
 	] );
 	toolbar.initialize();

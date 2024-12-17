@@ -98,7 +98,7 @@
 	"forms-error-target-mail-no-mail": "Label for error message if no valid mail address is set",
 	"forms-editor-create-form-label": "Label for the button on Special:FormEditor to create a new form",
 	"forms-editor-toolbar-cancel": "Generic label for a cancel button",
-	"forms-editor-toolbar-save": "Generic label for a save button",
+	"forms-editor-toolbar-save-label": "Generic label for a save button\n{{Identical|Save}}",
 	"forms-editor-toolbar-done": "Generic label for an done button",
 	"forms-editor-group-empty-help": "Help text for the empty group in the form editor",
 	"forms-form-editor-form-props-summary-label": "Field label for the summary field in the form editor",
