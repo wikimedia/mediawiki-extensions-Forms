@@ -95,5 +95,11 @@
 	"forms-form-editor-prop-target-email-subject": "الموضوع",
 	"forms-form-editor-prop-target-email-body": "المحتوى",
 	"forms-error-target-mail-send-failed": "فشل إرسال البريد",
-	"forms-error-target-mail-no-mail": "لا يوجد عنوان بريد إلكتروني صالح متاح"
+	"forms-error-target-mail-no-mail": "لا يوجد عنوان بريد إلكتروني صالح متاح",
+	"forms-editor-create-form-label": "إنشاء نموذج",
+	"forms-editor-toolbar-cancel": "إلغاء",
+	"forms-editor-toolbar-save": "حفظ التغييرات",
+	"forms-editor-toolbar-done": "تم",
+	"forms-form-editor-form-props-summary-label": "ملخص",
+	"forms-form-editor-form-props-summary-placeholder": "صف ما غيرته"
 }
