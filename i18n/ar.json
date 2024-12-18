@@ -100,6 +100,7 @@
 	"forms-editor-toolbar-cancel": "إلغاء",
 	"forms-editor-toolbar-save": "حفظ التغييرات",
 	"forms-editor-toolbar-done": "تم",
+	"forms-editor-group-empty-help": "لا يحتوي النموذج حاليا على أي عناصر. افتح علامة التبويب \"عناصر النموذج\" واسحب العناصر هنا",
 	"forms-form-editor-form-props-summary-label": "ملخص",
 	"forms-form-editor-form-props-summary-placeholder": "صف ما غيرته"
 }
