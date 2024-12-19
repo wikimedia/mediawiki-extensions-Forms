@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bgo eiu"
+			"Bgo eiu",
+			"Cabal"
 		]
 	},
-	"forms-form-editor-prop-categories": "ਸ਼੍ਰੇਣੀਆਂ"
+	"forms-form-editor-prop-categories": "ਸ਼੍ਰੇਣੀਆਂ",
+	"forms-form-editor-prop-targettypetemplate": "ਫਰਮਾ"
 }
