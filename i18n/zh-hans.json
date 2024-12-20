@@ -55,7 +55,6 @@
 	"forms-error-target-mail-no-mail": "没有可用的有效电子邮件地址",
 	"forms-editor-create-form-label": "创建表单",
 	"forms-editor-toolbar-cancel": "取消",
-	"forms-editor-toolbar-save": "保存更改",
 	"forms-editor-toolbar-done": "完成",
 	"forms-form-editor-form-props-summary-label": "摘要",
 	"forms-form-editor-form-props-summary-placeholder": "描述您的更改"

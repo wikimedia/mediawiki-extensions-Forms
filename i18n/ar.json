@@ -98,7 +98,6 @@
 	"forms-error-target-mail-no-mail": "لا يوجد عنوان بريد إلكتروني صالح متاح",
 	"forms-editor-create-form-label": "إنشاء نموذج",
 	"forms-editor-toolbar-cancel": "إلغاء",
-	"forms-editor-toolbar-save": "حفظ التغييرات",
 	"forms-editor-toolbar-done": "تم",
 	"forms-editor-group-empty-help": "لا يحتوي النموذج حاليا على أي عناصر. افتح علامة التبويب \"عناصر النموذج\" واسحب العناصر هنا",
 	"forms-form-editor-form-props-summary-label": "ملخص",
