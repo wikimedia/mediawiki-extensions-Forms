@@ -95,6 +95,7 @@
 	"forms-error-target-mail-no-mail": "Нема внесено важечка е-пошта",
 	"forms-editor-create-form-label": "Создај образец",
 	"forms-editor-toolbar-cancel": "Откажи",
+	"forms-editor-toolbar-save-label": "Зачувај",
 	"forms-editor-toolbar-done": "Готово",
 	"forms-editor-group-empty-help": "Образецот моментално нема елементи. Отворете го јазичето „Елементи на образецот“ и довлечете ги елементите тука",
 	"forms-form-editor-form-props-summary-label": "Опис",
