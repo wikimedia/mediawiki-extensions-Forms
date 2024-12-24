@@ -95,7 +95,6 @@
 	"forms-error-target-mail-no-mail": "沒有可用的有效電子郵件地址",
 	"forms-editor-create-form-label": "建立表單",
 	"forms-editor-toolbar-cancel": "取消",
-	"forms-editor-toolbar-save": "儲存更改",
 	"forms-editor-toolbar-done": "完成",
 	"forms-editor-group-empty-help": "表單目前沒有元素。請開啟「表單元素」標籤，並將元素拖曳至此處",
 	"forms-form-editor-form-props-summary-label": "摘要",

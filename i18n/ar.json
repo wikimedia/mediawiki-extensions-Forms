@@ -36,7 +36,7 @@
 	"forms-form-editor-prop-targettype": "نوع الهدف",
 	"forms-form-editor-prop-targettitle": "العنوان",
 	"forms-form-editor-prop-targetafteraction": "تعيين بعد العمل",
-	"forms-form-editor-prop-targettypejsononwikipage": "JSON على wikipage",
+	"forms-form-editor-prop-targettypejsononwikipage": "JSON على صفحة الويكي",
 	"forms-form-editor-prop-targettypedatabase": "قاعدة بيانات",
 	"forms-form-editor-prop-targetafteractiontype": "بعد نوع الإجراء",
 	"forms-form-editor-prop-targetafteractiontypenone": "لا رد فعل",
@@ -95,5 +95,12 @@
 	"forms-form-editor-prop-target-email-subject": "الموضوع",
 	"forms-form-editor-prop-target-email-body": "المحتوى",
 	"forms-error-target-mail-send-failed": "فشل إرسال البريد",
-	"forms-error-target-mail-no-mail": "لا يوجد عنوان بريد إلكتروني صالح متاح"
+	"forms-error-target-mail-no-mail": "لا يوجد عنوان بريد إلكتروني صالح متاح",
+	"forms-editor-create-form-label": "إنشاء نموذج",
+	"forms-editor-toolbar-cancel": "إلغاء",
+	"forms-editor-toolbar-save-label": "حفظ",
+	"forms-editor-toolbar-done": "تم",
+	"forms-editor-group-empty-help": "لا يحتوي النموذج حاليا على أي عناصر. افتح علامة التبويب \"عناصر النموذج\" واسحب العناصر هنا",
+	"forms-form-editor-form-props-summary-label": "ملخص",
+	"forms-form-editor-form-props-summary-placeholder": "صف ما غيرته"
 }

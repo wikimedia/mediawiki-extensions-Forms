@@ -10,5 +10,6 @@
 	"forms-label-city": "Город:",
 	"forms-label-street": "Улица:",
 	"forms-label-warehouse": "Склад",
-	"forms-form-editor-prop-targettypetemplate": "Шаблон"
+	"forms-form-editor-prop-targettypetemplate": "Шаблон",
+	"forms-editor-toolbar-save-label": "Сохранить"
 }
