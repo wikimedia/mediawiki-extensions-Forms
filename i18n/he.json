@@ -98,6 +98,7 @@
 	"forms-error-target-mail-no-mail": "אין כתובת דוא״ל תקינה זמינה",
 	"forms-editor-create-form-label": "יצירת טופס",
 	"forms-editor-toolbar-cancel": "ביטול",
+	"forms-editor-toolbar-save-label": "שמירה",
 	"forms-editor-toolbar-done": "בוצע",
 	"forms-editor-group-empty-help": "לטופס אין כרגע רכיבים. יש לפתוח את הלשונית \"רכיבי טופס\" ולגרור רכיבים לכאן",
 	"forms-form-editor-form-props-summary-label": "תקציר",
