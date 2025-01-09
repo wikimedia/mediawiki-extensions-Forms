@@ -5,8 +5,10 @@
 			"Yupik"
 		]
 	},
+	"forms-form-editor-prop-categories": "Kategoriijat",
 	"forms-label-contacts": "Oktavuođadieđut",
 	"forms-label-show-address": "Čájet čujuhusa",
 	"forms-label-email": "E-poastačujuhus",
-	"forms-form-editor-prop-targettypeemail": "E-poastačujuhus"
+	"forms-form-editor-prop-targettypeemail": "E-poastačujuhus",
+	"forms-editor-toolbar-save-label": "Vurke"
 }
