@@ -101,5 +101,6 @@
 	"forms-editor-toolbar-done": "Klaar",
 	"forms-editor-group-empty-help": "Het formulier heeft nog geen elementen. Open het tabblad “Formulierelementen” en sleep elementen hierheen.",
 	"forms-form-editor-form-props-summary-label": "Samenvatting",
-	"forms-form-editor-form-props-summary-placeholder": "Beschrijf wat u hebt gewijzigd"
+	"forms-form-editor-form-props-summary-placeholder": "Beschrijf wat u hebt gewijzigd",
+	"forms-editor-toolbar-save-label": "Opslaan"
 }

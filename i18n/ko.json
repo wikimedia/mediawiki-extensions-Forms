@@ -45,5 +45,6 @@
 	"forms-form-editor-prop-target-email-subject": "제목",
 	"forms-error-target-mail-send-failed": "메일 보내기 실패",
 	"forms-error-target-mail-no-mail": "유효한 이메일 주소가 없습니다",
-	"forms-editor-toolbar-cancel": "취소"
+	"forms-editor-toolbar-cancel": "취소",
+	"forms-editor-toolbar-save-label": "저장"
 }

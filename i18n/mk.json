@@ -99,5 +99,6 @@
 	"forms-editor-toolbar-done": "Готово",
 	"forms-editor-group-empty-help": "Образецот моментално нема елементи. Отворете го јазичето „Елементи на образецот“ и довлечете ги елементите тука",
 	"forms-form-editor-form-props-summary-label": "Опис",
-	"forms-form-editor-form-props-summary-placeholder": "Опишете ги направените измени"
+	"forms-form-editor-form-props-summary-placeholder": "Опишете ги направените измени",
+	"forms-editor-toolbar-save-label": "Зачувај"
 }

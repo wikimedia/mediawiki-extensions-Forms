@@ -102,5 +102,6 @@
 	"forms-editor-toolbar-done": "בוצע",
 	"forms-editor-group-empty-help": "לטופס אין כרגע רכיבים. יש לפתוח את הלשונית \"רכיבי טופס\" ולגרור רכיבים לכאן",
 	"forms-form-editor-form-props-summary-label": "תקציר",
-	"forms-form-editor-form-props-summary-placeholder": "תיאור השינויים"
+	"forms-form-editor-form-props-summary-placeholder": "תיאור השינויים",
+	"forms-editor-toolbar-save-label": "שמירה"
 }

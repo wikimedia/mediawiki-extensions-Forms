@@ -101,5 +101,6 @@
 	"forms-editor-toolbar-done": "تم",
 	"forms-editor-group-empty-help": "لا يحتوي النموذج حاليا على أي عناصر. افتح علامة التبويب \"عناصر النموذج\" واسحب العناصر هنا",
 	"forms-form-editor-form-props-summary-label": "ملخص",
-	"forms-form-editor-form-props-summary-placeholder": "صف ما غيرته"
+	"forms-form-editor-form-props-summary-placeholder": "صف ما غيرته",
+	"forms-editor-toolbar-save-label": "حفظ"
 }

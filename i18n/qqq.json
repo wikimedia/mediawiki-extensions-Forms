@@ -102,5 +102,6 @@
 	"forms-editor-toolbar-done": "Generic label for an done button",
 	"forms-editor-group-empty-help": "Help text for the empty group in the form editor",
 	"forms-form-editor-form-props-summary-label": "Field label for the summary field in the form editor",
-	"forms-form-editor-form-props-summary-placeholder": "Placeholder text for the summary field in the form editor"
+	"forms-form-editor-form-props-summary-placeholder": "Placeholder text for the summary field in the form editor",
+	"forms-editor-toolbar-save-label": "Generic label for a save button\n{{Identical|Save}}"
 }
