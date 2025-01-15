@@ -95,5 +95,12 @@
 	"forms-form-editor-prop-target-email-subject": "Onderwerp",
 	"forms-form-editor-prop-target-email-body": "Inhoud",
 	"forms-error-target-mail-send-failed": "Het verzenden van e-mail is mislukt",
-	"forms-error-target-mail-no-mail": "Geen geldig e-mailadres beschikbaar"
+	"forms-error-target-mail-no-mail": "Geen geldig e-mailadres beschikbaar",
+	"forms-editor-create-form-label": "Formulier aanmaken",
+	"forms-editor-toolbar-cancel": "Annuleren",
+	"forms-editor-toolbar-save-label": "Opslaan",
+	"forms-editor-toolbar-done": "Klaar",
+	"forms-editor-group-empty-help": "Het formulier heeft nog geen elementen. Open het tabblad “Formulierelementen” en sleep elementen hierheen.",
+	"forms-form-editor-form-props-summary-label": "Samenvatting",
+	"forms-form-editor-form-props-summary-placeholder": "Beschrijf wat u hebt gewijzigd"
 }

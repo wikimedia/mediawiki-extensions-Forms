@@ -42,5 +42,6 @@
 	"forms-form-editor-prop-targettypeemail": "E-Mail",
 	"forms-editor-toolbar-cancel": "Ofbriechen",
 	"forms-editor-toolbar-save": "Ännerunge späicheren",
-	"forms-form-editor-form-props-summary-label": "Resumé"
+	"forms-form-editor-form-props-summary-label": "Resumé",
+	"forms-editor-toolbar-save-label": "Späicheren"
 }

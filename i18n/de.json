@@ -96,5 +96,6 @@
 	"forms-form-editor-prop-target-email-subject": "Betreff",
 	"forms-form-editor-prop-target-email-body": "Inhalt",
 	"forms-error-target-mail-send-failed": "E-Mail-Versand fehlgeschlagen",
-	"forms-error-target-mail-no-mail": "Keine gültige E-Mail-Adresse verfügbar"
+	"forms-error-target-mail-no-mail": "Keine gültige E-Mail-Adresse verfügbar",
+	"forms-editor-toolbar-save-label": "Speichern"
 }

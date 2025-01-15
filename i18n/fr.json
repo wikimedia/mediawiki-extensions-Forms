@@ -104,5 +104,6 @@
 	"forms-editor-toolbar-done": "Fait",
 	"forms-editor-group-empty-help": "Le formulaire n'a actuellement aucun élément. Ouvrez l'onglet \"Éléments de formulaire\" et faites glisser des éléments ici",
 	"forms-form-editor-form-props-summary-label": "Résumé",
-	"forms-form-editor-form-props-summary-placeholder": "Décrivez ce que vous avez modifié"
+	"forms-form-editor-form-props-summary-placeholder": "Décrivez ce que vous avez modifié",
+	"forms-editor-toolbar-save-label": "Enregistrer"
 }
