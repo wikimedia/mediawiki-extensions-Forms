@@ -4,7 +4,7 @@ namespace MediaWiki\Extension\Forms\Content;
 
 use JsonContent;
 use MediaWiki\MediaWikiServices;
-use Title;
+use MediaWiki\Title\Title;
 
 class FormDataContent extends JsonContent {
 

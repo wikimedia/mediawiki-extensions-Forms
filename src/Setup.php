@@ -5,10 +5,10 @@ namespace MediaWiki\Extension\Forms;
 use MediaWiki\Extension\Forms\Tag\CreateForm;
 use MediaWiki\Extension\Forms\Tag\FormList;
 use MediaWiki\Extension\Forms\Tag\FormMeta;
+use MediaWiki\Title\Title;
 use Message;
 use Parser;
 use SkinTemplate;
-use Title;
 
 // phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
 class Setup {

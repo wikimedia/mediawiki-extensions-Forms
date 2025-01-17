@@ -4,8 +4,8 @@ namespace MediaWiki\Extension\Forms\Target;
 
 use HashConfig;
 use MediaWiki\Extension\Forms\ITarget;
+use MediaWiki\Title\Title;
 use TextContent;
-use Title;
 
 class Template extends TitleTarget {
 	/** @var Title */

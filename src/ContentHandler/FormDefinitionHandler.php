@@ -8,8 +8,8 @@ use MediaWiki\Content\Renderer\ContentParseParams;
 use MediaWiki\Extension\Forms\Action\FormDefinitionEditAction;
 use MediaWiki\Extension\Forms\Action\FormDefinitionSourceEditAction;
 use MediaWiki\Extension\Forms\Content\FormDefinitionContent;
+use MediaWiki\Title\Title;
 use ParserOutput;
-use Title;
 
 class FormDefinitionHandler extends JsonContentHandler {
 	/**
