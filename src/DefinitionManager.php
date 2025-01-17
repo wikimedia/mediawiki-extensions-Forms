@@ -4,8 +4,8 @@ namespace MediaWiki\Extension\Forms;
 
 use MediaWiki\Extension\Forms\Content\FormDefinitionContent;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use TextContent;
-use Title;
 
 class DefinitionManager {
 	public const TYPE_ABSTRACT = 'abstract';
@@ -102,7 +102,7 @@ class DefinitionManager {
 			return 0;
 		}
 		$defTitle = $this->getTitleFromDefinitionName( $definitionName );
-		if ( !$defTitle instanceof \Title || !$defTitle->exists() ) {
+		if ( !$defTitle instanceof Title || !$defTitle->exists() ) {
 			return 0;
 		}
 		return $defTitle->getLatestRevID();
@@ -263,7 +263,7 @@ class DefinitionManager {
 		$pages = $this->getPages();
 		$wikiPageFactory = $this->services->getWikiPageFactory();
 		foreach ( $pages as $pageRow ) {
-			$page = \Title::newFromRow( $pageRow );
+			$page = Title::newFromRow( $pageRow );
 			$wikipage = $wikiPageFactory->newFromTitle( $page );
 			$content = $wikipage->getContent();
 

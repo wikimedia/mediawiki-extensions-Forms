@@ -6,12 +6,12 @@ use Config;
 use Html;
 use MediaWiki\Extension\Forms\DefinitionManager;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use OOUI\ActionFieldLayout;
 use OOUI\ButtonInputWidget;
 use OOUI\FormLayout;
 use OOUI\TextInputWidget;
 use TextContent;
-use Title;
 
 class FormEditor extends FormSpecial {
 	/**

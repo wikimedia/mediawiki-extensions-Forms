@@ -4,8 +4,8 @@ namespace MediaWiki\Extension\Forms\Target;
 
 use MediaWiki\Extension\Forms\FormRevisionManager;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use Status;
-use Title;
 
 class FormDefinition extends JsonOnWikiPage {
 

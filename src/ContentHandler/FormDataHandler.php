@@ -9,8 +9,8 @@ use MediaWiki\Content\Renderer\ContentParseParams;
 use MediaWiki\Extension\Forms\Action\FormDataEditAction;
 use MediaWiki\Extension\Forms\Content\FormDataContent;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use ParserOutput;
-use Title;
 
 class FormDataHandler extends JsonContentHandler {
 	/**
@@ -69,11 +69,11 @@ class FormDataHandler extends JsonContentHandler {
 	private $forcedFormName = null;
 
 	/**
-	 * @param \Title $destination
+	 * @param Title $destination
 	 * @param string $text
 	 * @return \MediaWiki\Extension\Forms\Content\FormDataContent
 	 */
-	public function makeRedirectContent( \Title $destination, $text = '' ) {
+	public function makeRedirectContent( Title $destination, $text = '' ) {
 		$class = $this->getContentClass();
 		$json = [
 			"_redirect" => $destination->getPrefixedDBkey()
