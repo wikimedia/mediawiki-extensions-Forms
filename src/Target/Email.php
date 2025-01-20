@@ -7,10 +7,10 @@ use HashConfig;
 use MailAddress;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\User;
 use Message;
 use RequestContext;
 use Status;
-use User;
 use UserMailer;
 
 class Email implements ITarget {

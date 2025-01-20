@@ -6,9 +6,9 @@ use FormatJson;
 use HashConfig;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\User;
 use RequestContext;
 use Status;
-use User;
 use Wikimedia\Rdbms\IDatabase;
 
 class Database implements ITarget {
