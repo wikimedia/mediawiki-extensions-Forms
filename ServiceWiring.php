@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\Forms\Autosaver;
 use MediaWiki\Extension\Forms\DefinitionManager;
 use MediaWiki\Extension\Forms\FormRevisionManager;

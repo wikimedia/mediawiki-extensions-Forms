@@ -2,11 +2,11 @@
 
 namespace MediaWiki\Extension\Forms\Util;
 
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 use Parser;
 use ParserOptions;
-use RequestContext;
 
 class DataPreprocessor {
 
