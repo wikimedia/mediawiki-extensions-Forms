@@ -4,10 +4,10 @@ namespace MediaWiki\Extension\Forms\Target;
 
 use FormatJson;
 use HashConfig;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\User;
-use RequestContext;
 use Status;
 use Wikimedia\Rdbms\IDatabase;
 

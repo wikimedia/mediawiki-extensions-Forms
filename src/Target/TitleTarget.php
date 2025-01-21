@@ -5,11 +5,11 @@ namespace MediaWiki\Extension\Forms\Target;
 use CommentStoreComment;
 use Exception;
 use HashConfig;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Title\Title;
-use RequestContext;
 use Status;
 
 abstract class TitleTarget implements ITarget {
@@ -135,7 +135,7 @@ abstract class TitleTarget implements ITarget {
 				$replacement = $this->form;
 			}
 			if ( $var === '_user' ) {
-				$user = \RequestContext::getMain()->getUser();
+				$user = RequestContext::getMain()->getUser();
 				if ( $user->isAnon() ) {
 					$replacement = '';
 				} else {

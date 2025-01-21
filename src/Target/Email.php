@@ -5,11 +5,11 @@ namespace MediaWiki\Extension\Forms\Target;
 use DataPreprocessor;
 use HashConfig;
 use MailAddress;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\User;
 use Message;
-use RequestContext;
 use Status;
 use UserMailer;
 
