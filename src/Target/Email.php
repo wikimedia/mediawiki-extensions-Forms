@@ -8,8 +8,8 @@ use MailAddress;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Message\Message;
 use MediaWiki\User\User;
-use Message;
 use Status;
 use UserMailer;
 

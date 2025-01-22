@@ -5,8 +5,8 @@ namespace MediaWiki\Extension\Forms;
 use MediaWiki\Extension\Forms\Tag\CreateForm;
 use MediaWiki\Extension\Forms\Tag\FormList;
 use MediaWiki\Extension\Forms\Tag\FormMeta;
+use MediaWiki\Message\Message;
 use MediaWiki\Title\Title;
-use Message;
 use Parser;
 use SkinTemplate;
 
