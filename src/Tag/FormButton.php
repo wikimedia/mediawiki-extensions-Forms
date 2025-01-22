@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\Forms\Tag;
 
-use Message;
+use MediaWiki\Message\Message;
 
 class FormButton extends FormTag {
 
