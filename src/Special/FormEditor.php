@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\Forms\Special;
 
-use Config;
 use Html;
+use MediaWiki\Config\Config;
 use MediaWiki\Extension\Forms\DefinitionManager;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
