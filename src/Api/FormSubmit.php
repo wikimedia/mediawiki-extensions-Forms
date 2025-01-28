@@ -2,11 +2,12 @@
 
 namespace MediaWiki\Extension\Forms\Api;
 
+use MediaWiki\Api\ApiBase;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\Status\Status;
 use Wikimedia\ParamValidator\ParamValidator;
 
-class FormSubmit extends \ApiBase {
+class FormSubmit extends ApiBase {
 
 	/**
 	 * @var string|null
