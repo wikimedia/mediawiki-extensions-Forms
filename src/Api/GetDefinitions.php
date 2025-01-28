@@ -2,12 +2,13 @@
 
 namespace MediaWiki\Extension\Forms\Api;
 
+use MediaWiki\Api\ApiBase;
 use MediaWiki\Extension\Forms\DefinitionManager;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Status\Status;
 use Wikimedia\ParamValidator\ParamValidator;
 
-class GetDefinitions extends \ApiBase {
+class GetDefinitions extends ApiBase {
 	public const QUERY_TYPE_QUERY_AVAILABLE = 'query-available';
 	public const QUERY_TYPE_GET_DEFINITION = 'get-definition';
 
