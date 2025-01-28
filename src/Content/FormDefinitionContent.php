@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\Forms\Content;
 
-use Html;
+use MediaWiki\Html\Html;
 use MediaWiki\Title\Title;
 
 class FormDefinitionContent extends FormDataContent {

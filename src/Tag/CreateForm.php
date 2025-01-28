@@ -1,6 +1,8 @@
 <?php
 namespace MediaWiki\Extension\Forms\Tag;
 
+use MediaWiki\Html\Html;
+
 class CreateForm extends FormTag {
 	/** @var array */
 	protected $sizes = [
@@ -84,7 +86,7 @@ class CreateForm extends FormTag {
 		} else {
 			$data['data-form'] = $forms[0];
 		}
-		return \Html::element( 'div', $data );
+		return Html::element( 'div', $data );
 	}
 
 	protected function parseData() {

@@ -1,6 +1,7 @@
 <?php
 namespace MediaWiki\Extension\Forms\Tag;
 
+use MediaWiki\Html\Html;
 use Parser;
 use PPFrame;
 
@@ -64,7 +65,7 @@ abstract class FormTag {
 	 * @return string
 	 */
 	protected function error( $message ) {
-		return \Html::element( 'div', [
+		return Html::element( 'div', [
 			"class" => "ext-forms-tag-error"
 		], wfMessage( $message )->plain() );
 	}
