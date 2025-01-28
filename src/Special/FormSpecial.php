@@ -3,7 +3,7 @@
 namespace MediaWiki\Extension\Forms\Special;
 
 use Html;
-use SpecialPage;
+use MediaWiki\SpecialPage\SpecialPage;
 
 /**
  * Base class for all special pages that are supposed to show a form
