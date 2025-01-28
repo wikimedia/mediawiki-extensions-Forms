@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\Forms\Action;
 
-use SpecialPage;
+use MediaWiki\SpecialPage\SpecialPage;
 
 class FormDefinitionEditAction extends FormDataEditAction {
 

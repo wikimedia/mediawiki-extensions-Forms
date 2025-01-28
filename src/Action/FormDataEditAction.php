@@ -7,7 +7,7 @@ use FormlessAction;
 use MediaWiki\Extension\Forms\Content\FormDataContent;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\SlotRecord;
-use SpecialPage;
+use MediaWiki\SpecialPage\SpecialPage;
 
 class FormDataEditAction extends FormlessAction {
 
