@@ -7,8 +7,8 @@ use HashConfig;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Status\Status;
 use MediaWiki\User\User;
-use Status;
 use Wikimedia\Rdbms\IDatabase;
 
 class Database implements ITarget {

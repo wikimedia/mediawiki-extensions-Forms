@@ -9,8 +9,8 @@ use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\SlotRecord;
+use MediaWiki\Status\Status;
 use MediaWiki\Title\Title;
-use Status;
 
 abstract class TitleTarget implements ITarget {
 	/** @var array */
