@@ -4,8 +4,8 @@ namespace MediaWiki\Extension\Forms;
 
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionStore;
+use MediaWiki\Status\Status;
 use MediaWiki\Title\Title;
-use Status;
 use Wikimedia\Rdbms\IDatabase;
 
 class FormRevisionManager {

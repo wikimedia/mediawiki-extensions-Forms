@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\Forms\Api;
 
 use MediaWiki\Extension\Forms\DefinitionManager;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Status\Status;
 use Wikimedia\ParamValidator\ParamValidator;
 
 class GetDefinitions extends \ApiBase {
@@ -27,7 +28,7 @@ class GetDefinitions extends \ApiBase {
 	protected $validForTime;
 
 	/**
-	 * @var \Status
+	 * @var Status
 	 */
 	protected $status;
 
@@ -37,7 +38,7 @@ class GetDefinitions extends \ApiBase {
 	protected $definitionManager;
 
 	public function execute() {
-		$this->status = \Status::newGood();
+		$this->status = Status::newGood();
 		$this->definitionManager = MediaWikiServices::getInstance()->getService(
 			"FormsDefinitionManager"
 		);
@@ -87,7 +88,7 @@ class GetDefinitions extends \ApiBase {
 				$this->getDefinitionContent();
 				break;
 			default:
-				$this->status = \Status::newGood();
+				$this->status = Status::newGood();
 		}
 	}
 
@@ -108,7 +109,7 @@ class GetDefinitions extends \ApiBase {
 	 */
 	protected function getAvailableDefinitions() {
 		$type = $this->getParameter( 'definitionType' );
-		$this->status = \Status::newGood(
+		$this->status = Status::newGood(
 			$this->definitionManager->getDefinitionKeys( $type )
 		);
 	}
@@ -119,18 +120,18 @@ class GetDefinitions extends \ApiBase {
 	protected function getDefinitionContent() {
 		$name = $this->getParameter( 'name' );
 		if ( !$name ) {
-			$this->status = \Status::newFatal(
+			$this->status = Status::newFatal(
 				$this->msg( 'forms-api-get-definitions-no-name' )
 			);
 		}
 		if ( !$this->definitionManager->definitionExists( $name ) ) {
-			$this->status = \Status::newFatal(
+			$this->status = Status::newFatal(
 				$this->msg( 'forms-api-get-definitions-not-exist', $name )
 			);
 		}
 
 		$validForTime = $this->getParameter( 'validForTime' );
-		$this->status = \Status::newGood( [
+		$this->status = Status::newGood( [
 			'definition' => $this->definitionManager->getDefinition( $name, $validForTime ),
 			'lang' => $this->definitionManager->getDefinitionLang( $name )
 		] );

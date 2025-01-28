@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\Forms\Api;
 
 use MediaWiki\Extension\Forms\ITarget;
+use MediaWiki\Status\Status;
 use Wikimedia\ParamValidator\ParamValidator;
 
 class FormSubmit extends \ApiBase {
@@ -31,12 +32,12 @@ class FormSubmit extends \ApiBase {
 	protected $summary = '';
 
 	/**
-	 * @var \Status
+	 * @var Status
 	 */
 	protected $status;
 
 	public function execute() {
-		$this->status = \Status::newGood();
+		$this->status = Status::newGood();
 
 		$this->readInParameters();
 		$this->sendToTarget();
@@ -102,13 +103,13 @@ class FormSubmit extends \ApiBase {
 
 	protected function sendToTarget() {
 		if ( $this->target instanceof ITarget === false ) {
-			$this->status = \Status::newFatal(
+			$this->status = Status::newFatal(
 				$this->msg( 'forms-api-form-submit-invalid-target' )
 			);
 			return;
 		}
 		if ( empty( $this->data ) ) {
-			$this->status = \Status::newFatal(
+			$this->status = Status::newFatal(
 				$this->msg( 'forms-api-form-submit-empty-data' )
 			);
 			return;

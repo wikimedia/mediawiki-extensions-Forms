@@ -9,8 +9,8 @@ use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
+use MediaWiki\Status\Status;
 use MediaWiki\User\User;
-use Status;
 use UserMailer;
 
 class Email implements ITarget {

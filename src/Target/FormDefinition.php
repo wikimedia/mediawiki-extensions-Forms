@@ -4,8 +4,8 @@ namespace MediaWiki\Extension\Forms\Target;
 
 use MediaWiki\Extension\Forms\FormRevisionManager;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Status\Status;
 use MediaWiki\Title\Title;
-use Status;
 
 class FormDefinition extends JsonOnWikiPage {
 
@@ -30,7 +30,7 @@ class FormDefinition extends JsonOnWikiPage {
 		}
 
 		if ( !$this->checkPermissions() ) {
-			return \Status::newFatal( 'badaccess-group0' );
+			return Status::newFatal( 'badaccess-group0' );
 		}
 
 		$this->addPageNameToData();
