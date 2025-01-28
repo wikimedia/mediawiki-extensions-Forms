@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\Forms\Content;
 
 use JsonContent;
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 
@@ -50,7 +51,7 @@ class FormDataContent extends JsonContent {
 			}
 		}
 
-		return \Html::element( 'div', $formConfig );
+		return Html::element( 'div', $formConfig );
 	}
 
 	/**

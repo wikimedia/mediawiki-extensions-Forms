@@ -8,6 +8,7 @@ use JsonContentHandler;
 use MediaWiki\Content\Renderer\ContentParseParams;
 use MediaWiki\Extension\Forms\Action\FormDataEditAction;
 use MediaWiki\Extension\Forms\Content\FormDataContent;
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use ParserOutput;
@@ -163,7 +164,7 @@ class FormDataHandler extends JsonContentHandler {
 				$formConfig['data-form-created'] = $firstRev->getTimestamp();
 			}
 		}
-		return \Html::element( 'div', $formConfig );
+		return Html::element( 'div', $formConfig );
 	}
 
 	/**
