@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\Forms\ContentHandler;
 
-use Content;
+use MediaWiki\Content\Content;
 use MediaWiki\Content\JsonContentHandler;
 use MediaWiki\Content\Renderer\ContentParseParams;
 use MediaWiki\Extension\Forms\Action\FormDefinitionEditAction;
