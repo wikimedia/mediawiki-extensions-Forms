@@ -9,6 +9,7 @@ use MediaWiki\Content\Renderer\ContentParseParams;
 use MediaWiki\Extension\Forms\Action\FormDataEditAction;
 use MediaWiki\Extension\Forms\Content\FormDataContent;
 use MediaWiki\Html\Html;
+use MediaWiki\Json\FormatJson;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use ParserOutput;
@@ -79,7 +80,7 @@ class FormDataHandler extends JsonContentHandler {
 		$json = [
 			"_redirect" => $destination->getPrefixedDBkey()
 		];
-		return new $class( \FormatJson::encode( $json ) );
+		return new $class( FormatJson::encode( $json ) );
 	}
 
 	/**
@@ -155,7 +156,7 @@ class FormDataHandler extends JsonContentHandler {
 				return '';
 			}
 			unset( $data->_form );
-			$data = \FormatJson::encode( $data );
+			$data = FormatJson::encode( $data );
 			$formConfig['data-data'] = $data;
 			$formConfig['data-form'] = $this->forcedFormName ?? $this->formName;
 			if ( $title instanceof Title && $title->exists() ) {

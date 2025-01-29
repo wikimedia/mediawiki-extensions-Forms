@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\Forms\Api;
 
 use MediaWiki\Api\ApiBase;
 use MediaWiki\Extension\Forms\ITarget;
+use MediaWiki\Json\FormatJson;
 use MediaWiki\Status\Status;
 use Wikimedia\ParamValidator\ParamValidator;
 
@@ -81,7 +82,7 @@ class FormSubmit extends ApiBase {
 	protected function getParameterFromSettings( $paramName, $paramSettings, $parseLimit ) {
 		$value = parent::getParameterFromSettings( $paramName, $paramSettings, $parseLimit );
 		if ( $paramName === 'target' ) {
-			$decodedValue = \FormatJson::decode( $value, true );
+			$decodedValue = FormatJson::decode( $value, true );
 			if ( !isset( $decodedValue['type'] ) ) {
 				return null;
 			}
@@ -89,7 +90,7 @@ class FormSubmit extends ApiBase {
 			return $decodedValue;
 		}
 		if ( $paramName === 'data' ) {
-			return \FormatJson::decode( $value, true );
+			return FormatJson::decode( $value, true );
 		}
 
 		return $value;
