@@ -4,7 +4,7 @@ namespace MediaWiki\Extension\Forms\ContentHandler;
 
 use Article;
 use Content;
-use JsonContentHandler;
+use MediaWiki\Content\JsonContentHandler;
 use MediaWiki\Content\Renderer\ContentParseParams;
 use MediaWiki\Extension\Forms\Action\FormDataEditAction;
 use MediaWiki\Extension\Forms\Content\FormDataContent;
