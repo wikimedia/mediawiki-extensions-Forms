@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\Forms\Special;
 
 use MediaWiki\Config\Config;
+use MediaWiki\Content\TextContent;
 use MediaWiki\Extension\Forms\DefinitionManager;
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
@@ -11,7 +12,6 @@ use OOUI\ActionFieldLayout;
 use OOUI\ButtonInputWidget;
 use OOUI\FormLayout;
 use OOUI\TextInputWidget;
-use TextContent;
 
 class FormEditor extends FormSpecial {
 	/**
