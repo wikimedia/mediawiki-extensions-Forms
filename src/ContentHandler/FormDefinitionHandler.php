@@ -3,7 +3,7 @@
 namespace MediaWiki\Extension\Forms\ContentHandler;
 
 use Content;
-use JsonContentHandler;
+use MediaWiki\Content\JsonContentHandler;
 use MediaWiki\Content\Renderer\ContentParseParams;
 use MediaWiki\Extension\Forms\Action\FormDefinitionEditAction;
 use MediaWiki\Extension\Forms\Action\FormDefinitionSourceEditAction;
