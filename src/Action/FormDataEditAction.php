@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\Forms\Action;
 
-use Content;
 use FormlessAction;
+use MediaWiki\Content\Content;
 use MediaWiki\Extension\Forms\Content\FormDataContent;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\SlotRecord;
