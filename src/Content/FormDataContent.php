@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\Forms\Content;
 
 use JsonContent;
 use MediaWiki\Html\Html;
+use MediaWiki\Json\FormatJson;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 
@@ -40,7 +41,7 @@ class FormDataContent extends JsonContent {
 				return '';
 			}
 			unset( $data->_form );
-			$data = \FormatJson::encode( $data );
+			$data = FormatJson::encode( $data );
 			$formConfig['data-data'] = $data;
 			$formConfig['data-form'] = $this->formName;
 			if ( $form instanceof Title && $form->exists() ) {

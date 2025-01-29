@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\Forms;
 
 use MediaWiki\Extension\Forms\Content\FormDefinitionContent;
+use MediaWiki\Json\FormatJson;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use TextContent;
@@ -203,7 +204,7 @@ class DefinitionManager {
 			}
 			return static::TYPE_CONCRETE;
 		} elseif ( $lang === static::LANG_JSON ) {
-			$decoded = \FormatJson::decode( $definition, 1 );
+			$decoded = FormatJson::decode( $definition, 1 );
 			if ( isset( $decoded[static::TYPE_ABSTRACT] ) && $decoded[static::TYPE_ABSTRACT] ) {
 				return static::TYPE_ABSTRACT;
 			}

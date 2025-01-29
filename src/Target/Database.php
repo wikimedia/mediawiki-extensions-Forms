@@ -2,10 +2,10 @@
 
 namespace MediaWiki\Extension\Forms\Target;
 
-use FormatJson;
 use HashConfig;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\Forms\ITarget;
+use MediaWiki\Json\FormatJson;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Status\Status;
 use MediaWiki\User\User;

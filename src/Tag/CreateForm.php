@@ -2,6 +2,7 @@
 namespace MediaWiki\Extension\Forms\Tag;
 
 use MediaWiki\Html\Html;
+use MediaWiki\Json\FormatJson;
 
 class CreateForm extends FormTag {
 	/** @var array */
@@ -74,12 +75,12 @@ class CreateForm extends FormTag {
 		$data = [
 			'class' => 'forms-form-container',
 			'style' => $this->getStyle(),
-			'data-data' => \FormatJson::encode( $this->data ),
+			'data-data' => FormatJson::encode( $this->data ),
 			'data-action' => 'create'
 		];
 
 		if ( count( $forms ) > 1 ) {
-			$data['data-form-picker'] = \FormatJson::encode( [
+			$data['data-form-picker'] = FormatJson::encode( [
 				'forms' => $forms,
 				'autoSelectForm' => $this->autoSelectForm()
 			] );
