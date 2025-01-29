@@ -2,11 +2,11 @@
 
 namespace MediaWiki\Extension\Forms;
 
+use MediaWiki\Content\TextContent;
 use MediaWiki\Extension\Forms\Content\FormDefinitionContent;
 use MediaWiki\Json\FormatJson;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
-use TextContent;
 
 class DefinitionManager {
 	public const TYPE_ABSTRACT = 'abstract';
