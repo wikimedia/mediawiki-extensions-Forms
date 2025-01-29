@@ -11,8 +11,8 @@ use MediaWiki\Extension\Forms\Content\FormDataContent;
 use MediaWiki\Html\Html;
 use MediaWiki\Json\FormatJson;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Title\Title;
-use ParserOutput;
 
 class FormDataHandler extends JsonContentHandler {
 	/**
