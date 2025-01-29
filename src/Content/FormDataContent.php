@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\Forms\Content;
 
-use JsonContent;
+use MediaWiki\Content\JsonContent;
 use MediaWiki\Html\Html;
 use MediaWiki\Json\FormatJson;
 use MediaWiki\MediaWikiServices;
