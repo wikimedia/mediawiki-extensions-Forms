@@ -85,7 +85,7 @@
 	"right-forms-edit-form-definition": "Edit form definitions",
 	"action-forms-create-form": "create forms",
 	"action-forms-edit-form-definition": "edit form definitions",
-	"forms-action-editsource": "Edit source",
+	"forms-action-editsource": "Edit definition source",
 	"forms-form-editor-prop-rl-deps": "Resource loader dependencies",
 	"forms-form-editor-prop-rl-deps-help": "Specify list of ResourceLoader modules that should be loaded when the form is instantiated",
 	"forms-form-editor-prop-targettypeemail": "Email",
