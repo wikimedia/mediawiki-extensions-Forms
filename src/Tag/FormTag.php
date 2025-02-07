@@ -2,7 +2,7 @@
 namespace MediaWiki\Extension\Forms\Tag;
 
 use MediaWiki\Html\Html;
-use Parser;
+use MediaWiki\Parser\Parser;
 use PPFrame;
 
 abstract class FormTag {
