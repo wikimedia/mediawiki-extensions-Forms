@@ -84,7 +84,7 @@
 	"right-forms-edit-form-definition": "Modificar definitiones de formulario",
 	"action-forms-create-form": "crear formularios",
 	"action-forms-edit-form-definition": "modificar definitiones de formulario",
-	"forms-action-editsource": "Modificar fonte",
+	"forms-action-editsource": "Modificar le fonte del definition",
 	"forms-form-editor-prop-rl-deps": "Dependentias del cargator de ressources",
 	"forms-form-editor-prop-rl-deps-help": "Specifica le lista de modulos del cargator de ressources que debe esser cargate quando le formulario es instantiate",
 	"forms-form-editor-prop-targettypeemail": "E-mail",
