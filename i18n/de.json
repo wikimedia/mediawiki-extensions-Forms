@@ -87,7 +87,7 @@
 	"right-forms-edit-form-definition": "Formulardefinitionen bearbeiten",
 	"action-forms-create-form": "Formulare erstellen",
 	"action-forms-edit-form-definition": "Formulardefinitionen bearbeiten",
-	"forms-action-editsource": "Quelltext bearbeiten",
+	"forms-action-editsource": "Definitionsquelle bearbeiten",
 	"forms-form-editor-prop-rl-deps": "Abhängigkeiten vom Ressourcenlader",
 	"forms-form-editor-prop-rl-deps-help": "Angabe der Liste der ResourceLoader-Module, die bei der Instanziierung des Formulars geladen werden sollen",
 	"forms-form-editor-prop-targettypeemail": "E-Mail",
@@ -96,5 +96,11 @@
 	"forms-form-editor-prop-target-email-body": "Inhalt",
 	"forms-error-target-mail-send-failed": "E-Mail-Versand fehlgeschlagen",
 	"forms-error-target-mail-no-mail": "Keine gültige E-Mail-Adresse verfügbar",
-	"forms-editor-toolbar-save-label": "Speichern"
+	"forms-editor-toolbar-save-label": "Speichern",
+	"forms-editor-create-form-label": "Formulare erstellen",
+	"forms-editor-toolbar-cancel": "Abbrechen",
+	"forms-editor-toolbar-done": "Fertig",
+	"forms-editor-group-empty-help": "Das Formular enthält derzeit keine Elemente. Öffne die Registerkarte „Formularelemente“ und ziehe die Elemente hierher.",
+	"forms-form-editor-form-props-summary-label": "Zusammenfassung",
+	"forms-form-editor-form-props-summary-placeholder": "Bitte erläutere kurz deine Änderungen"
 }
