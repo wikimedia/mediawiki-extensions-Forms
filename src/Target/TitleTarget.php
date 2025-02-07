@@ -2,9 +2,9 @@
 
 namespace MediaWiki\Extension\Forms\Target;
 
-use CommentStoreComment;
 use Exception;
 use HashConfig;
+use MediaWiki\CommentStore\CommentStoreComment;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\MediaWikiServices;
