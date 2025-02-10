@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Alshamiri1",
+			"Cigaryno",
 			"Meno25",
 			"Mohanad",
 			"Mohanad Kh"
@@ -93,7 +94,7 @@
 	"right-forms-edit-form-definition": "تحرير تعريفات النموذج",
 	"action-forms-create-form": "إنشاء النماذج",
 	"action-forms-edit-form-definition": "تحرير تعريفات النموذج",
-	"forms-action-editsource": "عدل المصدر",
+	"forms-action-editsource": "عدل مصدر التعريف",
 	"forms-form-editor-prop-rl-deps": "تبعيات محمل الموارد",
 	"forms-form-editor-prop-rl-deps-help": "حدد قائمة بالوحدات النمطية لـ ResourceLoader التي يجب تحميلها عند إنشاء النموذج",
 	"forms-error-target-mail-no-mail": "لا يوجد عنوان بريد إلكتروني صالح متاح",
