@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\Forms\Api;
 
 use MediaWiki\Api\ApiBase;
+use MediaWiki\Config\HashConfig;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\Json\FormatJson;
 use MediaWiki\Status\Status;
@@ -160,7 +161,7 @@ class FormSubmit extends ApiBase {
 					$data['_id'] = $id;
 				}
 				unset( $data['type'] );
-				$config = new \HashConfig( array_merge(
+				$config = new HashConfig( array_merge(
 					$data, [
 						'form' => $this->form
 					]

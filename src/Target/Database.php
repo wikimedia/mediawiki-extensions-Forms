@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\Forms\Target;
 
-use HashConfig;
+use MediaWiki\Config\HashConfig;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\Json\FormatJson;
