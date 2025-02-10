@@ -6,6 +6,7 @@ use MediaWiki\Api\ApiBase;
 use MediaWiki\Config\HashConfig;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\Json\FormatJson;
+use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\Status\Status;
 use Wikimedia\ParamValidator\ParamValidator;
 
@@ -149,7 +150,7 @@ class FormSubmit extends ApiBase {
 	 */
 	private function makeTarget( $data ) {
 		$targetType = $data['type'];
-		$targets = \ExtensionRegistry::getInstance()->getAttribute(
+		$targets = ExtensionRegistry::getInstance()->getAttribute(
 			"FormsTargets"
 		);
 

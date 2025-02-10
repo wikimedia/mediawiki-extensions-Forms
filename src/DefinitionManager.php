@@ -6,6 +6,7 @@ use MediaWiki\Content\TextContent;
 use MediaWiki\Extension\Forms\Content\FormDefinitionContent;
 use MediaWiki\Json\FormatJson;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\Title\Title;
 
 class DefinitionManager {
@@ -239,7 +240,7 @@ class DefinitionManager {
 	}
 
 	protected function loadFromAttribute() {
-		$attribute = \ExtensionRegistry::getInstance()->getAttribute(
+		$attribute = ExtensionRegistry::getInstance()->getAttribute(
 			"FormsDefinitions"
 		);
 
