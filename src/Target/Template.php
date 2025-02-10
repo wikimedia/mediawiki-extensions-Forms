@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\Forms\Target;
 
-use HashConfig;
+use MediaWiki\Config\HashConfig;
 use MediaWiki\Content\TextContent;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\Title\Title;
