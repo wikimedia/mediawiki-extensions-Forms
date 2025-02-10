@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\Forms\Target;
 use Exception;
 use MediaWiki\CommentStore\CommentStoreComment;
 use MediaWiki\Config\HashConfig;
+use MediaWiki\Content\ContentHandler;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\MediaWikiServices;
@@ -203,7 +204,7 @@ abstract class TitleTarget implements ITarget {
 		$title = $this->getTitleFromPageName();
 		try {
 			$wikipage = $this->services->getWikiPageFactory()->newFromTitle( $title );
-			$content = \ContentHandler::makeContent(
+			$content = ContentHandler::makeContent(
 				$this->getDataForContent(),
 				$title
 			);
