@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Cabadeck",
 			"Kareyac"
 		]
 	},
@@ -11,5 +12,6 @@
 	"forms-label-street": "Улица:",
 	"forms-label-warehouse": "Склад",
 	"forms-form-editor-prop-targettypetemplate": "Шаблон",
+	"forms-action-editsource": "Изменить источник определения",
 	"forms-editor-toolbar-save-label": "Сохранить"
 }
