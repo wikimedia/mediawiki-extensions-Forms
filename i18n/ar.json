@@ -4,7 +4,8 @@
 			"Alshamiri1",
 			"Meno25",
 			"Mohanad",
-			"Mohanad Kh"
+			"Mohanad Kh",
+			"Cigaryno"
 		]
 	},
 	"forms-desc": "إطار عمل الشكل الشامل لميدياويكي",
@@ -87,7 +88,7 @@
 	"right-forms-edit-form-definition": "تحرير تعريفات النموذج",
 	"action-forms-create-form": "إنشاء النماذج",
 	"action-forms-edit-form-definition": "تحرير تعريفات النموذج",
-	"forms-action-editsource": "عدل المصدر",
+	"forms-action-editsource": "عدل مصدر التعريف",
 	"forms-form-editor-prop-rl-deps": "تبعيات محمل الموارد",
 	"forms-form-editor-prop-rl-deps-help": "حدد قائمة بالوحدات النمطية لـ ResourceLoader التي يجب تحميلها عند إنشاء النموذج",
 	"forms-form-editor-prop-targettypeemail": "بريد إلكتروني",
