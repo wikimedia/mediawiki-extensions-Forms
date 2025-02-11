@@ -14,7 +14,7 @@
 	"forms-form-editor-prop-targettitle": "כותרת",
 	"forms-label-employees-number": "מספר העובדים",
 	"forms-label-city": "עיר",
-	"forms-action-editsource": "עריכת קוד מקור",
+	"forms-action-editsource": "עריכת קוד המקור של ההגדרה",
 	"forms-desc": "מסגרת טפסים כללית למדיה־ויקי",
 	"createforminstance": "יצירת מופע של טופס",
 	"forms-createforminstance-form-name": "יצירת $1",
