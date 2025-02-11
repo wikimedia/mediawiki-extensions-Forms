@@ -87,7 +87,7 @@
 	"right-forms-edit-form-definition": "עריכת הגדרות טופס",
 	"action-forms-create-form": "ליצור טפסים",
 	"action-forms-edit-form-definition": "לערוך הגדרות טופס",
-	"forms-action-editsource": "עריכת קוד מקור",
+	"forms-action-editsource": "עריכת קוד המקור של ההגדרה",
 	"forms-form-editor-prop-rl-deps": "תלויות של ResourceLoader",
 	"forms-form-editor-prop-rl-deps-help": "קביעת רשימת מודולים של ResourceLoader שצריך לטעון כאשר הטופס מופעל",
 	"forms-form-editor-prop-targettypeemail": "דואר אלקטרוני",
