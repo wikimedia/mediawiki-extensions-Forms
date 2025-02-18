@@ -12,6 +12,6 @@
 	"forms-label-street": "Улица:",
 	"forms-label-warehouse": "Склад",
 	"forms-form-editor-prop-targettypetemplate": "Шаблон",
-	"forms-editor-toolbar-save-label": "Сохранить",
-	"forms-action-editsource": "Изменить источник определения"
+	"forms-action-editsource": "Изменить источник определения",
+	"forms-editor-toolbar-save-label": "Сохранить"
 }
