@@ -86,7 +86,7 @@
 	"right-forms-edit-form-definition": "Formulierdefinities bewerken",
 	"action-forms-create-form": "formulieren aan te maken",
 	"action-forms-edit-form-definition": "formulierdefinities te bewerken",
-	"forms-action-editsource": "Bron bewerken",
+	"forms-action-editsource": "Bron van de definitie bewerken",
 	"forms-form-editor-prop-rl-deps": "Afhankelijkheden van de resource-lader",
 	"forms-form-editor-prop-rl-deps-help": "Geef een lijst op met ResourceLoader-modules die moeten worden geladen wanneer het formulier wordt aangemaakt",
 	"forms-form-editor-prop-targettypeemail": "E-mail",
