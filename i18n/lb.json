@@ -38,6 +38,8 @@
 	"forms-title-new-customer": "Neie Client",
 	"forms-form-editor-prop-targettypetemplate": "Schabloun",
 	"forms-form-editor-target-template-field-manual": "(manuell)",
+	"apihelp-forms-form-submit-param-form": "Numm vum Formulaire",
+	"apihelp-forms-form-submit-param-target": "Numm vum Zil",
 	"forms-action-editsource": "Quelltext änneren",
 	"forms-form-editor-prop-targettypeemail": "E-Mail",
 	"forms-editor-toolbar-cancel": "Ofbriechen",
