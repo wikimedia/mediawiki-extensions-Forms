@@ -1,6 +1,6 @@
 ( function ( mw, $, undefined ) {
-	mw.ext.forms.target.JsonOnWikiPage = function( form, items ) {
-		mw.ext.forms.target.JsonOnWikiPage.parent.call( this, form, items );
+	mw.ext.forms.target.JsonOnWikiPage = function( form, standalone ) {
+		mw.ext.forms.target.JsonOnWikiPage.parent.call( this, form, standalone );
 	};
 
 	OO.inheritClass( mw.ext.forms.target.JsonOnWikiPage, mw.ext.forms.target.FormTarget );

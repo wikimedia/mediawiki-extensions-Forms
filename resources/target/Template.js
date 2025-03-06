@@ -1,6 +1,6 @@
 ( function ( mw, $, undefined ) {
-	mw.ext.forms.target.Template = function( form, items ) {
-		mw.ext.forms.target.Template.parent.call( this, form, items );
+	mw.ext.forms.target.Template = function( form, standalone ) {
+		mw.ext.forms.target.Template.parent.call( this, form, standalone );
 
 		this.fields = [];
 	};
@@ -23,6 +23,7 @@
 	};
 
 	mw.ext.forms.target.Template.prototype.getAdditionalFields = function() {
+		const sa = this.standalone;
 		return [ {
 			type: 'text',
 			name: 'target.title',
@@ -49,7 +50,7 @@
 					OO.ui.confirm( mw.message( 'forms-form-editor-confirm-import-template').text() )
 						.done( function ( confirmed ) {
 							if ( confirmed ) {
-								this.selectedTarget.insertFromTemplate( this );
+								this.selectedTarget.insertFromTemplate( this, sa );
 							}
 						}.bind( this ) );
 				}
@@ -204,8 +205,8 @@
 		return fields;
 	};
 
-	mw.ext.forms.target.Template.prototype.insertFromTemplate = function() {
-		var group = this.form.getItem( 'items' ),
+	mw.ext.forms.target.Template.prototype.insertFromTemplate = function( form, sa ) {
+		var group = sa.itemsForm.form.getItem( 'items' ),
 			value = [];
 		group.clearElements();
 		for( var i = 0; i < this.fields.length; i++ ) {
