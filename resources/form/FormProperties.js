@@ -1,6 +1,7 @@
 mw.ext.forms.form = mw.ext.forms.form || {};
 mw.ext.forms.form.FormProperties = function( cfg ) {
 	cfg = cfg || {};
+	this.itemsForm = cfg.itemsForm;
 	var sa = this;
 	cfg.definition = {
 		buttons: [],
@@ -159,7 +160,7 @@ mw.ext.forms.form.FormProperties = function( cfg ) {
 											return;
 										}
 
-										var target = new targetCB( this );
+										var target = new targetCB( this, sa );
 										this.getItem( 'target.additional_layout' ).clearItems();
 										var parsed = this.parseItems( target.getAdditionalFields(), this.getItem( 'target.additional_layout' ), true );
 										target.setItems( parsed );
@@ -304,6 +305,11 @@ mw.ext.forms.form.FormProperties.prototype.onParseComplete = function( form, ite
 		}
 	} );
 	form.getItem( 'listeners' ).connect( this, {
+		change: function( val ) {
+			sa.emit( 'layoutChange' );
+		}
+	} );
+	form.getItem( 'target.type' ).connect( this, {
 		change: function( val ) {
 			sa.emit( 'layoutChange' );
 		}

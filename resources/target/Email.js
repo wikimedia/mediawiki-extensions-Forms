@@ -1,6 +1,6 @@
 ( function ( mw, $, undefined ) {
-	mw.ext.forms.target.Email = function( form, items ) {
-		mw.ext.forms.target.Email.parent.call( this, form, items );
+	mw.ext.forms.target.Email = function( form, standalone ) {
+		mw.ext.forms.target.Email.parent.call( this, form, standalone );
 	};
 
 	OO.inheritClass( mw.ext.forms.target.Email, mw.ext.forms.target.FormTarget );

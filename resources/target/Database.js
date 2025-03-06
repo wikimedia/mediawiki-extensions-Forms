@@ -1,6 +1,6 @@
 ( function ( mw, $, undefined ) {
-	mw.ext.forms.target.Database = function( form, items ) {
-		mw.ext.forms.target.Database.parent.call( this, form, items );
+	mw.ext.forms.target.Database = function( form, standalone ) {
+		mw.ext.forms.target.Database.parent.call( this, form, standalone );
 	};
 
 	OO.inheritClass( mw.ext.forms.target.Database, mw.ext.forms.target.FormTarget );

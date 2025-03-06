@@ -1,6 +1,7 @@
 ( function ( mw, $, undefined ) {
-	mw.ext.forms.target.FormTarget = function( form ) {
+	mw.ext.forms.target.FormTarget = function( form, standalone ) {
 		this.form = form;
+		this.standalone = standalone;
 		this.items = {};
 	};
 

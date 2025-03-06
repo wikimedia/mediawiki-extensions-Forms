@@ -29,7 +29,8 @@ mw.ext.forms.widget.FormEditor.prototype.addItems = function () {
 	this.$element.append( this.itemsForm.$element );
 
 	this.propertiesForm = new mw.ext.forms.form.FormProperties( {
-		data: this.formData
+		data: this.formData,
+		itemsForm: this.itemsForm
 	} );
 	this.propertiesForm.render();
 };
