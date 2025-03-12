@@ -1,5 +1,5 @@
-( function ( mw, $, undefined ) {
-	mw.ext.forms.widget.edit.StyleTextarea = function( cfg ) {
+( function ( mw ) {
+	mw.ext.forms.widget.edit.StyleTextarea = function ( cfg ) {
 		this.form = cfg.form;
 
 		mw.ext.forms.widget.edit.StyleTextarea.parent.call( this, cfg );
@@ -7,35 +7,35 @@
 
 	OO.inheritClass( mw.ext.forms.widget.edit.StyleTextarea, OO.ui.MultilineTextInputWidget );
 
-	mw.ext.forms.widget.edit.StyleTextarea.prototype.setValue = function( value ) {
+	mw.ext.forms.widget.edit.StyleTextarea.prototype.setValue = function ( value ) {
 		if ( !value ) {
 			return;
 		}
 
-		var localCSS = this.form.getItem( 'local_css' ).getValue();
-		for ( var key in localCSS ) {
+		const localCSS = this.form.getItem( 'local_css' ).getValue();
+		for ( const key in localCSS ) {
 			if ( !localCSS.hasOwnProperty( key ) ) {
 				continue;
 			}
-			value = value.replace( localCSS[key].css, '{{' + key + '}}' );
+			value = value.replace( localCSS[ key ].css, '{{' + key + '}}' );
 		}
 
 		mw.ext.forms.widget.edit.StyleTextarea.parent.prototype.setValue.call( this, value );
 	};
 
-	mw.ext.forms.widget.edit.StyleTextarea.prototype.getValue = function() {
-		var value =  mw.ext.forms.widget.edit.StyleTextarea.parent.prototype.getValue.call( this );
+	mw.ext.forms.widget.edit.StyleTextarea.prototype.getValue = function () {
+		let value = mw.ext.forms.widget.edit.StyleTextarea.parent.prototype.getValue.call( this );
 
-		var localCSS = this.form.getItem( 'local_css' ).getValue();
-		var regex = new RegExp( '\{\{(.*?)\}\}', 'g' );
-		for ( var key in localCSS ) {
+		const localCSS = this.form.getItem( 'local_css' ).getValue();
+		const regex = new RegExp( '\{\{(.*?)\}\}', 'g' ); // eslint-disable-line prefer-regex-literals, no-useless-escape
+		for ( const key in localCSS ) {
 			if ( !localCSS.hasOwnProperty( key ) ) {
 				continue;
 			}
-			value = value.replace( regex, localCSS[key].css );
+			value = value.replace( regex, localCSS[ key ].css );
 		}
 
 		return value;
 	};
 
-} )( mediaWiki, jQuery );
+}( mediaWiki ) );

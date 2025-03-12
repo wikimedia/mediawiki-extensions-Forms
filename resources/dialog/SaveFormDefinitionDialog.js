@@ -1,5 +1,5 @@
 mw.ext.forms.dialog = mw.ext.forms.dialog || {};
-mw.ext.forms.dialog.SaveFormDefinitionDialog = function( cfg ) {
+mw.ext.forms.dialog.SaveFormDefinitionDialog = function ( cfg ) {
 	mw.ext.forms.dialog.SaveFormDefinitionDialog.parent.call( this, cfg );
 	this.formData = cfg.formData || {};
 	this.itemsForm = cfg.itemsForm || null;
@@ -37,37 +37,37 @@ mw.ext.forms.dialog.SaveFormDefinitionDialog.prototype.initialize = function () 
 
 mw.ext.forms.dialog.SaveFormDefinitionDialog.prototype.getActionProcess = function ( action ) {
 	return mw.ext.forms.dialog.SaveFormDefinitionDialog.parent.prototype.getActionProcess.call( this, action ).next(
-		function() {
+		function () {
 			if ( action === 'save' ) {
 
 				this.pushPending();
-				var mainPromise = $.Deferred(),
+				const mainPromise = $.Deferred(),
 					propertiesPromise = $.Deferred(),
 					itemsPromise = $.Deferred();
 				this.propertiesForm.connect( this, {
-					dataSubmitted: function( data ) {
+					dataSubmitted: function ( data ) {
 						propertiesPromise.resolve( data );
 					},
-					validationFailed: function() {
+					validationFailed: function () {
 						mainPromise.reject();
 					}
 				} );
 				this.propertiesForm.submit();
 
 				this.itemsForm.connect( this, {
-					dataSubmitted: function( data ) {
+					dataSubmitted: function ( data ) {
 						itemsPromise.resolve( data );
 					},
-					validationFailed: function() {
+					validationFailed: function () {
 						mainPromise.reject();
 					}
 				} );
 				this.itemsForm.submit();
 
-				$.when( propertiesPromise, itemsPromise ).done( function( properties, items ) {
-					var data = $.extend( true, {}, this.formData, properties, items ),
+				$.when( propertiesPromise, itemsPromise ).done( ( properties, items ) => {
+					const data = $.extend( true, {}, this.formData, properties, items ),
 						summary = this.summary.getValue();
-					var apiData = {
+					const apiData = {
 						action: 'forms-form-submit',
 						form: '_formEditor',
 						target: JSON.stringify( {
@@ -80,18 +80,18 @@ mw.ext.forms.dialog.SaveFormDefinitionDialog.prototype.getActionProcess = functi
 					if ( summary ) {
 						apiData.summary = summary;
 					}
-					var api = new mw.Api();
-					api.post( apiData ).done( function( data ) {
+					const api = new mw.Api();
+					api.post( apiData ).done( ( data ) => { // eslint-disable-line no-shadow
 						if ( data.success === 1 ) {
-							mainPromise.resolve( this.close( { action: 'save', data: data} ) );
+							mainPromise.resolve( this.close( { action: 'save', data: data } ) );
 						} else {
 							mainPromise.reject();
 						}
-					}.bind( this ) ).fail( function( code, data ) {
+					} ).fail( () => {
 						this.popPending();
 						mainPromise.reject();
-					}.bind( this ) );
-				}.bind ( this ) );
+					} );
+				} );
 
 				return mainPromise.promise();
 			}

@@ -1,18 +1,19 @@
-/** the 'var def = ' part is here only so this is valid JS, should be removed when
+/**
+ * the 'var def = ' part is here only so this is valid JS, should be removed when
  * pasting to .form wikipage.
  */
-var def = {
+var def = { // eslint-disable-line no-var, no-implicit-globals, no-unused-vars
 	title: mw.message( 'forms-title-new-customer' ).text(),
 	showTitle: true,
 	target: {
 		type: 'json-on-wikipage',
-		title: 'Customer_{{customerName}}'/*,
+		title: 'Customer_{{customerName}}'/* ,
 		afterAction: {
 			type: 'callback',
 			callback: function( result ) {
 				// result.title - Name of the created page
 			}
-		}*/
+		} */
 	},
 	items: [
 		{
@@ -51,7 +52,7 @@ var def = {
 					type: 'checkbox',
 					selected: true,
 					listeners: {
-						change: function( newVal ) {
+						change: function ( newVal ) {
 							if ( newVal ) {
 								this.getItem( 'contactsLayout' ).$element.show();
 							} else {
@@ -69,7 +70,7 @@ var def = {
 					type: 'checkbox',
 					selected: true,
 					listeners: {
-						change: function( newVal ) {
+						change: function ( newVal ) {
 							if ( newVal ) {
 								this.getItem( 'addressesLayout' ).$element.show();
 							} else {
@@ -132,7 +133,7 @@ var def = {
 							type: 'text'
 						}
 					]
-				},
+				}
 			]
 		},
 		{
@@ -211,20 +212,20 @@ var def = {
 							]
 						}
 					]
-				},
+				}
 			]
 		}
 	],
 	listeners: {
-		submit: function() {
+		submit: function () {
 			// Do stuff on submit - scope: form
 			// Called after validation pass
 		},
-		reset: function() {
+		reset: function () {
 			// Do stuff on reset - scope: form
 		},
-		cancel: function() {
+		cancel: function () {
 			// Do stuff on reset - scope: form
 		}
 	}
-}
+};

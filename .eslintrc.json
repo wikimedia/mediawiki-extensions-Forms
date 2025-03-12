@@ -1,0 +1,18 @@
+{
+	"root": true,
+	"extends": [
+		"wikimedia/client-es6",
+		"wikimedia/jquery",
+		"wikimedia/mediawiki"
+	],
+	"globals": {
+		"jQuery": "readonly",
+		"mediaWiki": "readonly"
+	},
+	"rules": {
+		"camelcase": "off",
+		"max-len": "off",
+		"no-jquery/no-global-selector": "off",
+		"no-prototype-builtins": "off"
+	}
+}

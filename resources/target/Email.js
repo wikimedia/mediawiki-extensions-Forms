@@ -1,24 +1,24 @@
-( function ( mw, $, undefined ) {
-	mw.ext.forms.target.Email = function( form, standalone ) {
+( function ( mw ) {
+	mw.ext.forms.target.Email = function ( form, standalone ) {
 		mw.ext.forms.target.Email.parent.call( this, form, standalone );
 	};
 
 	OO.inheritClass( mw.ext.forms.target.Email, mw.ext.forms.target.FormTarget );
 
-	mw.ext.forms.target.Email.prototype.getName = function() {
+	mw.ext.forms.target.Email.prototype.getName = function () {
 		return 'email';
 	};
 
-	mw.ext.forms.target.Email.prototype.getDisplayName = function() {
+	mw.ext.forms.target.Email.prototype.getDisplayName = function () {
 		return mw.message( 'forms-form-editor-prop-targettypeemail' ).text();
 	};
 
-	mw.ext.forms.target.Email.prototype.getAdditionalFields = function() {
-		var emailEntries = [];
-		for ( var entry in mw.config.get( 'formsEmailTargets') ) {
-			var item =  {
-				data: mw.config.get( 'formsEmailTargets')[ entry ],
-				label: mw.config.get( 'formsEmailTargets')[ entry ]
+	mw.ext.forms.target.Email.prototype.getAdditionalFields = function () {
+		const emailEntries = [];
+		for ( const entry in mw.config.get( 'formsEmailTargets' ) ) {
+			const item = {
+				data: mw.config.get( 'formsEmailTargets' )[ entry ],
+				label: mw.config.get( 'formsEmailTargets' )[ entry ]
 			};
 			emailEntries.push( item );
 		}
@@ -46,20 +46,20 @@
 				rows: 10
 			}
 		];
- 	};
-
-	mw.ext.forms.target.Email.prototype.getValue = function() {
-		return {
-			type: this.getName(),
-			receivers: this.items['target.receivers'].getValue(),
-			subject: this.items['target.subject'].getValue(),
-			body: this.items['target.body'].getValue()
-		}
 	};
 
-	mw.ext.forms.target.Email.prototype.setValue = function( value ) {
+	mw.ext.forms.target.Email.prototype.getValue = function () {
+		return {
+			type: this.getName(),
+			receivers: this.items[ 'target.receivers' ].getValue(),
+			subject: this.items[ 'target.subject' ].getValue(),
+			body: this.items[ 'target.body' ].getValue()
+		};
+	};
+
+	mw.ext.forms.target.Email.prototype.setValue = function ( value ) {
 		if ( value.hasOwnProperty( 'receivers' ) && this.items.hasOwnProperty( 'target.receivers' ) ) {
-			this.items['target.receivers'].setValue( value.receivers );
+			this.items[ 'target.receivers' ].setValue( value.receivers );
 		}
 		if ( value.hasOwnProperty( 'subject ' ) && this.items.hasOwnProperty( 'target.subject' ) ) {
 			this.items[ 'target.subject' ].setValue( value.subject );
@@ -70,4 +70,4 @@
 	};
 
 	mw.ext.forms.registry.Target.register( 'email', mw.ext.forms.target.Email );
-} )( mediaWiki, jQuery );
+}( mediaWiki ) );

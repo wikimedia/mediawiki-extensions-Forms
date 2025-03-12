@@ -1,5 +1,5 @@
-( function ( mw, $, undefined ) {
-	mw.ext.forms.widget.formElement.FormElementWrapper = function( cfg ) {
+( function ( mw, $ ) {
+	mw.ext.forms.widget.formElement.FormElementWrapper = function ( cfg ) {
 		mw.ext.forms.widget.formElement.FormElementWrapper.parent.call( this, cfg );
 		this.origin = cfg.original;
 		this.identifier = cfg.identifier;
@@ -20,7 +20,7 @@
 
 		this.layout = new OO.ui.FieldsetLayout( { classes: [ 'wrapper-original' ] } );
 		this.render = this.form.parseItems( [ this.origin ], this.layout, true );
-		this.render = this.render[Object.keys( this.render )[0] ];
+		this.render = this.render[ Object.keys( this.render )[ 0 ] ];
 
 		this.$overlay = $( '<div>' ).addClass( 'wrapper-overlay' );
 		this.$overlay.append( this.getNameAndToolsBadge().$element );
@@ -45,15 +45,15 @@
 
 		OO.ui.getDefaultOverlay().append( this.popup.$element );
 
-		this.$overlay.click( function() {
+		this.$overlay.on( 'click', () => {
 			this.group.openItemOptions( this.identifier, this );
-		}.bind( this ) );
+		} );
 	};
 
 	OO.inheritClass( mw.ext.forms.widget.formElement.FormElementWrapper, OO.ui.Widget );
 	OO.mixinClass( mw.ext.forms.widget.formElement.FormElementWrapper, OO.ui.mixin.PopupElement );
 
-	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.getNameAndToolsBadge = function() {
+	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.getNameAndToolsBadge = function () {
 
 		this.removeButton = new OO.ui.ButtonWidget( {
 			icon: 'trash',
@@ -62,12 +62,12 @@
 			flags: [ 'destructive', 'primary' ]
 		} );
 		this.removeButton.connect( this, {
-			click: function() {
+			click: function () {
 				this.group.removeElement( this.identifier );
 			}
 		} );
 
-		var items = [
+		const items = [
 			this.removeButton
 		];
 
@@ -86,30 +86,30 @@
 		} );
 	};
 
-	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.getPopup = function() {
+	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.getPopup = function () {
 		return this.popup;
 	};
 
-	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.getOptionsPanel = function() {
+	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.getOptionsPanel = function () {
 		return this.optionsPanel;
 	};
 
-	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.openOptions = function() {
+	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.openOptions = function () {
 		this.popup.$body.html( this.optionsPanel.$element );
 		this.popup.toggle( true );
 	};
 
-	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.setupSubitems = function() {
-		var subitemConfig = this.formDescriptor.getElement().getSubitemConfig();
+	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.setupSubitems = function () {
+		const subitemConfig = this.formDescriptor.getElement().getSubitemConfig();
 		if ( !subitemConfig ) {
 			return;
 		}
-		var accept = subitemConfig.accepts || null;
+		let accept = subitemConfig.accepts || null;
 		if ( accept === null ) {
 			return;
 		}
 		if ( !Array.isArray( accept ) ) {
-			accept = [accept];
+			accept = [ accept ];
 		}
 
 		this.render.$group.addClass( 'subitem-sortable' );
@@ -117,12 +117,12 @@
 			activate: function () {
 				this.popup.toggle( false );
 			}.bind( this ),
-			receive: function (event, ui) {
+			receive: function ( event, ui ) {
 				this.group.subitemHandledSort( event.timeStamp );
-				var item = ui.item;
+				const item = ui.item;
 				if (
 					item.hasClass( 'ext-forms-form-editor-element-wrapper' ) &&
-					item.attr( 'id' ).startsWith ( 'form_element' )
+					item.attr( 'id' ).startsWith( 'form_element' )
 				) {
 					return this.insertSubitemFromExisting( item, accept );
 				}
@@ -137,14 +137,14 @@
 		this.formDescriptor.setSortableContainer( this.render.$group );
 	};
 
-	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.insertSubitemFromExisting = function( item, accept ) {
-		this.group.findElementByIdentifier( item.attr( 'id' ) ).done( function( element ) {
-			var elementType = mw.ext.forms.widget.formElement.FormElementGroup.static.getElementType( element.getElement() ),
-				key = element.elementName,
-				accepted = false;
+	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.insertSubitemFromExisting = function ( item, accept ) {
+		this.group.findElementByIdentifier( item.attr( 'id' ) ).done( ( element ) => {
+			const elementType = mw.ext.forms.widget.formElement.FormElementGroup.static.getElementType( element.getElement() );
+			const key = element.elementName;
+			let accepted = false;
 
-			for ( var i = 0; i < accept.length; i++ ) {
-				if ( key === accept[i] || elementType === accept[i] ) {
+			for ( let i = 0; i < accept.length; i++ ) {
+				if ( key === accept[ i ] || elementType === accept[ i ] ) {
 					accepted = true;
 					break;
 				}
@@ -156,16 +156,16 @@
 			this.formDescriptor.addSubitem( element.elementName, element.values );
 			this.group.removeElement( element );
 			item.remove();
-		}.bind( this ) ).fail ( function() {
+		} ).fail( () => {
 			item.remove();
 		} );
 	};
 
-	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.insertSubitemFromNew = function( item, accept ) {
-		var selector = [];
-		for (var i = 0; i < accept.length; i++) {
-			selector.push( '.picker-element-item[data-type="' + accept[i] + '"]' );
-			selector.push( '.picker-element-item[data-key="' + accept[i] + '"]' );
+	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.insertSubitemFromNew = function ( item, accept ) {
+		const selector = [];
+		for ( let i = 0; i < accept.length; i++ ) {
+			selector.push( '.picker-element-item[data-type="' + accept[ i ] + '"]' );
+			selector.push( '.picker-element-item[data-key="' + accept[ i ] + '"]' );
 		}
 
 		if ( !item.is( selector.join( ',' ) ) ) {
@@ -173,10 +173,10 @@
 			return;
 		}
 
-		var type = item.attr( 'data-key' );
+		const type = item.attr( 'data-key' );
 		item.remove();
 
 		this.formDescriptor.addSubitem( type );
 	};
 
-} )( mediaWiki, jQuery );
+}( mediaWiki, jQuery ) );
