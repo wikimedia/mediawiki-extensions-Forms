@@ -1,5 +1,5 @@
 mw.ext.forms.dialog = mw.ext.forms.dialog || {};
-mw.ext.forms.dialog.FormPropertiesDialog = function( cfg ) {
+mw.ext.forms.dialog.FormPropertiesDialog = function ( cfg ) {
 	mw.ext.forms.dialog.FormPropertiesDialog.parent.call( this, cfg );
 	this.form = cfg.form;
 };
@@ -25,7 +25,7 @@ mw.ext.forms.dialog.FormPropertiesDialog.prototype.initialize = function () {
 	this.$body.append( this.content.$element );
 
 	this.form.connect( this, {
-		layoutChange: function() {
+		layoutChange: function () {
 			this.updateSize();
 		}
 	} );
@@ -36,15 +36,15 @@ mw.ext.forms.dialog.FormPropertiesDialog.prototype.initialize = function () {
 
 mw.ext.forms.dialog.FormPropertiesDialog.prototype.getActionProcess = function ( action ) {
 	return mw.ext.forms.dialog.FormPropertiesDialog.parent.prototype.getActionProcess.call( this, action ).next(
-		function() {
+		function () {
 			if ( action === 'save' ) {
 				this.pushPending();
-				var dfd = $.Deferred();
+				const dfd = $.Deferred();
 				this.form.connect( this, {
-					dataSubmitted: function( data ) {
+					dataSubmitted: function ( data ) { // eslint-disable-line no-unused-vars
 						dfd.resolve( this.close() );
 					},
-					validationFailed: function() {
+					validationFailed: function () {
 						this.popPending();
 						dfd.resolve();
 					}

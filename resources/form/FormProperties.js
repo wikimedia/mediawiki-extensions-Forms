@@ -1,18 +1,18 @@
 mw.ext.forms.form = mw.ext.forms.form || {};
-mw.ext.forms.form.FormProperties = function( cfg ) {
+mw.ext.forms.form.FormProperties = function ( cfg ) {
 	cfg = cfg || {};
 	this.itemsForm = cfg.itemsForm;
-	var sa = this;
+	const sa = this;
 	cfg.definition = {
 		buttons: [],
-		items:  [
+		items: [
 			{
 				name: 'formProperties',
 				type: 'layout_booklet',
 				outlined: true,
 				framed: true,
 				widget_listeners: {
-					set: function() {
+					set: function () {
 						sa.emit( 'layoutChange' );
 					}
 				},
@@ -98,9 +98,9 @@ mw.ext.forms.form.FormProperties = function( cfg ) {
 								type: 'dropdown',
 								name: 'extends',
 								label: mw.message( 'forms-form-editor-prop-extends' ).text(),
-								options: [ { data: '', label: '-' } ].concat( mw.config.get( 'formsAvailableFormsForWidget')['abstract'] ),
+								options: [ { data: '', label: '-' } ].concat( mw.config.get( 'formsAvailableFormsForWidget' ).abstract ),
 								listeners: {
-									change: function( val ) {
+									change: function ( val ) {
 										if ( val ) {
 											mw.ext.forms.editor.Extender.extendWith.call( this, val );
 											this.getItem( 'abstract' ).setValue( false );
@@ -114,7 +114,7 @@ mw.ext.forms.form.FormProperties = function( cfg ) {
 								name: 'abstract',
 								label: mw.message( 'forms-form-editor-prop-abstract' ).text(),
 								listeners: {
-									change: function( val ) {
+									change: function ( val ) {
 										if ( val ) {
 											this.getItem( 'partial' ).setValue( false );
 											this.getItem( 'extends' ).setValue( '' );
@@ -127,7 +127,7 @@ mw.ext.forms.form.FormProperties = function( cfg ) {
 								name: 'partial',
 								label: mw.message( 'forms-form-editor-prop-partial' ).text(),
 								listeners: {
-									change: function( val ) {
+									change: function ( val ) {
 										if ( val ) {
 											this.getItem( 'abstract' ).setValue( false );
 											this.getItem( 'extends' ).setValue( '' );
@@ -150,19 +150,19 @@ mw.ext.forms.form.FormProperties = function( cfg ) {
 								options: [],
 								style: 'margin-bottom: 10px;',
 								listeners: {
-									change: function( val ) {
+									change: function ( val ) {
 										this.selectedTarget = null;
 										if ( !val ) {
 											return;
 										}
-										var targetCB = mw.ext.forms.registry.Target.registry[val];
+										const targetCB = mw.ext.forms.registry.Target.registry[ val ];
 										if ( !targetCB ) {
 											return;
 										}
 
-										var target = new targetCB( this, sa );
+										const target = new targetCB( this, sa ); // eslint-disable-line new-cap
 										this.getItem( 'target.additional_layout' ).clearItems();
-										var parsed = this.parseItems( target.getAdditionalFields(), this.getItem( 'target.additional_layout' ), true );
+										const parsed = this.parseItems( target.getAdditionalFields(), this.getItem( 'target.additional_layout' ), true );
 										target.setItems( parsed );
 										this.selectedTarget = target;
 									}
@@ -172,14 +172,14 @@ mw.ext.forms.form.FormProperties = function( cfg ) {
 								type: 'layout_fieldset',
 								name: 'target.additional_layout',
 								items: [],
-								noLayout: true,
+								noLayout: true
 							},
 							{
 								name: 'show_target_afterAction',
 								type: 'checkbox',
 								label: mw.message( 'forms-form-editor-prop-targetafteraction' ).text(),
 								listeners: {
-									change: function( val ) {
+									change: function ( val ) {
 										if ( val ) {
 											return this.showItem( 'target.afterAction.type' );
 										}
@@ -201,15 +201,15 @@ mw.ext.forms.form.FormProperties = function( cfg ) {
 									},
 									{
 										data: 'redirect',
-										label: mw.message( 'forms-form-editor-prop-targetafteractiontyperedirect' ).text(),
+										label: mw.message( 'forms-form-editor-prop-targetafteractiontyperedirect' ).text()
 									},
 									{
 										data: 'callback',
-										label: mw.message( 'forms-form-editor-prop-targetafteractiontypecallback' ).text(),
+										label: mw.message( 'forms-form-editor-prop-targetafteractiontypecallback' ).text()
 									}
 								],
 								listeners: {
-									change: function( val ) {
+									change: function ( val ) {
 										if ( !val ) {
 											this.hideItem( 'target.afterAction.url' );
 											this.hideItem( 'target.afterAction.callback' );
@@ -224,12 +224,12 @@ mw.ext.forms.form.FormProperties = function( cfg ) {
 										}
 									}
 								}
-							},{
+							}, {
 								type: 'text',
 								hidden: true,
 								name: 'target.afterAction.url',
 								label: mw.message( 'forms-form-editor-prop-targetafteractionurl' ).text()
-							},{
+							}, {
 								type: 'js_input',
 								hidden: true,
 								name: 'target.afterAction.callback',
@@ -270,14 +270,14 @@ mw.ext.forms.form.FormProperties = function( cfg ) {
 
 OO.inheritClass( mw.ext.forms.form.FormProperties, mw.ext.forms.standalone.Form );
 
-mw.ext.forms.form.FormProperties.prototype.onParseComplete = function( form, items ) {
-	var targetPicker = form.getItem( 'target.type' ),
+mw.ext.forms.form.FormProperties.prototype.onParseComplete = function ( form, items ) { // eslint-disable-line no-unused-vars
+	const targetPicker = form.getItem( 'target.type' ),
 		options = [];
-	for( var name in mw.ext.forms.registry.Target.registry ) {
+	for ( const name in mw.ext.forms.registry.Target.registry ) {
 		if ( !mw.ext.forms.registry.Target.registry.hasOwnProperty( name ) ) {
 			continue;
 		}
-		var target = new mw.ext.forms.registry.Target.registry[name]();
+		const target = new mw.ext.forms.registry.Target.registry[ name ]();
 		options.push( {
 			data: target.getName(),
 			label: target.getDisplayName()
@@ -293,35 +293,35 @@ mw.ext.forms.form.FormProperties.prototype.onParseComplete = function( form, ite
 		targetPicker.setValue( 'database' );
 	}
 
-	var sa = this;
+	const sa = this;
 	form.getItem( 'show_target_afterAction' ).connect( this, {
-		change: function( val ) {
+		change: function () {
 			sa.emit( 'layoutChange' );
 		}
 	} );
 	form.getItem( 'target.afterAction.type' ).connect( this, {
-		change: function( val ) {
+		change: function () {
 			sa.emit( 'layoutChange' );
 		}
 	} );
 	form.getItem( 'listeners' ).connect( this, {
-		change: function( val ) {
+		change: function () {
 			sa.emit( 'layoutChange' );
 		}
 	} );
 	form.getItem( 'target.type' ).connect( this, {
-		change: function( val ) {
+		change: function () {
 			sa.emit( 'layoutChange' );
 		}
 	} );
 };
 
-mw.ext.forms.form.FormProperties.prototype.onBeforeSubmitData = function( form, data ) {
+mw.ext.forms.form.FormProperties.prototype.onBeforeSubmitData = function ( form, data ) {
 	if ( this.selectedTarget !== null ) {
 		data.target = form.selectedTarget.getValue();
 	}
 	if ( !data.show_target_afterAction ) {
-		delete( data.target.afterAction );
+		delete ( data.target.afterAction );
 	}
 	return mw.ext.forms.form.FormProperties.parent.prototype.onBeforeSubmitData.call( this, form, data );
 };

@@ -1,33 +1,41 @@
 .ext-forms-form-element-group {
 	position: relative;
+
 	.ext-forms-form-editor-element-wrapper {
 		position: relative;
 		margin-top: 10px;
 		min-height: 30px;
+
 		&:first-of-type {
 			margin-top: 0;
 		}
+
 		&.item-selected {
-			.wrapper-overlay{
-				background-color: rgba(0, 0, 0, 0.2);
+			.wrapper-overlay {
+				background-color: rgba( 0, 0, 0, 0.2 );
 			}
 		}
+
 		&:hover {
 			>.wrapper-overlay {
 				min-width: 200px;
 				display: block;
-				background-color: rgba(193, 193, 193, 0.4);
+				background-color: rgba( 193, 193, 193, 0.4 );
+
 				.name-badge {
 					display: inline-block;
 				}
-				.wrapper-sort-handle:not(.handle-in-tool) {
+
+				.wrapper-sort-handle:not( .handle-in-tool ) {
 					display: inline-block;
 				}
 			}
 		}
+
 		&.wrapper-for-layout {
 			min-height: 30px;
 			background-color: #f2f2f2;
+
 			&:hover {
 				> .wrapper-overlay {
 					display: block;
@@ -37,12 +45,15 @@
 				}
 			}
 		}
+
 		.subitem-sortable {
 			min-height: 30px;
+
 			&.active-drag {
 				border: 2px solid green;
 			}
 		}
+
 		.wrapper-overlay {
 			position: absolute;
 			left: 0;
@@ -52,6 +63,7 @@
 			z-index: 10;
 			text-align: right;
 			display: none;
+
 			.name-badge {
 				display: none;
 				padding-left: 5px;
@@ -60,23 +72,28 @@
 				height: 100%;
 				margin: 0 !important;
 				vertical-align: top;
+
 				.oo-ui-buttonWidget {
 					height: 100%;
 					margin: 0;
+
 					a {
 						height: 100%;
 						padding: 5px;
+
 						span.oo-ui-iconElement-icon {
 							background-size: 15px;
 							background-position: 0;
 						}
 					}
 				}
+
 				label.oo-ui-labelElement-label {
 					margin: 2px !important;
 				}
 			}
-			.wrapper-sort-handle:not(.handle-in-tool) {
+
+			.wrapper-sort-handle:not( .handle-in-tool ) {
 				background-color: #cecece;
 				display: none;
 				width: 40px;
@@ -86,15 +103,18 @@
 			}
 		}
 	}
+
 	div.editor-element {
 		vertical-align: top;
 		border: 1px solid #a4a4a4;
 		padding: 10px;
 		margin: 5px;
 		min-height: 500px;
+
 		&.preview-area {
 			width: 100%;
 			min-height: 200px !important;
+
 			.empty-help-placeholder {
 				width: 100%;
 				text-align: center;
@@ -102,25 +122,23 @@
 				font-size: 1.5em;
 				color: gray;
 			}
+
 			&.active-drag {
 				border-style: dashed;
 				border-color: orange;
 				border-radius: 10px;
 			}
+
 			&.drop-valid {
 				border-color: green;
 			}
+
 			ul#item-sortable-wrapper {
 				padding: 0 !important;
 				min-height: inherit;
+
 				.item-sortable-placeholder {
-					background: repeating-linear-gradient(
-						45deg,
-						#fefeff,
-						#e8e8e8 10px,
-						#d0d0d0 10px,
-						#d2d2d2 20px
-					);
+					background: repeating-linear-gradient( 45deg, #fefeff, #e8e8e8 10px, #d0d0d0 10px, #d2d2d2 20px );
 					height: 50px;
 					border-radius: 5px;
 					margin: 10px 0 10px 0;
@@ -128,18 +146,21 @@
 			}
 		}
 	}
+
 	.oo-ui-fieldsetLayout-header {
 		font-size: 1.2em;
 	}
 }
 
 .form-editor-toolbar {
-	position: sticky;
+	position: sticky; // stylelint-disable-line plugin/no-unsupported-browser-features
 	top: 64px;
 	z-index: 20;
+
 	.oo-ui-barToolGroup.actions {
 		float: right;
 	}
+
 	.oo-ui-tool-name-save a {
 		padding: 12px !important;
 	}
@@ -149,16 +170,6 @@
 	z-index: 11 !important;
 }
 
-/**
-	Because we use dropdown in the popup,
-	the dropdown list is outside of the element,
-	and needs to be brought to the front to appear
-	in front of the dialog
- */
-.oo-ui-menuSelectWidget {
-	z-index: 12;
-}
-
 .ui-draggable-dragging {
 	z-index: 999999;
 }
@@ -166,14 +177,16 @@
 .ext-forms-form-editor-element-picker {
 	width: 100%;
 	padding: 10px;
-	background-color: #ffffff;
+	background-color: #fff;
 	border-bottom: 1px solid #a4a4a4;
 	border-left: 1px solid #d9d6d6;
 	border-right: 1px solid #d9d6d6;
 	/* Height of toolbar */
 	top: 46px;
+
 	.ext-forms-form-editor-element-picker-page {
 		overflow: hidden !important;
+
 		.picker-element-item {
 			cursor: pointer;
 			display: inline-block;
@@ -182,15 +195,16 @@
 			border: 1px solid #b3b1b1;
 			margin: 3px;
 			padding: 5px 8px 5px 8px;
+
 			.oo-ui-horizontalLayout {
 				position: relative;
+
 				.oo-ui-labelElement-label.with-icon {
 					margin-left: 25px;
 				}
 			}
 		}
 	}
-
 }
 
 .ext-forms-editor-options-popup {

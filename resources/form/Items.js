@@ -1,9 +1,9 @@
 mw.ext.forms.form = mw.ext.forms.form || {};
-mw.ext.forms.form.Items = function( cfg ) {
+mw.ext.forms.form.Items = function ( cfg ) {
 	cfg = cfg || {};
 	cfg.definition = {
 		buttons: [],
-		items:  [
+		items: [
 			{
 				type: 'text',
 				hidden: true,

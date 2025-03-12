@@ -1,10 +1,10 @@
-( function ( mw, $, undefined ) {
-	mw.ext.forms.widget.ElementPickerItem = function( cfg ) {
+( function ( mw, $ ) {
+	mw.ext.forms.widget.ElementPickerItem = function ( cfg ) {
 		mw.ext.forms.widget.ElementPickerItem.parent.call( this, cfg );
 
 		OO.ui.mixin.IconElement.call( this, cfg );
 		OO.ui.mixin.LabelElement.call( this, cfg );
-		OO.ui.mixin.TitledElement.call( this, $.extend( {
+		OO.ui.mixin.TitledElement.call( this, Object.assign( {
 			$titled: this.$element
 		}, cfg ) );
 
@@ -17,18 +17,18 @@
 		this.$element.append( this.innerLayout.$element );
 
 		this.$element.draggable( {
-			start: function() {
+			start: function () {
 				this.emit( 'dragstart', $( this ) );
 			}.bind( this ),
-			stop: function() {
+			stop: function () {
 				this.emit( 'dragend', $( this ) );
 			}.bind( this ),
 			revert: 'invalid',
-			helper: "clone",
+			helper: 'clone',
 			connectToSortable: '#item-sortable-wrapper'
 		} );
 
-		var data = this.getData();
+		const data = this.getData();
 		this.$element.attr( 'data-key', data.key );
 		this.$element.attr( 'data-type', data.type );
 
@@ -40,4 +40,4 @@
 	OO.mixinClass( mw.ext.forms.widget.ElementPickerItem, OO.ui.mixin.LabelElement );
 	OO.mixinClass( mw.ext.forms.widget.ElementPickerItem, OO.ui.mixin.TitledElement );
 
-} )( mediaWiki, jQuery );
+}( mediaWiki, jQuery ) );

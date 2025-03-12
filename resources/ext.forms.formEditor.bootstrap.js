@@ -1,8 +1,7 @@
-
-$( function() {
-	var $ctn = $( '#form-editor' );
+$( () => {
+	const $ctn = $( '#form-editor' );
 	if ( $ctn.length ) {
-		var editor = new mw.ext.forms.widget.FormEditor( {
+		const editor = new mw.ext.forms.widget.FormEditor( {
 			formData: $ctn.data( 'form-data' ),
 			successRedirect: $ctn.data( 'success-redir' ),
 			cancelRedirect: $ctn.data( 'cancel-redir' ),

@@ -1,5 +1,5 @@
-( function ( mw, $, undefined ) {
-	mw.ext.forms.widget.formElement.FormElementGroup = function( cfg ) {
+( function ( mw, $ ) {
+	mw.ext.forms.widget.formElement.FormElementGroup = function ( cfg ) {
 		mw.ext.forms.widget.formElement.FormElementGroup.parent.call( this, cfg );
 
 		this.$input.remove();
@@ -14,7 +14,7 @@
 
 	OO.inheritClass( mw.ext.forms.widget.formElement.FormElementGroup, OO.ui.InputWidget );
 
-	mw.ext.forms.widget.formElement.FormElementGroup.static.getElementType = function( element ) {
+	mw.ext.forms.widget.formElement.FormElementGroup.static.getElementType = function ( element ) {
 		if ( element instanceof mw.ext.forms.formElement.FormLayoutElement ) {
 			return 'layout';
 		}
@@ -25,15 +25,15 @@
 		return 'static';
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.createAreas = function() {
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.createAreas = function () {
 		this.$sortable = $( '<ul>' ).attr( 'id', 'item-sortable-wrapper' );
 		this.$sortable.sortable( {
 			connectWith: '.subitem-sortable',
-			receive: function( e, ui ) {
+			receive: function ( e, ui ) {
 				// This is fired before the event the nested sortable,
 				// we wait a bit until we see if nested sortable will handle it
 				// if not then we handle it
-				setTimeout( function() {
+				setTimeout( () => {
 					if ( this.handledSortTs === e.timeStamp ) {
 						this.handledSortTs = null;
 						return;
@@ -44,42 +44,42 @@
 
 					if (
 						ui.item.hasClass( 'ext-forms-form-editor-element-wrapper' ) &&
-						ui.item.attr( 'id' ).startsWith ( 'form_element' )
+						ui.item.attr( 'id' ).startsWith( 'form_element' )
 					) {
-						this.findElementByIdentifier( ui.item.attr( 'id' ) ).done( function( element ) {
+						this.findElementByIdentifier( ui.item.attr( 'id' ) ).done( ( element ) => {
 							this.addExistingFromElement( element );
 							ui.item.remove();
-						}.bind( this ) ).fail( function() {
+						} ).fail( () => {
 							ui.item.remove();
 						} );
 					} else {
 						this.addNewFromDraggable( ui.item, true );
 					}
 					this.dropAllowed = false;
-					setTimeout( function() {
+					setTimeout( () => {
 						// There are all kinds of bubbling happening,
 						// Could not control them otherwise
 						this.dropAllowed = true;
-					}.bind( this ), 1000 );
+					}, 1000 );
 
-				}.bind( this ), 20 );
+				}, 20 );
 			}.bind( this ),
-			activate: function() {
+			activate: function () {
 				this.$previewArea.addClass( 'active-drag' );
 			}.bind( this ),
-			over: function() {
+			over: function () {
 				this.$previewArea.find( '.empty-help-placeholder' ).hide();
 				this.$previewArea.addClass( 'drop-valid' );
 			}.bind( this ),
-			out: function() {
+			out: function () {
 				this.$previewArea.find( '.empty-help-placeholder' ).show();
 				this.$previewArea.removeClass( 'drop-valid' );
 			}.bind( this ),
-			deactivate: function() {
+			deactivate: function () {
 				this.$previewArea.removeClass( 'active-drag' ).removeClass( 'drop-valid' );
 			}.bind( this ),
 			placeholder: 'item-sortable-placeholder',
-			handle: ".wrapper-sort-handle"
+			handle: '.wrapper-sort-handle'
 		} ).disableSelection();
 
 		this.$previewArea = $( '<div>' )
@@ -92,9 +92,9 @@
 		this.$element.append( this.$previewArea );
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.addNewFromDraggable = function( $draggable, removeDraggable ) {
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.addNewFromDraggable = function ( $draggable, removeDraggable ) {
 		removeDraggable = removeDraggable || false;
-		var key = $draggable.attr( 'data-key' );
+		const key = $draggable.attr( 'data-key' );
 		if ( !key ) {
 			return;
 		}
@@ -108,8 +108,8 @@
 		}
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.addExistingFromElement = function( element ) {
-		var type = element.getElementName(),
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.addExistingFromElement = function ( element ) {
+		const type = element.getElementName(),
 			value = element.getValue();
 
 		if ( this.isSubitem( element ) ) {
@@ -121,36 +121,36 @@
 		this.addElement( type, value, element.getIdentifier(), element.getIdentifier() );
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.findElementByIdentifier = function( identifier ) {
-		var dfd = $.Deferred();
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.findElementByIdentifier = function ( identifier ) {
+		const dfd = $.Deferred();
 		this.doFindElement( identifier, this.items, dfd, 0 );
 		return dfd.promise();
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.doFindElement = function( identifier, items, dfd, level ) {
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.doFindElement = function ( identifier, items, dfd, level ) {
 		if ( items.hasOwnProperty( identifier ) ) {
-			return dfd.resolve( items[identifier] );
+			return dfd.resolve( items[ identifier ] );
 		}
-		for ( var id in items ) {
+		for ( const id in items ) {
 			if ( !items.hasOwnProperty( id ) ) {
 				continue;
 			}
-			this.doFindElement( identifier, items[id].getSubitems(), dfd, level + 1 );
+			this.doFindElement( identifier, items[ id ].getSubitems(), dfd, level + 1 );
 		}
 		if ( level === 0 ) {
 			dfd.reject();
 		}
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.addElement = function( typeToAdd, values, identifier, addAfter ) {
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.addElement = function ( typeToAdd, values, identifier, addAfter ) {
 		if ( !mw.ext.forms.registry.Type.registry.hasOwnProperty( typeToAdd ) ) {
 			return;
 		}
-		var element = mw.ext.forms.registry.Type.lookup( typeToAdd );
+		const element = mw.ext.forms.registry.Type.lookup( typeToAdd );
 
-		values = $.extend( {}, element.getDefaultValue(), values || {} );
+		values = Object.assign( {}, element.getDefaultValue(), values || {} );
 		identifier = identifier || this.getNewIdentifier();
-		var elementDescriptor = new mw.ext.forms.widget.formElement.FormEditorElementDescriptor( {
+		const elementDescriptor = new mw.ext.forms.widget.formElement.FormEditorElementDescriptor( {
 			identifier: identifier,
 			elementName: typeToAdd,
 			group: this,
@@ -168,43 +168,43 @@
 		return elementDescriptor;
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.reRenderItem = function( descriptor ) {
-		var newDescriptor = this.renderItem( descriptor, null, true );
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.reRenderItem = function ( descriptor ) {
+		const newDescriptor = this.renderItem( descriptor, null, true );
 		this.$previewArea.find( '#' + descriptor.getIdentifier() ).replaceWith( newDescriptor.$element );
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.getNewIdentifier = function() {
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.getNewIdentifier = function () {
 		// This identifier is only used during the editing to identify the elements between
 		// different panels, does not go into the actual form definition
-		var identifier = null;
+		let identifier = null;
 		do {
-			identifier = this.form.getRandomName( 'form_element', Math.floor( Math.random() * (9999 - 100) + 100) );
+			identifier = this.form.getRandomName( 'form_element', Math.floor( Math.random() * ( 9999 - 100 ) + 100 ) );
 		} while ( this.items.hasOwnProperty( identifier ) );
 
 		return identifier;
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.clearElements = function() {
-		for( var id in this.items ) {
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.clearElements = function () {
+		for ( const id in this.items ) {
 			if ( !this.items.hasOwnProperty( id ) ) {
 				continue;
 			}
-			this.removeElement( this.items[id] );
+			this.removeElement( this.items[ id ] );
 		}
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.removeElement = function( item ) {
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.removeElement = function ( item ) {
 		if ( typeof item === 'string' ) {
-			this.findElementByIdentifier( item ).done( function( element ) {
+			this.findElementByIdentifier( item ).done( ( element ) => {
 				this.removeElement( element );
-			}.bind( this ) );
+			} );
 			return;
 		}
 
 		if ( item.getParentDescriptor() !== null ) {
 			item.getParentDescriptor().removeSubitem( item.getIdentifier() );
 		} else {
-			delete( this.items[item.getIdentifier()] );
+			delete ( this.items[ item.getIdentifier() ] );
 		}
 
 		this.$sortable.children( '#' + item.getIdentifier() ).remove();
@@ -214,43 +214,43 @@
 		}
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.isSubitem = function( item ) {
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.isSubitem = function ( item ) {
 		return item.getParentDescriptor() !== null;
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.parentInGroup = function( item ) {
-		item = $.extend( {}, item );
-		while( item.getParentDescriptor() !== null ) {
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.parentInGroup = function ( item ) {
+		item = Object.assign( {}, item );
+		while ( item.getParentDescriptor() !== null ) {
 			item = item.getParentDescriptor();
 		}
 		return this.items.hasOwnProperty( item.getIdentifier() );
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.renderAllItems = function() {
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.renderAllItems = function () {
 		this.$sortable.children().remove();
-		var itemsToRender = this.getOrderedItems();
+		const itemsToRender = this.getOrderedItems();
 		if ( $.isEmptyObject( itemsToRender ) ) {
 			if ( Object.keys( this.items ).length === 0 ) {
 				this.setHelpPlaceholder();
 			}
 			return;
 		}
-		this.recursiveRender( $.extend( {}, {}, itemsToRender ) );
+		this.recursiveRender( Object.assign( {}, {}, itemsToRender ) );
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.recursiveRender = function( items ) {
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.recursiveRender = function ( items ) {
 		if ( $.isEmptyObject( items ) ) {
 			return;
 		}
-		var keyToProcess = Object.keys( items ).shift();
+		const keyToProcess = Object.keys( items ).shift();
 
-		this.renderItem( items[keyToProcess] );
-		delete( items[keyToProcess] );
+		this.renderItem( items[ keyToProcess ] );
+		delete ( items[ keyToProcess ] );
 		this.recursiveRender( items );
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.renderItem = function( item, afterId, noAppend ) {
-		var toParse = item.getValueForPreview(),
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.renderItem = function ( item, afterId, noAppend ) {
+		const toParse = item.getValueForPreview(),
 			layout = new OO.ui.FieldsetLayout(),
 			name = toParse.name + '-wrapper';
 
@@ -260,7 +260,7 @@
 			this.$previewArea.find( '.empty-help-placeholder' ).remove();
 		}
 
-		var wrapper = {
+		const wrapper = {
 			name: name,
 			type: 'form_element_wrapper',
 			noLayout: true,
@@ -270,9 +270,9 @@
 			group: this
 		};
 
-		var rendered = this.form.parseItems( [ wrapper ], layout, true );
+		const rendered = this.form.parseItems( [ wrapper ], layout, true );
 
-		this.items[item.getIdentifier()] = item;
+		this.items[ item.getIdentifier() ] = item;
 		if ( !noAppend ) {
 			if ( afterId && this.$sortable.find( '#' + afterId ).length > 0 ) {
 				layout.$group.children().insertAfter( this.$sortable.find( '#' + afterId ) );
@@ -281,68 +281,68 @@
 			}
 		}
 
-		return rendered[Object.keys( rendered )[0]];
+		return rendered[ Object.keys( rendered )[ 0 ] ];
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.setValue = function( value ) {
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.setValue = function ( value ) {
 		if ( !value ) {
 			return;
 		}
-		for( var i = 0; i < value.length; i++ ) {
-			var element = value[i];
+		for ( let i = 0; i < value.length; i++ ) {
+			const element = value[ i ];
 			if ( !element.hasOwnProperty( 'type' ) ) {
 				continue;
 			}
-			var descriptor = this.addElement( element.type );
+			const descriptor = this.addElement( element.type );
 			descriptor.setValue( element );
 		}
 		this.renderAllItems();
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.getValue = function() {
-		var value = [];
-		var ordered = this.getOrderedItems();
-		for( var item in ordered ) {
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.getValue = function () {
+		const value = [];
+		const ordered = this.getOrderedItems();
+		for ( const item in ordered ) {
 			if ( !ordered.hasOwnProperty( item ) ) {
 				continue;
 			}
-			value.push( ordered[item].getValue() );
+			value.push( ordered[ item ].getValue() );
 		}
 
 		return value;
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.openItemOptions = function( id, wrapper ) {
-		this.findElementByIdentifier( id ).done( function( element ) {
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.openItemOptions = function ( id, wrapper ) {
+		this.findElementByIdentifier( id ).done( ( element ) => {
 			wrapper.optionsPanel.clearItems();
-			var hasOptions = element.renderOptions( wrapper.optionsPanel, element.getValue() );
+			const hasOptions = element.renderOptions( wrapper.optionsPanel, element.getValue() );
 			if ( hasOptions ) {
 				wrapper.openOptions();
 			}
-		}.bind( this ) );
+		} );
 
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.getValidity = function() {
-		var toValidate = $.extend( {}, this.items );
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.getValidity = function () {
+		const toValidate = Object.assign( {}, this.items );
 		return this.form.validateForm( toValidate );
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.getOrderedItems = function( items, $sortable ) {
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.getOrderedItems = function ( items, $sortable ) {
 		items = items || this.items;
 		$sortable = $sortable || this.$sortable;
 
 		if ( $sortable.children().length === Object.keys( items ).length ) {
-			var sortedIds = [], sortedItems = {};
-			$sortable.children().each( function() {
+			const sortedIds = [], sortedItems = {};
+			$sortable.children().each( function () {
 				sortedIds.push( $( this ).attr( 'id' ) );
 			} );
 
-			for ( var i = 0; i < sortedIds.length; i++ ) {
-				if ( !items.hasOwnProperty( sortedIds[i] ) ) {
+			for ( let i = 0; i < sortedIds.length; i++ ) {
+				if ( !items.hasOwnProperty( sortedIds[ i ] ) ) {
 					continue;
 				}
-				sortedItems[sortedIds[i]] = items[sortedIds[i]];
+				sortedItems[ sortedIds[ i ] ] = items[ sortedIds[ i ] ];
 			}
 
 			return sortedItems;
@@ -351,15 +351,14 @@
 		return $.extend( true, {}, {}, items );
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.setHelpPlaceholder = function() {
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.setHelpPlaceholder = function () {
 		this.$previewArea.prepend(
 			$( '<div>' ).addClass( 'empty-help-placeholder' ).text( mw.msg( 'forms-editor-group-empty-help' ) )
 		);
 	};
 
-	mw.ext.forms.widget.formElement.FormElementGroup.prototype.subitemHandledSort = function( ts ) {
+	mw.ext.forms.widget.formElement.FormElementGroup.prototype.subitemHandledSort = function ( ts ) {
 		this.handledSortTs = ts;
 	};
 
-
-} )( mediaWiki, jQuery );
+}( mediaWiki, jQuery ) );
