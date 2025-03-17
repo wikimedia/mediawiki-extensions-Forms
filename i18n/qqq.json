@@ -3,6 +3,7 @@
 		"authors": [
 			"Ajeje Brazorf",
 			"Dejan Savuljesku",
+			"McDutchie",
 			"Patric Wirth",
 			"Verdy p"
 		]
@@ -84,7 +85,7 @@
 	"apihelp-forms-form-submit-param-data": "Help message for the \"data\" parameter in the \"form-submit\" api module",
 	"apihelp-forms-form-submit-param-form": "Help message for the \"form\" parameter in the \"form-submit\" api module",
 	"apihelp-forms-form-submit-param-target": "Help message for the \"target\" parameter in the \"form-submit\" api module",
-	"apihelp-forms-form-submit-param-summary": "Help message for the \"summary\" parameter in the \"form-submit\" api module",
+	"apihelp-forms-form-submit-param-summary": "Help message for the \"summary\" parameter in the \"form-submit\" api module\n\n{{Doc-important|This refers to the summary of an edit, not to editing a summary!}}",
 	"apihelp-forms-form-submit-summary": "{{doc-apihelp-summary|forms-form-submit}}",
 	"apihelp-forms-get-definitions-param-definitionType": "Help message for the \"definitionType\" parameter in the \"get-definitions\" api module",
 	"apihelp-forms-get-definitions-param-name": "Help message for the \"name\" parameter in the \"get-definitions\" api module",

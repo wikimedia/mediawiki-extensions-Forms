@@ -5,6 +5,7 @@
 			"Gomoko",
 			"JLTRY",
 			"Mahabarata",
+			"McDutchie",
 			"Paraboule",
 			"Verdy p"
 		]
@@ -86,7 +87,7 @@
 	"apihelp-forms-form-submit-param-data": "Données soumises par le formulaire",
 	"apihelp-forms-form-submit-param-form": "Nom du formulaire.",
 	"apihelp-forms-form-submit-param-target": "Nom de la tâche.",
-	"apihelp-forms-form-submit-param-summary": "Modifier le résumé",
+	"apihelp-forms-form-submit-param-summary": "Résumé de la modification",
 	"apihelp-forms-form-submit-summary": "Fournit la modification via des formulaires",
 	"apihelp-forms-get-definitions-param-definitionType": "Type demandé de la définition du formulaire",
 	"apihelp-forms-get-definitions-param-name": "Nom de la définition du formulaire",
