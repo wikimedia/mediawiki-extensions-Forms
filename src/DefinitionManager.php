@@ -289,7 +289,8 @@ class DefinitionManager {
 		$res = $db->select(
 			'page',
 			'*',
-			[ 'page_content_model' => 'FormDefinition' ]
+			[ 'page_content_model' => 'FormDefinition' ],
+			__METHOD__
 		);
 
 		return $res;
