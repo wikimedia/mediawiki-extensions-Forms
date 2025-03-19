@@ -159,7 +159,8 @@ class FormRevisionManager {
 		$row = $this->db->selectRow(
 			static::TABLE,
 			'*',
-			[ static::FIELD_REV_ID => $revId ]
+			[ static::FIELD_REV_ID => $revId ],
+			__METHOD__
 		);
 		return (bool)$row;
 	}
