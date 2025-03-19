@@ -167,7 +167,8 @@ class Database implements ITarget {
 	private function insert( array $formsubmittedData ) {
 		return $this->db->insert(
 			static::TABLE,
-			$this->getDataForDB( $formsubmittedData )
+			$this->getDataForDB( $formsubmittedData ),
+			__METHOD__
 		);
 	}
 
