@@ -136,7 +136,8 @@ class Database implements ITarget {
 		$row = $this->db->selectRow(
 			static::TABLE,
 			[ static::FIELD_FORM ],
-			[ static::FIELD_ID => $this->id ]
+			[ static::FIELD_ID => $this->id ],
+			__METHOD__
 		);
 
 		// Form cannot change between saves, make sure form is still the same
