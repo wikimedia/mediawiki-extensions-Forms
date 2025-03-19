@@ -174,7 +174,8 @@ class FormRevisionManager {
 		$res = $this->db->update(
 			static::TABLE,
 			[ static::FIELD_APPLIES_FROM => $ts ],
-			[ static::FIELD_REV_ID => $revId ]
+			[ static::FIELD_REV_ID => $revId ],
+			__METHOD__
 		);
 
 		return $res;
