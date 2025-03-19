@@ -119,7 +119,8 @@ class FormRevisionManager {
 
 		$res = $this->db->delete(
 			static::TABLE,
-			$conds
+			$conds,
+			__METHOD__
 		);
 		if ( $res ) {
 			return Status::newGood();
