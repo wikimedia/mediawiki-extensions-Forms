@@ -193,7 +193,8 @@ class FormRevisionManager {
 				static::FIELD_REV_ID => $revId,
 				static::FIELD_PAGE_ID => $pageId,
 				static::FIELD_APPLIES_FROM => $ts
-			]
+			],
+			__METHOD__
 		);
 
 		return $res;
