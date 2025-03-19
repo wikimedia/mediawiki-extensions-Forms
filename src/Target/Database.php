@@ -156,7 +156,8 @@ class Database implements ITarget {
 		return $this->db->update(
 			static::TABLE,
 			$this->getDataForDB( $formsubmittedData ),
-			[ static::FIELD_ID => $this->id ]
+			[ static::FIELD_ID => $this->id ],
+			__METHOD__
 		);
 	}
 
