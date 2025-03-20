@@ -36,7 +36,7 @@
 				"form-definition": "MediaWiki\\Extension\\Forms\\Target\\FormDefinition::factory",
 				"database": "MediaWiki\\Extension\\Forms\\Target\\Database::factory",
 				"email": "MediaWiki\\Extension\\Forms\\Target\\Email::factory",
-				"template":  "MediaWiki\\Extension\\Forms\\Target\\Template::factory"
+				"template": "MediaWiki\\Extension\\Forms\\Target\\Template::factory"
 			}
 		}
 	},
@@ -47,7 +47,7 @@
 	"SpecialPages": {
 		"CreateFormInstance": "MediaWiki\\Extension\\Forms\\Special\\CreateFormInstance",
 		"FormEditor": {
-			"class":  "MediaWiki\\Extension\\Forms\\Special\\FormEditor",
+			"class": "MediaWiki\\Extension\\Forms\\Special\\FormEditor",
 			"services": [
 				"MainConfig"
 			]
@@ -58,7 +58,7 @@
 	},
 	"config": {
 		"FormsTargetEMailRecipients": {
-			"value":  {}
+			"value": {}
 		}
 	},
 	"GroupPermissions": {
