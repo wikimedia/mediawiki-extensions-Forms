@@ -59,7 +59,7 @@ class GetDefinitions extends ApiBase {
 				ParamValidator::PARAM_REQUIRED => false,
 				ParamValidator::PARAM_DEFAULT => self::QUERY_TYPE_QUERY_AVAILABLE
 			],
-			'definitionType' => [
+			'definitiontype' => [
 				ParamValidator::PARAM_TYPE => 'string',
 				ParamValidator::PARAM_REQUIRED => false,
 				ParamValidator::PARAM_DEFAULT => DefinitionManager::TYPE_CONCRETE
@@ -68,7 +68,7 @@ class GetDefinitions extends ApiBase {
 				ParamValidator::PARAM_TYPE => 'string',
 				ParamValidator::PARAM_REQUIRED => false,
 			],
-			'validForTime' => [
+			'validfortime' => [
 				ParamValidator::PARAM_TYPE => 'string',
 				ParamValidator::PARAM_REQUIRED => false,
 				ParamValidator::PARAM_DEFAULT => ''
@@ -109,7 +109,7 @@ class GetDefinitions extends ApiBase {
 	 *
 	 */
 	protected function getAvailableDefinitions() {
-		$type = $this->getParameter( 'definitionType' );
+		$type = $this->getParameter( 'definitiontype' );
 		$this->status = Status::newGood(
 			$this->definitionManager->getDefinitionKeys( $type )
 		);
@@ -131,7 +131,7 @@ class GetDefinitions extends ApiBase {
 			);
 		}
 
-		$validForTime = $this->getParameter( 'validForTime' );
+		$validForTime = $this->getParameter( 'validfortime' );
 		$this->status = Status::newGood( [
 			'definition' => $this->definitionManager->getDefinition( $name, $validForTime ),
 			'lang' => $this->definitionManager->getDefinitionLang( $name )

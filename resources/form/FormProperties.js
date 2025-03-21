@@ -35,7 +35,7 @@ mw.ext.forms.form.FormProperties = function ( cfg ) {
 							{
 								type: 'checkbox',
 								name: 'showFormName',
-								label: mw.message( 'forms-form-editor-prop-showFormName' ).text()
+								label: mw.message( 'forms-form-editor-prop-showformname' ).text()
 							},
 							{
 								type: 'checkbox',
