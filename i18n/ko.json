@@ -37,6 +37,7 @@
 	"forms-label-management": "관리",
 	"forms-form-editor-prop-targettypetemplate": "틀",
 	"forms-form-editor-prop-targettemplate": "사용할 틀",
+	"apihelp-forms-form-submit-param-data": "폼을 통해 제출된 데이터",
 	"apihelp-forms-form-submit-param-form": "폼 이름",
 	"apihelp-forms-form-submit-param-summary": "편집 요약",
 	"right-forms-create-form": "폼 만들기",
