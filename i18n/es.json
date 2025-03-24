@@ -20,7 +20,7 @@
 	"forms-form-editor-form-name-label": "Nombre del formulario",
 	"forms-form-editor-prop-title": "Título",
 	"forms-form-editor-prop-showtitle": "Mostrar título",
-	"forms-form-editor-prop-showFormName": "Mostrar el nombre del formulario",
+	"forms-form-editor-prop-showformname": "Mostrar el nombre del formulario",
 	"forms-form-editor-prop-categories": "Categorías",
 	"forms-form-editor-prop-buttonsfloat": "Botones flotantes",
 	"forms-form-editor-prop-enableprogresssave": "Activar el guardado intermedio",
