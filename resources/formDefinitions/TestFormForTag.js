@@ -1,4 +1,4 @@
-var def = { // eslint-disable-line no-var, no-implicit-globals, no-unused-vars
+var def = { // eslint-disable-line no-var, no-unused-vars
 	title: 'TestFormForTag',
 	extends: 'TestForm',
 	showTitle: true,

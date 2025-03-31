@@ -2,7 +2,7 @@
  * the 'var def = ' part is here only so this is valid JS, should be removed when
  * pasting to .form wikipage.
  */
-var def = { // eslint-disable-line no-var, no-implicit-globals, no-unused-vars
+var def = { // eslint-disable-line no-var, no-unused-vars
 	title: mw.message( 'forms-title-new-customer' ).text(),
 	showTitle: true,
 	target: {
