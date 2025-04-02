@@ -102,5 +102,6 @@
 	"forms-editor-toolbar-done": "Fertig",
 	"forms-editor-group-empty-help": "Das Formular enthält derzeit keine Elemente. Öffne die Registerkarte „Formularelemente“ und ziehe die Elemente hierher.",
 	"forms-form-editor-form-props-summary-label": "Zusammenfassung",
-	"forms-form-editor-form-props-summary-placeholder": "Bitte erläutere kurz deine Änderungen"
+	"forms-form-editor-form-props-summary-placeholder": "Bitte erläutere kurz deine Änderungen",
+	"forms-form-editor-prop-showformname": "Formularnamen anzeigen"
 }

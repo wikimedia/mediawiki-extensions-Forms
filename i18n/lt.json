@@ -76,5 +76,6 @@
 	"forms-form-editor-prop-target-email-subject": "Antraštė",
 	"forms-form-editor-prop-target-email-body": "Turinys",
 	"forms-error-target-mail-send-failed": "Nepavyko išsiųsti laiško",
-	"forms-error-target-mail-no-mail": "Nėra galiojančio el. pašto adreso"
+	"forms-error-target-mail-no-mail": "Nėra galiojančio el. pašto adreso",
+	"forms-form-editor-prop-showformname": "Rodyti formos pavadinimą"
 }

@@ -3,10 +3,11 @@
 		"authors": [
 			"Ajeje Brazorf",
 			"Gomoko",
+			"JLTRY",
 			"Mahabarata",
+			"McDutchie",
 			"Paraboule",
-			"Verdy p",
-			"JLTRY"
+			"Verdy p"
 		]
 	},
 	"forms-desc": "Cadre de formulaire complet pour MediaWiki",
@@ -104,5 +105,14 @@
 	"forms-editor-toolbar-done": "Fait",
 	"forms-editor-group-empty-help": "Le formulaire n'a actuellement aucun élément. Ouvrez l'onglet \"Éléments de formulaire\" et faites glisser des éléments ici",
 	"forms-form-editor-form-props-summary-label": "Résumé",
-	"forms-form-editor-form-props-summary-placeholder": "Décrivez ce que vous avez modifié"
+	"forms-form-editor-form-props-summary-placeholder": "Décrivez ce que vous avez modifié",
+	"forms-form-editor-prop-showformname": "Afficher le nom du formulaire",
+	"apihelp-forms-form-submit-param-data": "Données soumises par le formulaire",
+	"apihelp-forms-form-submit-param-form": "Nom du formulaire.",
+	"apihelp-forms-form-submit-param-target": "Nom de la tâche.",
+	"apihelp-forms-form-submit-param-summary": "Résumé de la modification",
+	"apihelp-forms-get-definitions-param-definitiontype": "Type demandé de la définition du formulaire",
+	"apihelp-forms-get-definitions-param-name": "Nom de la définition du formulaire",
+	"apihelp-forms-get-definitions-param-type": "Type de requête. Peut être 'query-available' ou 'get-definition'.",
+	"apihelp-forms-get-definitions-param-validfortime": "Durée pendant laquelle la définition du formulaire est valide"
 }

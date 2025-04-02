@@ -2,8 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Kareyac",
+			"Pikne",
 			"Rivoz"
 		]
 	},
-	"forms-form-editor-prop-categories": "Kategooriad"
+	"forms-form-editor-prop-categories": "Kategooriad",
+	"apihelp-forms-form-submit-param-summary": "Muuda resümeed"
 }

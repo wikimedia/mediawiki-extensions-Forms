@@ -102,5 +102,14 @@
 	"forms-editor-toolbar-done": "בוצע",
 	"forms-editor-group-empty-help": "לטופס אין כרגע רכיבים. יש לפתוח את הלשונית \"רכיבי טופס\" ולגרור רכיבים לכאן",
 	"forms-form-editor-form-props-summary-label": "תקציר",
-	"forms-form-editor-form-props-summary-placeholder": "תיאור השינויים"
+	"forms-form-editor-form-props-summary-placeholder": "תיאור השינויים",
+	"forms-form-editor-prop-showformname": "שם התצוגה של הטופס",
+	"apihelp-forms-form-submit-param-data": "נתונים שנשלחו באמצעות הטופס",
+	"apihelp-forms-form-submit-param-form": "שם הטופס",
+	"apihelp-forms-form-submit-param-target": "שם היעד",
+	"apihelp-forms-form-submit-param-summary": "תקציר העריכה",
+	"apihelp-forms-get-definitions-param-definitiontype": "סוג מבוקש של הגדרת הטופס",
+	"apihelp-forms-get-definitions-param-name": "שם הגדרת הטופס",
+	"apihelp-forms-get-definitions-param-type": "סוג הבקשה. יכול להיות \"query-available\" או \"get-definition\"",
+	"apihelp-forms-get-definitions-param-validfortime": "הזמן שהגדרת הטופס תקפה בו"
 }

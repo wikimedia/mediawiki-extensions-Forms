@@ -19,5 +19,6 @@
 	"forms-action-editsource": "সংজ্ঞার উৎস সম্পাদনা করুন",
 	"forms-editor-toolbar-cancel": "বাতিল",
 	"forms-editor-toolbar-done": "সম্পন্ন",
-	"forms-form-editor-form-props-summary-label": "সারাংশ"
+	"forms-form-editor-form-props-summary-label": "সারাংশ",
+	"apihelp-forms-form-submit-param-summary": "সম্পাদনা সারাংশ"
 }

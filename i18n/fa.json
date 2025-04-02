@@ -51,5 +51,6 @@
 	"forms-form-editor-prop-target-email-receiver": "دریافت‌کننده",
 	"forms-form-editor-prop-target-email-subject": "موضوع",
 	"forms-form-editor-prop-target-email-body": "محتوا",
-	"forms-error-target-mail-send-failed": "ارسال نامه ناموفق"
+	"forms-error-target-mail-send-failed": "ارسال نامه ناموفق",
+	"forms-form-editor-prop-showformname": "نمایش نام فرم"
 }

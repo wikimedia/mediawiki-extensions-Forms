@@ -13,5 +13,6 @@
 	"forms-form-editor-prop-targettypetemplate": "Կաղապար",
 	"forms-editor-toolbar-cancel": "Չեղարկել",
 	"forms-editor-toolbar-done": "Արված է",
-	"forms-form-editor-form-props-summary-label": "Ամփոփում"
+	"forms-form-editor-form-props-summary-label": "Ամփոփում",
+	"apihelp-forms-form-submit-param-summary": "Խմբագրել մեկնաբանությունը"
 }

@@ -81,5 +81,6 @@
 	"right-forms-create-form": "Skapa formulär",
 	"right-forms-edit-form-definition": "Redigera formulärdefinitioner",
 	"action-forms-create-form": "skapa formulär",
-	"action-forms-edit-form-definition": "eedigera formulärdefinitioner"
+	"action-forms-edit-form-definition": "eedigera formulärdefinitioner",
+	"forms-form-editor-prop-showformname": "Visa formulärnamn"
 }

@@ -98,5 +98,6 @@
 	"forms-editor-toolbar-done": "完成",
 	"forms-editor-group-empty-help": "表單目前沒有元素。請開啟「表單元素」標籤，並將元素拖曳至此處",
 	"forms-form-editor-form-props-summary-label": "摘要",
-	"forms-form-editor-form-props-summary-placeholder": "描述您做出的更改"
+	"forms-form-editor-form-props-summary-placeholder": "描述您做出的更改",
+	"forms-form-editor-prop-showformname": "顯示表單名稱"
 }

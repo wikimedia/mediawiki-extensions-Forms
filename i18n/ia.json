@@ -99,5 +99,14 @@
 	"forms-editor-toolbar-done": "Facite",
 	"forms-editor-group-empty-help": "Le formulario actualmente non ha elementos. Aperi le scheda “Elementos del formulario” e trahe elementos verso illo.",
 	"forms-form-editor-form-props-summary-label": "Summario",
-	"forms-form-editor-form-props-summary-placeholder": "Describe lo que tu ha cambiate"
+	"forms-form-editor-form-props-summary-placeholder": "Describe lo que tu ha cambiate",
+	"forms-form-editor-prop-showformname": "Monstrar nomine del formulario",
+	"apihelp-forms-form-submit-param-data": "Datos submittite per le formulario",
+	"apihelp-forms-form-submit-param-form": "Nomine del formulario",
+	"apihelp-forms-form-submit-param-target": "Nomine del destination",
+	"apihelp-forms-form-submit-param-summary": "Summario del modification",
+	"apihelp-forms-get-definitions-param-definitiontype": "Typo requestate del definition del formulario",
+	"apihelp-forms-get-definitions-param-name": "Nomine del definition del formulario",
+	"apihelp-forms-get-definitions-param-type": "Typo del requesta. Pote esser ‘query-available’ o ‘get-definition’",
+	"apihelp-forms-get-definitions-param-validfortime": "Durata de validitate del definition del formulario"
 }

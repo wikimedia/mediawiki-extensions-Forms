@@ -42,5 +42,7 @@
 	"forms-form-editor-prop-targettypeemail": "E-Mail",
 	"forms-editor-toolbar-cancel": "Ofbriechen",
 	"forms-editor-toolbar-save-label": "Späicheren",
-	"forms-form-editor-form-props-summary-label": "Resumé"
+	"forms-form-editor-form-props-summary-label": "Resumé",
+	"apihelp-forms-form-submit-param-form": "Numm vum Formulaire",
+	"apihelp-forms-form-submit-param-target": "Numm vum Zil"
 }
