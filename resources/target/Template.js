@@ -5,7 +5,7 @@
 		this.fields = [];
 	};
 
-	OO.inheritClass( mw.ext.forms.target.Template, mw.ext.forms.target.FormTarget );
+	OO.inheritClass( mw.ext.forms.target.Template, mw.ext.forms.target.WikipageTarget );
 
 	mw.ext.forms.target.Template.prototype.init = function () {
 		this.items[ 'target.template' ].connect( this, {
@@ -25,16 +25,12 @@
 	mw.ext.forms.target.Template.prototype.getAdditionalFields = function () {
 		const sa = this.standalone;
 		return [ {
-			type: 'text',
-			name: 'target.title',
-			required: true,
-			label: mw.message( 'forms-form-editor-prop-targettitle' ).text()
-		}, {
 			type: 'title',
 			name: 'target.template',
 			namespace: 10,
 			required: true,
-			label: mw.message( 'forms-form-editor-prop-targettemplate' ).text()
+			label: mw.message( 'forms-form-editor-prop-targettemplate' ).text(),
+			widget_$overlay: this.form.$overlay
 		}, {
 			type: 'button',
 			name: 'target.importfromtemplate',
@@ -147,7 +143,6 @@
 	mw.ext.forms.target.Template.prototype.getValue = function () {
 		return {
 			type: this.getName(),
-			title: this.items[ 'target.title' ].getValue(),
 			template: this.items[ 'target.template' ].getValue()
 		};
 	};
@@ -157,10 +152,6 @@
 	};
 
 	mw.ext.forms.target.Template.prototype.setValue = function ( value ) {
-		if ( value.hasOwnProperty( 'title' ) && this.items.hasOwnProperty( 'target.title' ) ) {
-			this.items[ 'target.title' ].setValue( value.title );
-		}
-
 		if ( value.hasOwnProperty( 'template' ) && this.items.hasOwnProperty( 'target.template' ) ) {
 			this.items[ 'target.template' ].setValue( value.template );
 			this.onTemplateChange( value.template );

@@ -4,12 +4,11 @@ $specialPageAliases = [];
 
 /** English (English) */
 $specialPageAliases['en'] = [
-	'CreateFormInstance' => [ 'Create form instance' ],
+	'EditWithForm' => [ 'Edit with form' ],
 	'FormEditor' => [ 'Form editor' ],
 ];
 
 /** English (English) */
 $specialPageAliases['de'] = [
-	'CreateFormInstance' => [ 'Formularinstanz erstellen' ],
 	'FormEditor' => [ 'Formulareditor' ]
 ];

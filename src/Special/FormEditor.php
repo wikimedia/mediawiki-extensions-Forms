@@ -57,6 +57,9 @@ class FormEditor extends FormSpecial {
 		}
 
 		$cancelReturnTo = $successReturnTo = $this->getPageTitle()->getLocalURL();
+		if ( str_ends_with( $subPage, '.form' ) ) {
+			$subPage = substr( $subPage, 0, -5 );
+		}
 		$formTitle = $this->getFormTitle( $subPage );
 		if ( $formTitle instanceof Title && $formTitle->exists() ) {
 			$successReturnTo = $formTitle->getLocalURL();
@@ -110,7 +113,8 @@ class FormEditor extends FormSpecial {
 		$this->getOutput()->addJsConfigVars(
 			'formsEmailTargets',
 			array_keys( $this->config->get( 'FormsTargetEMailRecipients' )
-			) );
+			)
+		);
 	}
 
 	/**

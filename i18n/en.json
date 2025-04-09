@@ -6,11 +6,11 @@
 		]
 	},
 	"forms-desc": "Allround form framework for MediaWiki",
-	"createforminstance": "Create form instance",
-	"forms-createforminstance-form-name": "Create $1",
+	"editwithform": "Edit with form",
+	"editwithform-with-title": "Edit with form: $1",
 	"formeditor": "Form editor",
 	"forms-api-get-definitions-no-name": "Name parameter must be set for type \"get-definition\"",
-	"forms-api-get-definitions-not-exist": "Definition \"$1\" does not exist",
+	"forms-api-get-definitions-not-exist": "Form \"$1\" does not exist",
 	"forms-target-json-page-summary": "Edit by form: $1",
 	"forms-error-no-form-specified": "No form is specified",
 	"forms-form-edit-title": "Edit $1",
@@ -93,7 +93,7 @@
 	"right-forms-edit-form-definition": "Edit form definitions",
 	"action-forms-create-form": "create forms",
 	"action-forms-edit-form-definition": "edit form definitions",
-	"forms-action-editsource": "Edit definition source",
+	"forms-action-editsource": "Edit source",
 	"forms-form-editor-prop-rl-deps": "Resource loader dependencies",
 	"forms-form-editor-prop-rl-deps-help": "Specify list of ResourceLoader modules that should be loaded when the form is instantiated",
 	"forms-form-editor-prop-targettypeemail": "Email",
@@ -108,5 +108,11 @@
 	"forms-editor-toolbar-done": "Done",
 	"forms-editor-group-empty-help": "Form currently has no elements. Open \"Form elements\" tab and drag elements here",
 	"forms-form-editor-form-props-summary-label": "Summary",
-	"forms-form-editor-form-props-summary-placeholder": "Describe what you changed"
+	"forms-form-editor-form-props-summary-placeholder": "Describe what you changed",
+	"forms-target-page-label": "Target page",
+	"forms-editor-create-form-instance-label": "Create using this form",
+	"forms-form-definition-label": "Form to use",
+	"forms-page-already-exists-no-form": "This page already exists, but was not created by a form",
+	"forms-definitions-not-exist": "Form \"$1\" does not exist",
+	"forms-action-edit-with-form": "Edit with form"
 }

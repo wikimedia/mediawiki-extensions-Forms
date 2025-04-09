@@ -2,6 +2,7 @@ mw.ext.forms.form = mw.ext.forms.form || {};
 mw.ext.forms.form.FormProperties = function ( cfg ) {
 	cfg = cfg || {};
 	this.itemsForm = cfg.itemsForm;
+	this.$overlay = true;
 	const sa = this;
 	cfg.definition = {
 		buttons: [],
@@ -165,6 +166,14 @@ mw.ext.forms.form.FormProperties = function ( cfg ) {
 										const parsed = this.parseItems( target.getAdditionalFields(), this.getItem( 'target.additional_layout' ), true );
 										target.setItems( parsed );
 										this.selectedTarget = target;
+										if ( target instanceof mw.ext.forms.target.WikipageTarget ) {
+											this.hideItem( 'show_target_afterAction' );
+											this.hideItem( 'target.afterAction.type' );
+											this.hideItem( 'target.afterAction.url' );
+											this.hideItem( 'target.afterAction.callback' );
+										} else {
+											this.showItem( 'show_target_afterAction' );
+										}
 									}
 								}
 							},
@@ -286,11 +295,11 @@ mw.ext.forms.form.FormProperties.prototype.onParseComplete = function ( form, it
 	targetPicker.setOptions( options );
 	if ( form.data.hasOwnProperty( 'target' ) ) {
 		targetPicker.setValue( form.data.target.type );
-		if ( form.selectedTarget !== null ) {
+		if ( form.selectedTarget ) {
 			form.selectedTarget.setValue( form.data.target );
 		}
 	} else {
-		targetPicker.setValue( 'database' );
+		targetPicker.setValue( 'json-on-wikipage' );
 	}
 
 	const sa = this;
@@ -317,11 +326,24 @@ mw.ext.forms.form.FormProperties.prototype.onParseComplete = function ( form, it
 };
 
 mw.ext.forms.form.FormProperties.prototype.onBeforeSubmitData = function ( form, data ) {
-	if ( this.selectedTarget !== null ) {
+	if ( form.selectedTarget instanceof mw.ext.forms.target.FormTarget ) {
 		data.target = form.selectedTarget.getValue();
 	}
 	if ( !data.show_target_afterAction ) {
 		delete ( data.target.afterAction );
 	}
 	return mw.ext.forms.form.FormProperties.parent.prototype.onBeforeSubmitData.call( this, form, data );
+};
+
+mw.ext.forms.form.FormProperties.prototype.setOverlay = function ( overlay ) {
+	// This that should not be: Set $overlay after the fact
+	this.$overlay = overlay;
+	this.form.items.inputs[ 'target.type' ].dropdownWidget.$overlay = overlay;
+	overlay.append( this.form.items.inputs[ 'target.type' ].dropdownWidget.menu.$element );
+
+	this.form.items.inputs.extends.dropdownWidget.$overlay = overlay;
+	overlay.append( this.form.items.inputs.extends.dropdownWidget.menu.$element );
+
+	this.form.items.inputs.categories.categoryMultiselectWidget.$overlay = overlay;
+	overlay.append( this.form.items.inputs.categories.categoryMultiselectWidget.menu.$element );
 };

@@ -40,12 +40,15 @@
 			}
 		}
 	},
-	"callback": "mwsInitComponents",
+	"callback": "MediaWiki\\Extension\\Forms\\Setup::callback",
 	"ServiceWiringFiles": [
 		"ServiceWiring.php"
 	],
 	"SpecialPages": {
-		"CreateFormInstance": "MediaWiki\\Extension\\Forms\\Special\\CreateFormInstance",
+		"EditWithForm": {
+			"class": "MediaWiki\\Extension\\Forms\\Special\\EditWithForm",
+			"services": [ "FormsDefinitionManager", "TitleFactory", "RevisionLookup" ]
+		},
 		"FormEditor": {
 			"class": "MediaWiki\\Extension\\Forms\\Special\\FormEditor",
 			"services": [
@@ -92,6 +95,7 @@
 		"ext.forms.form.editor": {
 			"scripts": [
 				"target/FormTarget.js",
+				"target/WikipageTarget.js",
 				"target/JsonOnWikiPage.js",
 				"target/Database.js",
 				"target/Template.js",
@@ -274,8 +278,12 @@
 		"remoteExtPath": "Forms/resources"
 	},
 	"HookHandlers": {
-		"discovery-skin": {
-			"class": "\\MediaWiki\\Extension\\Forms\\HookHandler\\DiscoverySkin"
+		"addContentActions": {
+			"class": "\\MediaWiki\\Extension\\Forms\\HookHandler\\AddContentActions",
+			"services": [ "SpecialPageFactory", "WikiPageFactory" ]
+		},
+		"addContentActionsDiscovery": {
+			"class": "\\MediaWiki\\Extension\\Forms\\HookHandler\\AddContentActionsDiscovery"
 		},
 		"addFormAutosaveTable": {
 			"class": "MediaWiki\\Extension\\Forms\\HookHandler\\LoadExtensionSchemaUpdates\\AddFormAutosaveTable"
@@ -285,19 +293,22 @@
 		},
 		"addFormRevisionTable": {
 			"class": "MediaWiki\\Extension\\Forms\\HookHandler\\LoadExtensionSchemaUpdates\\AddFormRevisionTable"
+		},
+		"setupContentModels": {
+			"class": "MediaWiki\\Extension\\Forms\\HookHandler\\SetupContentModels"
 		}
 	},
 	"Hooks": {
-		"ContentHandlerDefaultModelFor": "MediaWiki\\Extension\\Forms\\Setup::onContentHandlerDefaultModelFor",
-		"ParserFirstCallInit": "MediaWiki\\Extension\\Forms\\Setup::onParserFirstCallInit",
-		"SkinTemplateNavigation::Universal": "MediaWiki\\Extension\\Forms\\Setup::onSkinTemplateNavigation_Universal",
-		"CodeEditorGetPageLanguage": "MediaWiki\\Extension\\Forms\\Setup::onCodeEditorGetPageLanguage",
+		"ContentHandlerDefaultModelFor": "setupContentModels",
+		"SkinTemplateNavigation::Universal": "addContentActions",
+		"CodeEditorGetPageLanguage": "setupContentModels",
 		"LoadExtensionSchemaUpdates": [
 			"addFormAutosaveTable",
 			"addFormDataTable",
 			"addFormRevisionTable"
 		],
-		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin"
+		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "addContentActionsDiscovery",
+		"MediaWikiServices": "setupContentModels"
 	},
 	"manifest_version": 2,
 	"load_composer_autoloader": true

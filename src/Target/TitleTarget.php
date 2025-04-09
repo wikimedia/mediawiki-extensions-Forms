@@ -11,16 +11,15 @@ use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Status\Status;
+use MediaWiki\Storage\PageUpdater;
 use MediaWiki\Title\Title;
 
 abstract class TitleTarget implements ITarget {
 	/** @var array */
-	protected $reservedFields = [ '_form', '_form_rev', '_id' ];
+	protected $reservedFields = [ '_form', '_form_rev' ];
 
-	/**
-	 * @var string
-	 */
-	protected $pageName = '';
+	/** @var Title */
+	protected $targetTitle;
 
 	/**
 	 * @var string
@@ -48,16 +47,12 @@ abstract class TitleTarget implements ITarget {
 	protected $services = null;
 
 	/**
-	 * @param string $pageName
 	 * @param string $form
-	 * @param bool $exists
+	 * @param Title $title
 	 */
-	protected function __construct( $pageName, $form, $exists ) {
-		$this->pageName = $pageName;
-		// Make sure operating page name is not suffixed
-		$this->stripExtension();
+	protected function __construct( string $form, Title $title ) {
 		$this->form = $form;
-		$this->exists = $exists;
+		$this->targetTitle = $title;
 		$this->services = MediaWikiServices::getInstance();
 	}
 
@@ -66,21 +61,16 @@ abstract class TitleTarget implements ITarget {
 	 * @return ITarget
 	 */
 	public static function factory( HashConfig $config ) {
-		if ( !$config->has( 'title' ) || !$config->has( 'form' ) ) {
+		if ( !$config->has( 'form' ) || !$config->has( 'title' ) ) {
 			return null;
 		}
-		$pageName = $config->get( 'title' );
-		$exists = false;
-		if ( $config->has( '_id' ) ) {
-			$title = Title::newFromText( $config->get( '_id' ) );
-			if ( $title instanceof Title &&
-				$title->exists()
-			) {
-				$exists = true;
-				$pageName = $title->getPrefixedDBkey();
-			}
+		$title = MediaWikiServices::getInstance()->getTitleFactory()->newFromText( $config->get( 'title' ) );
+		if ( !$title ) {
+			throw new \RuntimeException(
+				'Invalid title ' . $config->get( 'title' ) . ' for form target'
+			);
 		}
-		return new static( $pageName, $config->get( 'form' ), $exists );
+		return new static( $config->get( 'form' ), $title );
 	}
 
 	/**
@@ -92,15 +82,10 @@ abstract class TitleTarget implements ITarget {
 		$this->data = $formsubmittedData;
 		$this->summary = $summary;
 
-		if ( !$this->exists ) {
-			$this->parsePageName();
-		}
-
 		if ( !$this->checkPermissions() ) {
 			return Status::newFatal( 'badaccess-group0' );
 		}
 		$this->addFormDataToPage();
-		$this->addPageNameToData();
 		return $this->saveToPage();
 	}
 
@@ -110,7 +95,7 @@ abstract class TitleTarget implements ITarget {
 	public function getDefaultAfterAction() {
 		return [
 			"type" => "redirect",
-			"url" => $this->getTitleFromPageName()->getFullURL()
+			"url" => $this->targetTitle->getFullURL()
 		];
 	}
 
@@ -126,66 +111,8 @@ abstract class TitleTarget implements ITarget {
 	}
 
 	/**
-	 * @param bool $makeSureIsValid If true it will set page name that is surely creatable
+	 * @return void
 	 */
-	protected function parsePageName( $makeSureIsValid = true ) {
-		$vars = $this->getPageNameVars();
-		foreach ( $vars as $placeholder => $var ) {
-			$replacement = isset( $this->data[$var] ) ? $this->data[$var] : '';
-			if ( $var === '_form' ) {
-				$replacement = $this->form;
-			}
-			if ( $var === '_user' ) {
-				$user = RequestContext::getMain()->getUser();
-				if ( $user->isAnon() ) {
-					$replacement = '';
-				} else {
-					$replacement = $user->getName();
-				}
-			}
-			if ( !empty( $replacement ) ) {
-				$this->pageName = preg_replace( "/$placeholder/", $replacement, $this->pageName );
-			}
-		}
-
-		if ( $makeSureIsValid ) {
-			$this->getNextAvailablePageName();
-		}
-	}
-
-	/**
-	 * @return array
-	 */
-	protected function getPageNameVars() {
-		$matches = [];
-		$vars = [];
-		preg_match_all( '/{{(.*?)}}/', $this->pageName, $matches );
-		foreach ( $matches[0] as $idx => $var ) {
-			$vars[$var] = $matches[1][$idx];
-		}
-
-		return $vars;
-	}
-
-	/**
-	 * @param int $increment
-	 * @return string
-	 */
-	protected function getNextAvailablePageName( $increment = 0 ) {
-		$pageName = $this->pageName;
-		if ( $increment ) {
-			$pageName = "$pageName $increment";
-		}
-		$title = $this->getTitleFromPageName( $pageName );
-		if ( $title instanceof Title && $title->exists() ) {
-			$increment++;
-			return $this->getNextAvailablePageName( $increment );
-		}
-
-		$this->pageName = $pageName;
-		return $this->pageName;
-	}
-
 	protected function addFormDataToPage() {
 		$this->data['_form'] = $this->form;
 		if ( $this->exists === false ) {
@@ -193,33 +120,29 @@ abstract class TitleTarget implements ITarget {
 		}
 	}
 
-	protected function addPageNameToData() {
-		$this->data['_id'] = $this->getTitleFromPageName()->getPrefixedDBkey();
-	}
-
 	/**
 	 * @return Status
 	 */
 	protected function saveToPage() {
-		$title = $this->getTitleFromPageName();
 		try {
-			$wikipage = $this->services->getWikiPageFactory()->newFromTitle( $title );
+			$wikipage = $this->services->getWikiPageFactory()->newFromTitle( $this->targetTitle );
 			$content = ContentHandler::makeContent(
 				$this->getDataForContent(),
-				$title
+				$this->targetTitle
 			);
 			$user = RequestContext::getMain()->getUser();
 			$updater = $wikipage->newPageUpdater( $user );
 			$updater->setContent( SlotRecord::MAIN, $content );
+			$this->setUpdaterContent( $updater );
 			$summary = $this->summary ?: wfMessage( 'forms-target-json-page-summary', $this->form )->plain();
 			$comment = CommentStoreComment::newUnsavedComment( $summary );
 			$updater->saveRevision( $comment );
 			$saveStatus = $updater->getStatus();
 			if ( $saveStatus->isOK() ) {
 				return Status::newGood( [
-					'title' => $title->getPrefixedDBkey(),
-					'id' => $title->getArticleID(),
-					'fullURL' => $title->getFullURL()
+					'title' => $this->targetTitle->getPrefixedDBkey(),
+					'id' => $this->targetTitle->getArticleID(),
+					'fullURL' => $this->targetTitle->getFullURL()
 				] );
 			}
 			return $saveStatus;
@@ -228,22 +151,8 @@ abstract class TitleTarget implements ITarget {
 		}
 	}
 
-	/**
-	 * @param string $pageName
-	 * @return Title
-	 */
-	protected function getTitleFromPageName( $pageName = '' ) {
-		if ( empty( $pageName ) ) {
-			$pageName = $this->pageName;
-		}
-		return Title::newFromText( $pageName . $this->getPageFormat() );
-	}
-
-	protected function stripExtension() {
-		$extensionLen = strlen( $this->getPageFormat() );
-		if ( substr( $this->pageName, -$extensionLen ) === $this->getPageFormat() ) {
-			$this->pageName = substr( $this->pageName, 0, -$extensionLen );
-		}
+	protected function setUpdaterContent( PageUpdater $updater ) {
+		// Do nothing by default
 	}
 
 	/**
@@ -251,24 +160,10 @@ abstract class TitleTarget implements ITarget {
 	 * @return bool
 	 */
 	protected function checkPermissions( $action = 'edit' ) {
-		$title = $this->getTitleFromPageName();
-		if ( $title instanceof Title === false ) {
-			return false;
-		}
-
+		$title = $this->targetTitle;
 		$user = RequestContext::getMain()->getUser();
-		$userCan = MediaWikiServices::getInstance()->getPermissionManager()
-			->userCan( $action, $user, $title );
-		if ( $userCan ) {
-			return true;
-		}
-		return false;
+		return MediaWikiServices::getInstance()->getPermissionManager()->userCan( $action, $user, $title );
 	}
-
-	/**
-	 * @return string
-	 */
-	abstract protected function getPageFormat();
 
 	/**
 	 * @return string
