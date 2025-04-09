@@ -33,9 +33,14 @@ class FormDefinitionEditAction extends FormDataEditAction {
 
 	public function show() {
 		parent::show();
-		$formName = $this->getCurrentContent()->getTitleWithoutExtension( $this->getTitle() );
+		// Strip '.form' from the title
+		$formName = substr(
+			$this->getTitle()->getPrefixedText(),
+			0,
+			strlen( $this->getTitle()->getPrefixedText() ) - strlen( '.form' )
+		);
 		$this->getOutput()->redirect(
-			SpecialPage::getTitleFor( 'FormEditor' )->getLocalURL() . "/$formName"
+			SpecialPage::getTitleFor( 'FormEditor', $formName )->getLocalURL()
 		);
 	}
 

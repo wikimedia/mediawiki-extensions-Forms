@@ -5,9 +5,13 @@ namespace MediaWiki\Extension\Forms\ContentHandler;
 use MediaWiki\Content\Content;
 use MediaWiki\Content\JsonContentHandler;
 use MediaWiki\Content\Renderer\ContentParseParams;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\Forms\Action\FormDefinitionEditAction;
 use MediaWiki\Extension\Forms\Action\FormDefinitionSourceEditAction;
 use MediaWiki\Extension\Forms\Content\FormDefinitionContent;
+use MediaWiki\Extension\Forms\Target\TitleTarget;
+use MediaWiki\Extension\Forms\Util\PickerMaker;
+use MediaWiki\Extension\Forms\Util\TargetFactory;
 use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Title\Title;
 
@@ -77,8 +81,21 @@ class FormDefinitionHandler extends JsonContentHandler {
 		$data = (array)$content->getData()->getValue();
 		$this->addCategoriesFromJSON( $output, $data );
 
-		$formDataHandler = new FormDataHandler();
-		$formDataHandler->fillParserOutputForDefinition( $content, $cpoParams, $output, $definitionForm );
+		$targetData = isset( $data['target'] ) ? (array)$data['target'] : [];
+		if ( !$targetData ) {
+			return;
+		}
+		// Title is needed to create the target, but since we are not actually executing the target,
+		// we can use a dummy title.
+		$targetData['title'] = 'Dummy';
+		$targetData['form'] = $definitionForm;
+		$target = ( new TargetFactory() )->makeTarget( $targetData['type'], $targetData );
+		if ( $target instanceof TitleTarget ) {
+			$this->outputTitleInputForm( $output, $definitionForm );
+		} else {
+			$formDataHandler = new FormDataHandler();
+			$formDataHandler->fillParserOutputForDefinition( $content, $cpoParams, $output, $definitionForm );
+		}
 	}
 
 	/**
@@ -92,4 +109,14 @@ class FormDefinitionHandler extends JsonContentHandler {
 			$output->addCategory( $categoryName, $categoryName );
 		}
 	}
+
+	private function outputTitleInputForm( ParserOutput &$output, string $form ) {
+		RequestContext::getMain()->getOutput()->enableOOUI();
+		$output->setEnableOOUI( true );
+
+		$form = ( new PickerMaker() )->makeTargetTitlePicker( $form );
+
+		$output->setRawText( $form->toString() );
+	}
+
 }

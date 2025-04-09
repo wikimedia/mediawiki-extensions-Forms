@@ -13,26 +13,12 @@
 		return mw.message( 'forms-form-editor-prop-targettypedatabase' ).text();
 	};
 
-	mw.ext.forms.target.Database.prototype.getAdditionalFields = function () {
-		return [ {
-			type: 'text',
-			name: 'target.title',
-			label: mw.message( 'forms-form-editor-prop-targettitle' ).text()
-		} ];
-	};
-
 	mw.ext.forms.target.Database.prototype.getValue = function () {
 		return {
-			type: this.getName(),
-			title: this.items[ 'target.title' ].getValue()
+			type: this.getName()
 		};
 	};
 
-	mw.ext.forms.target.Database.prototype.setValue = function ( value ) {
-		if ( value.hasOwnProperty( 'title' ) && this.items.hasOwnProperty( 'target.title' ) ) {
-			this.items[ 'target.title' ].setValue( value.title );
-		}
-	};
-
-	mw.ext.forms.registry.Target.register( 'database', mw.ext.forms.target.Database );
+	// Disabled, do we need it?
+	// mw.ext.forms.registry.Target.register( 'database', mw.ext.forms.target.Database );
 }( mediaWiki ) );

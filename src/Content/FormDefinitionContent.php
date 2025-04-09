@@ -2,9 +2,6 @@
 
 namespace MediaWiki\Extension\Forms\Content;
 
-use MediaWiki\Html\Html;
-use MediaWiki\Title\Title;
-
 class FormDefinitionContent extends FormDataContent {
 	/**
 	 * @var string
@@ -17,23 +14,6 @@ class FormDefinitionContent extends FormDataContent {
 	 */
 	public function __construct( $text, $modelId = 'FormDefinition' ) {
 		parent::__construct( $text, $modelId );
-	}
-
-	/**
-	 * @param string $action
-	 * @param Title|null $for
-	 *
-	 * @return string
-	 */
-	public function getFormContainer( $action = 'view', $for = null ) {
-		$formConfig = [
-			'data-action' => 'create',
-			'class' => 'forms-form-container'
-		];
-
-		$formConfig['data-form'] = $this->currentForm;
-
-		return Html::element( 'div', $formConfig );
 	}
 
 	/**
