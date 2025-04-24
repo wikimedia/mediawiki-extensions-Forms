@@ -101,5 +101,14 @@
 	"forms-editor-group-empty-help": "Form currently has no elements. Open \"Form elements\" tab and drag elements here",
 	"forms-form-editor-form-props-summary-label": "Summary",
 	"forms-form-editor-form-props-summary-placeholder": "Describe what you changed",
-	"forms-editor-toolbar-save-label": "Save"
+	"forms-editor-toolbar-save-label": "Save",
+	"forms-form-editor-prop-showformname": "Display form name",
+	"apihelp-forms-form-submit-param-data": "Data submitted by the form",
+	"apihelp-forms-form-submit-param-form": "Name of the form",
+	"apihelp-forms-form-submit-param-target": "Name of the target",
+	"apihelp-forms-form-submit-param-summary": "Edit summary",
+	"apihelp-forms-get-definitions-param-definitiontype": "Requested type of the form definition",
+	"apihelp-forms-get-definitions-param-name": "Name of the form definition",
+	"apihelp-forms-get-definitions-param-type": "Type of the request. Can be 'query-available' or 'get-definition'",
+	"apihelp-forms-get-definitions-param-validfortime": "Time for which the form definition is valid"
 }

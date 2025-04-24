@@ -104,5 +104,14 @@
 	"forms-editor-toolbar-done": "تم",
 	"forms-editor-group-empty-help": "لا يحتوي النموذج حاليا على أي عناصر. افتح علامة التبويب \"عناصر النموذج\" واسحب العناصر هنا",
 	"forms-form-editor-form-props-summary-label": "ملخص",
-	"forms-form-editor-form-props-summary-placeholder": "صف ما غيرته"
+	"forms-form-editor-form-props-summary-placeholder": "صف ما غيرته",
+	"forms-form-editor-prop-showformname": "عرض اسم النموذج",
+	"apihelp-forms-form-submit-param-data": "البيانات المرسلة بواسطة النموذج",
+	"apihelp-forms-form-submit-param-form": "اسم النموذج",
+	"apihelp-forms-form-submit-param-target": "اسم الهدف",
+	"apihelp-forms-form-submit-param-summary": "تحرير الملخص",
+	"apihelp-forms-get-definitions-param-definitiontype": "نوع التعريف المطلوب للنموذج",
+	"apihelp-forms-get-definitions-param-name": "اسم تعريف النموذج",
+	"apihelp-forms-get-definitions-param-type": "نوع الطلب. يمكن أن يكون \"متاح للاستعلام\" أو \"الحصول على التعريف\"",
+	"apihelp-forms-get-definitions-param-validfortime": "الوقت الذي يكون فيه تعريف النموذج صالحًا"
 }

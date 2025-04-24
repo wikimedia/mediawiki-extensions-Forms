@@ -93,5 +93,6 @@
 	"forms-form-editor-prop-target-email-subject": "Assunto",
 	"forms-form-editor-prop-target-email-body": "Conteúdo",
 	"forms-error-target-mail-send-failed": "O envio de correio eletrónico falhou",
-	"forms-error-target-mail-no-mail": "Não há nenhum endereço de correio eletrónico válido disponível"
+	"forms-error-target-mail-no-mail": "Não há nenhum endereço de correio eletrónico válido disponível",
+	"forms-form-editor-prop-showformname": "Apresentar nome do formulário"
 }

@@ -87,7 +87,7 @@
 	"apihelp-forms-form-submit-summary": "Biedt bewerking via formulieren",
 	"right-forms-edit-form-definition": "Formulierdefinities bewerken",
 	"action-forms-edit-form-definition": "formulierdefinities te bewerken",
-	"forms-action-editsource": "Bron bewerken",
+	"forms-action-editsource": "Bron van de definitie bewerken",
 	"forms-form-editor-prop-rl-deps": "Afhankelijkheden van de resource-lader",
 	"forms-form-editor-prop-rl-deps-help": "Geef een lijst op met ResourceLoader-modules die moeten worden geladen wanneer het formulier wordt aangemaakt",
 	"forms-form-editor-prop-targettypeemail": "E-mail",
@@ -102,5 +102,14 @@
 	"forms-editor-toolbar-done": "Klaar",
 	"forms-editor-group-empty-help": "Het formulier heeft nog geen elementen. Open het tabblad “Formulierelementen” en sleep elementen hierheen.",
 	"forms-form-editor-form-props-summary-label": "Samenvatting",
-	"forms-form-editor-form-props-summary-placeholder": "Beschrijf wat u hebt gewijzigd"
+	"forms-form-editor-form-props-summary-placeholder": "Beschrijf wat u hebt gewijzigd",
+	"forms-form-editor-prop-showformname": "Formuliernaam weergeven",
+	"apihelp-forms-form-submit-param-data": "Via het formulier ingediende gegevens",
+	"apihelp-forms-form-submit-param-form": "Naam van het formulier",
+	"apihelp-forms-form-submit-param-target": "Naam van het doelwit",
+	"apihelp-forms-form-submit-param-summary": "Bewerkingssamenvatting",
+	"apihelp-forms-get-definitions-param-definitiontype": "Gevraagd type van de formulierdefinitie",
+	"apihelp-forms-get-definitions-param-name": "Naam van de formulierdefinitie",
+	"apihelp-forms-get-definitions-param-type": "Het soort aanvraag. Kan ‘query-available’ of ‘get-definition’ zijn",
+	"apihelp-forms-get-definitions-param-validfortime": "Geldigheidsduur van de formulierdefinitie"
 }

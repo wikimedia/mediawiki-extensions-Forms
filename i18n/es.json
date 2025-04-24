@@ -76,5 +76,6 @@
 	"right-forms-edit-form-definition": "Editar las definiciones de los formularios",
 	"action-forms-create-form": "crear formularios",
 	"action-forms-edit-form-definition": "editar definiciones de formularios",
-	"forms-action-editsource": "Editar fuente"
+	"forms-action-editsource": "Editar fuente",
+	"forms-form-editor-prop-showformname": "Mostrar el nombre del formulario"
 }

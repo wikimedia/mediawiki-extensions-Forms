@@ -51,5 +51,6 @@
 	"forms-form-meta-tag": "Luotu käyttämällä lomaketta [[$1]] (versio: $2)",
 	"right-forms-create-form": "Luo lomakkeita",
 	"action-forms-create-form": "luo lomakkeita",
-	"forms-action-editsource": "Muokkaa wikitekstiä"
+	"forms-action-editsource": "Muokkaa wikitekstiä",
+	"forms-form-editor-prop-showformname": "Näytä lomakkeen nimi"
 }

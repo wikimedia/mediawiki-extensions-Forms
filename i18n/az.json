@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nemoralis",
+			"Əkrəm"
+		]
+	},
+	"apihelp-forms-form-submit-param-form": "Formanın adı",
+	"apihelp-forms-get-definitions-param-type": "Sorğu növü. Ya \"query-available\", ya da \"get-definition\" ola bilər."
+}

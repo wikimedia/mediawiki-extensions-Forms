@@ -3,7 +3,9 @@
 		"authors": [
 			"Ajeje Brazorf",
 			"Gomoko",
+			"JLTRY",
 			"Mahabarata",
+			"McDutchie",
 			"Paraboule",
 			"Verdy p"
 		]
@@ -89,7 +91,7 @@
 	"right-forms-edit-form-definition": "Modifier les définitions de formulaire",
 	"action-forms-create-form": "créer les formulaires",
 	"action-forms-edit-form-definition": "modifier les définitions de formulaire",
-	"forms-action-editsource": "Modifier la source",
+	"forms-action-editsource": "Modifier la source de la définition",
 	"forms-form-editor-prop-rl-deps": "Dépendances du chargeur de ressources",
 	"forms-form-editor-prop-rl-deps-help": "Spécifie la liste des modules du chargeur de ressources qui devraient être chargés lorsque le formulaire est instancié",
 	"forms-form-editor-prop-targettypeemail": "Courriel",
@@ -105,5 +107,14 @@
 	"forms-editor-group-empty-help": "Le formulaire n'a actuellement aucun élément. Ouvrez l'onglet \"Éléments de formulaire\" et faites glisser des éléments ici",
 	"forms-form-editor-form-props-summary-label": "Résumé",
 	"forms-form-editor-form-props-summary-placeholder": "Décrivez ce que vous avez modifié",
-	"forms-editor-toolbar-save-label": "Enregistrer"
+	"forms-editor-toolbar-save-label": "Enregistrer",
+	"forms-form-editor-prop-showformname": "Afficher le nom du formulaire",
+	"apihelp-forms-form-submit-param-data": "Données soumises par le formulaire",
+	"apihelp-forms-form-submit-param-form": "Nom du formulaire.",
+	"apihelp-forms-form-submit-param-target": "Nom de la tâche.",
+	"apihelp-forms-form-submit-param-summary": "Résumé de la modification",
+	"apihelp-forms-get-definitions-param-definitiontype": "Type demandé de la définition du formulaire",
+	"apihelp-forms-get-definitions-param-name": "Nom de la définition du formulaire",
+	"apihelp-forms-get-definitions-param-type": "Type de requête. Peut être 'query-available' ou 'get-definition'.",
+	"apihelp-forms-get-definitions-param-validfortime": "Durée pendant laquelle la définition du formulaire est valide"
 }

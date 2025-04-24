@@ -46,5 +46,8 @@
 	"forms-error-target-mail-send-failed": "메일 보내기 실패",
 	"forms-error-target-mail-no-mail": "유효한 이메일 주소가 없습니다",
 	"forms-editor-toolbar-cancel": "취소",
-	"forms-editor-toolbar-save-label": "저장"
+	"forms-editor-toolbar-save-label": "저장",
+	"apihelp-forms-form-submit-param-data": "폼을 통해 제출된 데이터",
+	"apihelp-forms-form-submit-param-form": "폼 이름",
+	"apihelp-forms-form-submit-param-summary": "편집 요약"
 }

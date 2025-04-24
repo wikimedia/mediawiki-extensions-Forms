@@ -58,5 +58,6 @@
 	"forms-editor-toolbar-save": "保存更改",
 	"forms-editor-toolbar-done": "完成",
 	"forms-form-editor-form-props-summary-label": "摘要",
-	"forms-form-editor-form-props-summary-placeholder": "描述您的更改"
+	"forms-form-editor-form-props-summary-placeholder": "描述您的更改",
+	"forms-form-editor-prop-showformname": "显示表单名称"
 }

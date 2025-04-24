@@ -93,5 +93,6 @@
 	"forms-form-editor-prop-target-email-subject": "Zadeva",
 	"forms-form-editor-prop-target-email-body": "Vsebina",
 	"forms-error-target-mail-send-failed": "Pošiljanje e-pošte ni uspelo",
-	"forms-error-target-mail-no-mail": "Ni veljavnega e-poštnega naslova"
+	"forms-error-target-mail-no-mail": "Ni veljavnega e-poštnega naslova",
+	"forms-form-editor-prop-showformname": "Prikaz imena obrazca"
 }

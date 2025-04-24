@@ -85,7 +85,7 @@
 	"right-forms-edit-form-definition": "уредување на одредби во обрасци",
 	"action-forms-create-form": "создавање на обрасци",
 	"action-forms-edit-form-definition": "уредување на одредби",
-	"forms-action-editsource": "Уреди извор",
+	"forms-action-editsource": "Уреди извор на одредбата",
 	"forms-form-editor-prop-rl-deps": "Зависности на ресурсниот вчитувач",
 	"forms-form-editor-prop-rl-deps-help": "Укажете список на модули ResourceLoader кои би се вчитале при отворањето на образецот",
 	"forms-form-editor-prop-targettypeemail": "Е-пошта",
@@ -101,5 +101,14 @@
 	"forms-editor-group-empty-help": "Образецот моментално нема елементи. Отворете го јазичето „Елементи на образецот“ и довлечете ги елементите тука",
 	"forms-form-editor-form-props-summary-label": "Опис",
 	"forms-form-editor-form-props-summary-placeholder": "Опишете ги направените измени",
-	"forms-editor-toolbar-save-label": "Зачувај"
+	"forms-editor-toolbar-save-label": "Зачувај",
+	"forms-form-editor-prop-showformname": "Прикажи име на образецот",
+	"apihelp-forms-form-submit-param-data": "Податоци поднесени од образецот",
+	"apihelp-forms-form-submit-param-form": "Назив на образецот",
+	"apihelp-forms-form-submit-param-target": "Назив на целта",
+	"apihelp-forms-form-submit-param-summary": "Опис на уредувањето",
+	"apihelp-forms-get-definitions-param-definitiontype": "Баран вид на одредба на образецот",
+	"apihelp-forms-get-definitions-param-name": "Назив на одредбата на образецот",
+	"apihelp-forms-get-definitions-param-type": "Вид на барањето. Може да биде „query-available“ или „get-definition“",
+	"apihelp-forms-get-definitions-param-validfortime": "Колку долго да важи одредбата на образецот"
 }
