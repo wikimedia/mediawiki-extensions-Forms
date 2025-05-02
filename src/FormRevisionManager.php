@@ -168,18 +168,16 @@ class FormRevisionManager {
 
 	/**
 	 * @param int $revId
-	 * @param stinrg $ts
+	 * @param string $ts
 	 * @return bool
 	 */
 	private function doUpdate( $revId, $ts ) {
-		$res = $this->db->update(
+		return $this->db->update(
 			static::TABLE,
 			[ static::FIELD_APPLIES_FROM => $ts ],
 			[ static::FIELD_REV_ID => $revId ],
 			__METHOD__
 		);
-
-		return $res;
 	}
 
 	/**
@@ -189,7 +187,7 @@ class FormRevisionManager {
 	 * @return bool
 	 */
 	private function doInsert( $pageId, $revId, $ts ) {
-		$res = $this->db->insert(
+		return $this->db->insert(
 			static::TABLE,
 			[
 				static::FIELD_REV_ID => $revId,
@@ -198,8 +196,6 @@ class FormRevisionManager {
 			],
 			__METHOD__
 		);
-
-		return $res;
 	}
 
 }

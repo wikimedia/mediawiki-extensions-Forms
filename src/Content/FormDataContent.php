@@ -3,8 +3,6 @@
 namespace MediaWiki\Extension\Forms\Content;
 
 use MediaWiki\Content\JsonContent;
-use MediaWiki\Html\Html;
-use MediaWiki\Json\FormatJson;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 
@@ -21,38 +19,6 @@ class FormDataContent extends JsonContent {
 	 */
 	public function __construct( $text, $modelId = "FormData" ) {
 		parent::__construct( $text, $modelId );
-	}
-
-	/**
-	 * @param string $action
-	 * @param Title|null $form
-	 *
-	 * @return string
-	 */
-	public function getFormContainer( $action = 'view', $form = null ) {
-		$formConfig = [
-			'data-action' => $action,
-			'class' => 'forms-form-container'
-		];
-
-		$data = $this->getData()->getValue();
-		if ( $action !== 'create' ) {
-			if ( !$this->getFormProps() ) {
-				return '';
-			}
-			unset( $data->_form );
-			$data = FormatJson::encode( $data );
-			$formConfig['data-data'] = $data;
-			$formConfig['data-form'] = $this->formName;
-			if ( $form instanceof Title && $form->exists() ) {
-				$firstRev = MediaWikiServices::getInstance()->getRevisionLookup()->getFirstRevision(
-						$form->toPageIdentity()
-					);
-				$formConfig['data-form-created'] = $firstRev->getTimestamp();
-			}
-		}
-
-		return Html::element( 'div', $formConfig );
 	}
 
 	/**
@@ -82,22 +48,6 @@ class FormDataContent extends JsonContent {
 	 */
 	public function isValid() {
 		return $this->getText() === '' || parent::isValid();
-	}
-
-	/**
-	 * @return bool
-	 */
-	private function getFormProps() {
-		if ( !$this->formName ) {
-			$data = $this->getData()->getValue();
-			if ( property_exists( $data, '_form' ) ) {
-				$this->formName = $data->_form;
-
-				return true;
-			}
-		}
-
-		return false;
 	}
 
 	/**

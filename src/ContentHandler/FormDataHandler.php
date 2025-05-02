@@ -114,8 +114,7 @@ class FormDataHandler extends JsonContentHandler {
 			throw new \InvalidArgumentException( 'FormDataHandler can only handle FormDataContent' );
 		}
 
-		$dbKey = $cpoParams->getPage()->getDBkey();
-		$title = Title::newFromDBkey( $dbKey );
+		$title = Title::castFromPageReference( $cpoParams->getPage() );
 		$data = $content->getData()->getValue() ?? new \stdClass;
 
 		if ( $content->isRedirect() ) {
@@ -123,7 +122,7 @@ class FormDataHandler extends JsonContentHandler {
 			if ( $destTitle instanceof Title ) {
 				$output->addLink( $destTitle );
 				if ( $cpoParams->getGenerateHtml() ) {
-					$output->setText(
+					$output->setRawText(
 						Article::getRedirectHeaderHtml( $title->getPageLanguage(), $destTitle )
 					);
 					$output->addModuleStyles( [ 'mediawiki.action.view.redirectPage' ] );
@@ -132,20 +131,21 @@ class FormDataHandler extends JsonContentHandler {
 			return;
 		}
 		$output->setDisplayTitle( $content->getDisplayTitle( $title ) );
-		$output->setText( $this->getFormContainer( $data, $defaultAction, $title ) );
+		$output->setRawText( $this->getFormContainer( $data, $defaultAction, $title ) );
 		$output->addModules( [ 'ext.forms.init' ] );
 	}
 
 	/**
 	 * @param mixed $data
 	 * @param string $action
-	 * @param Title|null $title
+	 * @param Title $title
 	 * @return string
 	 */
-	private function getFormContainer( $data, $action = 'view', $title = null ) {
+	private function getFormContainer( $data, $action, Title $title ) {
 		$formConfig = [
 			'data-action' => $action,
-			'class' => 'forms-form-container'
+			'class' => 'forms-form-container',
+			'data-target-title' => $title->getPrefixedDBkey(),
 		];
 		if ( $this->forcedFormName ) {
 			$formConfig['data-form'] = $this->forcedFormName;
@@ -159,7 +159,7 @@ class FormDataHandler extends JsonContentHandler {
 			$data = FormatJson::encode( $data );
 			$formConfig['data-data'] = $data;
 			$formConfig['data-form'] = $this->forcedFormName ?? $this->formName;
-			if ( $title instanceof Title && $title->exists() ) {
+			if ( $title->exists() ) {
 				$firstRev = MediaWikiServices::getInstance()->getRevisionLookup()
 					->getFirstRevision( $title->toPageIdentity() );
 				$formConfig['data-form-created'] = $firstRev->getTimestamp();

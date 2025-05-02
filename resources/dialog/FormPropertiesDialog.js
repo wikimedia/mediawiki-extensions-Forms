@@ -23,7 +23,7 @@ mw.ext.forms.dialog.FormPropertiesDialog.prototype.initialize = function () {
 		expanded: false
 	} );
 	this.$body.append( this.content.$element );
-
+	this.form.setOverlay( this.$overlay );
 	this.form.connect( this, {
 		layoutChange: function () {
 			this.updateSize();
@@ -41,7 +41,7 @@ mw.ext.forms.dialog.FormPropertiesDialog.prototype.getActionProcess = function (
 				this.pushPending();
 				const dfd = $.Deferred();
 				this.form.connect( this, {
-					dataSubmitted: function ( data ) { // eslint-disable-line no-unused-vars
+					dataSubmitted: function () {
 						dfd.resolve( this.close() );
 					},
 					validationFailed: function () {
