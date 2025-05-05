@@ -9,8 +9,6 @@
 		]
 	},
 	"forms-desc": "إطار عمل الشكل الشامل لميدياويكي",
-	"createforminstance": "إنشاء مثيل النموذج",
-	"forms-createforminstance-form-name": "أنشئ $1",
 	"formeditor": "محرر النموذج",
 	"forms-api-get-definitions-no-name": "يجب تعيين معلمة الاسم للنوع \"get-definition\"",
 	"forms-api-get-definitions-not-exist": "التعريف \" $1 \" غير موجود",

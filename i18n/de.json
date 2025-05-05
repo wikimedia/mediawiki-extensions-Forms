@@ -8,8 +8,6 @@
 		]
 	},
 	"forms-desc": "Allzweckformular-Framework für MediaWiki",
-	"createforminstance": "Instanz erzeugen",
-	"forms-createforminstance-form-name": "$1 erstellen",
 	"formeditor": "Formulareditor",
 	"forms-api-get-definitions-no-name": "Für \"get-definition\" muss ein Name angegeben sein",
 	"forms-api-get-definitions-not-exist": "Definition „$1“ existiert nicht",

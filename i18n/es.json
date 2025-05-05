@@ -5,8 +5,6 @@
 		]
 	},
 	"forms-desc": "Marco de formularios completo para MediaWiki",
-	"createforminstance": "Crear instancia de formulario",
-	"forms-createforminstance-form-name": "Crear $1",
 	"formeditor": "Editor de formularios",
 	"forms-api-get-definitions-not-exist": "La definición \"$1\" no existe",
 	"forms-target-json-page-summary": "Editado por el formulario: $1",

@@ -10,6 +10,7 @@
 	},
 	"forms-desc": "{{desc|name=Forms}}",
 	"editwithform": "Special page name for [[Special:EditWithForm]] special page",
+	"editwithform-with-title": "Special page title label. \n$1 - name of the page being edited",
 	"formeditor": "Special page name for [[Special:FormEditor]] special page",
 	"forms-api-get-definitions-no-name": "Error message when no name was given for \"name\" parameter in the \"forms-get-definitions\" api module",
 	"forms-api-get-definitions-not-exist": "Error message when the definition to the given name in the \"name\" parameter does not exist in the \"forms-get-definitions\" api module",
@@ -116,6 +117,5 @@
 	"forms-form-definition-label": "Field name",
 	"forms-page-already-exists-no-form": "Error message when the page already exists and no form is specified",
 	"forms-definitions-not-exist": "Error message when the definition to the given name is not a valid form definition.\n$1 - form name",
-	"forms-action-edit-with-form": "Label for content action link.\n{{Identical|Edit with form}}",
-	"editwithform-with-title": "Special page title label. \n$1 - name of the page being edited"
+	"forms-action-edit-with-form": "Label for content action link.\n{{Identical|Edit with form}}"
 }

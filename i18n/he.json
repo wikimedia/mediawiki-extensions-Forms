@@ -8,11 +8,11 @@
 		]
 	},
 	"forms-desc": "מסגרת טפסים כללית למדיה־ויקי",
-	"createforminstance": "יצירת מופע של טופס",
-	"forms-createforminstance-form-name": "יצירת $1",
+	"editwithform": "עריכה באמצעות טופס",
+	"editwithform-with-title": "עריכה באמצעות טופס: $1",
 	"formeditor": "עורך טפסים",
 	"forms-api-get-definitions-no-name": "פרמטר השם חייב להיות מוגדר בשביל הסוג \"get-definition\"",
-	"forms-api-get-definitions-not-exist": "ההגדרה \"$1\" אינה קיימת",
+	"forms-api-get-definitions-not-exist": "הטופס \"$1\" אינו קיים",
 	"forms-target-json-page-summary": "עריכה באמצעות טופס: $1",
 	"forms-error-no-form-specified": "לא צוין טופס",
 	"forms-form-edit-title": "עריכת $1",
@@ -95,7 +95,7 @@
 	"right-forms-edit-form-definition": "עריכת הגדרות טופס",
 	"action-forms-create-form": "ליצור טפסים",
 	"action-forms-edit-form-definition": "לערוך הגדרות טופס",
-	"forms-action-editsource": "עריכת קוד המקור של ההגדרה",
+	"forms-action-editsource": "עריכת קוד המקור",
 	"forms-form-editor-prop-rl-deps": "תלויות של ResourceLoader",
 	"forms-form-editor-prop-rl-deps-help": "קביעת רשימת מודולים של ResourceLoader שצריך לטעון כאשר הטופס מופעל",
 	"forms-form-editor-prop-targettypeemail": "דואר אלקטרוני",
@@ -110,5 +110,11 @@
 	"forms-editor-toolbar-done": "בוצע",
 	"forms-editor-group-empty-help": "לטופס אין כרגע רכיבים. יש לפתוח את הלשונית \"רכיבי טופס\" ולגרור רכיבים לכאן",
 	"forms-form-editor-form-props-summary-label": "תקציר",
-	"forms-form-editor-form-props-summary-placeholder": "תיאור השינויים"
+	"forms-form-editor-form-props-summary-placeholder": "תיאור השינויים",
+	"forms-target-page-label": "דף היעד",
+	"forms-editor-create-form-instance-label": "יצירה באמצעות הטופס הזה",
+	"forms-form-definition-label": "באיזה טופס להשתמש",
+	"forms-page-already-exists-no-form": "הדף הזה כבר קיים, אבל לא נוצר באמצעות טופס",
+	"forms-definitions-not-exist": "הטופס \"$1\" אינו קיים",
+	"forms-action-edit-with-form": "עריכה באמצעות טופס"
 }

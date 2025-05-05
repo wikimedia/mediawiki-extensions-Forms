@@ -4,7 +4,6 @@
 			"Ykhwong"
 		]
 	},
-	"forms-createforminstance-form-name": "$1 만들기",
 	"formeditor": "폼 편집기",
 	"forms-api-get-definitions-not-exist": "\"$1\" 정의가 존재하지 않습니다",
 	"forms-error-no-form-specified": "지정된 폼이 없습니다",

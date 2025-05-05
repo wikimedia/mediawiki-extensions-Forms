@@ -5,8 +5,6 @@
 		]
 	},
 	"forms-desc": "Estrutura de formulários completa para o MediaWiki",
-	"createforminstance": "Criar instância de formulário",
-	"forms-createforminstance-form-name": "Criar $1",
 	"formeditor": "Editor de formulários",
 	"forms-api-get-definitions-no-name": "O parâmetro do nome tem de ser definido para o tipo \"get-definition\"",
 	"forms-api-get-definitions-not-exist": "A definição \"$1\" não existe",
