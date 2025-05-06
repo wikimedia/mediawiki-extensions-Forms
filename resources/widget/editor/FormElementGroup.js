@@ -7,6 +7,9 @@
 		this.items = {};
 		this.dropAllowed = true;
 
+		this.renderedOptions = {};
+		this.wrappers = {};
+
 		this.createAreas();
 
 		this.$element.addClass( 'ext-forms-form-element-group' );
@@ -169,8 +172,13 @@
 	};
 
 	mw.ext.forms.widget.formElement.FormElementGroup.prototype.reRenderItem = function ( descriptor ) {
-		const newDescriptor = this.renderItem( descriptor, null, true );
-		this.$previewArea.find( '#' + descriptor.getIdentifier() ).replaceWith( newDescriptor.$element );
+		if ( this.wrappers[ descriptor.getIdentifier() ] ) {
+			this.wrappers[ descriptor.getIdentifier() ].reRender( descriptor );
+			this.items[ descriptor.getIdentifier() ] = descriptor;
+		} else {
+			const newDescriptor = this.renderItem( descriptor, null, true );
+			this.$previewArea.find( '#' + descriptor.getIdentifier() ).replaceWith( newDescriptor.$element );
+		}
 	};
 
 	mw.ext.forms.widget.formElement.FormElementGroup.prototype.getNewIdentifier = function () {
@@ -281,7 +289,8 @@
 			}
 		}
 
-		return rendered[ Object.keys( rendered )[ 0 ] ];
+		this.wrappers[ item.getIdentifier() ] = rendered[ Object.keys( rendered )[ 0 ] ];
+		return this.wrappers[ item.getIdentifier() ];
 	};
 
 	mw.ext.forms.widget.formElement.FormElementGroup.prototype.setValue = function ( value ) {
@@ -313,12 +322,17 @@
 	};
 
 	mw.ext.forms.widget.formElement.FormElementGroup.prototype.openItemOptions = function ( id, wrapper ) {
+		if ( this.renderedOptions.hasOwnProperty( id ) ) {
+			wrapper.popup.toggle( true );
+			return;
+		}
 		this.findElementByIdentifier( id ).done( ( element ) => {
 			wrapper.optionsPanel.clearItems();
 			const hasOptions = element.renderOptions( wrapper.optionsPanel, element.getValue() );
 			if ( hasOptions ) {
 				wrapper.openOptions();
 			}
+			this.renderedOptions[ id ] = true;
 		} );
 
 	};
