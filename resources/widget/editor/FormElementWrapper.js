@@ -53,6 +53,15 @@
 	OO.inheritClass( mw.ext.forms.widget.formElement.FormElementWrapper, OO.ui.Widget );
 	OO.mixinClass( mw.ext.forms.widget.formElement.FormElementWrapper, OO.ui.mixin.PopupElement );
 
+	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.reRender = function ( descriptor ) {
+		this.formDescriptor = descriptor;
+		this.origin = descriptor.getValueForPreview();
+		this.name = this.origin.name + '-wrapper';
+		this.layout.clearItems();
+		this.render = this.form.parseItems( [ this.origin ], this.layout, true );
+		this.render = this.render[ Object.keys( this.render )[ 0 ] ];
+	};
+
 	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.getNameAndToolsBadge = function () {
 
 		this.removeButton = new OO.ui.ButtonWidget( {
@@ -84,14 +93,6 @@
 			items: items,
 			classes: [ 'name-badge' ]
 		} );
-	};
-
-	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.getPopup = function () {
-		return this.popup;
-	};
-
-	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.getOptionsPanel = function () {
-		return this.optionsPanel;
 	};
 
 	mw.ext.forms.widget.formElement.FormElementWrapper.prototype.openOptions = function () {
