@@ -5,8 +5,6 @@
 		]
 	},
 	"forms-desc": "Vsestransko ogrodje obrazcev za MediaWiki",
-	"createforminstance": "Ustvari primerek obrazca",
-	"forms-createforminstance-form-name": "Ustvari $1",
 	"formeditor": "Urejevalnik obrazcev",
 	"forms-api-get-definitions-no-name": "Parameter imena mora biti nastavljen za tip »get-definition«",
 	"forms-api-get-definitions-not-exist": "Opredelitev »$1« ne obstaja",

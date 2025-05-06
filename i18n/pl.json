@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rail"
+		]
+	},
+	"editwithform": "Edytowanie formularzem",
+	"editwithform-with-title": "Edytowanie formularzem: $1",
+	"forms-api-get-definitions-not-exist": "Formularz „$1” nie istnieje",
+	"forms-action-editsource": "Edytuj kod źródłowy",
+	"forms-target-page-label": "Strona docelowa",
+	"forms-editor-create-form-instance-label": "Utwórz za pomocą formularza",
+	"forms-form-definition-label": "Formularz do użycia",
+	"forms-page-already-exists-no-form": "Ta strona już istnieje, ale nie została utworzona za pomocą formularza",
+	"forms-definitions-not-exist": "Formularz „$1” nie istnieje",
+	"forms-action-edit-with-form": "Edytuj formularzem"
+}

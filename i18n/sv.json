@@ -6,8 +6,6 @@
 		]
 	},
 	"forms-desc": "Allsidigt formulärramverk för MediaWiki",
-	"createforminstance": "Skapa formulärinstans",
-	"forms-createforminstance-form-name": "Skapa $1",
 	"formeditor": "Formulärredigerare",
 	"forms-api-get-definitions-no-name": "Namnparameter måste anges för \"get-definition\"",
 	"forms-api-get-definitions-not-exist": "Definition \"$1\" finns inte",

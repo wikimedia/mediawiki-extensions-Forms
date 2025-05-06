@@ -5,8 +5,6 @@
 		]
 	},
 	"forms-desc": "MediaWiki 的全能表單框架",
-	"createforminstance": "建立表單實例",
-	"forms-createforminstance-form-name": "建立$1",
 	"formeditor": "表單編輯器",
 	"forms-api-get-definitions-no-name": "必須為類型「get-definition」設定名稱參數",
 	"forms-api-get-definitions-not-exist": "定義「$1」不存在",

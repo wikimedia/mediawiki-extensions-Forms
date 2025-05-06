@@ -4,7 +4,6 @@
 			"MITO"
 		]
 	},
-	"forms-createforminstance-form-name": "Luo sivu $1",
 	"formeditor": "Lomakkeen muokkaaja",
 	"forms-api-get-definitions-not-exist": "Määritelmää \"$1\" ei ole olemassa",
 	"forms-form-edit-title": "Muokkaa sivua $1",

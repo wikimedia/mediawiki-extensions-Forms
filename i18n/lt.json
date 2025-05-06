@@ -5,8 +5,6 @@
 		]
 	},
 	"forms-desc": "MediaWiki universalių formų sistema",
-	"createforminstance": "Sukurti formos egzempliorių",
-	"forms-createforminstance-form-name": "Sukurti $1",
 	"formeditor": "Formos redaktorius",
 	"forms-api-get-definitions-no-name": "Pavadinimo parametras turi būti nustatytas tipui „get-definition“",
 	"forms-api-get-definitions-not-exist": "Apibrėžtis „$1“ neegzistuoja",

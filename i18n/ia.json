@@ -5,8 +5,6 @@
 		]
 	},
 	"forms-desc": "Quadro de formularios complete pro MediaWiki",
-	"createforminstance": "Crear instantia de formulario",
-	"forms-createforminstance-form-name": "Crear $1",
 	"formeditor": "Editor de formularios",
 	"forms-api-get-definitions-no-name": "Le parametro \"name\" debe esser definite pro le typo \"get-definition\"",
 	"forms-api-get-definitions-not-exist": "Le definition \"$1\" non existe",

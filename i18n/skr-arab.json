@@ -10,5 +10,7 @@
 	"forms-editor-toolbar-save-label": "بچاؤ",
 	"forms-editor-toolbar-done": "تھی ڳیا",
 	"forms-form-editor-form-props-summary-label": "خلاصہ",
-	"forms-form-editor-form-props-summary-placeholder": "بیان کرو جو تساں کیا تبدیل کیتے"
+	"forms-form-editor-form-props-summary-placeholder": "بیان کرو جو تساں کیا تبدیل کیتے",
+	"forms-target-page-label": "ہدف ورقہ",
+	"forms-definitions-not-exist": "فارم \"$1\" موجود کائنی"
 }
