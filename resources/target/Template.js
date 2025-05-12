@@ -30,7 +30,7 @@
 			namespace: 10,
 			required: true,
 			label: mw.message( 'forms-form-editor-prop-targettemplate' ).text(),
-			widget_$overlay: this.form.$overlay
+			widget_$overlay: this.standalone.$overlay
 		}, {
 			type: 'button',
 			name: 'target.importfromtemplate',
@@ -43,12 +43,7 @@
 					if ( !( this.selectedTarget instanceof mw.ext.forms.target.Template ) ) {
 						return;
 					}
-					OO.ui.confirm( mw.message( 'forms-form-editor-confirm-import-template' ).text() )
-						.done( ( confirmed ) => {
-							if ( confirmed ) {
-								this.selectedTarget.insertFromTemplate( this, sa );
-							}
-						} );
+					this.selectedTarget.insertFromTemplate( this, sa );
 				}
 			}
 		} ];
