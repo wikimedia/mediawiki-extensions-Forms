@@ -9,9 +9,11 @@
 		]
 	},
 	"forms-desc": "إطار عمل الشكل الشامل لميدياويكي",
+	"editwithform": "تحرير باستخدام النموذج",
+	"editwithform-with-title": "تعديل باستخدام النموذج: $1",
 	"formeditor": "محرر النموذج",
 	"forms-api-get-definitions-no-name": "يجب تعيين معلمة الاسم للنوع \"get-definition\"",
-	"forms-api-get-definitions-not-exist": "التعريف \" $1 \" غير موجود",
+	"forms-api-get-definitions-not-exist": "النموذج \"$1\" غير موجود",
 	"forms-target-json-page-summary": "تحرير حسب النموذج: $1",
 	"forms-error-no-form-specified": "لم يتم تحديد أي شكل",
 	"forms-form-edit-title": "تحرير $1",
@@ -94,7 +96,7 @@
 	"right-forms-edit-form-definition": "تحرير تعريفات النموذج",
 	"action-forms-create-form": "إنشاء النماذج",
 	"action-forms-edit-form-definition": "تحرير تعريفات النموذج",
-	"forms-action-editsource": "عدل مصدر التعريف",
+	"forms-action-editsource": "تعديل المصدر",
 	"forms-form-editor-prop-rl-deps": "تبعيات محمل الموارد",
 	"forms-form-editor-prop-rl-deps-help": "حدد قائمة بالوحدات النمطية لـ ResourceLoader التي يجب تحميلها عند إنشاء النموذج",
 	"forms-form-editor-prop-targettypeemail": "بريد إلكتروني",
@@ -109,5 +111,11 @@
 	"forms-editor-toolbar-done": "تم",
 	"forms-editor-group-empty-help": "لا يحتوي النموذج حاليا على أي عناصر. افتح علامة التبويب \"عناصر النموذج\" واسحب العناصر هنا",
 	"forms-form-editor-form-props-summary-label": "ملخص",
-	"forms-form-editor-form-props-summary-placeholder": "صف ما غيرته"
+	"forms-form-editor-form-props-summary-placeholder": "صف ما غيرته",
+	"forms-target-page-label": "الصفحة المستهدفة",
+	"forms-editor-create-form-instance-label": "إنشاء باستخدام هذا النموذج",
+	"forms-form-definition-label": "نموذج للاستخدام",
+	"forms-page-already-exists-no-form": "هذه الصفحة موجودة بالفعل، ولكن لم يتم إنشاؤها بواسطة نموذج",
+	"forms-definitions-not-exist": "النموذج \"$1\" غير موجود",
+	"forms-action-edit-with-form": "تحرير باستخدام النموذج"
 }
