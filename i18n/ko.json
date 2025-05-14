@@ -5,7 +5,7 @@
 		]
 	},
 	"formeditor": "폼 편집기",
-	"forms-api-get-definitions-not-exist": "\"$1\" 정의가 존재하지 않습니다",
+	"forms-api-get-definitions-not-exist": "\"$1\" 폼이 존재하지 않습니다",
 	"forms-error-no-form-specified": "지정된 폼이 없습니다",
 	"forms-form-edit-title": "$1 편집",
 	"forms-edit-error-form-sealed": "이 폼은 봉인되어 있어서 편집할 수 없습니다",
@@ -41,6 +41,7 @@
 	"apihelp-forms-form-submit-param-summary": "편집 요약",
 	"right-forms-create-form": "폼 만들기",
 	"action-forms-create-form": "폼을 만들",
+	"forms-action-editsource": "원본 편집",
 	"forms-form-editor-prop-rl-deps": "리소스 로더 의존성",
 	"forms-form-editor-prop-targettypeemail": "이메일",
 	"forms-form-editor-prop-target-email-receiver": "받는이",
@@ -48,5 +49,7 @@
 	"forms-error-target-mail-send-failed": "메일 보내기 실패",
 	"forms-error-target-mail-no-mail": "유효한 이메일 주소가 없습니다",
 	"forms-editor-toolbar-cancel": "취소",
-	"forms-editor-toolbar-save-label": "저장"
+	"forms-editor-toolbar-save-label": "저장",
+	"forms-target-page-label": "대상 문서",
+	"forms-definitions-not-exist": "\"$1\" 폼이 존재하지 않습니다"
 }
