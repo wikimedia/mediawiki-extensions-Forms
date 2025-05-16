@@ -9,5 +9,6 @@
 	"forms-editor-toolbar-done": "Готово",
 	"forms-form-editor-form-props-summary-label": "Опис",
 	"forms-form-editor-form-props-summary-placeholder": "Опишите шта сте променили",
-	"apihelp-forms-form-submit-param-summary": "Опис измене"
+	"apihelp-forms-form-submit-param-summary": "Опис измене",
+	"forms-action-editsource": "Уреди извор"
 }

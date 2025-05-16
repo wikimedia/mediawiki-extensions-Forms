@@ -14,5 +14,6 @@
 	"forms-editor-toolbar-cancel": "Չեղարկել",
 	"forms-editor-toolbar-done": "Արված է",
 	"forms-form-editor-form-props-summary-label": "Ամփոփում",
-	"apihelp-forms-form-submit-param-summary": "Խմբագրել մեկնաբանությունը"
+	"apihelp-forms-form-submit-param-summary": "Խմբագրել մեկնաբանությունը",
+	"forms-target-page-label": "Նպատակային էջ"
 }

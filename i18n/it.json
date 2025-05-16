@@ -21,7 +21,7 @@
 	"forms-label-production": "Produzione",
 	"forms-form-editor-prop-targettypetemplate": "Template",
 	"forms-form-editor-prop-targettemplate": "Template da usare",
-	"forms-action-editsource": "Modifica sorgente definizione",
+	"forms-action-editsource": "Modifica sorgente",
 	"forms-form-editor-prop-targettypeemail": "Email",
 	"forms-form-editor-prop-target-email-subject": "Oggetto",
 	"forms-form-editor-prop-target-email-body": "Contenuto",
@@ -29,5 +29,14 @@
 	"forms-error-target-mail-no-mail": "Nessun indirizzo email valido disponibile",
 	"forms-editor-toolbar-cancel": "Annulla",
 	"forms-editor-toolbar-done": "Fatto",
-	"forms-form-editor-form-props-summary-placeholder": "Descrivi cosa hai cambiato"
+	"forms-form-editor-form-props-summary-placeholder": "Descrivi cosa hai cambiato",
+	"editwithform": "Modifica tramite un modulo",
+	"editwithform-with-title": "Modifica tramite modulo: $1",
+	"forms-api-get-definitions-not-exist": "Modulo \"$1\" non esiste",
+	"forms-target-page-label": "Pagina di destinazione",
+	"forms-editor-create-form-instance-label": "Crea utilizzando questo modulo",
+	"forms-form-definition-label": "Modulo da utilizzare",
+	"forms-page-already-exists-no-form": "Questa pagina esiste già, ma non è stata creata da un modulo",
+	"forms-definitions-not-exist": "Modulo \"$1\" non esiste",
+	"forms-action-edit-with-form": "Modifica tramite un modulo"
 }

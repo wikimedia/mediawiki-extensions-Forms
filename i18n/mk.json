@@ -9,7 +9,7 @@
 	"forms-createforminstance-form-name": "Создај $1",
 	"formeditor": "Уредник на обрасци",
 	"forms-api-get-definitions-no-name": "Мора да биде зададен параметарот за име за типот „get-definition“",
-	"forms-api-get-definitions-not-exist": "Одредбата „$1“ не постои",
+	"forms-api-get-definitions-not-exist": "Образецот „$1“ не постои",
 	"forms-target-json-page-summary": "Уредување со образец: $1",
 	"forms-error-no-form-specified": "Нема укажано образец",
 	"forms-form-edit-title": "Уреди $1",
@@ -84,7 +84,7 @@
 	"right-forms-edit-form-definition": "уредување на одредби во обрасци",
 	"action-forms-create-form": "создавање на обрасци",
 	"action-forms-edit-form-definition": "уредување на одредби",
-	"forms-action-editsource": "Уреди извор на одредбата",
+	"forms-action-editsource": "Уреди извор",
 	"forms-form-editor-prop-rl-deps": "Зависности на ресурсниот вчитувач",
 	"forms-form-editor-prop-rl-deps-help": "Укажете список на модули ResourceLoader кои би се вчитале при отворањето на образецот",
 	"forms-form-editor-prop-targettypeemail": "Е-пошта",
@@ -108,5 +108,13 @@
 	"apihelp-forms-get-definitions-param-definitiontype": "Баран вид на одредба на образецот",
 	"apihelp-forms-get-definitions-param-name": "Назив на одредбата на образецот",
 	"apihelp-forms-get-definitions-param-type": "Вид на барањето. Може да биде „query-available“ или „get-definition“",
-	"apihelp-forms-get-definitions-param-validfortime": "Колку долго да важи одредбата на образецот"
+	"apihelp-forms-get-definitions-param-validfortime": "Колку долго да важи одредбата на образецот",
+	"editwithform": "Уреди со образец",
+	"editwithform-with-title": "Уреди со образец: $1",
+	"forms-target-page-label": "Целна страница",
+	"forms-editor-create-form-instance-label": "Создај со образецов",
+	"forms-form-definition-label": "Образец за употреба",
+	"forms-page-already-exists-no-form": "Оваа страница веќе постои, но не е направена со образец",
+	"forms-definitions-not-exist": "Образецот „$1“ не постои",
+	"forms-action-edit-with-form": "Уреди со образец"
 }

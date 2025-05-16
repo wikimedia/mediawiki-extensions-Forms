@@ -7,7 +7,7 @@
 	},
 	"forms-createforminstance-form-name": "$1 uleeën",
 	"formeditor": "Editeur fir Formulairen",
-	"forms-api-get-definitions-not-exist": "Definitioun \"$1\" gëtt et net",
+	"forms-api-get-definitions-not-exist": "De Formulaire „$1“ gëtt et net",
 	"forms-target-json-page-summary": "Mam Formulaire \"$1\" änneren",
 	"forms-error-no-form-specified": "Kee Formulaire uginn",
 	"forms-form-edit-title": "$1 änneren",
@@ -44,5 +44,9 @@
 	"forms-editor-toolbar-save-label": "Späicheren",
 	"forms-form-editor-form-props-summary-label": "Resumé",
 	"apihelp-forms-form-submit-param-form": "Numm vum Formulaire",
-	"apihelp-forms-form-submit-param-target": "Numm vum Zil"
+	"apihelp-forms-form-submit-param-target": "Numm vum Zil",
+	"forms-target-page-label": "Zilsäit",
+	"forms-form-definition-label": "Formulaire fir ze benotzen",
+	"forms-page-already-exists-no-form": "Dës Säit gëtt et schonn, mee se gouf net duerch e Formulaire ugeluecht",
+	"forms-definitions-not-exist": "De Formulaire „$1“ gëtt et net"
 }

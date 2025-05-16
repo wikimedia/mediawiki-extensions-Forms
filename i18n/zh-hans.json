@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"GuoPC",
 			"LittlePaw365",
 			"沈澄心"
 		]
@@ -8,7 +9,7 @@
 	"createforminstance": "创建表单实例",
 	"forms-createforminstance-form-name": "创建$1",
 	"formeditor": "表单编辑器",
-	"forms-api-get-definitions-not-exist": "定义“$1”不存在",
+	"forms-api-get-definitions-not-exist": "表单“$1”不存在",
 	"forms-target-json-page-summary": "按表单编辑：$1",
 	"forms-error-no-form-specified": "没有指定表单",
 	"forms-form-edit-title": "编辑$1",

@@ -111,5 +111,13 @@
 	"forms-editor-toolbar-done": "Generic label for an done button",
 	"forms-editor-group-empty-help": "Help text for the empty group in the form editor",
 	"forms-form-editor-form-props-summary-label": "Field label for the summary field in the form editor",
-	"forms-form-editor-form-props-summary-placeholder": "Placeholder text for the summary field in the form editor"
+	"forms-form-editor-form-props-summary-placeholder": "Placeholder text for the summary field in the form editor",
+	"editwithform": "Special page name for [[Special:EditWithForm]] special page",
+	"editwithform-with-title": "Special page title label. \n$1 - name of the page being edited",
+	"forms-target-page-label": "Label for the field specifying the target page in the form editor",
+	"forms-editor-create-form-instance-label": "Label for the button on Special:EditWithForm to create a new form instance",
+	"forms-form-definition-label": "Field name",
+	"forms-page-already-exists-no-form": "Error message when the page already exists and no form is specified",
+	"forms-definitions-not-exist": "Error message when the definition to the given name is not a valid form definition.\n$1 - form name",
+	"forms-action-edit-with-form": "Label for content action link.\n{{Identical|Edit with form}}"
 }
