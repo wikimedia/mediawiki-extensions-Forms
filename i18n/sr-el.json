@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"apihelp-forms-form-submit-param-summary": "Opis izmene",
+	"forms-action-editsource": "Uredi izvor",
+	"forms-editor-toolbar-cancel": "Otkaži",
+	"forms-editor-toolbar-save-label": "Sačuvaj",
+	"forms-editor-toolbar-done": "Gotovo",
+	"forms-form-editor-form-props-summary-label": "Opis",
+	"forms-form-editor-form-props-summary-placeholder": "Opišite šta ste promenili"
+}
