@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"forms-editor-toolbar-cancel": "Otkaži",
+	"forms-editor-toolbar-done": "Gotovo",
+	"forms-form-editor-form-props-summary-label": "Opis",
+	"forms-form-editor-form-props-summary-placeholder": "Opišite šta ste promenili",
+	"forms-editor-toolbar-save-label": "Sačuvaj"
+}
