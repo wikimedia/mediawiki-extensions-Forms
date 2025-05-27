@@ -199,6 +199,7 @@
 			}
 			this.removeElement( this.items[ id ] );
 		}
+		this.items = {};
 	};
 
 	mw.ext.forms.widget.formElement.FormElementGroup.prototype.removeElement = function ( item ) {
@@ -294,6 +295,7 @@
 	};
 
 	mw.ext.forms.widget.formElement.FormElementGroup.prototype.setValue = function ( value ) {
+		this.clearElements();
 		if ( !value ) {
 			return;
 		}

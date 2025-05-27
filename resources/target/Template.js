@@ -193,9 +193,29 @@
 
 	mw.ext.forms.target.Template.prototype.insertFromTemplate = function ( form, sa ) {
 		const group = sa.itemsForm.form.getItem( 'items' ),
-			value = [];
+			value = [],
+			processed = [];
+		for ( const itemId in group.items ) {
+			const item = group.items[ itemId ];
+			const itemName = item.values.name || null;
+			if ( !itemName ) {
+				value.push( item.values );
+				continue;
+			}
+			if ( this.fields.indexOf( itemName ) === -1 ) {
+				// Field no longer exists in template
+				continue;
+			}
+			// Already exists
+			value.push( item.values );
+			processed.push( itemName );
+		}
 		group.clearElements();
 		for ( let i = 0; i < this.fields.length; i++ ) {
+			if ( processed.indexOf( this.fields[ i ] ) !== -1 ) {
+				// Field already exists
+				continue;
+			}
 			value.push( {
 				type: 'text',
 				name: this.fields[ i ]

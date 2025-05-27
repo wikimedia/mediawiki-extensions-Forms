@@ -65,7 +65,8 @@ mw.ext.forms.dialog.SaveFormDefinitionDialog.prototype.getActionProcess = functi
 				this.itemsForm.submit();
 
 				$.when( propertiesPromise, itemsPromise ).done( ( properties, items ) => {
-					const data = $.extend( true, {}, this.formData, properties, items ),
+
+					const data = Object.assign( {}, properties, items ),
 						summary = this.summary.getValue();
 					const apiData = {
 						action: 'forms-form-submit',
