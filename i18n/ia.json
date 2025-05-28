@@ -5,6 +5,8 @@
 		]
 	},
 	"forms-desc": "Quadro de formularios complete pro MediaWiki",
+	"editwithform": "Modificar con formulario",
+	"editwithform-with-title": "Modificar con formulario: $1",
 	"formeditor": "Editor de formularios",
 	"forms-api-get-definitions-no-name": "Le parametro \"name\" debe esser definite pro le typo \"get-definition\"",
 	"forms-api-get-definitions-not-exist": "Le formulario “$1” non existe",
@@ -105,5 +107,11 @@
 	"forms-editor-toolbar-done": "Facite",
 	"forms-editor-group-empty-help": "Le formulario actualmente non ha elementos. Aperi le scheda “Elementos del formulario” e trahe elementos verso illo.",
 	"forms-form-editor-form-props-summary-label": "Summario",
-	"forms-form-editor-form-props-summary-placeholder": "Describe lo que tu ha cambiate"
+	"forms-form-editor-form-props-summary-placeholder": "Describe lo que tu ha cambiate",
+	"forms-target-page-label": "Pagina de destination",
+	"forms-editor-create-form-instance-label": "Crear con iste formulario",
+	"forms-form-definition-label": "Le formulario a usar",
+	"forms-page-already-exists-no-form": "Iste pagina ja exite, ma non ha essite create per un formulario",
+	"forms-definitions-not-exist": "Le formulario “$1” non existe",
+	"forms-action-edit-with-form": "Modificar con formulario"
 }
