@@ -46,7 +46,6 @@ class FormDefinitionEditAction extends FormDataEditAction {
 
 	/**
 	 * @return string
-	 * @throws \MWException
 	 */
 	protected function getCreateRedirect() {
 		return SpecialPage::getTitleFor( 'FormEditor' )->getLocalURL();

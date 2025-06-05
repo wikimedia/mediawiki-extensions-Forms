@@ -2,6 +2,7 @@
 
 namespace MediaWiki\Extension\Forms;
 
+use InvalidArgumentException;
 use MediaWiki\Content\TextContent;
 use MediaWiki\Extension\Forms\Content\FormDefinitionContent;
 use MediaWiki\Json\FormatJson;
@@ -52,12 +53,12 @@ class DefinitionManager {
 	 * @param string $definition
 	 * @param string $validForTime Get definition as it was on timestamp
 	 * @return string Definition at given ts or latest definition if versionining does not apply or is invalid
-	 * @throws \MWException
+	 * @throws InvalidArgumentException
 	 */
 	public function getDefinition( $definition, $validForTime = '' ) {
 		$definition = $this->normalizeDefinitionName( $definition );
 		if ( !$this->definitionExists( $definition ) ) {
-			throw new \MWException( 'Definition does not exist' );
+			throw new InvalidArgumentException( 'Definition does not exist' );
 		}
 		if ( $validForTime !== '' && $this->definitionIsWikipage( $definition ) ) {
 			$title = $this->getTitleFromDefinitionName( $definition );
@@ -157,12 +158,12 @@ class DefinitionManager {
 	 *
 	 * @param string $name
 	 * @return string
-	 * @throws \MWException
+	 * @throws InvalidArgumentException
 	 */
 	public function getDefinitionLang( $name ) {
 		$name = $this->normalizeDefinitionName( $name );
 		if ( !$this->definitionExists( $name ) ) {
-			throw new \MWException( 'Definition does not exist' );
+			throw new InvalidArgumentException( 'Definition does not exist' );
 		}
 		$info = $this->definitions[$name];
 		return $info['lang'];
