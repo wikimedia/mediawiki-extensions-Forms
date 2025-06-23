@@ -20,6 +20,7 @@ class DefinitionManager {
 
 	public const SOURCE_ATTRIBUTE = 'attribute';
 	public const SOURCE_WIKIPAGE = 'wikipage';
+	public const DEFINITION_PAGE_SUFFIX = '.form';
 
 	/**
 	 * @var array
@@ -54,6 +55,7 @@ class DefinitionManager {
 	 * @throws \MWException
 	 */
 	public function getDefinition( $definition, $validForTime = '' ) {
+		$definition = $this->normalizeDefinitionName( $definition );
 		if ( !$this->definitionExists( $definition ) ) {
 			throw new \MWException( 'Definition does not exist' );
 		}
@@ -83,6 +85,7 @@ class DefinitionManager {
 	 * @return bool
 	 */
 	public function definitionIsWikipage( $definitionName ) {
+		$definitionName = $this->normalizeDefinitionName( $definitionName );
 		if ( $this->definitionExists( $definitionName ) === false ) {
 			return false;
 		}
@@ -100,6 +103,7 @@ class DefinitionManager {
 	 * @return int
 	 */
 	public function getLatestDefinitionRev( $definitionName ) {
+		$definitionName = $this->normalizeDefinitionName( $definitionName );
 		if ( !$this->definitionIsWikipage( $definitionName ) ) {
 			return 0;
 		}
@@ -156,11 +160,23 @@ class DefinitionManager {
 	 * @throws \MWException
 	 */
 	public function getDefinitionLang( $name ) {
+		$name = $this->normalizeDefinitionName( $name );
 		if ( !$this->definitionExists( $name ) ) {
 			throw new \MWException( 'Definition does not exist' );
 		}
 		$info = $this->definitions[$name];
 		return $info['lang'];
+	}
+
+	/**
+	 * @param string $definition
+	 * @return string
+	 */
+	public function normalizeDefinitionName( string $definition ): string {
+		if ( str_ends_with( $definition, static::DEFINITION_PAGE_SUFFIX ) ) {
+			return substr( $definition, 0, -strlen( static::DEFINITION_PAGE_SUFFIX ) );
+		}
+		return $definition;
 	}
 
 	protected function loadDefinitions() {
@@ -173,8 +189,7 @@ class DefinitionManager {
 	 * @return Title
 	 */
 	private function getTitleFromDefinitionName( $name ) {
-		 // TODO: No hardcoded extension
-		return Title::newFromText( "$name.form" );
+		return Title::newFromText( "$name." . static::DEFINITION_PAGE_SUFFIX );
 	}
 
 	/**

@@ -2,6 +2,8 @@
 
 namespace MediaWiki\Extension\Forms\Content;
 
+use MediaWiki\Extension\Forms\DefinitionManager;
+
 class FormDefinitionContent extends FormDataContent {
 	/**
 	 * @var string
@@ -20,6 +22,6 @@ class FormDefinitionContent extends FormDataContent {
 	 * @return string
 	 */
 	protected function getPageFormat() {
-		return ".form";
+		return DefinitionManager::DEFINITION_PAGE_SUFFIX;
 	}
 }
