@@ -1,8 +1,37 @@
 {
 	"@metadata": {
 		"authors": [
-			"Af420"
+			"Af420",
+			"شاه زمان پټان"
 		]
 	},
-	"forms-label-appearance": "ښکارېدونکې بڼه"
+	"forms-desc": "د مېډياويکي ټوليزې بڼې چوکاټ",
+	"editwithform": "د فورمې کارولو سره سمول",
+	"editwithform-with-title": "د فورمې کارولو سره سمول: $1",
+	"formeditor": "فورم سمونگر",
+	"forms-api-get-definitions-no-name": "نوم پاراميتر بايد د \"get-definition\" په ډول واوڼل شي",
+	"forms-api-get-definitions-not-exist": "د \"$1\" په نوم کومه فورمه نشته.",
+	"forms-target-json-page-summary": "فورمې له مخې سمول: $1",
+	"forms-error-target-db-save-failed": "اومتوک اډانه کې خوندي‌کول نابريالي شول",
+	"forms-form-editor-title": "فورم سمونگر",
+	"forms-form-editor-form-name-label": "د فورم نوم",
+	"forms-form-editor-prop-title": "سرليک",
+	"forms-form-editor-prop-showtitle": "ښکارېدونکی سرليک",
+	"forms-form-editor-prop-showformname": "ښکارېدونکی فورم نوم",
+	"forms-form-editor-prop-categories": "وېشنيزې",
+	"forms-form-editor-prop-sealaftercreation": "د جوړولو وروسته مهر کول",
+	"forms-form-editor-prop-enableprogresssave": "منځمهاله سپما چارنول",
+	"forms-form-editor-prop-enableeditsummary": "سمون لنډیز چارنول",
+	"forms-form-editor-prop-partial": "برخيز",
+	"forms-form-editor-prop-targettype": "موخې ډول",
+	"forms-form-editor-prop-targettitle": "سرليک",
+	"forms-form-editor-prop-targettypejsononwikipage": "په ويکي‌مخ کې JSON",
+	"forms-form-editor-prop-targettypedatabase": "اومتوک‌اډانه",
+	"forms-form-editor-prop-targetafteractiontypenone": "هېڅ چاره نشته",
+	"forms-form-editor-prop-targetafteractiontyperedirect": "مخگرځ",
+	"forms-form-editor-prop-targetafteractionurl": "وېبتړ ته مخگرځ",
+	"forms-formelement-group-input": "ننوتنې",
+	"forms-formelement-group-layout": "هډوانې",
+	"forms-formelement-group-other": "نور",
+	"forms-label-appearance": "ونگ‌بڼه"
 }
