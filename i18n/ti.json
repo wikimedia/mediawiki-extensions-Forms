@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joanmp17"
+		]
+	},
+	"forms-form-editor-prop-title": "ኣርእስቲ",
+	"forms-form-editor-prop-showtitle": "ኣርእስቲ ኣርእይ",
+	"forms-form-editor-prop-showformname": "ስም ቅጥዒ ኣርእይ",
+	"forms-form-editor-prop-targettitle": "ኣርእስቲ",
+	"forms-formelement-group-other": "ካልእ",
+	"forms-label-appearance": "መልክዕ",
+	"forms-label-behaviour": "ባህርያት",
+	"forms-label-infrastructure": "ትሕተ ቅርጺ",
+	"forms-label-target": "ዕላማ",
+	"forms-label-company-name": "ስም ኩባንያ",
+	"forms-label-employees-number": "ብዝሒ ሰራሕተኛታት",
+	"forms-label-city": "ከተማ",
+	"forms-label-contacts": "ርክባት",
+	"forms-label-show-contacts": "ርክባት ኣርእይ",
+	"forms-label-show-address": "ኣድራሻ ኣርእይ",
+	"forms-label-sales": "መሸጣ",
+	"forms-label-phone": "ስልኪ",
+	"forms-label-email": "ኢመይል",
+	"forms-label-production": "ፍርያት",
+	"forms-label-hq-address": "ዋና ቤት ጽሕፈት",
+	"forms-form-editor-prop-targettypeemail": "ኢመይል",
+	"forms-form-editor-form-props-summary-label": "መጠቓለሊ"
+}
