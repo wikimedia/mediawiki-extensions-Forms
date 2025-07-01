@@ -5,7 +5,6 @@
 			"شاه زمان پټان"
 		]
 	},
-	"forms-label-appearance": "ونگ‌بڼه",
 	"forms-desc": "د مېډياويکي ټوليزې بڼې چوکاټ",
 	"editwithform": "د فورمې کارولو سره سمول",
 	"editwithform-with-title": "د فورمې کارولو سره سمول: $1",
@@ -33,5 +32,6 @@
 	"forms-form-editor-prop-targetafteractionurl": "وېبتړ ته مخگرځ",
 	"forms-formelement-group-input": "ننوتنې",
 	"forms-formelement-group-layout": "هډوانې",
-	"forms-formelement-group-other": "نور"
+	"forms-formelement-group-other": "نور",
+	"forms-label-appearance": "ونگ‌بڼه"
 }
