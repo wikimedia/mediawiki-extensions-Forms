@@ -4,7 +4,8 @@
 			"Brettchenweber",
 			"McDutchie",
 			"Umherirrender",
-			"Umlaut"
+			"Umlaut",
+			"Vhoesl"
 		]
 	},
 	"forms-desc": "Allzweckformular-Framework für MediaWiki",
@@ -100,5 +101,17 @@
 	"forms-editor-toolbar-done": "Fertig",
 	"forms-editor-group-empty-help": "Das Formular enthält derzeit keine Elemente. Öffne die Registerkarte „Formularelemente“ und ziehe die Elemente hierher.",
 	"forms-form-editor-form-props-summary-label": "Zusammenfassung",
-	"forms-form-editor-form-props-summary-placeholder": "Bitte erläutere kurz deine Änderungen"
+	"forms-form-editor-form-props-summary-placeholder": "Bitte erläutere kurz deine Änderungen",
+	"editwithform": "Mit Formular bearbeiten",
+	"editwithform-with-title": "Mit Formular bearbeiten: $1",
+	"apihelp-forms-form-submit-param-data": "Über das Formular übermittelte Daten",
+	"apihelp-forms-form-submit-param-form": "Name des Formulars",
+	"apihelp-forms-form-submit-param-target": "Name des Ziels",
+	"apihelp-forms-form-submit-param-summary": "Zusammenfassung",
+	"forms-target-page-label": "Zielseite",
+	"forms-editor-create-form-instance-label": "Mit diesem Formular erstellen",
+	"forms-form-definition-label": "Zu verwendendes Formular",
+	"forms-page-already-exists-no-form": "Diese Seite existiert bereits, wurde aber nicht durch ein Formular erstellt.",
+	"forms-definitions-not-exist": "Das Formular \"$1“ existiert nicht.",
+	"forms-action-edit-with-form": "Mit Formular bearbeiten"
 }
