@@ -112,7 +112,7 @@
 	"forms-target-page-label": "Target page",
 	"forms-editor-create-form-instance-label": "Create using this form",
 	"forms-form-definition-label": "Form to use",
-	"forms-page-already-exists-no-form": "This page already exists, but was not created by a form",
-	"forms-definitions-not-exist": "Form \"$1\" does not exist",
+	"forms-page-already-exists-no-form": "This page already exists, but was not created by a form.",
+	"forms-definitions-not-exist": "Form \"$1\" does not exist.",
 	"forms-action-edit-with-form": "Edit with form"
 }
