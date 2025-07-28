@@ -7,6 +7,8 @@
 		]
 	},
 	"forms-desc": "Algemeen formulieren-framework voor MediaWiki",
+	"editwithform": "Bewerken met formulier",
+	"editwithform-with-title": "Bewerken met formulier: $1",
 	"formeditor": "Formulieren-editor",
 	"forms-api-get-definitions-no-name": "De parameter ‘Name’ moet worden opgegeven voor het type ‘get-definition’",
 	"forms-api-get-definitions-not-exist": "Formulier “$1” bestaat niet",
@@ -107,5 +109,11 @@
 	"forms-editor-toolbar-done": "Klaar",
 	"forms-editor-group-empty-help": "Het formulier heeft nog geen elementen. Open het tabblad “Formulierelementen” en sleep elementen hierheen.",
 	"forms-form-editor-form-props-summary-label": "Samenvatting",
-	"forms-form-editor-form-props-summary-placeholder": "Beschrijf wat u hebt gewijzigd"
+	"forms-form-editor-form-props-summary-placeholder": "Beschrijf wat u hebt gewijzigd",
+	"forms-target-page-label": "Doelpagina",
+	"forms-editor-create-form-instance-label": "Aanmaken met dit formulier",
+	"forms-form-definition-label": "Te gebruiken formulier",
+	"forms-page-already-exists-no-form": "Deze pagina bestaat al, maar is niet door een formulier aangemaakt.",
+	"forms-definitions-not-exist": "Het formulier “$1” bestaat niet.",
+	"forms-action-edit-with-form": "Bewerken met formulier"
 }

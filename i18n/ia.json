@@ -111,7 +111,7 @@
 	"forms-target-page-label": "Pagina de destination",
 	"forms-editor-create-form-instance-label": "Crear con iste formulario",
 	"forms-form-definition-label": "Le formulario a usar",
-	"forms-page-already-exists-no-form": "Iste pagina ja exite, ma non ha essite create per un formulario",
-	"forms-definitions-not-exist": "Le formulario “$1” non existe",
+	"forms-page-already-exists-no-form": "Iste pagina ja exite, ma non ha essite create per un formulario.",
+	"forms-definitions-not-exist": "Le formulario “$1” non existe.",
 	"forms-action-edit-with-form": "Modificar con formulario"
 }
