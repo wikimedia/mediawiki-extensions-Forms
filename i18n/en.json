@@ -10,7 +10,7 @@
 	"forms-createforminstance-form-name": "Create $1",
 	"formeditor": "Form editor",
 	"forms-api-get-definitions-no-name": "Name parameter must be set for type \"get-definition\"",
-	"forms-api-get-definitions-not-exist": "Definition \"$1\" does not exist",
+	"forms-api-get-definitions-not-exist": "Form \"$1\" does not exist",
 	"forms-target-json-page-summary": "Edit by form: $1",
 	"forms-error-no-form-specified": "No form is specified",
 	"forms-form-edit-title": "Edit $1",
@@ -85,7 +85,7 @@
 	"right-forms-edit-form-definition": "Edit form definitions",
 	"action-forms-create-form": "create forms",
 	"action-forms-edit-form-definition": "edit form definitions",
-	"forms-action-editsource": "Edit definition source",
+	"forms-action-editsource": "Edit source",
 	"forms-form-editor-prop-rl-deps": "Resource loader dependencies",
 	"forms-form-editor-prop-rl-deps-help": "Specify list of ResourceLoader modules that should be loaded when the form is instantiated",
 	"forms-form-editor-prop-targettypeemail": "Email",
@@ -110,5 +110,13 @@
 	"apihelp-forms-get-definitions-param-definitiontype": "Requested type of the form definition",
 	"apihelp-forms-get-definitions-param-name": "Name of the form definition",
 	"apihelp-forms-get-definitions-param-type": "Type of the request. Can be 'query-available' or 'get-definition'",
-	"apihelp-forms-get-definitions-param-validfortime": "Time for which the form definition is valid"
+	"apihelp-forms-get-definitions-param-validfortime": "Time for which the form definition is valid",
+	"editwithform": "Edit with form",
+	"editwithform-with-title": "Edit with form: $1",
+	"forms-target-page-label": "Target page",
+	"forms-editor-create-form-instance-label": "Create using this form",
+	"forms-form-definition-label": "Form to use",
+	"forms-page-already-exists-no-form": "This page already exists, but was not created by a form.",
+	"forms-definitions-not-exist": "Form \"$1\" does not exist.",
+	"forms-action-edit-with-form": "Edit with form"
 }

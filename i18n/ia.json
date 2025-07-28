@@ -9,7 +9,7 @@
 	"forms-createforminstance-form-name": "Crear $1",
 	"formeditor": "Editor de formularios",
 	"forms-api-get-definitions-no-name": "Le parametro \"name\" debe esser definite pro le typo \"get-definition\"",
-	"forms-api-get-definitions-not-exist": "Le definition \"$1\" non existe",
+	"forms-api-get-definitions-not-exist": "Le formulario “$1” non existe",
 	"forms-target-json-page-summary": "Modificate per formulario: $1",
 	"forms-error-no-form-specified": "Nulle formulario specificate",
 	"forms-form-edit-title": "Modificar $1",
@@ -85,7 +85,7 @@
 	"right-forms-edit-form-definition": "Modificar definitiones de formulario",
 	"action-forms-create-form": "crear formularios",
 	"action-forms-edit-form-definition": "modificar definitiones de formulario",
-	"forms-action-editsource": "Modificar le fonte del definition",
+	"forms-action-editsource": "Modificar fonte",
 	"forms-form-editor-prop-rl-deps": "Dependentias del cargator de ressources",
 	"forms-form-editor-prop-rl-deps-help": "Specifica le lista de modulos del cargator de ressources que debe esser cargate quando le formulario es instantiate",
 	"forms-form-editor-prop-targettypeemail": "E-mail",
@@ -110,5 +110,13 @@
 	"apihelp-forms-get-definitions-param-definitiontype": "Typo requestate del definition del formulario",
 	"apihelp-forms-get-definitions-param-name": "Nomine del definition del formulario",
 	"apihelp-forms-get-definitions-param-type": "Typo del requesta. Pote esser ‘query-available’ o ‘get-definition’",
-	"apihelp-forms-get-definitions-param-validfortime": "Durata de validitate del definition del formulario"
+	"apihelp-forms-get-definitions-param-validfortime": "Durata de validitate del definition del formulario",
+	"editwithform": "Modificar con formulario",
+	"editwithform-with-title": "Modificar con formulario: $1",
+	"forms-target-page-label": "Pagina de destination",
+	"forms-editor-create-form-instance-label": "Crear con iste formulario",
+	"forms-form-definition-label": "Le formulario a usar",
+	"forms-page-already-exists-no-form": "Iste pagina ja exite, ma non ha essite create per un formulario",
+	"forms-definitions-not-exist": "Le formulario “$1” non existe",
+	"forms-action-edit-with-form": "Modificar con formulario"
 }

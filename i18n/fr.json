@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Ajeje Brazorf",
+			"EmDashUser002",
 			"Gomoko",
 			"JLTRY",
 			"Mahabarata",
@@ -15,7 +16,7 @@
 	"forms-createforminstance-form-name": "Créer $1",
 	"formeditor": "Éditeur de formulaire",
 	"forms-api-get-definitions-no-name": "Le paramètre de nom doit être défini pour le type « get-definition »",
-	"forms-api-get-definitions-not-exist": "La définition « $1 » n’existe pas",
+	"forms-api-get-definitions-not-exist": "Le formulaire “$1” n’existe pas.",
 	"forms-target-json-page-summary": "Modifier par le formulaire : $1",
 	"forms-error-no-form-specified": "Aucun formulaire n’est spécifié",
 	"forms-form-edit-title": "Modifier $1",
@@ -91,7 +92,7 @@
 	"right-forms-edit-form-definition": "Modifier les définitions de formulaire",
 	"action-forms-create-form": "créer les formulaires",
 	"action-forms-edit-form-definition": "modifier les définitions de formulaire",
-	"forms-action-editsource": "Modifier la source de la définition",
+	"forms-action-editsource": "Modifier le wikicode",
 	"forms-form-editor-prop-rl-deps": "Dépendances du chargeur de ressources",
 	"forms-form-editor-prop-rl-deps-help": "Spécifie la liste des modules du chargeur de ressources qui devraient être chargés lorsque le formulaire est instancié",
 	"forms-form-editor-prop-targettypeemail": "Courriel",
@@ -116,5 +117,13 @@
 	"apihelp-forms-get-definitions-param-definitiontype": "Type demandé de la définition du formulaire",
 	"apihelp-forms-get-definitions-param-name": "Nom de la définition du formulaire",
 	"apihelp-forms-get-definitions-param-type": "Type de requête. Peut être 'query-available' ou 'get-definition'.",
-	"apihelp-forms-get-definitions-param-validfortime": "Durée pendant laquelle la définition du formulaire est valide"
+	"apihelp-forms-get-definitions-param-validfortime": "Durée pendant laquelle la définition du formulaire est valide",
+	"editwithform": "Modifier avec formulaire",
+	"editwithform-with-title": "Modifier avec formulaire $1",
+	"forms-target-page-label": "Page cible",
+	"forms-editor-create-form-instance-label": "Créer en utilisant ce formulaire",
+	"forms-form-definition-label": "Formulaire à utiliser",
+	"forms-page-already-exists-no-form": "Cette page existe déjà, mais n'a pas été créée par un formulaire",
+	"forms-definitions-not-exist": "Le formulaire « $1 » n’existe pas.",
+	"forms-action-edit-with-form": "Modifier avec formulaire"
 }
