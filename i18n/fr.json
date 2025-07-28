@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Ajeje Brazorf",
+			"Bananax47",
 			"EmDashUser002",
 			"Gomoko",
 			"JLTRY",
@@ -123,7 +124,7 @@
 	"forms-target-page-label": "Page cible",
 	"forms-editor-create-form-instance-label": "Créer en utilisant ce formulaire",
 	"forms-form-definition-label": "Formulaire à utiliser",
-	"forms-page-already-exists-no-form": "Cette page existe déjà, mais n'a pas été créée par un formulaire",
+	"forms-page-already-exists-no-form": "Cette page existe déjà, mais n'a pas été créée par un formulaire.",
 	"forms-definitions-not-exist": "Le formulaire « $1 » n’existe pas.",
 	"forms-action-edit-with-form": "Modifier avec formulaire"
 }

@@ -111,5 +111,13 @@
 	"apihelp-forms-get-definitions-param-definitiontype": "Gevraagd type van de formulierdefinitie",
 	"apihelp-forms-get-definitions-param-name": "Naam van de formulierdefinitie",
 	"apihelp-forms-get-definitions-param-type": "Het soort aanvraag. Kan ‘query-available’ of ‘get-definition’ zijn",
-	"apihelp-forms-get-definitions-param-validfortime": "Geldigheidsduur van de formulierdefinitie"
+	"apihelp-forms-get-definitions-param-validfortime": "Geldigheidsduur van de formulierdefinitie",
+	"editwithform": "Bewerken met formulier",
+	"editwithform-with-title": "Bewerken met formulier: $1",
+	"forms-target-page-label": "Doelpagina",
+	"forms-editor-create-form-instance-label": "Aanmaken met dit formulier",
+	"forms-form-definition-label": "Te gebruiken formulier",
+	"forms-page-already-exists-no-form": "Deze pagina bestaat al, maar is niet door een formulier aangemaakt.",
+	"forms-definitions-not-exist": "Het formulier “$1” bestaat niet.",
+	"forms-action-edit-with-form": "Bewerken met formulier"
 }
