@@ -35,7 +35,7 @@
 	"forms-target-page-label": "Pagina di destinazione",
 	"forms-editor-create-form-instance-label": "Crea utilizzando questo modulo",
 	"forms-form-definition-label": "Modulo da utilizzare",
-	"forms-page-already-exists-no-form": "Questa pagina esiste già, ma non è stata creata da un modulo",
-	"forms-definitions-not-exist": "Modulo \"$1\" non esiste",
+	"forms-page-already-exists-no-form": "Questa pagina esiste già, ma non è stata creata da un modulo.",
+	"forms-definitions-not-exist": "Modulo \"$1\" non esiste.",
 	"forms-action-edit-with-form": "Modifica tramite un modulo"
 }
