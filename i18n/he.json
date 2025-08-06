@@ -3,6 +3,7 @@
 		"authors": [
 			"Amire80",
 			"Freddy9",
+			"Neriah",
 			"מקף",
 			"שוקו מוקה"
 		]
@@ -114,7 +115,7 @@
 	"forms-target-page-label": "דף היעד",
 	"forms-editor-create-form-instance-label": "יצירה באמצעות הטופס הזה",
 	"forms-form-definition-label": "באיזה טופס להשתמש",
-	"forms-page-already-exists-no-form": "הדף הזה כבר קיים, אבל לא נוצר באמצעות טופס",
-	"forms-definitions-not-exist": "הטופס \"$1\" אינו קיים",
+	"forms-page-already-exists-no-form": "הדף הזה כבר קיים, אבל לא נוצר באמצעות טופס.",
+	"forms-definitions-not-exist": "הטופס \"$1\" אינו קיים.",
 	"forms-action-edit-with-form": "עריכה באמצעות טופס"
 }
