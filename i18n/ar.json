@@ -120,7 +120,7 @@
 	"forms-target-page-label": "الصفحة المستهدفة",
 	"forms-editor-create-form-instance-label": "إنشاء باستخدام هذا النموذج",
 	"forms-form-definition-label": "نموذج للاستخدام",
-	"forms-page-already-exists-no-form": "هذه الصفحة موجودة بالفعل، ولكن لم يتم إنشاؤها بواسطة نموذج",
-	"forms-definitions-not-exist": "النموذج \"$1\" غير موجود",
+	"forms-page-already-exists-no-form": "هذه الصفحة موجودة بالفعل، ولكن لم يتم إنشاؤها بواسطة نموذج.",
+	"forms-definitions-not-exist": "النموذج \" $1 \" غير موجود.",
 	"forms-action-edit-with-form": "تحرير باستخدام النموذج"
 }
