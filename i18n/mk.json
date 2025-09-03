@@ -111,7 +111,7 @@
 	"forms-target-page-label": "Целна страница",
 	"forms-editor-create-form-instance-label": "Создај со образецов",
 	"forms-form-definition-label": "Образец за употреба",
-	"forms-page-already-exists-no-form": "Оваа страница веќе постои, но не е направена со образец",
-	"forms-definitions-not-exist": "Образецот „$1“ не постои",
+	"forms-page-already-exists-no-form": "Оваа страница веќе постои, но не е направена со образец.",
+	"forms-definitions-not-exist": "Образецот „$1“ не постои.",
 	"forms-action-edit-with-form": "Уреди со образец"
 }
