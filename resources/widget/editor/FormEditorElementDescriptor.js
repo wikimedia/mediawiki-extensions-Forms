@@ -73,7 +73,7 @@
 				continue;
 			}
 			const realKey = key.split( 'widget_' ).pop();
-			if ( reserved.indexOf( realKey ) !== -1 ) {
+			if ( reserved.includes( realKey ) ) {
 				continue;
 			}
 

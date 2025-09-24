@@ -95,7 +95,7 @@
 			}
 		} );
 
-		if ( this.fields.indexOf( configs.name.getValue() ) !== -1 ) {
+		if ( this.fields.includes( configs.name.getValue() ) ) {
 			configs.template_field.setValue( configs.name.getValue() );
 		}
 
@@ -202,7 +202,7 @@
 				value.push( item.values );
 				continue;
 			}
-			if ( this.fields.indexOf( itemName ) === -1 ) {
+			if ( !this.fields.includes( itemName ) ) {
 				// Field no longer exists in template
 				continue;
 			}
@@ -212,7 +212,7 @@
 		}
 		group.clearElements();
 		for ( let i = 0; i < this.fields.length; i++ ) {
-			if ( processed.indexOf( this.fields[ i ] ) !== -1 ) {
+			if ( processed.includes( this.fields[ i ] ) ) {
 				// Field already exists
 				continue;
 			}
