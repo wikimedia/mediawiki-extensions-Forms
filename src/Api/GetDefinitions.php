@@ -23,7 +23,6 @@ class GetDefinitions extends ApiBase {
 	protected $definitionType;
 
 	/**
-	 *
 	 * @var string
 	 */
 	protected $validForTime;
@@ -105,19 +104,13 @@ class GetDefinitions extends ApiBase {
 		}
 	}
 
-	/**
-	 *
-	 */
 	protected function getAvailableDefinitions() {
 		$type = $this->getParameter( 'definitiontype' );
 		$this->status = Status::newGood(
-			$this->definitionManager->getDefinitionKeys( $type )
+		$this->definitionManager->getDefinitionKeys( $type )
 		);
 	}
 
-	/**
-	 *
-	 */
 	protected function getDefinitionContent() {
 		$name = $this->getParameter( 'name' );
 		if ( !$name ) {
@@ -133,8 +126,8 @@ class GetDefinitions extends ApiBase {
 
 		$validForTime = $this->getParameter( 'validfortime' );
 		$this->status = Status::newGood( [
-			'definition' => $this->definitionManager->getDefinition( $name, $validForTime ),
-			'lang' => $this->definitionManager->getDefinitionLang( $name )
+		'definition' => $this->definitionManager->getDefinition( $name, $validForTime ),
+		'lang' => $this->definitionManager->getDefinitionLang( $name )
 		] );
 	}
 }

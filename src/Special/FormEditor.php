@@ -30,7 +30,6 @@ class FormEditor extends FormSpecial {
 	protected $action = 'create';
 
 	/**
-	 *
 	 * @param Config $config
 	 */
 	public function __construct( Config $config ) {
@@ -176,7 +175,6 @@ class FormEditor extends FormSpecial {
 	}
 
 	/**
-	 *
 	 * @return DefinitionManager
 	 */
 	private function getDefinitionManager() {

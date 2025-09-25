@@ -5,7 +5,6 @@ namespace MediaWiki\Extension\Forms;
 interface ITarget {
 
 	/**
-	 *
 	 * @param array $formsubmittedData
 	 * @param string|null $summary
 	 */
