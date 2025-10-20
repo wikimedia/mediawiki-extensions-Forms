@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"GilPe",
 			"Robby",
 			"Volvox"
 		]
@@ -14,7 +15,7 @@
 	"forms-form-editor-prop-title": "Titel",
 	"forms-form-editor-prop-showtitle": "Titel weisen",
 	"forms-form-editor-prop-categories": "Kategorien",
-	"forms-form-editor-prop-abstract": "Resumé",
+	"forms-form-editor-prop-abstract": "Resümmee",
 	"forms-form-editor-prop-partial": "Partiell",
 	"forms-form-editor-prop-targettitle": "Titel",
 	"forms-form-editor-prop-targettypedatabase": "Datebank",
@@ -43,7 +44,7 @@
 	"forms-form-editor-prop-targettypeemail": "E-Mail",
 	"forms-editor-toolbar-cancel": "Ofbriechen",
 	"forms-editor-toolbar-save-label": "Späicheren",
-	"forms-form-editor-form-props-summary-label": "Resumé",
+	"forms-form-editor-form-props-summary-label": "Resümmee",
 	"forms-target-page-label": "Zilsäit",
 	"forms-form-definition-label": "Formulaire fir ze benotzen",
 	"forms-page-already-exists-no-form": "Dës Säit gëtt et schonn, mee se gouf net duerch e Formulaire ugeluecht",
