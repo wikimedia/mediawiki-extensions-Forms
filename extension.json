@@ -262,8 +262,7 @@
 				"forms-editor-group-empty-help",
 				"forms-editor-toolbar-done",
 				"forms-form-editor-form-props-summary-label",
-				"forms-form-editor-form-props-summary-placeholder",
-				"mwstake-formengine-type-hr"
+				"forms-form-editor-form-props-summary-placeholder"
 			],
 			"dependencies": [
 				"ext.forms.init",
