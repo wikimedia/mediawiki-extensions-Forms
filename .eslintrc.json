@@ -14,6 +14,7 @@
 		"max-len": "off",
 		"no-jquery/no-global-selector": "off",
 		"no-prototype-builtins": "off",
-		"no-jquery/no-done-fail": "warn"
+		"no-jquery/no-done-fail": "warn",
+		"mediawiki/no-unlabeled-buttonwidget": "warn"
 	}
 }
