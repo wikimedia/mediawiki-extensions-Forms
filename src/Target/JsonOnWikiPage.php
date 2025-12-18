@@ -14,20 +14,32 @@ class JsonOnWikiPage extends TitleTarget {
 	 * @return ITarget
 	 */
 	public static function factory( HashConfig $config ) {
-		if ( !$config->has( 'form' ) || !$config->has( 'title' ) ) {
+		if (
+			!$config->has( 'form' ) ||
+			(
+				!$config->has( 'title' ) &&
+				!$config->has( 'predefined_title' )
+			)
+		) {
 			return null;
 		}
-		$pageName = $config->get( 'title' );
-		if ( !str_ends_with( $pageName, '.formdata' ) ) {
-			$pageName .= '.formdata';
+
+		$title = null;
+		if ( $config->has( 'title' ) ) {
+			$pageName = $config->get( 'title' );
+			if ( !str_ends_with( $pageName, '.formdata' ) ) {
+				$pageName .= '.formdata';
+			}
+			$title = MediaWikiServices::getInstance()->getTitleFactory()->newFromText( $pageName );
+			if ( !$title ) {
+				throw new \RuntimeException(
+					'Invalid title ' . $config->get( 'title' ) . ' for form target'
+				);
+			}
 		}
-		$title = MediaWikiServices::getInstance()->getTitleFactory()->newFromText( $pageName );
-		if ( !$title ) {
-			throw new \RuntimeException(
-				'Invalid title ' . $config->get( 'title' ) . ' for form target'
-			);
-		}
-		return new static( $config->get( 'form' ), $title );
+
+		$predefinedTitle = $config->has( 'predefined_title' ) ? $config->get( 'predefined_title' ) : '';
+		return new static( $config->get( 'form' ), $title, MediaWikiServices::getInstance(), $predefinedTitle );
 	}
 
 	/**
@@ -35,5 +47,16 @@ class JsonOnWikiPage extends TitleTarget {
 	 */
 	protected function getDataForContent() {
 		return FormatJson::encode( $this->data );
+	}
+
+	/**
+	 * @return string
+	 */
+	protected function getParsedPredefinedName(): string {
+		$name = parent::getParsedPredefinedName();
+		if ( !str_ends_with( $name, '.formdata' ) ) {
+			$name .= '.formdata';
+		}
+		return $name;
 	}
 }

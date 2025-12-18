@@ -11,7 +11,9 @@ use MediaWiki\Extension\Forms\Action\FormDefinitionSourceEditAction;
 use MediaWiki\Extension\Forms\Content\FormDefinitionContent;
 use MediaWiki\Extension\Forms\Target\TitleTarget;
 use MediaWiki\Extension\Forms\Util\PickerMaker;
+use MediaWiki\Extension\Forms\Util\PredefinedTitleNotice;
 use MediaWiki\Extension\Forms\Util\TargetFactory;
+use MediaWiki\Output\OutputPage;
 use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Title\Title;
 
@@ -90,11 +92,21 @@ class FormDefinitionHandler extends JsonContentHandler {
 		$targetData['title'] = 'Dummy';
 		$targetData['form'] = $definitionForm;
 		$target = ( new TargetFactory() )->makeTarget( $targetData['type'], $targetData );
-		if ( $target instanceof TitleTarget ) {
+
+		$predefinedTitle = $target instanceof TitleTarget ? $target->getPredefinedTitle() : '';
+		if ( $target instanceof TitleTarget && !$predefinedTitle ) {
 			$this->outputTitleInputForm( $output, $definitionForm );
 		} else {
 			$formDataHandler = new FormDataHandler();
-			$formDataHandler->fillParserOutputForDefinition( $content, $cpoParams, $output, $definitionForm );
+			$formDataHandler->fillParserOutputForDefinition(
+				$content, $cpoParams, $output, $definitionForm, (bool)$predefinedTitle
+			);
+		}
+		if ( $predefinedTitle ) {
+			OutputPage::setupOOUI();
+			$output->setRawText(
+				( new PredefinedTitleNotice( $predefinedTitle ) ) . $output->getRawText()
+			);
 		}
 	}
 
