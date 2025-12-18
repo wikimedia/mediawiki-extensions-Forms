@@ -114,5 +114,12 @@
 	"forms-form-definition-label": "Form to use",
 	"forms-page-already-exists-no-form": "This page already exists, but was not created by a form.",
 	"forms-definitions-not-exist": "Form \"$1\" does not exist.",
-	"forms-action-edit-with-form": "Edit with form"
+	"forms-action-edit-with-form": "Edit with form",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title": "Predefined page title for pages created using this form",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title-help": "Can be used to automatically generate page names based on data from the form. Use \"{{field_name}}\" to insert value from a form field. For example, if you have a field with the name \"company_name\", you can use \"{{company_name}}\" in the title to insert the value entered in that field.",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title-ph": "Leave empty to specify title on form instance creation",
+	"forms-formdata-notitle-displaytitle": "Create form instance",
+	"forms-form-will-be-created-as": "This form has predefined target page, will be created as \"$1\"",
+	"forms-target-predefined-title-error": "Predefined form target page title cannot be resolved",
+	"forms-target-predefined-title-exists-error": "Page with same name as predefined form target page title already exists"
 }

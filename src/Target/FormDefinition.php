@@ -29,7 +29,7 @@ class FormDefinition extends JsonOnWikiPage {
 				'Invalid title ' . $config->get( 'title' ) . ' for form target'
 			);
 		}
-		return new static( $config->get( 'form' ), $title );
+		return new static( $config->get( 'form' ), $title, MediaWikiServices::getInstance() );
 	}
 
 	/**
