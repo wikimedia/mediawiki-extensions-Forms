@@ -80,6 +80,9 @@
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\Forms\\": "src/"
 	},
+	"TestAutoloadNamespaces": {
+		"MediaWiki\\Extension\\Forms\\Tests\\": "tests/phpunit/"
+	},
 	"ContentHandlers": {
 		"FormDefinition": "MediaWiki\\Extension\\Forms\\ContentHandler\\FormDefinitionHandler",
 		"FormData": "MediaWiki\\Extension\\Forms\\ContentHandler\\FormDataHandler"
@@ -262,7 +265,10 @@
 				"forms-editor-group-empty-help",
 				"forms-editor-toolbar-done",
 				"forms-form-editor-form-props-summary-label",
-				"forms-form-editor-form-props-summary-placeholder"
+				"forms-form-editor-form-props-summary-placeholder",
+				"forms-form-editor-prop-target-json-wikipage-predefined-title",
+				"forms-form-editor-prop-target-json-wikipage-predefined-title-help",
+				"forms-form-editor-prop-target-json-wikipage-predefined-title-ph"
 			],
 			"dependencies": [
 				"ext.forms.init",

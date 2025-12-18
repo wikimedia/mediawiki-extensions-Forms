@@ -25,6 +25,13 @@
 	mw.ext.forms.target.Template.prototype.getAdditionalFields = function () {
 		const sa = this.standalone;
 		return [ {
+			type: 'text',
+			help: mw.msg( 'forms-form-editor-prop-target-json-wikipage-predefined-title-help' ),
+			name: 'target.predefined_page_name',
+			required: false,
+			label: mw.msg( 'forms-form-editor-prop-target-json-wikipage-predefined-title' ),
+			widget_placeholder: mw.msg( 'forms-form-editor-prop-target-json-wikipage-predefined-title-ph' )
+		}, {
 			type: 'title',
 			name: 'target.template',
 			namespace: 10,
@@ -138,7 +145,8 @@
 	mw.ext.forms.target.Template.prototype.getValue = function () {
 		return {
 			type: this.getName(),
-			template: this.items[ 'target.template' ].getValue()
+			template: this.items[ 'target.template' ].getValue(),
+			predefined_title: this.items[ 'target.predefined_page_name' ].getValue()
 		};
 	};
 
@@ -150,6 +158,9 @@
 		if ( value.hasOwnProperty( 'template' ) && this.items.hasOwnProperty( 'target.template' ) ) {
 			this.items[ 'target.template' ].setValue( value.template );
 			this.onTemplateChange( value.template );
+		}
+		if ( value.hasOwnProperty( 'predefined_title' ) && this.items.hasOwnProperty( 'target.predefined_page_name' ) ) {
+			this.items[ 'target.predefined_page_name' ].setValue( value.predefined_title );
 		}
 	};
 
