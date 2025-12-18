@@ -2,11 +2,15 @@
 
 namespace MediaWiki\Extension\Forms\Special;
 
+use InvalidArgumentException;
 use MediaWiki\Content\JsonContent;
 use MediaWiki\Extension\Forms\Content\FormDataContent;
 use MediaWiki\Extension\Forms\DefinitionManager;
 use MediaWiki\Extension\Forms\INonNativeTarget;
+use MediaWiki\Extension\Forms\ITarget;
+use MediaWiki\Extension\Forms\Target\TitleTarget;
 use MediaWiki\Extension\Forms\Util\PickerMaker;
+use MediaWiki\Extension\Forms\Util\PredefinedTitleNotice;
 use MediaWiki\Extension\Forms\Util\TargetFactory;
 use MediaWiki\Message\Message;
 use MediaWiki\Revision\RevisionLookup;
@@ -14,6 +18,7 @@ use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 use OOUI\MessageWidget;
+use Throwable;
 
 class EditWithForm extends FormSpecial {
 
@@ -80,8 +85,16 @@ class EditWithForm extends FormSpecial {
 		}
 		$this->formDefinition = $formName;
 		if ( !$this->targetPage ) {
-			$this->outputTargetPageForm();
-			return;
+			$target = $this->getTargetForForm( $formName );
+			if ( !( $target instanceof TitleTarget ) || !$target->getPredefinedTitle() ) {
+				$this->outputTargetPageForm();
+				return;
+			}
+			// Predefined title
+			$this->getOutput()->enableOOUI();
+			$this->getOutput()->addHtml(
+				( new PredefinedTitleNotice( $target->getPredefinedTitle() ) )->toString()
+			);
 		}
 
 		$this->insertDependencies();
@@ -202,5 +215,34 @@ class EditWithForm extends FormSpecial {
 			return null;
 		}
 		return (array)$data->getValue();
+	}
+
+	/**
+	 * @param string $formName
+	 * @return ITarget|null
+	 */
+	private function getTargetForForm( string $formName ): ?ITarget {
+		if ( !$formName ) {
+			return null;
+		}
+		try {
+			$definitionJson = $this->definitionManager->getDefinition( $formName );
+		} catch ( InvalidArgumentException $e ) {
+			return null;
+		}
+		$definitionData = json_decode( $definitionJson, true );
+		if ( !$definitionData ) {
+			return null;
+		}
+		$targetData = $definitionData['target'] ?? null;
+		if ( !$targetData ) {
+			return null;
+		}
+		$targetData['form'] = $formName;
+		try {
+			return ( new TargetFactory() )->makeTarget( $targetData['type'], $targetData );
+		} catch ( Throwable $e ) {
+			return null;
+		}
 	}
 }

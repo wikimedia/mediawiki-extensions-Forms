@@ -117,5 +117,12 @@
 	"forms-form-definition-label": "Field name",
 	"forms-page-already-exists-no-form": "Error message when the page already exists and no form is specified",
 	"forms-definitions-not-exist": "Error message when the definition to the given name is not a valid form definition.\n$1 - form name",
-	"forms-action-edit-with-form": "Label for content action link.\n{{Identical|Edit with form}}"
+	"forms-action-edit-with-form": "Label for content action link.\n{{Identical|Edit with form}}",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title": "Field label",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title-help": "Field help",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title-ph": "Field placeholder",
+	"forms-formdata-notitle-displaytitle": "Page title when no page is given",
+	"forms-form-will-be-created-as": "Notice when form has predefined title.\n$1 - predefined title mask",
+	"forms-target-predefined-title-error": "Error message",
+	"forms-target-predefined-title-exists-error": "Error message"
 }

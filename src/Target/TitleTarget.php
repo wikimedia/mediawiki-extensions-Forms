@@ -9,6 +9,7 @@ use MediaWiki\Content\ContentHandler;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\Forms\ITarget;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Message\Message;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Status\Status;
 use MediaWiki\Storage\PageUpdater;
@@ -46,14 +47,22 @@ abstract class TitleTarget implements ITarget {
 	/** @var MediaWikiServices */
 	protected $services = null;
 
+	/** @var string */
+	protected $predefinedTitle = '';
+
 	/**
 	 * @param string $form
-	 * @param Title $title
+	 * @param Title|null $title
+	 * @param MediaWikiServices|null $services
+	 * @param string $predefinedTitle
 	 */
-	protected function __construct( string $form, Title $title ) {
+	public function __construct(
+		string $form, ?Title $title, ?MediaWikiServices $services, string $predefinedTitle = ''
+	) {
 		$this->form = $form;
 		$this->targetTitle = $title;
-		$this->services = MediaWikiServices::getInstance();
+		$this->predefinedTitle = $predefinedTitle;
+		$this->services = $services ?: MediaWikiServices::getInstance();
 	}
 
 	/**
@@ -61,16 +70,27 @@ abstract class TitleTarget implements ITarget {
 	 * @return ITarget
 	 */
 	public static function factory( HashConfig $config ) {
-		if ( !$config->has( 'form' ) || !$config->has( 'title' ) ) {
+		if (
+			!$config->has( 'form' ) ||
+			(
+				!$config->has( 'title' ) &&
+				!$config->has( 'predefined_title' )
+			)
+		) {
 			return null;
 		}
-		$title = MediaWikiServices::getInstance()->getTitleFactory()->newFromText( $config->get( 'title' ) );
-		if ( !$title ) {
-			throw new \RuntimeException(
-				'Invalid title ' . $config->get( 'title' ) . ' for form target'
-			);
+		$title = null;
+		if ( $config->has( 'title' ) ) {
+			$title = MediaWikiServices::getInstance()->getTitleFactory()->newFromText( $config->get( 'title' ) );
+			if ( !$title ) {
+				throw new \RuntimeException(
+					'Invalid title ' . $config->get( 'title' ) . ' for form target'
+				);
+			}
 		}
-		return new static( $config->get( 'form' ), $title );
+
+		$predefinedTitle = $config->has( 'predefined_title' ) ? $config->get( 'predefined_title' ) : '';
+		return new static( $config->get( 'form' ), $title, MediaWikiServices::getInstance(), $predefinedTitle );
 	}
 
 	/**
@@ -81,6 +101,10 @@ abstract class TitleTarget implements ITarget {
 	public function execute( $formsubmittedData, $summary ) {
 		$this->data = $formsubmittedData;
 		$this->summary = $summary;
+
+		if ( !$this->targetTitle && $this->predefinedTitle ) {
+			$this->targetTitle = $this->getTitleFromPredefined();
+		}
 
 		if ( !$this->checkPermissions() ) {
 			return Status::newFatal( 'badaccess-group0' );
@@ -108,6 +132,13 @@ abstract class TitleTarget implements ITarget {
 		if ( $definitionManager->definitionIsWikipage( $this->form ) ) {
 			$this->data['_form_rev'] = $definitionManager->getLatestDefinitionRev( $this->form );
 		}
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getPredefinedTitle(): string {
+		return $this->predefinedTitle;
 	}
 
 	/**
@@ -162,11 +193,76 @@ abstract class TitleTarget implements ITarget {
 	protected function checkPermissions( $action = 'edit' ) {
 		$title = $this->targetTitle;
 		$user = RequestContext::getMain()->getUser();
-		return MediaWikiServices::getInstance()->getPermissionManager()->userCan( $action, $user, $title );
+		return $this->services->getPermissionManager()->userCan( $action, $user, $title );
 	}
 
 	/**
 	 * @return string
 	 */
 	abstract protected function getDataForContent();
+
+	/**
+	 * @return Title
+	 */
+	private function getTitleFromPredefined(): Title {
+		$name = $this->getParsedPredefinedName();
+		$title = $this->services->getTitleFactory()->newFromText( $name );
+		if ( !$title ) {
+			throw new \RuntimeException(
+				Message::newFromKey( 'forms-target-predefined-title-error' )->text()
+			);
+		}
+		if ( $title->exists() ) {
+			throw new \RuntimeException(
+				Message::newFromKey( 'forms-target-predefined-title-exists-error' )->text()
+			);
+		}
+		return $title;
+	}
+
+	/**
+	 * @return string
+	 */
+	protected function getParsedPredefinedName(): string {
+		$vars = $this->getPageNameVars();
+		$pagename = $this->predefinedTitle;
+		foreach ( $vars as $placeholder => $var ) {
+			$replacement = $this->data[$var] ?? '';
+			if ( $var === '_form' ) {
+				$replacement = $this->form;
+			}
+			if ( $var === '_user' ) {
+				$user = \RequestContext::getMain()->getUser();
+				if ( $user->isAnon() ) {
+					$replacement = '';
+				} else {
+					$replacement = $user->getName();
+				}
+			}
+			if ( !empty( $replacement ) ) {
+				$pagename = preg_replace( "/$placeholder/", $replacement, $pagename );
+			}
+		}
+
+		if ( empty( $pagename ) ) {
+			throw new \RuntimeException( Message::newFromKey( 'forms-target-predefined-title-error' )->text() );
+		}
+
+		return $pagename;
+	}
+
+	/**
+	 * @return array
+	 */
+	private function getPageNameVars() {
+		$matches = [];
+		$vars = [];
+		preg_match_all( '/{{(.*?)}}/', $this->predefinedTitle, $matches );
+		foreach ( $matches[0] as $idx => $var ) {
+			$vars[$var] = $matches[1][$idx];
+		}
+
+		return $vars;
+	}
+
 }
