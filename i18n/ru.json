@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Cabadeck",
-			"Kareyac"
+			"Kareyac",
+			"Vonavy"
 		]
 	},
 	"forms-createforminstance-form-name": "Создать $1",
