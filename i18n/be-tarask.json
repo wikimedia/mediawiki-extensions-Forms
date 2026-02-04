@@ -6,5 +6,6 @@
 		]
 	},
 	"forms-label-appearance": "Выгляд",
-	"forms-action-editsource": "Рэдагаваць код"
+	"forms-action-editsource": "Рэдагаваць код",
+	"forms-editor-toolbar-cancel": "Скасаваць"
 }
