@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Renessaince"
+			"Renessaince",
+			"Ucukor"
 		]
 	},
-	"forms-label-appearance": "Выгляд"
+	"forms-label-appearance": "Выгляд",
+	"forms-action-editsource": "Рэдагаваць код",
+	"forms-editor-toolbar-cancel": "Скасаваць"
 }

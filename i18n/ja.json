@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"MathXplore"
+			"MathXplore",
+			"Shirayuki"
 		]
 	},
-	"forms-form-editor-prop-targettypeemail": "メール"
+	"forms-form-editor-prop-targettypeemail": "メール",
+	"right-forms-create-form": "フォームを作成",
+	"right-forms-edit-form-definition": "フォームの定義を編集",
+	"action-forms-create-form": "フォームの作成",
+	"action-forms-edit-form-definition": "フォームの定義の編集"
 }
