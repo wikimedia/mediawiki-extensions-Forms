@@ -6,6 +6,8 @@
 			"YuriNikolai"
 		]
 	},
+	"forms-desc": "Estrutura de formulários completa para o MediaWiki",
+	"editwithform": "Editar com formulário",
 	"formeditor": "Editor de formulários",
 	"forms-target-json-page-summary": "Editar por formulário: $1",
 	"forms-error-no-form-specified": "Não está especificado nenhum formulário",
@@ -13,6 +15,7 @@
 	"forms-form-editor-prop-title": "Título",
 	"forms-form-editor-prop-showtitle": "Título de apresentação",
 	"forms-form-editor-prop-categories": "Categorias",
+	"forms-form-editor-prop-targettitle": "Título",
 	"forms-form-editor-prop-targetafteractiontypenone": "Nenhuma operação",
 	"forms-form-editor-prop-targetafteractiontyperedirect": "Redirecionamento",
 	"forms-label-appearance": "Aparência"
