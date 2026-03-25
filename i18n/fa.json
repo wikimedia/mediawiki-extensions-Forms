@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Darafsh",
 			"Jeeputer"
 		]
 	},
@@ -49,5 +50,7 @@
 	"forms-form-editor-prop-targettypetemplate": "الگو",
 	"forms-form-editor-prop-targettemplate": "الگوها برای استفاده",
 	"forms-form-editor-target-template-field": "زمینهٔ الگو",
-	"forms-form-meta-tag": "ایجادشده با استفاده از فرم [[$1]] (نسخه: $2)"
+	"forms-form-meta-tag": "ایجادشده با استفاده از فرم [[$1]] (نسخه: $2)",
+	"forms-form-editor-prop-showformname": "نمایش نام فرم",
+	"forms-label-appearance": "ظاهر"
 }

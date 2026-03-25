@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Milicevic01"
+		]
+	},
+	"apihelp-forms-form-submit-param-summary": "Опис измене",
+	"forms-action-editsource": "Уреди извор",
+	"forms-editor-toolbar-cancel": "Откажи",
+	"forms-editor-toolbar-save-label": "Сачувај",
+	"forms-editor-toolbar-done": "Готово",
+	"forms-form-editor-form-props-summary-label": "Опис",
+	"forms-form-editor-form-props-summary-placeholder": "Опишите шта сте променили"
+}

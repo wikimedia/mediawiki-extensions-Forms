@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Hakimi97",
 			"Tofeiku"
 		]
 	},
@@ -22,5 +23,6 @@
 	"forms-label-facilities": "Kemudahan",
 	"forms-title-new-customer": "Pelanggan baru",
 	"forms-form-editor-prop-targettypetemplate": "Templat",
-	"forms-form-editor-target-template-field-manual": "(manual)"
+	"forms-form-editor-target-template-field-manual": "(manual)",
+	"forms-label-appearance": "Paparan"
 }

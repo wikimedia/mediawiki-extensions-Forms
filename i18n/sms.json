@@ -16,5 +16,7 @@
 	"forms-action-editsource": "Muuʹtt wikiteeʹkst",
 	"forms-formelement-group-other": "Jeeʹres",
 	"forms-label-city": "Gåårad",
-	"forms-createforminstance-form-name": "Raaj seeid $1"
+	"forms-createforminstance-form-name": "Raaj seeid $1",
+	"forms-label-appearance": "Kuâsttjõs",
+	"forms-editor-toolbar-save-label": "Ruõkk"
 }

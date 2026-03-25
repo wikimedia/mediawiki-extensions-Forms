@@ -26,5 +26,17 @@
 	"forms-form-editor-prop-target-email-subject": "Oggetto",
 	"forms-form-editor-prop-target-email-body": "Contenuto",
 	"forms-error-target-mail-send-failed": "Invio email non riuscito",
-	"forms-error-target-mail-no-mail": "Nessun indirizzo email valido disponibile"
+	"forms-error-target-mail-no-mail": "Nessun indirizzo email valido disponibile",
+	"editwithform": "Modifica tramite un modulo",
+	"editwithform-with-title": "Modifica tramite modulo: $1",
+	"forms-api-get-definitions-not-exist": "Modulo \"$1\" non esiste",
+	"forms-editor-toolbar-cancel": "Annulla",
+	"forms-editor-toolbar-done": "Fatto",
+	"forms-form-editor-form-props-summary-placeholder": "Descrivi cosa hai cambiato",
+	"forms-target-page-label": "Pagina di destinazione",
+	"forms-editor-create-form-instance-label": "Crea utilizzando questo modulo",
+	"forms-form-definition-label": "Modulo da utilizzare",
+	"forms-page-already-exists-no-form": "Questa pagina esiste già, ma non è stata creata da un modulo.",
+	"forms-definitions-not-exist": "Modulo \"$1\" non esiste.",
+	"forms-action-edit-with-form": "Modifica tramite un modulo"
 }

@@ -1,12 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"GilPe",
+			"Robby",
+			"Volvox"
 		]
 	},
 	"forms-createforminstance-form-name": "$1 uleeën",
 	"formeditor": "Editeur fir Formulairen",
-	"forms-api-get-definitions-not-exist": "Definitioun \"$1\" gëtt et net",
+	"forms-api-get-definitions-not-exist": "De Formulaire „$1“ gëtt et net",
 	"forms-target-json-page-summary": "Mam Formulaire \"$1\" änneren",
 	"forms-error-no-form-specified": "Kee Formulaire uginn",
 	"forms-form-edit-title": "$1 änneren",
@@ -14,7 +16,7 @@
 	"forms-form-editor-prop-title": "Titel",
 	"forms-form-editor-prop-showtitle": "Titel weisen",
 	"forms-form-editor-prop-categories": "Kategorien",
-	"forms-form-editor-prop-abstract": "Resumé",
+	"forms-form-editor-prop-abstract": "Resümmee",
 	"forms-form-editor-prop-partial": "Partiell",
 	"forms-form-editor-prop-targettitle": "Titel",
 	"forms-form-editor-prop-targettypedatabase": "Datebank",
@@ -37,5 +39,15 @@
 	"forms-title-new-customer": "Neie Client",
 	"forms-form-editor-prop-targettypetemplate": "Schabloun",
 	"forms-form-editor-target-template-field-manual": "(manuell)",
-	"forms-action-editsource": "Quelltext änneren"
+	"forms-action-editsource": "Quelltext änneren",
+	"apihelp-forms-form-submit-param-form": "Numm vum Formulaire",
+	"apihelp-forms-form-submit-param-target": "Numm vum Zil",
+	"forms-form-editor-prop-targettypeemail": "E-Mail",
+	"forms-editor-toolbar-cancel": "Ofbriechen",
+	"forms-editor-toolbar-save-label": "Späicheren",
+	"forms-form-editor-form-props-summary-label": "Resümmee",
+	"forms-target-page-label": "Zilsäit",
+	"forms-form-definition-label": "Formulaire fir ze benotzen",
+	"forms-page-already-exists-no-form": "Dës Säit gëtt et schonn, mee se gouf net duerch e Formulaire ugeluecht",
+	"forms-definitions-not-exist": "De Formulaire „$1“ gëtt et net."
 }

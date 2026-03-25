@@ -1,7 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Cabadeck",
+			"Kareyac",
+			"Vonavy"
 		]
 	},
 	"forms-createforminstance-form-name": "Создать $1",
@@ -10,5 +12,7 @@
 	"forms-label-city": "Город:",
 	"forms-label-street": "Улица:",
 	"forms-label-warehouse": "Склад",
-	"forms-form-editor-prop-targettypetemplate": "Шаблон"
+	"forms-form-editor-prop-targettypetemplate": "Шаблон",
+	"forms-action-editsource": "Изменить источник",
+	"forms-editor-toolbar-save-label": "Сохранить"
 }

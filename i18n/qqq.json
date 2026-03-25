@@ -3,6 +3,7 @@
 		"authors": [
 			"Ajeje Brazorf",
 			"Dejan Savuljesku",
+			"McDutchie",
 			"Patric Wirth",
 			"Verdy p"
 		]
@@ -96,5 +97,29 @@
 	"forms-form-editor-prop-target-email-subject": "Label for text input widget to define email subject",
 	"forms-form-editor-prop-target-email-body": "Label for text input to define content of email",
 	"forms-error-target-mail-send-failed": "Label for error message if mail send failed",
-	"forms-error-target-mail-no-mail": "Label for error message if no valid mail address is set"
+	"forms-error-target-mail-no-mail": "Label for error message if no valid mail address is set",
+	"editwithform": "Special page name for [[Special:EditWithForm]] special page",
+	"editwithform-with-title": "Special page title label. \n$1 - name of the page being edited",
+	"forms-form-editor-prop-showformname": "Label for the \"showTitle\" checkbox field in the form editor.\n{{Identical|Display form name}}",
+	"apihelp-forms-form-submit-param-data": "Help message for the \"data\" parameter in the \"form-submit\" api module",
+	"apihelp-forms-form-submit-param-form": "Help message for the \"form\" parameter in the \"form-submit\" api module",
+	"apihelp-forms-form-submit-param-target": "Help message for the \"target\" parameter in the \"form-submit\" api module",
+	"apihelp-forms-form-submit-param-summary": "Help message for the \"summary\" parameter in the \"form-submit\" api module\n\n{{Doc-important|This refers to the summary of an edit, not to editing a summary!}}",
+	"apihelp-forms-get-definitions-param-definitiontype": "Help message for the \"definitiontype\" parameter in the \"get-definitions\" api module",
+	"apihelp-forms-get-definitions-param-name": "Help message for the \"name\" parameter in the \"get-definitions\" api module",
+	"apihelp-forms-get-definitions-param-type": "Help message for the \"type\" parameter in the \"get-definitions\" api module",
+	"apihelp-forms-get-definitions-param-validfortime": "Help message for the \"validfortime\" parameter in the \"get-definitions\" api module",
+	"forms-editor-create-form-label": "Label for the button on Special:FormEditor to create a new form",
+	"forms-editor-toolbar-cancel": "Generic label for a cancel button",
+	"forms-editor-toolbar-save-label": "Generic label for a save button\n{{Identical|Save}}",
+	"forms-editor-toolbar-done": "Generic label for an done button",
+	"forms-editor-group-empty-help": "Help text for the empty group in the form editor",
+	"forms-form-editor-form-props-summary-label": "Field label for the summary field in the form editor",
+	"forms-form-editor-form-props-summary-placeholder": "Placeholder text for the summary field in the form editor",
+	"forms-target-page-label": "Label for the field specifying the target page in the form editor",
+	"forms-editor-create-form-instance-label": "Label for the button on Special:EditWithForm to create a new form instance",
+	"forms-form-definition-label": "Field name",
+	"forms-page-already-exists-no-form": "Error message when the page already exists and no form is specified",
+	"forms-definitions-not-exist": "Error message when the definition to the given name is not a valid form definition.\n$1 - form name",
+	"forms-action-edit-with-form": "Label for content action link.\n{{Identical|Edit with form}}"
 }
