@@ -15,5 +15,8 @@
 	"forms-form-editor-prop-categories": "Categorias",
 	"forms-form-editor-prop-targetafteractiontypenone": "Nenhuma operação",
 	"forms-form-editor-prop-targetafteractiontyperedirect": "Redirecionamento",
-	"forms-label-appearance": "Aparência"
+	"forms-label-appearance": "Aparência",
+	"forms-desc": "Estrutura de formulários completa para o MediaWiki",
+	"editwithform": "Editar com formulário",
+	"forms-form-editor-prop-targettitle": "Título"
 }
