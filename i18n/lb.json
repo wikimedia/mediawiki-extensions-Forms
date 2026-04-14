@@ -40,6 +40,7 @@
 	"forms-form-editor-target-template-field-manual": "(manuell)",
 	"apihelp-forms-form-submit-param-form": "Numm vum Formulaire",
 	"apihelp-forms-form-submit-param-target": "Numm vum Zil",
+	"apihelp-forms-form-submit-param-summary": "Resümmee vun der Ännerung",
 	"forms-action-editsource": "Quelltext änneren",
 	"forms-form-editor-prop-targettypeemail": "E-Mail",
 	"forms-editor-toolbar-cancel": "Ofbriechen",
@@ -48,6 +49,5 @@
 	"forms-target-page-label": "Zilsäit",
 	"forms-form-definition-label": "Formulaire fir ze benotzen",
 	"forms-page-already-exists-no-form": "Dës Säit gëtt et schonn, mee se gouf net duerch e Formulaire ugeluecht",
-	"forms-definitions-not-exist": "De Formulaire „$1“ gëtt et net.",
-	"apihelp-forms-form-submit-param-summary": "Resümmee vun der Ännerung"
+	"forms-definitions-not-exist": "De Formulaire „$1“ gëtt et net."
 }
