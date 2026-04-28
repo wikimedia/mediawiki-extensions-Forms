@@ -33,8 +33,13 @@ class FormEditor extends FormSpecial {
 	 * @param Config $config
 	 */
 	public function __construct( Config $config ) {
-		parent::__construct( 'FormEditor', 'forms-edit-form-definition' );
+		parent::__construct( 'FormEditor' );
 		$this->config = $config;
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'forms-edit-form-definition';
 	}
 
 	/**
