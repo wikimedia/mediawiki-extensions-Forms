@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Tensama0415",
 			"Ykhwong"
 		]
 	},
@@ -30,7 +31,7 @@
 	"forms-label-city": "도시",
 	"forms-label-contacts": "연락처",
 	"forms-label-show-address": "주소 보기",
-	"forms-label-phone": "전화",
+	"forms-label-phone": "전화번호",
 	"forms-label-email": "이메일",
 	"forms-label-hq-address": "본사",
 	"forms-label-management": "관리",
@@ -51,5 +52,6 @@
 	"forms-editor-toolbar-cancel": "취소",
 	"forms-editor-toolbar-save-label": "저장",
 	"forms-target-page-label": "대상 문서",
-	"forms-definitions-not-exist": "\"$1\" 폼이 존재하지 않습니다."
+	"forms-definitions-not-exist": "\"$1\" 폼이 존재하지 않습니다.",
+	"forms-form-editor-form-name-label": "폼 이름"
 }
