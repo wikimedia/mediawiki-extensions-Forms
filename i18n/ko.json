@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ykhwong"
+			"Ykhwong",
+			"Tensama0415"
 		]
 	},
 	"formeditor": "폼 편집기",
@@ -11,6 +12,7 @@
 	"forms-edit-error-form-sealed": "이 폼은 봉인되어 있어서 편집할 수 없습니다",
 	"forms-error-target-db-save-failed": "데이터베이스에 저장하지 못했습니다",
 	"forms-form-editor-title": "폼 편집기",
+	"forms-form-editor-form-name-label": "폼 이름",
 	"forms-form-editor-prop-title": "제목",
 	"forms-form-editor-prop-categories": "분류",
 	"forms-form-editor-prop-enableeditsummary": "편집 요약 활성화",
@@ -30,7 +32,7 @@
 	"forms-label-city": "도시",
 	"forms-label-contacts": "연락처",
 	"forms-label-show-address": "주소 보기",
-	"forms-label-phone": "전화",
+	"forms-label-phone": "전화번호",
 	"forms-label-email": "이메일",
 	"forms-label-hq-address": "본사",
 	"forms-label-management": "관리",
