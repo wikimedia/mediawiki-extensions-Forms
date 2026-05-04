@@ -53,5 +53,8 @@
 	"forms-editor-toolbar-save-label": "저장",
 	"forms-target-page-label": "대상 문서",
 	"forms-definitions-not-exist": "\"$1\" 폼이 존재하지 않습니다.",
-	"forms-form-editor-form-name-label": "폼 이름"
+	"forms-form-editor-form-name-label": "폼 이름",
+	"forms-form-editor-prop-abstract": "추상",
+	"forms-editor-toolbar-done": "완료",
+	"forms-form-editor-form-props-summary-label": "요약"
 }
