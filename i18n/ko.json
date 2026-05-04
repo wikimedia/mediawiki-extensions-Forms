@@ -16,6 +16,7 @@
 	"forms-form-editor-prop-title": "제목",
 	"forms-form-editor-prop-categories": "분류",
 	"forms-form-editor-prop-enableeditsummary": "편집 요약 활성화",
+	"forms-form-editor-prop-abstract": "추상",
 	"forms-form-editor-prop-partial": "부분",
 	"forms-form-editor-prop-targettitle": "제목",
 	"forms-form-editor-prop-targettypejsononwikipage": "위키페이지의 JSON",
@@ -52,6 +53,8 @@
 	"forms-error-target-mail-no-mail": "유효한 이메일 주소가 없습니다",
 	"forms-editor-toolbar-cancel": "취소",
 	"forms-editor-toolbar-save-label": "저장",
+	"forms-editor-toolbar-done": "완료",
+	"forms-form-editor-form-props-summary-label": "요약",
 	"forms-target-page-label": "대상 문서",
 	"forms-definitions-not-exist": "\"$1\" 폼이 존재하지 않습니다."
 }
