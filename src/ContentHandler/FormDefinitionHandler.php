@@ -105,7 +105,7 @@ class FormDefinitionHandler extends JsonContentHandler {
 		if ( $predefinedTitle ) {
 			OutputPage::setupOOUI();
 			$output->setContentHolderText(
-				( new PredefinedTitleNotice( $predefinedTitle ) ) . $output->getRawText()
+				( new PredefinedTitleNotice( $predefinedTitle ) ) . $output->getContentHolderText()
 			);
 		}
 	}
