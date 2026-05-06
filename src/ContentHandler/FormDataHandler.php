@@ -145,7 +145,7 @@ class FormDataHandler extends JsonContentHandler {
 			if ( $destTitle instanceof Title ) {
 				$output->addLink( $destTitle );
 				if ( $cpoParams->getGenerateHtml() ) {
-					$output->setRawText( '' );
+					$output->setContentHolderText( '' );
 					$output->setRedirectHeader(
 						$this->linkRenderer->makeRedirectHeader(
 							$title->getPageLanguage(), $destTitle, false
@@ -160,7 +160,7 @@ class FormDataHandler extends JsonContentHandler {
 			$content->getDisplayTitle( $title ) :
 			Message::newFromKey( 'forms-formdata-notitle-displaytitle' )->text();
 		$output->setDisplayTitle( $displayTitle );
-		$output->setRawText( $this->getFormContainer( $data, $defaultAction, $title ) );
+		$output->setContentHolderText( $this->getFormContainer( $data, $defaultAction, $title ) );
 		$output->addModules( [ 'ext.forms.init' ] );
 	}
 

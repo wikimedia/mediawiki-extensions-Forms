@@ -104,7 +104,7 @@ class FormDefinitionHandler extends JsonContentHandler {
 		}
 		if ( $predefinedTitle ) {
 			OutputPage::setupOOUI();
-			$output->setRawText(
+			$output->setContentHolderText(
 				( new PredefinedTitleNotice( $predefinedTitle ) ) . $output->getRawText()
 			);
 		}
@@ -128,7 +128,7 @@ class FormDefinitionHandler extends JsonContentHandler {
 
 		$form = ( new PickerMaker() )->makeTargetTitlePicker( $form );
 
-		$output->setRawText( $form->toString() );
+		$output->setContentHolderText( $form->toString() );
 	}
 
 }
