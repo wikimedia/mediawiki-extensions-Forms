@@ -95,7 +95,7 @@
 	"action-forms-create-form": "formulieren aan te maken",
 	"action-forms-edit-form-definition": "formulierdefinities te bewerken",
 	"forms-action-editsource": "Brontekst bewerken",
-	"forms-form-editor-prop-rl-deps": "Afhankelijkheden van de resource-lader",
+	"forms-form-editor-prop-rl-deps": "Afhankelijkheden van de bronlader",
 	"forms-form-editor-prop-rl-deps-help": "Geef een lijst op met ResourceLoader-modules die moeten worden geladen wanneer het formulier wordt aangemaakt",
 	"forms-form-editor-prop-targettypeemail": "E-mail",
 	"forms-form-editor-prop-target-email-receiver": "Ontvanger",
@@ -121,6 +121,6 @@
 	"forms-form-editor-prop-target-json-wikipage-predefined-title-ph": "Laat dit veld leeg om een titel te specificeren bij het aanmaken van het formulier.",
 	"forms-formdata-notitle-displaytitle": "Formulier aanmaken",
 	"forms-form-will-be-created-as": "Dit formulier heeft een vooraf gedefinieerde doelpagina en wordt aangemaakt als \"$1\".",
-	"forms-target-predefined-title-error": "De vooraf gedefinieerde paginatitel van het formulier kan niet worden opgelost",
+	"forms-target-predefined-title-error": "De vooraf gedefinieerde paginatitel van het formulier kan niet worden gevonden",
 	"forms-target-predefined-title-exists-error": "Er bestaat al een pagina met dezelfde naam als de vooraf gedefinieerde paginatitel van het formulier"
 }
