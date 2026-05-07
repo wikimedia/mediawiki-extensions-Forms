@@ -113,5 +113,12 @@
 	"forms-form-definition-label": "Formulario a utilizar",
 	"forms-page-already-exists-no-form": "Esta páxina xa existe, pero non se creou mediante un formulario.",
 	"forms-definitions-not-exist": "O formulario «$1» non existe.",
-	"forms-action-edit-with-form": "Editar con formulario"
+	"forms-action-edit-with-form": "Editar con formulario",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title": "Título de páxina predefinido para as páxinas creadas con este formulario",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title-help": "Pódese usar para xerar automaticamente nomes de páxinas baseados nos datos do formulario. Usa «{{nome_do_campo}}» para inserir un valor dun campo de formulario. Por exemplo, se tes un campo chamado «nome_da_empresa», podes usar «{{nome_da_empresa}}» no título para inserir o valor introducido nese campo.",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title-ph": "Deixar en branco para especificar o título ao crear a instancia do formulario",
+	"forms-formdata-notitle-displaytitle": "Crear a instancia de formulario",
+	"forms-form-will-be-created-as": "Este formulario ten unha páxina de destino predefinida; crearase como «$1»",
+	"forms-target-predefined-title-error": "Non se pode resolver o título da páxina de destino do formulario predefinido",
+	"forms-target-predefined-title-exists-error": "Xa existe unha páxina co mesmo nome que o título da páxina de destino do formulario predefinido."
 }
