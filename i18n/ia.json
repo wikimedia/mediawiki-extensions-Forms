@@ -118,5 +118,12 @@
 	"forms-form-definition-label": "Le formulario a usar",
 	"forms-page-already-exists-no-form": "Iste pagina ja exite, ma non ha essite create per un formulario.",
 	"forms-definitions-not-exist": "Le formulario “$1” non existe.",
-	"forms-action-edit-with-form": "Modificar con formulario"
+	"forms-action-edit-with-form": "Modificar con formulario",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title": "Titulo de pagina predefinite pro le paginas create con iste formulario",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title-help": "Pote esser usate pro generar automaticamente nomines de pagina a base del datos del formulario. Usa “{{nomine_de_campo}}” pro inserer le valor de un campo del formulario. Per exemplo, si tu ha un campo con le nomine “nomine_de_compania”, tu pote usar “{{nomine_de_compania}}” in le titulo pro inserer le valor introducite in ille campo.",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title-ph": "Lassar vacue pro specificar le titulo al momento de creation del formulario.",
+	"forms-formdata-notitle-displaytitle": "Crear formulario",
+	"forms-form-will-be-created-as": "Iste formulario ha un pagina de destination predefinite e essera create como “$1”",
+	"forms-target-predefined-title-error": "Le titulo predefinite del pagina de destination del formulario non pote esser resolvite",
+	"forms-target-predefined-title-exists-error": "Existe ja un pagina con le mesme nomine que le titulo predefinite del pagina de destination del formulario"
 }
