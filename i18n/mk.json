@@ -113,5 +113,6 @@
 	"forms-form-definition-label": "Образец за употреба",
 	"forms-page-already-exists-no-form": "Оваа страница веќе постои, но не е направена со образец.",
 	"forms-definitions-not-exist": "Образецот „$1“ не постои.",
-	"forms-action-edit-with-form": "Уреди со образец"
+	"forms-action-edit-with-form": "Уреди со образец",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title": "Предопределен наслов на страница за страници создадени со овој образец"
 }
