@@ -14,7 +14,7 @@
 	"forms-error-no-form-specified": "Geen formulier opgegeven",
 	"forms-form-edit-title": "$1 bewerken",
 	"forms-edit-error-form-sealed": "Dit formulier is verzegeld en kan niet worden bewerkt",
-	"forms-api-form-submit-invalid-target": "Doel voor dit formulier is ongeldig",
+	"forms-api-form-submit-invalid-target": "Doel voor dit formulier is onjuist",
 	"forms-error-form-mismatch": "Opslaan mislukt omdat de formuliernaam niet overeenstemt",
 	"forms-error-target-db-save-failed": "Opslaan in database mislukt",
 	"forms-form-editor-title": "Formulieren-editor",
