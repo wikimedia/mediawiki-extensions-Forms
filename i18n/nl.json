@@ -51,7 +51,7 @@
 	"forms-api-get-definitions-not-exist": "Formulier “$1” bestaat niet",
 	"forms-target-json-page-summary": "Bewerking via formulier: $1",
 	"forms-edit-error-form-sealed": "Dit formulier is verzegeld en kan niet worden bewerkt",
-	"forms-api-form-submit-invalid-target": "Doel voor dit formulier is ongeldig",
+	"forms-api-form-submit-invalid-target": "Doel voor dit formulier is onjuist",
 	"forms-error-form-mismatch": "Opslaan mislukt omdat de formuliernaam niet overeenstemt",
 	"forms-error-target-db-save-failed": "Opslaan in database mislukt",
 	"forms-form-editor-title": "Formulieren-editor",
