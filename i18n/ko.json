@@ -111,5 +111,15 @@
 	"forms-formdata-notitle-displaytitle": "양식 인스턴스 만들기",
 	"forms-form-will-be-created-as": "이 양식은 사전 정의된 대상 문서가 있으며, \"$1\"로 생성됩니다",
 	"forms-target-predefined-title-error": "사전 정의된 양식 대상 문서 제목을 해결할 수 없습니다",
-	"forms-target-predefined-title-exists-error": "사전 정의된 양식 대상 문서 제목과 동일한 이름의 문서가 이미 존재합니다"
+	"forms-target-predefined-title-exists-error": "사전 정의된 양식 대상 문서 제목과 동일한 이름의 문서가 이미 존재합니다",
+	"forms-form-editor-prop-buttonsfloat": "플로팅 버튼",
+	"forms-form-editor-prop-use-form-revs-help": "true로 설정하면 이 양식을 사용해 생성된 모든 양식 인스턴스가 인스턴스 생성 당시의 양식 상태를 기억합니다. 양식 정의의 업데이트는 업데이트 전에 생성된 인스턴스에는 적용되지 않습니다.",
+	"forms-label-infrastructure": "인프라",
+	"forms-label-facilities-radio": "시설 라디오",
+	"forms-form-editor-target-template-field-manual": "(수동)",
+	"forms-form-meta-tag": "[[$1]] 양식을 사용하여 생성됨 (판: $2)",
+	"forms-form-editor-confirm-import-template": "현재 양식의 모든 필드를 삭제하고 선택한 틀에서 가져온 필드로 바꿉니다. 계속하시겠습니까?",
+	"forms-editor-group-empty-help": "현재 양식에 요소가 없습니다. \"양식 요소\" 탭을 열고 여기에 요소를 끌어다 놓으세요",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title-help": "양식의 데이터를 기반으로 문서 이름을 자동 생성하는 데 사용할 수 있습니다. 양식 필드의 값을 삽입하려면 \"{{field_name}}\"을 사용하세요. 예를 들어 이름이 \"company_name\"인 필드가 있는 경우 제목에 \"{{company_name}}\"을 사용하여 해당 필드에 입력된 값을 삽입할 수 있습니다.",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title-ph": "양식 인스턴스 생성 시 제목을 지정하려면 비워 두세요"
 }
