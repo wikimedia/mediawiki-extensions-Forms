@@ -43,7 +43,7 @@
 	"forms-form-editor-prop-targetafteractionurl": "URL로 리다이렉트",
 	"forms-form-editor-prop-targetafteractioncallback": "JS 콜백 함수 (고급)",
 	"forms-form-editor-prop-extends": "양식 확장",
-	"forms-form-editor-prop-use-form-revs": "편집 사항 추적하기",
+	"forms-form-editor-prop-use-form-revs": "수정내역 추적하기",
 	"forms-form-editor-prop-use-form-revs-help": "true로 설정하면 이 양식을 사용해 생성된 모든 양식 인스턴스가 인스턴스 생성 당시의 양식 상태를 기억합니다. 양식 정의의 업데이트는 업데이트 전에 생성된 인스턴스에는 적용되지 않습니다.",
 	"forms-form-editor-form-props-label": "양식 속성",
 	"forms-form-editor-form-items-label": "양식 요소",
