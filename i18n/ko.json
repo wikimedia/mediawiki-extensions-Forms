@@ -92,7 +92,7 @@
 	"forms-form-editor-prop-sealaftercreation": "생성 이후 숨기기",
 	"forms-form-editor-prop-targetafteraction": "작업 이후 할당하기",
 	"forms-form-editor-prop-targetafteractiontype": "작업 이후 유형",
-	"forms-form-editor-prop-use-form-revs": "편집 사항 추적하기",
+	"forms-form-editor-prop-use-form-revs": "수정내역 추적하기",
 	"forms-label-show-contacts": "연락처 표시",
 	"forms-title-new-customer": "새로운 고객",
 	"forms-form-editor-button-import-template": "틀에서 필드 가져오기",
