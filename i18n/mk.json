@@ -119,5 +119,11 @@
 	"forms-page-already-exists-no-form": "Оваа страница веќе постои, но не е направена со образец.",
 	"forms-definitions-not-exist": "Образецот „$1“ не постои.",
 	"forms-action-edit-with-form": "Уреди со образец",
-	"forms-form-editor-prop-target-json-wikipage-predefined-title": "Предопределен наслов на страница за страници создадени со овој образец"
+	"forms-form-editor-prop-target-json-wikipage-predefined-title": "Предопределен наслов на страница за страници создадени со овој образец",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title-help": "Може да се користи за автоматско создавање на имиња на страници според податоци од образецот. Послужете се со „{{field_name}}“ за да вметнете вредност од поле на образец. На пример, ако имате поле со име „company_name“, можете да употребите „{{company_name}}“ во насовот за да ја вметнете вредноста внесена во тоа поле.",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title-ph": "Оставете празно за да укажете наслов при создавање на примерок на образец",
+	"forms-formdata-notitle-displaytitle": "Создај од примерок",
+	"forms-form-will-be-created-as": "Овој образец има предопределена целна страница. Ќе биде созаден како „$1“",
+	"forms-target-predefined-title-error": "Предопределениата целна страница на образецот не може да се испише",
+	"forms-target-predefined-title-exists-error": "Веќе постои страница со исто име како предопределена целна страница на образец"
 }
