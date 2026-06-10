@@ -41,7 +41,7 @@
 	"forms-form-editor-prop-targetafteractiontypenone": "Geen handeling",
 	"forms-form-editor-prop-targetafteractiontyperedirect": "Doorverwijzing",
 	"forms-form-editor-prop-targetafteractiontypecallback": "Terugroepfunctie",
-	"forms-form-editor-prop-targetafteractionurl": "Doorverwijzen naar URL",
+	"forms-form-editor-prop-targetafteractionurl": "Doorverwijzen naar url",
 	"forms-form-editor-prop-targetafteractioncallback": "JS Callback-functie (geavanceerd)",
 	"forms-form-editor-prop-extends": "Breidt het formulier uit",
 	"forms-form-editor-prop-use-form-revs": "Versies bijhouden",
