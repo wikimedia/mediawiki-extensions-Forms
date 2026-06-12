@@ -121,5 +121,12 @@
 	"forms-form-editor-prop-rl-deps-help": "指定当表单实例化时，应被载入的ResourceLoader模组清单",
 	"forms-editor-group-empty-help": "表单目前没有元素。请开启“表单元素”标签，并将元素拖曳至此处",
 	"forms-page-already-exists-no-form": "此页面已存在，但不是由表单创建的。",
-	"forms-definitions-not-exist": "表单“$1”不存在。"
+	"forms-definitions-not-exist": "表单“$1”不存在。",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title": "使用此表单所创建页面的预定义页面标题",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title-help": "可用于根据表单数据自动生成的页面名称。使用“{{field_name}}”插入表单字段中的值。例如，如果您有一个名为“company_name”的字段，则可以在标题中使用“{{company_name}}”来插入该字段中输入的值。",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title-ph": "留空可在创建表单实例时指定标题",
+	"forms-formdata-notitle-displaytitle": "创建表单实例",
+	"forms-form-will-be-created-as": "此表单已预定义目标页面，将创建为“$1”。",
+	"forms-target-predefined-title-error": "无法解析预定义表单目标页面标题",
+	"forms-target-predefined-title-exists-error": "已存在与预定义表单目标页面标题同名的页面"
 }
