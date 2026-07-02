@@ -118,5 +118,12 @@
 	"forms-form-definition-label": "نموذج للاستخدام",
 	"forms-page-already-exists-no-form": "هذه الصفحة موجودة بالفعل، ولكن لم يتم إنشاؤها بواسطة نموذج.",
 	"forms-definitions-not-exist": "النموذج \" $1 \" غير موجود.",
-	"forms-action-edit-with-form": "تحرير باستخدام النموذج"
+	"forms-action-edit-with-form": "تحرير باستخدام النموذج",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title": "عنوان الصفحة المحدد مسبقًا للصفحات التي تم إنشاؤها باستخدام هذا النموذج",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title-help": "يمكن استخدام هذه الخاصية لإنشاء أسماء الصفحات تلقائيًا بناءً على البيانات المُدخلة في النموذج. استخدم \"{{field_name}}\" لإدراج القيمة من حقل في النموذج. على سبيل المثال، إذا كان لديك حقل باسم \"company_name\"، يمكنك استخدام \"{{company_name}}\" في العنوان لإدراج القيمة المُدخلة في ذلك الحقل.",
+	"forms-form-editor-prop-target-json-wikipage-predefined-title-ph": "اترك هذا الحقل فارغًا لتحديد العنوان عند إنشاء نموذج النموذج.",
+	"forms-formdata-notitle-displaytitle": "إنشاء نموذج",
+	"forms-form-will-be-created-as": "يحتوي هذا النموذج على صفحة هدف محددة مسبقًا، وسيتم إنشاؤها باسم \" $1 \".",
+	"forms-target-predefined-title-error": "لا يمكن حل عنوان صفحة الهدف للنموذج المحدد مسبقًا",
+	"forms-target-predefined-title-exists-error": "توجد بالفعل صفحة تحمل نفس اسم عنوان الصفحة المستهدفة للنموذج المحدد مسبقاً."
 }
