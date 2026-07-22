@@ -100,7 +100,6 @@ class Database implements ITarget {
 	}
 
 	/**
-	 *
 	 * @param array $formsubmittedData
 	 * @param string|null $summary
 	 * @return Status
