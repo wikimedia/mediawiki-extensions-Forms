@@ -125,7 +125,6 @@ class Email implements ITarget {
 	}
 
 	/**
-	 *
 	 * @param array $formsubmittedData
 	 * @param string|null $summary
 	 * @return Status
@@ -154,7 +153,6 @@ class Email implements ITarget {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	private function getReceivers() {
@@ -178,7 +176,6 @@ class Email implements ITarget {
 	}
 
 	/**
-	 *
 	 * @return false
 	 */
 	public function getDefaultAfterAction() {
@@ -186,7 +183,6 @@ class Email implements ITarget {
 	}
 
 	/**
-	 *
 	 * @param array $formData
 	 * @return string
 	 */
@@ -196,7 +192,6 @@ class Email implements ITarget {
 	}
 
 	/**
-	 *
 	 * @param array $formData
 	 * @return string
 	 */
@@ -206,7 +201,6 @@ class Email implements ITarget {
 	}
 
 	/**
-	 *
 	 * @param string $username
 	 * @return bool
 	 */
@@ -219,7 +213,6 @@ class Email implements ITarget {
 	}
 
 	/**
-	 *
 	 * @param string $address
 	 * @return bool
 	 */

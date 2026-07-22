@@ -17,6 +17,9 @@ class SyncFormRevisions extends Maintenance {
 		$this->addOption( 'untilRev', 'Sync revisions until this form definition revision', false, true );
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function execute() {
 		if ( !$this->hasOption( 'quick' ) ) {
 			$this->countDown( 5 );

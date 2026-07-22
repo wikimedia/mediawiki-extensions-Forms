@@ -79,7 +79,6 @@ class FormDataHandler extends JsonContentHandler {
 	}
 
 	/**
-	 *
 	 * @var string
 	 */
 	protected $formName;

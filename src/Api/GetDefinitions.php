@@ -23,7 +23,6 @@ class GetDefinitions extends ApiBase {
 	protected $definitionType;
 
 	/**
-	 *
 	 * @var string
 	 */
 	protected $validForTime;
@@ -105,9 +104,6 @@ class GetDefinitions extends ApiBase {
 		}
 	}
 
-	/**
-	 *
-	 */
 	protected function getAvailableDefinitions() {
 		$type = $this->getParameter( 'definitiontype' );
 		$this->status = Status::newGood(
@@ -115,9 +111,6 @@ class GetDefinitions extends ApiBase {
 		);
 	}
 
-	/**
-	 *
-	 */
 	protected function getDefinitionContent() {
 		$name = $this->getParameter( 'name' );
 		if ( !$name ) {
