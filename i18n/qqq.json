@@ -124,5 +124,6 @@
 	"forms-formdata-notitle-displaytitle": "Page title when no page is given",
 	"forms-form-will-be-created-as": "Notice when form has predefined title.\n$1 - predefined title mask",
 	"forms-target-predefined-title-error": "Error message",
-	"forms-target-predefined-title-exists-error": "Error message"
+	"forms-target-predefined-title-exists-error": "Error message",
+	"bs-extendedsearch-search-center-filter-document-type-formdefinition-label": "Label for the document_type option for the \"FormDefinition\" content model"
 }
