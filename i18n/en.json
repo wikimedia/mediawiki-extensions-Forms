@@ -121,5 +121,6 @@
 	"forms-formdata-notitle-displaytitle": "Create form instance",
 	"forms-form-will-be-created-as": "This form has predefined target page, will be created as \"$1\"",
 	"forms-target-predefined-title-error": "Predefined form target page title cannot be resolved",
-	"forms-target-predefined-title-exists-error": "Page with same name as predefined form target page title already exists"
+	"forms-target-predefined-title-exists-error": "Page with same name as predefined form target page title already exists",
+	"bs-extendedsearch-search-center-filter-document-type-formdefinition-label": "Form definition"
 }
