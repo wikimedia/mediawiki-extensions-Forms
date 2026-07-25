@@ -114,5 +114,6 @@
 	"forms-form-definition-label": "Zu verwendendes Formular",
 	"forms-page-already-exists-no-form": "Diese Seite existiert bereits, wurde aber nicht durch ein Formular erstellt.",
 	"forms-definitions-not-exist": "Das Formular \"$1“ existiert nicht.",
-	"forms-action-edit-with-form": "Mit Formular bearbeiten"
+	"forms-action-edit-with-form": "Mit Formular bearbeiten",
+	"bs-extendedsearch-search-center-filter-document-type-formdefinition-label": "Formulardefinition"
 }
