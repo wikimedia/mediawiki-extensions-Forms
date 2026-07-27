@@ -124,5 +124,6 @@
 	"forms-formdata-notitle-displaytitle": "创建表单实例",
 	"forms-form-will-be-created-as": "此表单已预定义目标页面，将创建为“$1”。",
 	"forms-target-predefined-title-error": "无法解析预定义表单目标页面标题",
-	"forms-target-predefined-title-exists-error": "已存在与预定义表单目标页面标题同名的页面"
+	"forms-target-predefined-title-exists-error": "已存在与预定义表单目标页面标题同名的页面",
+	"bs-extendedsearch-search-center-filter-document-type-formdefinition-label": "表单定义"
 }
