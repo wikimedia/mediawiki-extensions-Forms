@@ -120,5 +120,6 @@
 	"forms-formdata-notitle-displaytitle": "Crear a instancia de formulario",
 	"forms-form-will-be-created-as": "Este formulario ten unha páxina de destino predefinida; crearase como «$1»",
 	"forms-target-predefined-title-error": "Non se pode resolver o título da páxina de destino do formulario predefinido",
-	"forms-target-predefined-title-exists-error": "Xa existe unha páxina co mesmo nome que o título da páxina de destino do formulario predefinido."
+	"forms-target-predefined-title-exists-error": "Xa existe unha páxina co mesmo nome que o título da páxina de destino do formulario predefinido.",
+	"bs-extendedsearch-search-center-filter-document-type-formdefinition-label": "Definición do formulario"
 }
