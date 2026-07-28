@@ -43,6 +43,7 @@
 	"apihelp-forms-form-submit-param-summary": "Resümmee vun der Ännerung",
 	"forms-action-editsource": "Quelltext änneren",
 	"forms-form-editor-prop-targettypeemail": "E-Mail",
+	"forms-error-target-mail-no-mail": "Keng gülteg E-Mail-Adress disponibel",
 	"forms-editor-toolbar-cancel": "Ofbriechen",
 	"forms-editor-toolbar-save-label": "Späicheren",
 	"forms-form-editor-form-props-summary-label": "Resümmee",
