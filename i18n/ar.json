@@ -125,5 +125,6 @@
 	"forms-formdata-notitle-displaytitle": "إنشاء نموذج",
 	"forms-form-will-be-created-as": "يحتوي هذا النموذج على صفحة هدف محددة مسبقًا، وسيتم إنشاؤها باسم \" $1 \".",
 	"forms-target-predefined-title-error": "لا يمكن حل عنوان صفحة الهدف للنموذج المحدد مسبقًا",
-	"forms-target-predefined-title-exists-error": "توجد بالفعل صفحة تحمل نفس اسم عنوان الصفحة المستهدفة للنموذج المحدد مسبقاً."
+	"forms-target-predefined-title-exists-error": "توجد بالفعل صفحة تحمل نفس اسم عنوان الصفحة المستهدفة للنموذج المحدد مسبقاً.",
+	"bs-extendedsearch-search-center-filter-document-type-formdefinition-label": "تعريف النموذج"
 }

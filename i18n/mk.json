@@ -120,5 +120,6 @@
 	"forms-formdata-notitle-displaytitle": "Создај од примерок",
 	"forms-form-will-be-created-as": "Овој образец има предопределена целна страница. Ќе биде созаден како „$1“",
 	"forms-target-predefined-title-error": "Предопределениата целна страница на образецот не може да се испише",
-	"forms-target-predefined-title-exists-error": "Веќе постои страница со исто име како предопределена целна страница на образец"
+	"forms-target-predefined-title-exists-error": "Веќе постои страница со исто име како предопределена целна страница на образец",
+	"bs-extendedsearch-search-center-filter-document-type-formdefinition-label": "Дефиниција за образец"
 }
