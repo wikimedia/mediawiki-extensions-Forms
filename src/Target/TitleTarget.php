@@ -232,7 +232,7 @@ abstract class TitleTarget implements ITarget {
 				$replacement = $this->form;
 			}
 			if ( $var === '_user' ) {
-				$user = \RequestContext::getMain()->getUser();
+				$user = RequestContext::getMain()->getUser();
 				if ( $user->isAnon() ) {
 					$replacement = '';
 				} else {
