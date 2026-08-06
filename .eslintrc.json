@@ -15,6 +15,7 @@
 		"no-jquery/no-global-selector": "off",
 		"no-prototype-builtins": "off",
 		"no-jquery/no-done-fail": "warn",
-		"mediawiki/no-unlabeled-buttonwidget": "warn"
+		"mediawiki/no-unlabeled-buttonwidget": "warn",
+		"no-jquery/no-jquery-ui": "warn"
 	}
 }
