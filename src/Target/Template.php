@@ -24,9 +24,19 @@ class Template extends TitleTarget implements INonNativeTarget {
 	 */
 	public static function factory( HashConfig $config ) {
 		$instance = parent::factory( $config );
+		if ( !$instance instanceof self ) {
+			return $instance;
+		}
+
+		if ( !$config->has( 'template' ) || !$config->get( 'template' ) ) {
+			return null;
+		}
 
 		$template = $config->get( 'template' );
 		$templateTitle = Title::newFromText( $template, NS_TEMPLATE );
+		if ( !$templateTitle ) {
+			return null;
+		}
 		$instance->setTemplate( $templateTitle );
 
 		return $instance;
