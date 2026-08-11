@@ -121,5 +121,6 @@
 	"forms-formdata-notitle-displaytitle": "양식 인스턴스 만들기",
 	"forms-form-will-be-created-as": "이 양식은 사전 정의된 대상 문서가 있으며, \"$1\"로 생성됩니다",
 	"forms-target-predefined-title-error": "사전 정의된 양식 대상 문서 제목을 해결할 수 없습니다",
-	"forms-target-predefined-title-exists-error": "사전 정의된 양식 대상 문서 제목과 동일한 이름의 문서가 이미 존재합니다"
+	"forms-target-predefined-title-exists-error": "사전 정의된 양식 대상 문서 제목과 동일한 이름의 문서가 이미 존재합니다",
+	"bs-extendedsearch-search-center-filter-document-type-formdefinition-label": "양식 정의"
 }
