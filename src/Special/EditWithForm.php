@@ -54,8 +54,8 @@ class EditWithForm extends FormSpecial {
 		}
 		$this->setTargetPage( $subPage );
 		if ( $this->targetPage ) {
-			$this->getOutput()->setPageTitle(
-				$this->msg( 'editwithform-with-title', $this->targetPage->getPrefixedText() )->escaped()
+			$this->getOutput()->setPageTitleMsg(
+				$this->msg( 'editwithform-with-title', $this->targetPage->getPrefixedText() )
 			);
 		}
 
