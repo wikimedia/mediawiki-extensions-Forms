@@ -86,7 +86,7 @@
 	"apihelp-forms-form-submit-param-data": "البيانات المرسلة بواسطة النموذج",
 	"apihelp-forms-form-submit-param-form": "اسم النموذج",
 	"apihelp-forms-form-submit-param-target": "اسم الهدف",
-	"apihelp-forms-form-submit-param-summary": "تحرير الملخص",
+	"apihelp-forms-form-submit-param-summary": "ملخص التعديل",
 	"apihelp-forms-form-submit-summary": "يوفر التحرير عبر النماذج",
 	"apihelp-forms-get-definitions-param-definitiontype": "نوع التعريف المطلوب للنموذج",
 	"apihelp-forms-get-definitions-param-name": "اسم تعريف النموذج",
