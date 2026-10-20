@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Eleassar"
+			"Eleassar",
+			"Upwinxp"
 		]
 	},
 	"forms-desc": "Vsestransko ogrodje obrazcev za MediaWiki",
@@ -90,5 +91,17 @@
 	"forms-form-editor-prop-target-email-subject": "Zadeva",
 	"forms-form-editor-prop-target-email-body": "Vsebina",
 	"forms-error-target-mail-send-failed": "Pošiljanje e-pošte ni uspelo",
-	"forms-error-target-mail-no-mail": "Ni veljavnega e-poštnega naslova"
+	"forms-error-target-mail-no-mail": "Ni veljavnega e-poštnega naslova",
+	"apihelp-forms-form-submit-param-data": "Podatki, poslani z obrazcem",
+	"apihelp-forms-form-submit-param-form": "Ime obrazca",
+	"apihelp-forms-form-submit-param-target": "Ime cilja",
+	"apihelp-forms-form-submit-param-summary": "Povzetek urejanja",
+	"forms-editor-create-form-label": "Ustvari obrazec",
+	"forms-editor-toolbar-cancel": "Prekliči",
+	"forms-editor-toolbar-save-label": "Shrani",
+	"forms-editor-toolbar-done": "Opravljeno",
+	"forms-form-editor-form-props-summary-label": "Povzetek",
+	"forms-form-editor-form-props-summary-placeholder": "Opišite, kaj ste spremenili",
+	"forms-target-page-label": "Ciljna stran",
+	"forms-editor-create-form-instance-label": "Ustvari s tem obrazcem"
 }
