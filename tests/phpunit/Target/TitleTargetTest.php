@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\Forms\Tests\Target;
 use MediaWiki\Extension\Forms\DefinitionManager;
 use MediaWiki\Extension\Forms\Target\JsonOnWikiPage;
 use MediaWiki\Extension\Forms\Target\Template;
+use MediaWiki\Page\WikiPage;
 use MediaWiki\Page\WikiPageFactory;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Storage\PageUpdater;
@@ -36,7 +37,7 @@ class TitleTargetTest extends TestCase {
 		?Title $expectedTitle, bool $expectException = false
 	) {
 		$updater = $this->createMock( PageUpdater::class );
-		$wikiPage = $this->createMock( \WikiPage::class );
+		$wikiPage = $this->createMock( WikiPage::class );
 		$wikiPage->method( 'newPageUpdater' )->willReturn( $updater );
 
 		$wikiPageFactory = $this->createMock( WikiPageFactory::class );
