@@ -2,7 +2,9 @@
 
 namespace MediaWiki\Extension\Forms\Action;
 
-class FormDefinitionSourceEditAction extends \EditAction {
+use MediaWiki\Actions\EditAction;
+
+class FormDefinitionSourceEditAction extends EditAction {
 	/**
 	 * @return string
 	 */
